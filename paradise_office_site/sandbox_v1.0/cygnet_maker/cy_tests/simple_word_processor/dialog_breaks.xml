@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE file PUBLIC "-//paradise-office//DTD text-processing 1.0//EN" "http://www.linux-paradise.co.uk/development/DTDs/text-processing_1.dtd">
+  <dialog name="Breaks" type="modal">
+    <field_box>
+      <row num="1">
+        <button name="Page" options="page" />
+        <button name="Line" options="line" />
+      </row>
+      <row num="2">
+        <button name="Landscape" options="landscape" />
+        <button name="Column" options="column" />
+      </row>
+    </field_box>
+    <button name="OK" command="ok" /><button name="Cancel" command="cancel" />
+  </dialog>

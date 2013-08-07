@@ -1,0 +1,38 @@
+Hazel's notes
+
+2013-07-23
+- Use PHP add slashes and trim on all input fields, text areas etc. 
+
+2013-08-03
+
+For the Cygnet files: 
+The field_box tag fills the dialog boxes from left to right. Percentages may be used for the height and width, in order to fit more than one field_box into a tab or dialog. So, with the format_pages dialog, on the second tab: they should render as thus
+
+---------------------------------------------
+|                       |                   |
+|                       |                   |
+|                       |                   |
+|                       |                   |
+|                       |                   |
+|                       |                   |
+|                       |___________________|
+|                       |                   |
+|                       |                   |
+|_______________________|___________________|
+
+The larger one on the left is the page orientation box, the second largest is the margins, and the smallest one is the print preview options.
+
+Also, I want large_icons to be set so that only one can be active at the same time, like radio buttons.
+
+2013-08-04
+
+Radio and check boxes always appear with the clickable area on the left.
+
+In dialog xml files, controls don't have a spans attribute in icons, only in char lengths for text_fields. width and height are determined by the icon picture dimensions.
+
+2013-08-06
+
+Dialog boxes - non-modal : close button top right corner. Non resizeable.
+              Modal: OK and cancel buttons, resizeable by program event, but not by the user.
+              quick_menu : A hide button on the top edge with arrows. No bloody rounded corners on everything.
+              confirm : A small diddy dialog box, that flashes in animated mode, or has a red border round it.

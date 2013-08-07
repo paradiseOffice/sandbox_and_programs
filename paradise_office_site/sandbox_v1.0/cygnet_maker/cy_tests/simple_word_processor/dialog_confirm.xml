@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE file PUBLIC "-//paradise-office//DTD text-processing 1.0//EN" "http://www.linux-paradise.co.uk/development/DTDs/text-processing_1.dtd">
+  <dialog name="Confirm" type="confirm">
+    <field_box>
+      <row num="1">
+        <label>Are you sure? </label>
+      </row>
+    <button name="Yes" command="ok" /><button name="No" command="cancel" />
+  </dialog>

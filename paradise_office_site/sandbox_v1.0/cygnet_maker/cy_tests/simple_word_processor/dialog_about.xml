@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE file PUBLIC "-//paradise-office//DTD text-processing 1.0//EN" "http://www.linux-paradise.co.uk/development/DTDs/text-processing_1.dtd">
+  <dialog name="About" type="non-modal">
+    <field_box>
+      <row num="1">
+        <heading_label>About simple word processor</heading_label>
+      </row>
+      <row num="2">
+        <label name="about_text"></label>
+      </row>
+    </field_box>
+  </dialog>

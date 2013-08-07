@@ -1,0 +1,47 @@
+cy_data_validation
+	- web address*
+	- email address *
+	- long text*
+	- currency*
+	- integer*
+	- float*
+	- date*
+	- month and year*
+	- month*
+	- day*
+	- year*
+	- datetime*
+	- time*
+	- short text*
+	- uk phone no*
+	- uk mobile no*
+	- us phone no*
+	-us mobile no*
+	- international phone no*
+	- national insurance*
+	- social security*
+	- credit card num*
+	- credit card cvv num*
+	- custom card num*
+	- post code*
+	- zip code
+
+cy_reader
+	- syntax checker
+	  	 + which parts of syntax, keywords, command, arguments, meta info fields, any logic: like inheritance.
+	- valid commands
+	  	+ immutable list of valid commands from Sandbox functions
+	- valid arguments
+	  	+ list of correct arguments and description of them in comments
+	- caller to the writer
+	  	+ Replaces syntax with correct function calls, links in python validation and other functions.
+	- program meta information
+
+cy_writer
+	- copy html
+	- copy css (sep files)
+	- copy javascript
+	- link in py files (call processing/py_linker)
+	- copy php
+	- include php javascript
+	- write meta info as xml

@@ -1,0 +1,184 @@
+<!DOCTYPE dialog_box [
+<!ELEMENT dialog (tab*,field_box+)>
+  <!ATTLIST dialog type (quick_menu|modal|non-modal|confirm) #REQUIRED>
+  <!ATTLIST dialog name CDATA #REQUIRED>
+  
+  <!ELEMENT tab (control|row|font_preview|pic_preview|text_preview|print_view|heading_label|separator|label|color_picker|checkbox_wLabel|radio_btns_wLabel|button|icon|large_icon|slider|combo_box|spinbox|progress_bar|tool_tip|long_text_field|date_field|time_field|url_field|email_field|whole_num_field|currency_field|float_field|sci_num_field|colour_swatches|upload_pic|upload_text|clipboard_entries_list)*>
+    <!ATTLIST tab name CDATA #REQUIRED>
+  <!ELEMENT field_box (control|row|font_preview|pic_preview|text_preview|print_view|heading_label|separator|label|color_picker|checkbox_wLabel|radio_btns_wLabel|button|icon|large_icon|slider|combo_box|spinbox|progress_bar|tool_tip|long_text_field|date_field|time_field|url_field|email_field|whole_num_field|currency_field|float_field|sci_num_field|colour_swatches|upload_pic|upload_text|clipboard_entries_list)* >
+    <!ATTLIST field_box name CDATA >
+    <!ATTLIST field_box plugin CDATA >
+    <!ATTLIST field_box width CDATA>
+    <!ATTLIST field_box height CDATA>
+    
+    <!ELEMENT row (control|font_preview|pic_preview|text_preview|print_view|heading_label|separator|label|color_picker|checkbox_wLabel|radio_btns_wLabel|button|icon|large_icon|slider|combo_box|spinbox|progress_bar|tool_tip|long_text_field|date_field|time_field|url_field|email_field|whole_num_field|currency_field|float_field|sci_num_field|colour_swatches|upload_pic|upload_text|clipboard_entries_list)* >
+      <!ATTLIST row num (1|2|3|4|5|6|7|8|9|10) #REQUIRED>
+      
+    <!ELEMENT font_preview EMPTY>
+      <!ATTLIST font_preview name CDATA #REQUIRED>
+      <!ATTLIST font_preview spans (1 icon|2 icons|3 icons) #IMPLIED>
+      <!ATTLIST font_preview plugin CDATA >
+      <!ATTLIST font_preview options CDATA >
+      <!ATTLIST font_preview type (glyph_table|default|selection_preview) #REQUIRED "default">
+    <!ELEMENT pic_preview EMPTY>
+      <!ATTLIST pic_preview name CDATA #REQUIRED>
+      <!ATTLIST pic_preview width CDATA #REQUIRED>
+      <!ATTLIST pic_preview height CDATA #REQUIRED>
+      <!ATTLIST pic_preview plugin CDATA #REQUIRED>
+      <!ATTLIST pic_preview pic CDATA >
+    <!ELEMENT text_preview EMPTY>
+      <!ATTLIST text_preview name CDATA #REQUIRED>
+      <!ATTLIST text_preview max_chars CDATA #REQUIRED "50" >
+      <!ATTLIST text_preview plugin CDATA >
+      <!ATTLIST text_preview options CDATA >
+      <!ATTLIST text_preview type (alignment|default|formatted) >
+      <!ATTLIST text_preview spans (1 row|2 rows|3 rows) #REQUIRED>
+      
+    <!ELEMENT print_view EMPTY>
+      <!ATTLIST print_view name CDATA #FIXED "DOC_TITLE">
+      <!ATTLIST print_view spans (7 rows|8 rows | 9 rows|10 rows) #REQUIRED "9 rows">
+      <!ATTLIST print_view options CDATA>
+    <!ELEMENT heading_label >
+      <!ATTLIST heading_label plugin CDATA>
+      <!ATTLIST heading_label options CDATA>
+    <!ELEMENT separator EMPTY>
+      <!ATTLIST separator type (vertical|horizontal) #REQUIRED>
+      <!ATTLIST separator length CDATA #REQUIRED>
+      <!ATTLIST separator colour CDATA >
+    <!ELEMENT label EMPTY>
+      <!ATTLIST label name CDATA #REQUIRED>
+      <!ATTLIST label plugin CDATA>
+      <!ATTLIST label options CDATA>
+      <!ATTLIST label align (left|centre|right)>
+    <!ELEMENT color_picker EMPTY>
+      <!ATTLIST color_picker type CDATA #FIXED "horizontal_simple">
+    <!ELEMENT tool_tip EMPTY>
+      <!ATTLIST tool_tip name CDATA #REQUIRED>
+    <!ELEMENT long_text_field EMPTY>
+      <!ATTLIST long_text_field spans (1 row| 2 rows| 3 rows | 4 rows) #REQUIRED>
+      <!ATTLIST long_text_field type (read-only|default) #IMPLIED>
+      <!ATTLIST long_text_field name CDATA #REQUIRED>
+      <!ATTLIST long_text_field command (new|open_upload|save_download|save_as_dl|close_file|convert_bfile|                 prepare_statment|log_in|log_out|add_data|query_data|describe_tables|set_up_keys|security_settings|delete_data|update_data|alter_tables|create_tables|create_forms|alter_forms|insert_data_in_forms|create_reports|modify_reports|lexigraphic_checker|ok|cancel) #IMPLIED>
+      <!ATTLIST long_text_field plugin CDATA #IMPLIED>
+      <!ATTLIST long_text_field options CDATA #IMPLIED>
+    <!ELEMENT url_field EMPTY>
+      <!ATTLIST url_field name CDATA #REQUIRED>
+      <!ATTLIST url_field spans (100 chars| 75 chars) "75 chars">
+      <!ATTLIST url_field plugin CDATA #IMPLIED>
+      <!ATTLIST url_field options CDATA #IMPLIED>
+    <!ELEMENT email_field EMPTY>
+      <!ATTLIST email_field name CDATA #REQUIRED>
+      <!ATTLIST email_field spans (100 chars | 75 chars) "75 chars">
+      <!ATTLIST email_field plugin CDATA #IMPLIED>
+      <!ATTLIST email_field options CDATA #IMPLIED>
+    <!ELEMENT whole_num_field EMPTY>
+      <!ATTLIST whole_num_field name CDATA #REQUIRED>
+      <!ATTLIST whole_num_field plugin CDATA #REQUIRED>
+      <!ATTLIST whole_num_field options CDATA #IMPLIED>
+    <!ELEMENT currency_field EMPTY>
+      <!ATTLIST currency_field name CDATA #REQUIRED>
+      <!ATTLIST currency_field plugin CDATA #REQUIRED>
+      <!ATTLIST currency_field options CDATA #IMPLIED>
+    <!ELEMENT float_field EMPTY>
+      <!ATTLIST float_field name CDATA #REQUIRED>
+      <!ATTLIST float_field plugin CDATA #REQUIRED>
+      <!ATTLIST float_field options CDATA #IMPLIED>
+    <!ELEMENT sci_num_field EMPTY>
+      <!ATTLIST sci_num_field name CDATA #REQUIRED>
+      <!ATTLIST sci_num_field spans CDATA #FIXED "10 chars">
+      <!ATTLIST sci_num_field plugin CDATA #REQUIRED>
+      <!ATTLIST sci_num_field options CDATA #IMPLIED>
+    <!ELEMENT upload_pic EMPTY>
+      <!ATTLIST upload_pic name CDATA #REQUIRED>
+      <!ATTLIST upload_pic type (with_text_field|preview) #REQUIRED>
+      <!ATTLIST upload_pic pic CDATA >
+      <!ATTLIST upload_pic plugin CDATA #REQUIRED>
+      <!ATTLIST upload_pic options CDATA>
+    <!ELEMENT upload_text EMPTY>
+      <!ATTLIST upload_text ending (linux_or_mac|windows) #REQUIRED>
+      <!ATTLIST upload_text name CDATA #REQUIRED>
+      <!ATTLIST upload_text plugin CDATA #REQUIRED>
+      <!ATTLIST upload_text options CDATA >
+ 
+ ==================== ADDED STUFF - CHECK THROUGH WITH ALL DIALOGS DURING DEBUG ------
+  <!ELEMENT icon EMPTY>
+        <!ATTLIST icon name CDATA #REQUIRED>
+        <!ATTLIST icon acckey CDATA>
+        <!ATTLIST icon pic CDATA #REQUIRED>
+        <!ATTLIST icon plugin CDATA #REQUIRED>
+        <!ATTLIST icon options CDATA>
+  <!ELEMENT large_icon EMPTY>
+        <!ATTLIST large_icon name CDATA #REQUIRED>
+        <!ATTLIST large_icon acckey CDATA #REQUIRED>
+        <!ATTLIST large_icon pic CDATA #REQUIRED>
+        <!ATTLIST large_icon command (new|open_upload|save_download|save_as_dl|close_file|convert_bfile|                 prepare_statment|log_in|log_out|add_data|query_data|describe_tables|set_up_keys|security_settings|delete_data|update_data|alter_tables|create_tables|create_forms|alter_forms|insert_data_in_forms|create_reports|modify_reports|lexigraphic_checker|ok|cancel) #IMPLIED>
+        <!ATTLIST large_icon plugin CDATA #IMPLIED>
+        <!ATTLIST large_icon open_browser (upload_box|download_box|print_box) #IMPLIED>
+        <!ATTLIST large_icon opens_dialog CDATA #IMPLIED>
+        <!ATTLIST large_icon options CDATA #IMPLIED>
+  <!ELEMENT control EMPTY (combo_box|spinbox|checkbox_wLabel|radio_btns_wLabel|button|slider|progress_bar|text_field|date_field|time_field|colour_swatches|clipboard_entries_list)+>
+        <!ATTLIST control name CDATA #REQUIRED>
+        <!ATTLIST control spans (1 icon|2 icons|3 icons|4 icons) #REQUIRED>
+        <!ELEMENT combo_box EMPTY>
+          <!ATTLIST combo_box type (drop down|multi|spinner) #REQUIRED>
+          <!ATTLIST combo_box plugin CDATA #IMPLIED>
+          <!ATTLIST combo_box pic CDATA #IMPLIED>
+          <!ATTLIST combo_box default CDATA #IMPLIED>
+        <!ELEMENT spinbox EMPTY>
+          <!ATTLIST spinbox default CDATA #IMPLIED>
+          <!ATTLIST spinbox step_size CDATA #REQUIRED>
+          <!ATTLIST spinbox plugin CDATA #IMPLIED>
+          <!ATTLIST spinbox options CDATA #REQUIRED>
+        <!ELEMENT checkbox_wLabel EMPTY>
+          <!ATTLIST checkbox_wLabel name CDATA #REQUIRED>
+          <!ATTLIST checkbox_wLabel plugin CDATA #IMPLIED>
+          <!ATTLIST checkbox_wLabel options CDATA #IMPLIED>
+        <!ELEMENT radio_btns_wLabel EMPTY>
+          <!ATTLIST radio_btns_wLabel name CDATA #REQUIRED>
+          <!ATTLIST radio_btns_wLabel plugin CDATA #IMPLIED>
+          <!ATTLIST radio_btns_wLabel options CDATA #IMPLIED>
+          <!ATTLIST radio_btns_wLabel group CDATA #REQUIRED>
+        <!ELEMENT button EMPTY>
+          <!ATTLIST button name CDATA #REQUIRED>
+          <!ATTLIST button command (new|open_upload|save_download|save_as_dl|close_file|convert_bfile|                 prepare_statment|log_in|log_out|add_data|query_data|describe_tables|set_up_keys|security_settings|delete_data|update_data|alter_tables|create_tables|create_forms|alter_forms|insert_data_in_forms|create_reports|modify_reports|lexigraphic_checker|ok|cancel) #IMPLIED>
+          <!ATTLIST button plugin CDATA #IMPLIED>
+          <!ATTLIST button options CDATA #IMPLIED>
+        <!ELEMENT slider EMPTY>
+          <!ATTLIST slider min CDATA #REQUIRED>
+          <!ATTLIST slider max CDATA #REQUIRED>
+          <!ATTLIST slider default CDATA #IMPLIED>
+          <!ATTLIST slider plugin CDATA #IMPLIED>
+          <!ATTLIST slider options CDATA #IMPLIED>
+        <!ELEMENT progress_bar EMPTY>
+          <!ATTLIST progress_bar min CDATA #REQUIRED>
+          <!ATTLIST progress_bar max CDATA #REQUIRED>
+          <!ATTLIST progress_bar default CDATA #IMPLIED>
+          <!ATTLIST progress_bar plugin CDATA #IMPLIED>
+          <!ATTLIST progress_bar options CDATA #IMPLIED>
+          <!ATTLIST progress_bar type (vertical|horizontal) #REQUIRED "horizontal" >
+        <!ELEMENT text_field EMPTY>
+          <!ATTLIST text_field name CDATA #REQUIRED>
+          <!ATTLIST text_field spans (10 chars|25 chars|50 chars|100 chars) "50 chars">
+          <!ATTLIST text_field plugin CDATA #REQUIRED>
+          <!ATTLIST text_field options CDATA #REQUIRED>
+        <!ELEMENT date_field EMPTY>
+          <!ATTLIST date_field name CDATA #REQUIRED>
+          <!ATTLIST date_field min CDATA #IMPLIED>
+          <!ATTLIST date_field max CDATA #IMPLIED>
+          <!ATTLIST date_field plugin CDATA #REQUIRED>
+          <!ATTLIST date_field options CDATA #REQUIRED>
+        <!ELEMENT time_field EMPTY>
+          <!ATTLIST time_field name CDATA #REQUIRED>
+          <!ATTLIST time_field min CDATA #IMPLIED>
+          <!ATTLIST time_field max CDATA #IMPLIED>
+          <!ATTLIST time_field plugin CDATA #REQUIRED>
+          <!ATTLIST time_field options CDATA #REQUIRED>
+        <!ELEMENT colour_swatches EMPTY>
+          <!ATTLIST colour_swatches name CDATA #REQUIRED>
+          <!ATTLIST colour_swatches plugin CDATA #REQUIRED>
+          <!ATTLIST colour_swatches options CDATA #IMPLIED>
+          <!ATTLIST colour_swatches max_colours CDATA "12">
+        <!ELEMENT clipboard_entries_list EMPTY>
+          <!ATTLIST clipboard_entries_list command CDATA #FIXED "clipboard_words">
+          <!ATTLIST clipboard_entries_list name CDATA #REQUIRED>
+]>

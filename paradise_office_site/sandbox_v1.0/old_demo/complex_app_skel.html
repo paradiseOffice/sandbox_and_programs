@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+     <title>Paradise Office - AppName</title>
+     <link rel="icon" type="image/jpg" href="UI/logo_favicon.jpg" />
+  <!-- meta bits -->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Hazel Windle" />
+  <meta name="description" content="Linux productivity software to manage simple office tasks. Word processor, spreadsheet, Presenter, and web design tools. Modular and free." />
+  <meta name="keywords" content="Linux,distro,open source, free software, office, productivity" />
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/JavaScript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>
+<script type="text/JavaScript" src="resize-screen.js">
+</script>  
+  <!--CSS parts ================= -->
+     
+     <link rel="stylesheet" type="text/css" href="main-layout.css" />
+     <link rel="stylesheet" type="text/css" href="large-screen.css" />
+</head>
+<body>
+
+<div class="app-window">
+	
+		<div class="title-bar">
+                  <header>Document Title - AppName</header>
+		</div>
+		<div class="menu-bar">
+                  <ul class="menu">
+                       <li class="menuHead"><a class="topMenu" href="#">File</a>
+                          
+                          <ul class="menuBody">
+                            <li><a class="level1-option" href="#">New</a></li>
+                            <li><a class="level1-option" href="#">Open</a></li>
+                            <li><a class="level1-option" id="save" onclick="saveTextAsFile()">Save (download)</a></li>
+                          </ul>
+                          
+                        </li>
+                       <li class="menuHead"><a class="topMenu"  href="#">Edit</a></li>
+                       <li class="menuHead"><a class="topMenu" href="#">View</a></li>
+                       <li class="menuHead"><a class="topMenu" href="#">Something</a></li>
+                       <li class="menuHead"><a class="topMenu" href="#">Help</a></li>
+                    </ul>
+                  </menu>
+		</div>
+		<div class="common-bar">
+                  <table class="common-icons"><tr>
+                    <td id="newFile" class="large-icon"><img src="UI/Large_Icons/bg.png" /></td>
+                    <td id="saveFile" class="large-icon"><button onclick="saveTextAsFile()">Save to File</button></td>
+                    <td  class="large-icon"><img src="UI/Large_Icons/bg.png" /></td>
+                    <td class="large-icon"><img src="UI/Large_Icons/bg.png" /></td>
+                    <td class="large-icon"><img src="UI/Large_Icons/bg.png" /></td>
+                     <td id="newFile" class="large-icon"><img src="UI/Large_Icons/bg.png" /></td>
+                    <td id="openFile" class="large-icon"><img src="UI/Large_Icons/bg.png" /></td>
+                    <td  class="large-icon"><img src="UI/Large_Icons/bg.png" /></td>
+                    <td class="large-icon"><img src="UI/Large_Icons/bg.png" /></td>
+                    <td class="large-icon"><img src="UI/Large_Icons/bg.png" /></td>
+                    </tr>
+                  </table>
+		</div>
+	
+	
+	
+	<div class="clearfix">
+	<div class="window">
+		<div id="viewport" class="viewport" contenteditable>
+
+		</div>
+		<div class="toolbox">
+                  <table id="1st-toolbox">
+                    <tr>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                    </tr>
+                    <tr>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                    </tr>
+                    <tr>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                    </tr>
+                    <tr>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                    </tr>
+                    <tr>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                    </tr>
+                  </table>
+                  <table id="2nd-toolbox">
+                    <tr>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                    </tr>
+                    <tr>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                    </tr>
+                    <tr>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                    </tr>
+                    <tr>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                    </tr>
+                    <tr>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                      <td><img src="UI/Icons/bg.png" /></td>
+                    </tr>
+                  </table>
+                  
+                   
+                  <div id="error-area">
+                    <p>Errors or help msgs.</p>
+                  </div>
+		</div>
+	</div>
+	
+	<div class="clearfix">
+                <footer class="status-bar">
+                  <div id="start-button" class="launcher">Launcher<!-- SVG button --></div>
+                  <div id="message-status" class="statuses">Status</div>
+                </footer>
+        </div>
+	</div>
+</div> 
+
+<script type="text/javascript" src="menu-slider.js">
+</script>
+<script type="text/javascript" src="save_text.js"></script>
+
+</body>
+</html>

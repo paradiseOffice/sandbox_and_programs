@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE file PUBLIC "-//paradise-office//DTD text-processing 1.0//EN" "http://www.linux-paradise.co.uk/development/DTDs/text-processing_1.dtd">
+  <dialog name="Clipboard Entries" type="non-modal">
+    <field_box>  
+      <row num="1">
+        <text_field name="last" plugin="clipboard_words" options="last_item" /><button name="Paste" plugin="paste_words" options="last_item" />
+      </row>
+      <row num="2">
+        <text_field name="4th" plugin="clipboard_words"  options="4th_item" /><button name="Paste" plugin="paste_words" options="4th_item" />
+      </row>
+      <row num="3">
+        <text_field name="3rd" plugin="clipboard_words" options="3rd_item" /><button name="Paste" plugin="paste_words" options="3rd_item" />
+      </row>
+      <row num="4">
+        <text_field name="2nd" plugin="clipboard_words"  options="2nd_item" /><button name="Paste" plugin="paste_words" options="2nd_item" />
+      </row>
+      <row num="5">
+        <text_field name="1st" plugin="clipboard_words" options="1st_item" /><button name="Paste" plugin="paste_words" options="1st_item" />
+      </row>
+    </field_box>
+  </dialog>

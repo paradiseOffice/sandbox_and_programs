@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Software Requirements Specification - Sandbox</title>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8">
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Hazel Windle" />
+  <meta name="description" content="Series of small programs designed to ease the creation of web apps. Office applications based on this system to come soon." />
+  <meta name="keywords" content="open source, web, free software, office suite, toolkit" />
+  <link rel="stylesheet" href="../styles/global_screen.css" media="screen" />
+  <link rel="stylesheet" href="../styles/spec.css" media="screen" />
+</head>
+
+<body class="spec" id="sandbox">
+
+<a href="../index.html"><div class="masthead">
+ <h1>Paradise Software</h1>
+ <h2>Created with privacy and openess in mind </h2>
+ <img src="../ui/colour_trees.png" id="trees" alt="Palm trees" />
+</div></a>
+<div class="toplinks">
+  <div id="features_link"><a href="../feature_tracker.html" title="features">Features</a></div>
+  <div id="dev_link"><a href="../development.html" title="Development Plans">Development</a></div>
+  <div id="doc_link"><a href="../doc_index.html" title="Documentation">Documentation</a></div>
+  <div id="contact_link"><a href="../contact.html" title="contact and bug reports">Contact</a></div>
+  <a href="https://twitter.com/LinuxParadise" id="twit" title="twitter"><img src="../ui/twitter.png" width="80" height="60" alt="Twitter" /></a>
+  <a href="https://diasp.org/u/paradiseoffice" id="diasp" title="diaspora"><img src="../ui/diaspora.png" width="80" height="60" alt="Diaspora" /></a>
+  <a href="https://github.com/paradiseOffice/sandbox_API_v1.0.git" id="git" title="github"><img src="../ui/github.png" width="80" height="60" alt="Github" /></a>
+
+</div>
+
+<div class="content">
+
+  <div class="main-content">
+
+
+<div class="policies">
+<h2>Policies and Tactics</h2>
+<h3>Specific Products to Use</h3>
+  <ul>
+    <li>PHP 5.4.9 or higher</li>
+    <li>Postgresql 9.1</li>
+    <li>Apache 2.2 (because of its resource throttling abilities and plethora of configuration options).</li>
+    <li>OpenSSL (latest patched version)</li>
+    <li>Python 3.3</li>
+    <li>JQuery 1.10.2</li>
+    <li>JQuery UI latest stable version</li>
+    <li>A Python or PHP graphing library</li>
+    <li>Firefox 22 to test everything in, with its Javascript debuggers.</li>
+    <li>Opera 11.60, Firefox 11, Internet Explorer 9, and random 'phones and tablets from Tesco to test with.</li></ul>
+<h3>Engineering Trade Offs</h3>
+<p>I will only convert the binary formats below for now, for this first release as I'm only one woman and I anticipate this will take me a long time. </p>
+<ul><li>Doc format (all these are MS 07, 2000, XP, 2003 formats)</li><li>XLS format</li><li>PPT format</li></ul><p>Other binary formats will be converted from in later releases.</p>
+<h3>Coding Conventions Guidelines</h3>
+<p>Camel case variables, e.g. someVariable. No underscores for variable names, that's for functions. A comment next to each initialised variable describing the data type and use. Names no longer than 30 characters. Functions to be named similar but with the following code prepended, then an underscore and the function name.
+</p>
+<ul>
+  <li>cy (Cygnet Maker)</li>
+  <li>fo (formats)</li>
+  <li>da (data IO)</li>
+  <li>ui (UI widgets)</li>
+  <li>th (threads)</li>
+  <li>ap (appearence)</li>
+</ul>
+<p>Where an OOP approach comes naturally to a program, it will be used. This means if the problem models real world objects and abstractions closely. Two spaces for the indentation in all code and markup. Curly braces to go on separate lines.</p>
+
+<h3>Protocol That Isn't HTTPS</h3>
+<p>LDAP may be used to store calendar information and contacts. The POP, IMAP and SMTP servers may be connected to, to collect email. Plain HTTP will be used for the developer site, www.linux-paradise.co.uk. HTTPS will be used for www.paradise-office.co.uk.</p>
+<h3>Algorithms or Design Patterns</h3>
+<h3>Planning for Requiremnts Tracebility</h3>
+<p>Any feature requirements and their unit tests will be numbered, and a green highlight applied when the test passes. For small bugs, amber will be used. A failed test or missing functions will mean no highlight is applied.</p>
+<h3>Testing the Software</h3>
+<p>The unit test Python module shall be used. For UI tests, a written (on paper) test plan shall be used with boxes for comments.</p>
+<ul><li>Do some regression testing</li><li>Test the whole thing each day or week</li><li>Write the tests before the code</li></ul>
+<h3>Software Maintainence</h3>
+<p>A new requirements specification will be done for each new release. Bugs will be categorised and dealt with, once enough bugs have been fixed, a new point release will come out.</p>
+<h3>Interfaces for End Users</h3>
+<p>Each word will be surrounded by a hash (#) on either side. For instance, #screen[ui]# would be used for a screen layout. The Python Cygnet Maker would parse each of these words as a token. A program maker app in the browser could easily make Cygnet files.</p>
+<h3>Directory Structure for the Source Code</h3>
+<ul>
+  <li>/developer_site</li>
+    <ol>
+    <li>/styles</li>
+    <li>/images (and an images folder in specs)</li>
+    <li>/ui (banners)</li>
+    <li>/contact (mailing list)</li>
+    <li>/specs (version 1)</li>
+    <li>/features (sandbox)</li>
+    <li>/documentation (installation, images)</li>
+    <li>/download </li>
+    </ol>
+  <li>/paradise_office_site</li>
+    <ol>
+    <li>/sandbox_v1.0</li>
+    <ul>
+      <li>/ui_widgets etc</li>
+      <li>/tests (for all)</li>
+    </ul>
+    <li>/pages (first office app)</li>
+    <ul>
+      <li>/layout</li>
+      <li>/print</li>
+      <li>/formatting</li>
+      <li>/modules</li>
+      <li>/language</li>
+    </ul></ol>
+</ul>
+<h3>Compiling the Code</h3>
+<h4>Git Conventions</h4>
+<p>Create a new branch for each new feature, and for when tidying up any rendering issues with browsers (CSS). Upload to the repository once a day, and checkout (download from there) each morning.</p>
+<h3>Cygnet Script</h3>
+<p>A little like #screen[ui]#. Looks for the brackets first after breaking up each word in between hashes. Then searches in the UI section for 'screen', and calls the appropriate function.</p>
+
+</div>
+
+  </div>
+
+
+</div><!-- content -->
+<div class="footer">
+  <p>All content made by Hazel Windle &copy;, 2013.</p>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script></script>
+</body>
+</html>

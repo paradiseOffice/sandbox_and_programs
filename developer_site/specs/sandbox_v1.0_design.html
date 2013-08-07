@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Software Requirements Specification - Sandbox</title>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8">
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Hazel Windle" />
+  <meta name="description" content="Series of small programs designed to ease the creation of web apps. Office applications based on this system to come soon." />
+  <meta name="keywords" content="open source, web, free software, office suite, toolkit" />
+  <link rel="stylesheet" href="../styles/global_screen.css" media="screen" />
+  <link rel="stylesheet" href="../styles/spec.css" media="screen" />
+</head>
+
+<body class="spec" id="sandbox">
+
+<a href="../index.html"><div class="masthead">
+ <h1>Paradise Software</h1>
+ <h2>Created with privacy and openess in mind </h2>
+ <img src="../ui/colour_trees.png" id="trees" alt="Palm trees" />
+</div></a>
+<div class="toplinks">
+  <div id="features_link"><a href="../feature_tracker.html" title="features">Features</a></div>
+  <div id="dev_link"><a href="../development.html" title="Development Plans">Development</a></div>
+  <div id="doc_link"><a href="../doc_index.html" title="Documentation">Documentation</a></div>
+  <div id="contact_link"><a href="../contact.html" title="contact and bug reports">Contact</a></div>
+  <a href="https://twitter.com/LinuxParadise" id="twit" title="twitter"><img src="../ui/twitter.png" width="80" height="60" alt="Twitter" /></a>
+  <a href="https://diasp.org/u/paradiseoffice" id="diasp" title="diaspora"><img src="../ui/diaspora.png" width="80" height="60" alt="Diaspora" /></a>
+  <a href="https://github.com/paradiseOffice/sandbox_API_v1.0.git" id="git" title="github"><img src="../ui/github.png" width="80" height="60" alt="Github" /></a>
+
+</div>
+
+<div class="content">
+
+  <div class="main-content">
+
+<div class="detailed_design">
+<h2>Detailed System Design</h2>
+<h3>Cygnet Maker - Program</h3>
+<dt>Definition:</dt><dd>Reads Cygnet files and outputs HTML, CSS, PHP, Javascript and Python files.</dd>
+<h4>Responsibilities</h4>
+<ul>
+  <li>To put the HTML and other code snippets in the right order.</li>
+  <li>To write standards compliant code that works across many browsers.</li>
+  <li>To encode SQL queries that work in any of the common databases, and that doesn't expose security risks.</li>
+  <li>To take in any options and check them for flaws (using a separate function).</li>
+  <li>To keep the appearence and structural CSS apart at all times.</li>
+  <li>To provide consistent methods of linking programs to options.</li>
+  <li>To provide specific methods of data validation for office and web applications, for example to prevent 'divide by zero' in maths.</li>
+  <li>To provide default JQuery animations for the modern web.</li>
+</ul>
+<h4>Constraints</h4>
+<p>There may be problems with the syntax initially.</p>
+<h4>Composition</h4>
+  <ul>
+    <li>data_validation (classes and methods)</li>
+    <li>options_checker (for each function, binary search)</li>
+    <li>reader (with syntax checker)</li>
+    <li>writer</li></ul>
+<h4>Interactions</h4>
+<p>Reader outputs to the writer. Reader calls the options checker, the writer adds extra data validation calls to methods.</p>
+<h4>Inputs</h4>
+<p>A Cygnet text file with a simple syntax.</p>
+<h4>Processing</h4>
+<p>Use of token processing. Binary search. A bubble sort on the options checker.</p>
+<h4>Exports (Returns)</h4>
+<p>The web application in the folder it is ran in (the current working directory).</p>
+
+<h3>Formats</h3>
+<h4>open_doc</h4>
+  <ul>
+    <li>write_odt</li>
+    <li>read_odt</li>
+    <li>write_ods</li>
+    <li>read_ods</li>
+    <li>write_odp</li>
+    <li>read_odp</li>
+  </ul>
+<h4>standards</h4>
+  <ul>
+    <li>read_text</li>
+    <li>write_text</li>
+    <li>read_html</li>
+    <li>write_html</li>
+  </ul>
+<h4>xml</h4>
+  <ul>
+    <li>write_scrolls_xml</li>
+    <li>read_scrolls_xml</li>
+  </ul>
+<h4>binary</h4>
+  <ul>
+    <li>read_doc</li>
+    <li>write_doc</li>
+    <li>read_xls</li>
+    <li>write_xls</li>
+    <li>read_ppt</li>
+    <li>write_ppt</li>
+  </ul>
+
+<h3>Data_IO</h3>
+<h4>files</h4>
+  <ul>
+    <li>new</li>
+    <li>open_upload</li>
+    <li>save_download</li>
+    <li>save_as_dl</li>
+    <li>close_file</li>
+    <li>convert_bfile</li>
+  </ul>
+<h4>databases</h4>
+  <ul>
+    <li>prepare_statment</li>
+    <li>log_in</li>
+    <li>log_out</li>
+    <li>add_data</li>
+    <li>query_data</li>
+    <li>describe_tables</li>
+    <li>set_up_keys</li>
+    <li>security_settings</li>
+    <li>delete_data</li>
+    <li>update_data</li>
+    <li>alter_tables</li>
+    <li>create_tables</li>
+    <li>create_forms</li>
+    <li>alter_forms</li>
+    <li>insert_data_in_forms</li>
+    <li>create_reports</li>
+    <li>modify_reports</li>
+</ul>
+<h3>UI_Widgets</h3>
+<h4>layout</h4>
+  <ul>
+    <li>simple_phone_200w</li>
+    <li>simple_tablet_500w</li>
+    <li>simple_screen_650w</li>
+    <li>simple_large_screen_800w</li>
+    <li>modern_phone_500w</li>
+    <li>modern_tablet_800w</li>
+    <li>modern_screen_950w</li>
+    <li>modern_large_screen_1200w</li>
+  </ul>
+<h4>container_elements</h4>
+<ul>
+  <li>menu_bar</li>
+  <ul><li>menu</li>
+    <ul><li>sub_menu</li>
+      <ul><li>menu_item</li>
+	</ul></ul></ul>
+  <li>common_bar</li>
+  <ul><li>large_icon</li>
+    <ul><li>quick_menu</li>
+      </ul></ul>
+  <li>tool_pane</li>
+  <ul><li>tool_box</li>
+    <ul><li>icon</li>
+      </ul></ul>
+  <li>file_port</li>
+  <ul><li>page</li>
+    <li>calendar</li>
+    <li>tabular</li>
+    <ul><li>context_menu</li>
+      <li>lexigraphic_checker</li>
+      </ul></ul>
+  <li>help_box (help_message in appearence)</li>
+</ul>
+<h4>dialogs</h4>
+<ul>
+    
+  <li>dialog_box</li>
+  <ul><li>tab</li>
+    <li>field_box</li>
+    <li>font_preview</li>
+    <li>pic_preview</li>
+    <li>text_preview</li>
+    <li>other user controls except update_status_msgs</li>
+    </ul>
+  <li>print_view</li>
+</ul>
+
+<h4>labels</h4>
+<ul>
+  <li>heading_label</li>
+  <li>separator</li>
+  <li>label</li>
+</ul>
+
+<h4>user_controls</h4>
+<ul>
+  <li>color_picker</li>
+  <li>checkbox_wLabel</li>
+  <li>radio_btns_wLabel</li>
+  <li>button</li>
+  <li>icon</li>
+  <li>large_icon</li>
+  <li>slider</li>
+  <li>combo_box</li>
+  <li>spinbox</li>
+  <li>progress_bar</li>
+  <li>tool_tip</li>
+  <li>text_field<li>
+  <li>long_text_field</li>
+  <li>date_field</li>
+  <li>time_field</li>
+  <li>url_field</li>
+  <li>email_field</li>
+  <li>whole_num_field</li>
+  <li>currency_field</li>
+  <li>float_field</li>
+  <li>sci_num_field</li>
+  <li>colour_swatches</li>
+  <li>upload_pic</li>
+  <li>upload_text</li>
+  <li>clipboard_entries_list</li>
+  <li>update_status_msgs</li>
+</ul>
+
+<h3>Threads</h3>
+<h4>events</h4>
+<h5>mouse</h5>
+<ul>
+  <li>ok</li>
+  <li>cancel</li>
+  <li>left_click</li>
+  <li>wheel_down</li>
+  <li>wheel_up</li>
+  <li>wheel_left</li>
+  <li>wheel_right</li>
+  <li>wheel_mid_click</li>
+  <li>right_click</li>
+  <li>double_click</li>
+  <li>triple_click</li>
+  <li>left_drag</li>
+  <li>left_drop</li>
+  <li>right_drag</li>
+  <li>right_drop</li>
+</ul>
+<h5>keypad</h5>
+<ul>
+  <li>kpad_left</li>
+  <li>kpad_right</li>
+  <li>kpad_up</li>
+  <li>kpad_down</li>
+</ul>
+<h5>main_keys</h5>
+<ul>
+  <li>cursor_up</li>
+  <li>cursor_down</li>
+  <li>cursor_left</li>
+  <li>cursor_right</li>
+  <li>enter</li>
+  <li>escape</li>
+  <li>page_down</li>
+  <li>page_up</li>
+  <li>end</li>
+  <li>insert</li>
+  <li>home </li>
+  <li>print_scr</li>
+  <li>delete</li>
+  <li>backspace</li>
+  <li>spaceb_repeat</li>
+  <li>F1</li>
+  <li>F4</li>
+  <li>F6</li>
+  <li>F7</li>
+  <li>F8</li>
+  <li>F9</li>
+  <li>F10</li>
+  <li>F12</li>
+  <li>windows</li>
+  <li>alt_gr</li>
+  <li>right_btn_key</li>
+</ul>
+<h5>system</h5>
+<ul>
+  <li>sudden_exit</li>
+  <li>crap_browser</li>
+  <li>no_javascript</li>
+</ul>
+<h4>main</h4>
+<h4>processing</h4>
+<ul><li>py_linker</li></ul>
+<h3>Appearence</h3>
+<h4>messaging</h4>
+  <ul>
+    <li>error_box</li>
+    <li>error_message</li>
+    <li>info_message</li>
+    <li>help_message</li>
+    <li>status_message</li>
+    <li>long_tool_tips</li>
+  </ul>
+<h4>themes</h4>
+<ul>
+  <li>default_pro_theme</li>
+  <li>small, medium, default, large, xlarge theme sizes (separate sheet)</li>
+</ul>
+
+</div>
+
+  </div>
+
+
+  </div>
+</div><!-- content -->
+<div class="footer">
+  <p>All content made by Hazel Windle &copy;, 2013.</p>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script></script>
+</body>
+</html>

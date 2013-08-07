@@ -1,0 +1,12 @@
+.status-bar { height: 26;  font-size: 10pt; }
+header { height: 24; font-size: 10pt; }
+.menu, .menu li { height: 36; } 
+.topLevelMenu { width: 120; }
+
+.common-icons tr { height: 36; } /* height of the common bar icons. */
+
+.large-icon td {  width: 100;  } /* width of each common bar icon and height */
+.large-icon img {  width: 100; height: 36; }
+.toolbox table tr { height: 36; } /* toolbox icon height */
+.toolbox table tr td { width: 36; } /* toolbox icon width */
+.toolbox table tr td img { width: 36; height: 36; }

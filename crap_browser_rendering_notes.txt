@@ -1,0 +1,24 @@
+1. Javascript menus render in the wrong location, higher up and to the left. 
+2. Javascript twitter embed is empty
+3. twitter site very plain, no Paradise branding
+4. Blog looks shit, no content or branding
+5. Diaspora logo jaggeys on rainbow, no content. Github link though.
+6. Rainbow isn't there, or header background of palm trees.
+7. No background colour or gradient either.
+8. Header text is the wrong colour.
+9. No shadow on the header text.
+10. Link bar not all grey straight across.
+11. Links look plain and dull. Text isn't right in the middle.
+12. Bullets in the sub link menus.
+13. Text overruns sub link items.
+14. The javascript kicks off on only short hovers, it should wait a bit.
+15. No custom bullets.
+16. Footer isn't placed right on the bottom, at the end of content instead.
+17. My old email addy is in the footer.
+18. Fig caption is in the left instead of in the centre.
+19. Javascript menus still a bit licky.
+20. Unstyled contact form.
+21. Missing and errornous content everywhere.
+22. Wrong bloody emails.
+23. No media wiki thingy.
+24. No github repo or bug tracker setup.

@@ -1,0 +1,1845 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Software Requirements Specification - Sandbox</title>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8">
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Hazel Windle" />
+  <meta name="description" content="Series of small programs designed to ease the creation of web apps. Office applications based on this system to come soon." />
+  <meta name="keywords" content="open source, web, free software, office suite, toolkit" />
+  <link rel="stylesheet" href="../styles/global_screen.css" media="screen" />
+  <link rel="stylesheet" href="../styles/spec.css" media="screen" />
+</head>
+
+<body class="spec" id="sandbox">
+
+<a href="../index.html"><div class="masthead">
+ <h1>Paradise Software</h1>
+ <h2>Created with privacy and openess in mind </h2>
+ <img src="../ui/colour_trees.png" id="trees" alt="Palm trees" />
+</div></a>
+<div class="toplinks">
+  <div id="features_link"><a href="../feature_tracker.html" title="features">Features</a></div>
+  <div id="dev_link"><a href="../development.html" title="Development Plans">Development</a></div>
+  <div id="doc_link"><a href="../doc_index.html" title="Documentation">Documentation</a></div>
+  <div id="contact_link"><a href="../contact.html" title="contact and bug reports">Contact</a></div>
+  <a href="https://twitter.com/LinuxParadise" id="twit" title="twitter"><img src="../ui/twitter.png" width="80" height="60" alt="Twitter" /></a>
+  <a href="https://diasp.org/u/paradiseoffice" id="diasp" title="diaspora"><img src="../ui/diaspora.png" width="80" height="60" alt="Diaspora" /></a>
+  <a href="https://github.com/paradiseOffice/sandbox_API_v1.0.git" id="git" title="github"><img src="../ui/github.png" width="80" height="60" alt="Github" /></a>
+
+</div>
+
+<div class="content">
+
+  <div class="main-content">
+
+<div class="subsystem_details">
+<h1>Detailed Subsystem Design</h1>
+<h2 class="detailed_outline">formats/open_doc/</h2>
+  <h3 class="detailed_outline">write_odt</h3>
+    <dt>Definition</dt>
+    <dd>Writes out odt files from what is currently entered by the user in the file area. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called from save, save as.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>An odt .tar.gz file with xml documents and any pictures. The user supplies a file name and location.</p>
+  <h3 class="detailed_outline">read_odt</h3>
+    <dt>Definition</dt>
+    <dd>Reads in an odt file. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called from open or convert</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>An xml viewable and formatted representation of the document in the fileport.</p>
+
+  <h3 class="detailed_outline">write_ods</h3>
+    <dt>Definition</dt>
+    <dd>Writes out ods files from what is currently entered by the user in the file area. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>An ods .tar.gz file with xml documents and any extra bits. The user supplies a file name and location.</p>
+
+  <h3 class="detailed_outline">read_ods</h3>
+    <dt>Definition</dt>
+    <dd>Reads in an ods spreadsheet file into the fileport, which is the tabular type. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called from open.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>An xml viewable and formatted representation of the document in the fileport.</p>
+
+  <h3 class="detailed_outline">write_odp</h3>
+    <dt>Definition</dt>
+    <dd>Writes out an odp file from what the user has entered in the file port. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called from save, save as.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>An odp presentation file that's compressed, with xml files and any images. The user supplies a filename and location.</p>
+  <h3 class="detailed_outline">read_odp</h3>
+    <dt>Definition</dt>
+    <dd>Reads in an odp presentation into the fileport. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called from open. </p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>An xml viewable and formatted representation of the document in the fileport.</p>
+
+<h2 class="detailed_outline">formats/standards/</h2>
+  <h3 class="detailed_outline">read_text</h3>
+    <dt>Definition</dt>
+    <dd>Reads in text and displays in the fileport. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called from open.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>The text wrapped in the file port with a font style applied. Any weird characters converted into HTML character codes.</p>
+  <h3 class="detailed_outline">write_text</h3>
+    <dt>Definition</dt>
+    <dd>Writes out to a text file, in UTF-8. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called from save, save as, or convert.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A .txt file in UTF-8 with unix line endings by default, and with HTML characters converted back.</p>
+
+  <h3 class="detailed_outline">read_html</h3>
+    <dt>Definition</dt>
+    <dd>Passes HTML into the fileport, along with relevant styles. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called with open. </p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>HTML in the file port.</p>
+
+  <h3 class="detailed_outline">write_html</h3>
+    <dt>Definition</dt>
+    <dd>Writes out HTML to a .zip file. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called from save, save as</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>An HTML file with separate CSS, and an images folder, compressed to a .zip file.</p>
+
+<h2 class="detailed_outline">formats/xml/</h2>
+  <h3 class="detailed_outline">write_scrolls_xml</h3>
+    <dt>Definition</dt>
+    <dd>Writes to the Scrolls xml format, which represents a book in xml and xlst. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called from the save, save as functions in publishing programs.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A compressed zip file containing xml files, and an images folder.</p>
+
+  <h3 class="detailed_outline">read_scrolls_xml</h3>
+    <dt>Definition</dt>
+    <dd>Reads in the xml and displays it in the viewport. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called with open. </p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>The file displayed correctly on screen. </p>
+
+<h2 class="detailed_outline">formats/binary/</h2>
+  <h3 class="detailed_outline">read_doc</h3>
+    <dt>Definition</dt>
+    <dd>Converts a doc file to HTML and displays it in the file port. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called from open or convert. </p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>The file displayed in HTML in the file port.</p>
+
+  <h3 class="detailed_outline">write_doc</h3>
+    <dt>Definition</dt>
+    <dd>Converts the HTML in the file port to doc. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called from save, save as.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A .doc file compatible with Microsoft Office 1997/2000/2003/XP and above.</p>
+
+  <h3 class="detailed_outline">read_xls</h3>
+    <dt>Definition</dt>
+    <dd>Converts a xls file to xml and displays it in the file port. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called with open or convert.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>The file displayed in xml in the file port in a table view. </p>
+
+  <h3 class="detailed_outline">write_xls</h3>
+    <dt>Definition</dt>
+    <dd>Converts the xml in the file port to xls. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called from save, save as.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A .xls file compatible with Microsoft Office 1997/2000/2003/XP and above.</p>
+
+  <h3 class="detailed_outline">read_ppt</h3>
+    <dt>Definition</dt>
+    <dd>Converts the ppt file to HTML and displays in the file port. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called with open or convert.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>The HTML, in the file port.</p>
+
+  <h3 class="detailed_outline">write_ppt</h3>
+    <dt>Definition</dt>
+    <dd>Converts the HTML in the file port to ppt. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Called with save, save as. </p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A .ppt file compatible with Microsoft Office 1997/2000/2003/XP and above.</p>
+
+<h2 class="detailed_outline">data_IO/files/</h2>
+  <h3 class="detailed_outline">new</h3>
+    <dt>Definition</dt>
+    <dd>Creates a new file. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>None</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A blank HTML file for page file ports, xml for tablular or calendar file ports.</p>
+
+  <h3 class="detailed_outline">open_upload</h3>
+    <dt>Definition</dt>
+    <dd>Uploads a file that the user chooses. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>The formats are called depending on the file ending and binary magic number.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A formatted file in the file port. </p>
+
+  <h3 class="detailed_outline">save_download</h3>
+    <dt>Definition</dt>
+    <dd>Downloads a file to a directory the user selects, with their chosen file name and file type. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>The formats are called according to the file type selected.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A saved file of .ods, .odt, odp, txt, zip(html), zip(scrolls_xml), doc, xls, ppt types.</p>
+
+  <h3 class="detailed_outline">save_as_dl</h3>
+    <dt>Definition</dt>
+    <dd>Downloads a file with a different name, location or file type than the original.</dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>The formats are called according to the file type selected.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A saved file of .ods, .odt, odp, txt, zip(html), zip(scrolls_xml), doc, xls, ppt types.</p>
+
+  <h3 class="detailed_outline">close_file</h3>
+    <dt>Definition</dt>
+    <dd>Closes a file and creates a new one. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Calls new. </p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>None</p>
+
+  <h3 class="detailed_outline">convert_bfile</h3>
+    <dt>Definition</dt>
+    <dd>Converts a binary file that's already opened. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>None</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>The file type the user selects, in the current document window. The user then has to save it.</p>
+ 
+<h2 class="detailed_outline">data_IO/databases/</h2>
+  <h3 class="detailed_outline">prepare_statement</h3>
+    <dt>Definition</dt>
+    <dd>Prepares a SQL statement by wrapping it in PDO code to prevent cross site scripting. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>With database functions that use SQL queries.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A query ready to be used by the database engine.</p>
+
+  <h3 class="detailed_outline">log_in</h3>
+    <dt>Definition</dt>
+    <dd>Log in to a database, on an application server or on a separate database server. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Status checked by log out.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A database connection with a 0 for success, 1 for failiure.</p>
+
+  <h3 class="detailed_outline">log_out</h3>
+    <dt>Definition</dt>
+    <dd>Log out of a database, either on a Paradise server or a separate database server. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Sees if log in's status is a success before disconnecting.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A message indicating success or failiure. </p>
+
+  <h3 class="detailed_outline">add_data</h3>
+    <dt>Definition</dt>
+    <dd>Inserts records of data into a database. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Calls prepare_statement
+      Requires a database connection, which is provided by 'log_in'</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A message indicating the number of records added. 0 for success, 1 for failiure.</p>
+
+  <h3 class="detailed_outline">query_data</h3>
+    <dt>Definition</dt>
+    <dd>Finds data with select. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Calls prepare_statement, requires a connection, provided by 'log_in'. </p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A message stating the no of records found. Returns 0 for failiure.</p>
+
+  <h3 class="detailed_outline">describe_tables</h3>
+    <dt>Definition</dt>
+    <dd>Shows the user what columns and enumerated values exist for each table. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Calls prepare_statement</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>Outputs a table with the details for each table.</p>
+
+  <h3 class="detailed_outline">set_up_keys</h3>
+    <dt>Definition</dt>
+    <dd>Allows the user to set and modify primary and foreign keys. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Calls prepare_statement. Affects query_data, add_data, update_data, delete_data.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>An indexed message, and an explanation of the change made. Returns 0 for success, failiure is 1.</p>
+  <h3 class="detailed_outline">security_settings</h3>
+    <dt>Definition</dt>
+    <dd>Set up users, groups (or roles) to access parts of the database. </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Calls prepare_statement</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A message regarding the grants/revokes. 0 for success, 1 for failiure.</p>
+
+  <h3 class="detailed_outline">delete_data</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Calls prepare_statement </p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>Returns the number of rows removed as a message. 0 for success, 1 for failiure.</p>
+
+  <h3 class="detailed_outline">update_data</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Calls prepare_statement </p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>Returns the number of rows updated as a message. 0 for success, 1 for failiure.</p>
+
+  <h3 class="detailed_outline">alter_tables</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Calls prepare_statement, calls describe_tables (table altered). </p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A message saying success, along with the table description view. 0 for success, 1 for failiure.</p>
+
+  <h3 class="detailed_outline">create_tables</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Calls prepare_statement </p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A message saying 'table made', 0 for success, 1 for failiure. </p>
+
+  <h3 class="detailed_outline">create_forms</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Some elements of ui_widgets. Cygnet data validation bits.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A completed HTML 5 form with jQuery and CSS (inline). Can be saved to HTML only.</p>
+
+  <h3 class="detailed_outline">alter_forms</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Some elements of ui_widgets. Cygnet data validation bits.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>An edited form in the file port.</p>
+
+  <h3 class="detailed_outline">insert_data_in_forms</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Calls add_data. </p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>The number of rows inserted, and success or failiure message.</p>
+
+  <h3 class="detailed_outline">create_reports</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Calls query_data. Calls query_data to fetch all the field names.</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>Prints the records of data out either with big boxes, small boxes or in a predefined layout template. Saves to HTML 5 and CSS/jQuery (inline).</p>
+
+  <h3 class="detailed_outline">modify_reports</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Open a report. Calls query_data. </p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A modified HTML 5 and CSS report with jQuery bits inline.</p>
+
+<h2 class="detailed_outline">ui_Widgets/layout/</h2>
+  <h3 class="detailed_outline">simple_phone_200w</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A javascript-less XHTML layout without a menu bar, only a common bar with 5 buttons. Simple apps only.</p>
+
+  <h3 class="detailed_outline">simple_tablet_500w</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A layout in XHTML without javascript, with only a menu bar and common bar with 7 buttons at most.</p>
+
+  <h3 class="detailed_outline">simple_screen_650w</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A layout in XHTML without javascript, with the tool pane, menu bar and common bar with 8 buttons at most.</p>
+
+  <h3 class="detailed_outline">simple_large_screen_800w</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A layout in XHTML without javascript, with the tool pane, menu bar and common bar with 10 buttons at most.</p>
+
+  <h3 class="detailed_outline">modern_phone_500w</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A layout in HTML 5, CSS 3 and jQuery, with only a menu bar and common bar with 7 buttons at most.</p>
+
+  <h3 class="detailed_outline">modern_tablet_800w</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A layout in HTML 5, CSS 3 and jQuery, with a tool pane, menu bar and common bar with 10 buttons at most.</p>
+
+  <h3 class="detailed_outline">modern_screen_950w</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A layout in HTML 5, CSS 3 and jQuery, with a tool pane, menu bar and common bar with 11 buttons at most.</p>
+
+  <h3 class="detailed_outline">modern_large_screen_1200w</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A layout in HTML 5, CSS 3 and jQuery, with a tool pane, menu bar and common bar with 13 buttons at most.</p>
+
+<h2 class="detailed_outline">ui_widgets/container_elements/</h2>
+  <h3 class="detailed_outline">menu_bar</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A HTML, CSS menu bar that is below the header bar.</p>
+
+  <h3 class="detailed_outline">subcomponent - menu</h3>
+     <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A HTML, CSS menu in a ul structure.</p>
+
+    <h4 class="detailed_outline">subcomponent - sub_menu</h4>
+        <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A HTML, CSS menu in a ol structure. No other levels of sub menus.</p>
+
+      <h5 class="detailed_outline">subcomponent - menu_item</h5>
+         <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <p>Calls py_linker</p>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>An HTML link with CSS 2.1, runs another program. Translatable</p>
+
+  <h3 class="detailed_outline">common_bar</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A HTML and CSS 2.1 area for just large_icon buttons. </p>
+
+  <h3 class="detailed_outline">subcomponent - large_icon</h3>see ui_widgets/user_controls/large_icon
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4 class="detailed_outline">subcomponent - quick_menu</h4>
+      <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A HTML menu in a ul list. Only a maximum of 5 menu_items on each with no icons.</p>
+
+  <h3 class="detailed_outline">tool_pane</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>An HTML area on the right side full of icons contained within a tool box. </p>
+
+  <h3 class="detailed_outline">subcomponent - tool_box</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A HTML box with absolute positioning to contain icons (also with absolute positioning).</p>
+
+    <h4 class="detailed_outline">subcomponent - icon</h4>see ui_widgets/user_controls/icon
+      <dt>Definition</dt>
+    <dd> </dd>
+    
+  <h3 class="detailed_outline">file_port</h3>
+  <h3 class="detailed_outline">subcomponent - page</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A large HTML div with contenteditable set, or an ultra large text area for mobile phone compatibility.</p>
+
+    <h3 class="detailed_outline">subcomponent - calendar</h3>
+      <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A calendar based day, week or month layout with times and pop up next month previous month bits. See Google Calendar for what I mean.</p>
+
+    <h3 class="detailed_outline">subcomponent - tabular</h3>
+      <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A table with or without row and column reference letters/numbers. A separate area for a heading.  </p>
+
+      <h4 class="detailed_outline">subcomponent - context_menu</h4>
+        <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>A small 6 menu item context menu in HTML 5 and CSS 3, jQuery.</p>
+
+      <h4 class="detailed_outline">subcomponent - lexigraphic_checker</h4>
+        <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>Marks wrongly spelt words and provides simple corrections even in programming languages.</p>
+
+  <h3 class="detailed_outline">help_box (help_message in appearence)</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <p>An area in HTML for help and information messages to go into. </p>
+
+<h2 class="detailed_outline">ui_widgets/dialogs/</h2>
+  <h3 class="detailed_outline">dialog_box</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <h3 class="detailed_outline">subcomponent - tab</h3>
+      <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <h3 class="detailed_outline">subcomponent - field_box</h3>
+      <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <h4 class="detailed_outline">subcomponent - font_preview</h4>
+      <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <h4 class="detailed_outline">subcomponent - pic_preview</h4>
+      <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+    <h4 class="detailed_outline">subcomponent -text_preview</h4>
+      <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">print_view</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+<h2 class="detailed_outline">ui_widgets/labels/</h2>
+  <h3 class="detailed_outline">heading_label</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">separator</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">label</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+
+<h2 class="detailed_outline">ui_widgets/user_controls/</h2>
+<h3 class="detailed_outline">color_picker</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">checkbox_wLabel</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">radio_btns_wLabel</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">button</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">icon</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">large_icon</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">slider</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">combo_box</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">spinbox</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">progress_bar</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">tool_tip</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">text_field<h3>
+      <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">long_text_field</h3>
+     <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">date_field</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">time_field</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">url_field</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">email_field</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">whole_num_field</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">currency_field</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">float_field</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">sci_num_field</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">colour_swatches</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">upload_pic</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">upload_text</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">clipboard_entries_list</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">update_status_msgs</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+
+<h2 class="detailed_outline">threads/events/</h2>
+<h3 class="detailed_outline">mouse</h3>
+  <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - ok</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - cancel</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - left_click</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - wheel_down</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - wheel_up</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - wheel_left</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - wheel_right</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - wheel_mid_click</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - right_click</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - double_click</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - triple_click</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - left_drag</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - left_drop</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - right_drag</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - right_drop</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+<h3 class="detailed_outline">keypad</h3>
+  <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - kpad_left</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - kpad_right</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - kpad_up</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - kpad_down</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+<h3 class="detailed_outline">main_keys</h3>
+  <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - cursor_up</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - cursor_down</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - cursor_left</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - cursor_right</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - enter</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - escape</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - page_down</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - page_up</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - end</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - insert</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - home </h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - print_scr</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - delete</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - backspace</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - spaceb_repeat</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - F1</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - F4</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - F6</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - F7</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - F8</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - F9</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - F10</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - F12</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - windows</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - alt_gr</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - right_btn_key</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+<h3 class="detailed_outline">system</h3>
+  <h4 class="detailed_outline">subcomponent - sudden_exit</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - crap_browser</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h4 class="detailed_outline">subcomponent - no_javascript</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+
+<h3 class="detailed_outline">main</h3>
+<h3 class="detailed_outline">processing</h3>
+  <h4 class="detailed_outline">py_linker (links programs to events)</h4>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+
+<h2 class="detailed_outline">appearence/messaging/</h2>
+  <h3 class="detailed_outline">error_box</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">error_message</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">info_message</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">help_message</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">status_message</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">long_tool_tips</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+<h2 class="detailed_outline">appearence/themes/</h2>
+  <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">default_pro_theme</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+  <h3 class="detailed_outline">sizes</h3>
+    <dt>Definition</dt>
+    <dd> </dd>
+    <h4>Responsibilities</h4>
+    <h4>Constraints</h4>
+    <h4>Composition</h4>
+    <h4>Interactions</h4>
+    <h4>Inputs</h4>
+    <h4>Processing</h4>
+    <h4>Exports (Returns)</h4>
+
+</div>
+
+  </div>
+
+
+</div><!-- content -->
+<div class="footer">
+  <p>All content made by Hazel Windle &copy;, 2013.</p>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script></script>
+</body>
+</html>

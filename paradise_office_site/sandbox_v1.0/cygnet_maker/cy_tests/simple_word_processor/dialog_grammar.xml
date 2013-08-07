@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE file PUBLIC "-//paradise-office//DTD text-processing 1.0//EN" "http://www.linux-paradise.co.uk/development/DTDs/text-processing_1.dtd">
+  <dialog type="modal" name="Grammar check">
+    <field_box>
+      <row num="1">
+        <long_text_field type="read-only" spans="3 rows" name="errors"
+        command="lexigraphic_checker" options="error_array" />
+        <button name="Next" command="lexigraphic_checker"
+        options="error_array_next" />
+      </row>
+      <row num="2">
+        <button name="Back" command="lexigraphic_checker"
+        options="error_array_back" />
+      </row>
+      <row num="3">
+        <label plugin="lexigraphic_checker" options="grammar_problem" />
+        <button name="Edit" command="long_text_field" options="errors" />
+      </row>
+      <row num="4"></row>
+    </field_box>
+      
+    <button name="OK" command="ok" /><button name="Cancel" command="cancel" />
+  </dialog>

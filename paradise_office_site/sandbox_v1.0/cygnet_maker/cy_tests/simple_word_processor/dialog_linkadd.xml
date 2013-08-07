@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE file PUBLIC "-//paradise-office//DTD text-processing 1.0//EN" "http://www.linux-paradise.co.uk/development/DTDs/text-processing_1.dtd">
+  <dialog type="modal" name="Add link">
+    <field_box>
+      <row num="1">
+        <label name="Web address" />
+        <url_field name="URL" spans="100 chars" plugin="add_link" />
+      </row>
+    </field_box>
+      
+    <button name="OK" command="ok" /><button name="Cancel" command="cancel" />
+  </dialog>

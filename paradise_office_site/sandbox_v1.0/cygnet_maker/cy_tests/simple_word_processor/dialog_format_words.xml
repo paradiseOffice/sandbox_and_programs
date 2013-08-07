@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE file PUBLIC "-//paradise-office//DTD text-processing 1.0//EN" "http://www.linux-paradise.co.uk/development/DTDs/text-processing_1.dtd">
+  <dialog type="non-modal" name="Format Words or Letters">
+    <field_box>
+      <row num="1">
+        <control name="Font: " plugin="format_words"><combo_box type="drop down"
+        command="font_preview" /></control>
+      </row>
+      <row num="2">
+        <label name="Size: " /><spinbox default="12" step_size="1"
+        plugin="format_words" options="font_size" /><label name="pt" />
+        <control name="Text colour">
+        <combo_box type="drop down" pic="text_colour.png" plugin="format_words" />
+        </control>
+        <control name="Highlight colour" spans="1 icon">
+        <combo_box type="drop down" pic="highlight_colour.png"
+        plugin="format_words" />
+      </row>
+      <row num="3">
+        <button name="Add colours" plugin="add_colours"
+        command="color_picker" />
+        <icon name="bold" acckey="Ctrl + B" pic="text_bold.png"
+        plugin="format_words" />
+        <icon name="underline" acckey="Ctrl + U" pic="text_underline.png"
+        plugin="format_words" />
+        <icon name="italic" acckey="Ctrl + I" pic="text_italic.png"
+        plugin="format_words" />
+      </row>
+    </field_box>
+    <field_box>
+      <row num="4">
+        <radio_btns_wLabel group="cases" name="UPPERCASE" plugin="format_words"
+        options="upper" />
+        <radio_btns_wLabel group="scripts" name="Superscript"
+        plugin="format_words" options="superscript" />
+      </row>
+      <row num="5">
+        <radio_btns_wLabel group="cases" name="lowercase" plugin="format_words"
+        options="lower" />
+        <radio_btns_wLabel group="scripts" name="Subscript"
+        plugin="format_words" options="subscript" />
+      </row>
+      <row num="6">
+        <radio_btns_wLabel group="cases" name="Title Case" plugin="format_words"
+        options="title" />
+      </row>
+    </field_box>
+
+    <button name="OK" command="ok" /><button name="Cancel" command="cancel" />
+  </dialog>
