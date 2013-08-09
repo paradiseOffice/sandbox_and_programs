@@ -1,0 +1,19 @@
+.title_bar { height: 36px; }
+.title_bar h1 { font-size: 14pt; font-family: arial, sans-serif;
+  margin-bottom: 2px; margin-right: 2px; 
+}
+
+.status-bar { height: 40px; font-size: 16pt; }
+
+ul.menu { height: 52px; width: 180px; border: solid black 1px; } 
+.topLevelMenu { width: 180px; }
+
+.large_icon {  height: 52px;  width: 180px; border: solid blue 1px; } /* width of each common bar icon and height */
+#large_icon1 { left: 200px; top: 0px; }
+#large_icon2 { left: 380px; top: 0px; }
+#large_icon3 { left: 560px; top: 0px; }
+#large_icon4 { left: 740px; top: 0px; }
+
+
+.toolbox table tr { } /* toolbox icon height */
+.toolbox table tr td { height: 64;  width: 64; } /* toolbox icon width */
