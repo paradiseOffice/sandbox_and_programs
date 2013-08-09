@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE file PUBLIC "-//paradise-office//DTD text-processing 1.0//EN" "http://www.linux-paradise.co.uk/development/DTDs/text-processing_1.dtd">
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE dialog PUBLIC "-//paradise-office//DTD cygnet-dialog 0.1//EN" "http://www.linux-paradise.co.uk/DTDs/cygnet/dialogs.dtd">
   <dialog type="modal" name="Add link">
     <field_box>
       <row num="1">

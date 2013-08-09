@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE file PUBLIC "-//paradise-office//DTD text-processing 1.0//EN" "http://www.linux-paradise.co.uk/development/DTDs/text-processing_1.dtd">
+<!DOCTYPE program PUBLIC "-//paradise-office//DTD cygnet-application 0.1//EN" "http://www.linux-paradise.co.uk/DTDs/cygnet/application.dtd">
   <program>
     <meta-information>
-
       <app_info>
-	<name>Simple Word Processor</name>
-	<description>Edit and create short texts.</description>
-	<created date="20130724" />
-	<modified date="20130727" />
-	</app_info>
+        <name>Simple Word Processor</name>
+        <description>Edit and create short texts.</description>
+        <created date="20130724" />
+        <modified date="20130727" />
+      </app_info>
       <author_info> 
-	<name>Hazel Windle</name>
-	<email>lead-dev@linux-paradise.co.uk</email>
-	<company>Paradise Software</company>
+        <name>Hazel Windle</name>
+        <email>lead-dev@linux-paradise.co.uk</email>
+        <company>Paradise Software</company>
       </author_info>
       <security> 
-	<encryption method="md5" />
-	<keyfile link="x.md5" />
-	<originating domain="http://www.paradise-office.co.uk" />
+        <encryption method="md5" />
+        <keyfile link="check_20130809.md5" />
+        <originating domain="http://www.paradise-office.co.uk" />
       </security>
       <language locale="en-gb" text="en-gb" direction="ltr" />
-
     </meta-information>
 
     <formats>
@@ -42,27 +40,27 @@
 	  <menu_item name="Open" acckey="Ctrl + O" command="open_upload" open_browser="upload_box" />
 	  <menu_item name="Save" acckey="Ctrl + S" command="save_download" open_browser="download_box" />
 	  <menu_item name="Save As" acckey="Ctrl Shift + A" command="save_as_dl" opens_dialog="dialog_saveas.xml" />
-	  <menu_item name="Convert File" command="convert_bfile" opens_dialog="dialog_convert.xml" />
-	  <menu_item name="Print Preview" command="print_view" opens_dialog="dialog_print_preview.xml" />
+	  <menu_item name="Convert File" acckey="Alt + V" command="convert_bfile" opens_dialog="dialog_convert.xml" />
+	  <menu_item name="Print Preview" acckey="Alt + P" command="print_view" opens_dialog="dialog_print_preview.xml" />
 	  <menu_item name="Print" acckey="Ctrl + P" plugin="print" open_browser="print_box" />
 	  <menu_item name="Close File" acckey="Ctrl + W" command="close_file" opens_dialog="dialog_confirm.xml" />
         </menu>
         <menu name="Edit" acckey="E">
-          <menu_item name="Cut" acckey="Ctrl + x" plugin="cut_words" />
-          <menu_item name="Copy" acckey="Ctrl + c" plugin="copy_words" />
-	  <menu_item name="Paste" acckey="Ctrl + v" plugin="paste_words" />
-	  <menu_item name="Clipboard" acckey="Ctrl Shift + v" plugin="clipboard_words" opens_dialog="dialog_clipboard.xml" />
+          <menu_item name="Cut" acckey="Ctrl + X" plugin="cut_words" />
+          <menu_item name="Copy" acckey="Ctrl + C" plugin="copy_words" />
+	  <menu_item name="Paste" acckey="Ctrl + V" plugin="paste_words" />
+	  <menu_item name="Clipboard" acckey="Ctrl Shift + V" plugin="clipboard_words" opens_dialog="dialog_clipboard.xml" />
 	  <menu_item name="Delete" acckey="Del" plugin="del_words" />
 	</menu>
 	<menu name="View" acckey="V">
-	  <menu_item name="10% Zoom" plugin="zoom_up_page" options="10" />
-	  <menu_item name="25% Zoom" plugin="zoom_up_page" options="25" />
-	  <menu_item name="50% Zoom" plugin="zoom_up_page" options="50" />
-	  <menu_item name="100% Zoom" plugin="zoom_up_page" options="100" />
-	  <menu_item name="125% Zoom" plugin="zoom_up_page" options="125" />
-	  <menu_item name="150% Zoom" plugin="zoom_up_page" options="150" />
-	  <menu_item name="Fit Page Width" plugin="zoom_up_page" options="fitWidth" />
-	  <menu_item name="Fit Page Height" plugin="zoom_up_page" options="fitHeight" />
+	  <menu_item name="10% Zoom" acckey="-10" plugin="zoom_up_page" options="10" />
+	  <menu_item name="25% Zoom" acckey="-25" plugin="zoom_up_page" options="25" />
+	  <menu_item name="50% Zoom" acckey="-50" plugin="zoom_up_page" options="50" />
+	  <menu_item name="100% Zoom" acckey="0" plugin="zoom_up_page" options="100" />
+	  <menu_item name="125% Zoom" acckey="+25" plugin="zoom_up_page" options="125" />
+	  <menu_item name="150% Zoom" acckey="+50" plugin="zoom_up_page" options="150" />
+	  <menu_item name="Fit Page Width" acckey="W" plugin="zoom_up_page" options="fitWidth" />
+	  <menu_item name="Fit Page Height" acckey="H" plugin="zoom_up_page" options="fitHeight" />
 	</menu>
 	<menu name="Insert" acckey="I">
 	  <menu_item name="Break" acckey="B" plugin="text_breaks" opens_dialog="dialog_breaks.xml" />
@@ -71,15 +69,15 @@
 	  <menu_item name="Table" acckey="T" plugin="insert_table" opens_dialog="dialog_tableadd.xml" />
 	  <menu_item name="Reference" acckey="R" plugin="insert_ref" opens_dialog="dialog_refadd.xml" />
 	  <menu_item name="Link" acckey="L" plugin="insert_link" opens_dialog="dialog_linkadd.xml" />
-	  <menu_item name="Text File" acckey="e" plugin="insert_text" opens_dialog="dialog_textadd.xml" />
+	  <menu_item name="Text File" acckey="E" plugin="insert_text" opens_dialog="dialog_textadd.xml" />
 	</menu>
 	<menu name="Format" acckey="F">
 	  <menu_item name="Words" acckey="W" plugin="format_words" opens_dialog="dialog_format_words.xml" />
 	  <menu_item name="Paragraph" acckey="P" plugin="format_para" opens_dialog="dialog_format_para.xml" />
 	  <menu_item name="Text Frame" acckey="T" plugin="format_frame" opens_dialog="dialog_format_frame.xml" />
 	  <menu_item name="Table" acckey="a" plugin="format_table" opens_dialog="dialog_format_table.xml" />
-	  <menu_item name="Picture" acckey="i" plugin="format_pic" opens_dialog="dialog_format_pic.xml" />
-	  <menu_item name="Page" acckey="g" plugin="format_pages" opens_dialog="dialog_format_pages.xml" />
+	  <menu_item name="Picture" acckey="I" plugin="format_pic" opens_dialog="dialog_format_pic.xml" />
+	  <menu_item name="Page" acckey="G" plugin="format_pages" opens_dialog="dialog_format_pages.xml" />
 	</menu>
 	<menu name="Help" acckey="H">
 	  <menu_item name="About" acckey="A" plugin="show_about" opens_dialog="dialog_about.xml" />
@@ -87,33 +85,33 @@
       </menu_bar>
 
       <common_bar>
-	<large_icon name="Print" pic="print.png" plugin="print" open_browser="print_box" />
-	<large_icon name="Time" pic="clock.png" plugin="current_time" options="now" />
-	<large_icon name="Wikipedia" pic="wiki.png" plugin="research_wiki" opens_dialog="dialog_wiki_research_pane.xml" />
-	<control name="Dictionary" spans="large_icon">
+	<large_icon name="Print" acckey="Win + P" pic="print.png" plugin="print" open_browser="print_box" />
+	<large_icon name="Time" acckey="Win + T" pic="clock.png" plugin="current_time" options="now" />
+	<large_icon name="Wikipedia" acckey="Win + W" pic="wiki.png" plugin="research_wiki" opens_dialog="dialog_wiki_research_pane.xml" />
+	<control name="Dictionary" acckey="Win + D" spans="large_icon">
 	  <text_field name="Enter word" opens_dialog="dialog_lookup.xml" />
 	  <button name="Look Up" pic="book.png" />
-	  <quick_menu name="Definition" plugin="dict_lookup" />
 	</control>
-	<large_icon name="Grammar" pic="grammar.png" command="lexigraphic_checker" opens_dialog="dialog_grammar.xml" />
+	<large_icon name="Grammar" acckey="Win + G" pic="grammar.png" command="lexigraphic_checker" opens_dialog="dialog_grammar.xml" />
       </common_bar>
+      
       <tool_pane>
-	<tool_box name="words">
+	<tool_box name="Words">
 	  <control name="font_picker" spans="3 icons">
 	    <combo_box type="drop down" plugin="font_list" />
 	  </control>
-	  <control name="font_size" spans="1 icon" plugin="format_words">
-	    <spinbox default="12" step_size="1" />
+	  <control name="font_size" spans="1 icon">
+	    <spinbox default="12" step_size="1" plugin="format_words" options="font_size" />
 	  </control>
-	  <icon name="bold" acckey="Ctrl + B" pic="text_bold.png" plugin="format_words" />
-	  <icon name="underline" acckey="Ctrl + U" pic="text_underline.png" plugin="format_words" />
-	  <icon name="italic" acckey="Ctrl + I" pic="text_italic.png" plugin="format_words" />
+	  <icon name="bold" acckey="Ctrl + B" pic="text_bold.png" plugin="format_words" options="bold" />
+	  <icon name="underline" acckey="Ctrl + U" pic="text_underline.png" plugin="format_words" options="underline" />
+	  <icon name="italic" acckey="Ctrl + I" pic="text_italic.png" plugin="format_words" options="italic" />
 	  <icon name="all caps" acckey="Ctrl Shift + U" pic="all_caps.png" plugin="all_caps" />
 	  <control name="Text colour" spans="1 icon">
-      <combo_box type="drop down" pic="text_colour.png" plugin="format_words" />
+      <combo_box type="drop down" pic="text_colour.png" plugin="format_words" options="text_colour" />
 	  </control>
 	  <control name="Highlight colour" spans="1 icon">
-      <combo_box type="drop down" pic="highlight_colour.png" plugin="format_words" />
+      <combo_box type="drop down" pic="highlight_colour.png" plugin="format_words" options="highlight_colour" />
 	  </control>
     <icon name="super script" pic="super_script.png" plugin="format_words" />
     <icon name="sub script" pic="sub_script.png" plugin="format_words" />

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Building Cygnet Applications</title>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8">
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Hazel Windle" />
+  <meta name="description" content="Series of small programs designed to ease the creation of web apps. Office applications based on this system to come soon." />
+  <meta name="keywords" content="open source, web, free software, office suite, toolkit" />
+  <link rel="stylesheet" href="../styles/global_screen.css" media="screen" />
+  <link rel="stylesheet" href="styles/documentation.css" media="screen" />
+</head>
+
+<body>
+
+<a href="../index.html"><div class="masthead">
+ <h1>Paradise Software</h1>
+ <h2>Created with privacy and openess in mind </h2>
+ <img src="../ui/colour_trees.png" id="trees" alt="Palm trees" />
+</div></a>
+<div class="toplinks">
+  <div id="features_link"><a href="../feature_tracker.html" title="features">Features</a></div>
+  <div id="dev_link"><a href="../development.html" title="Development Plans">Development</a></div>
+  <div id="doc_link"><a href="../doc_index.html" title="Documentation">Documentation</a></div>
+  <div id="contact_link"><a href="../contact.html" title="contact and bug reports">Contact</a></div>
+  <a href="https://twitter.com/LinuxParadise" id="twit" title="twitter"><img src="../ui/twitter.png" width="80" height="60" alt="Twitter" /></a>
+  <a href="https://diasp.org/u/paradiseoffice" id="diasp" title="diaspora"><img src="../ui/diaspora.png" width="80" height="60" alt="Diaspora" /></a>
+  <a href="https://github.com/paradiseOffice/sandbox_and_programs.git" id="git" title="github"><img src="../ui/github.png" width="80" height="60" alt="Github" /></a>
+
+</div>
+
+<div class="content">
+
+<div class="main-content">
+  <h1>Cygnet Applications</h1>
+  <p>This describes how to build applications in the Cygnet framework, in xml. A lot of common conventions are explained. Other dialog boxes, and pop ups get put into separate files, and will be dealt with later on.</p>
+  <p>The root element for each xml file is program, and the xml is validated via a public DTD. Each file starts with a meta information section, then the formats available to the program, then the layout of the application. The file contains details of who made the program, and the layout including menus, menu items, icons, large icons (with pictures and text on them) and links to  any dialogs that need to pop up.</p>
+  <p>Commands are already contained within the Cygnet API, and are documented. These are for common things, such as data validation, opening and saving in various formats and printing. Plugins are written by the application creator or by Paradise Software, and implement extra functionality outside of the core API. Plugins are written in Python 3.3. </p><p>The meta information part has author information, and a description of the program. More than one author may be listed. The security section is for linking a md5 hash or key/certificate to the program. That is useful for checking for authencity and whether the program has been tampered with. A md5 hash is created by typing <code>$ md5sum app_name.xml > hash_name.md5</code><br /> at the Linux command line. The program is checked against the md5 hash by typing: <code>$ md5sum -c hash_name.md5</code></p>
+  <img src="images/appxml1.png" alt="The source for the meta information" />
+  <h2>File Formats</h2>
+  <p>To enable a file format, you put the corresponding read/write format commands into the formats node of the xml. This calls the correct pieces of the API for reading and writing files. Some take mandatory options. See the table below.</p>
+  <table id="file_formats">
+    <thead>
+      <th>Tag Name</th>
+      <th>Attributes</th>
+      <th>Files handled</th>
+    </thead>
+    <tbody>
+      <tr class="xml-file">
+        <td>write_open_document_word_files</td>
+        <td>None</td>
+        <td>odt, Libreoffice odt templates</td>
+      </tr>
+      <tr class="xml-file">
+        <td>read_open_document_word_files</td>
+        <td>None</td>
+        <td>odt, Libreoffice odt templates</td>
+      </tr>
+      <tr class="xml-file">
+        <td>write_open_document_spreadsheets</td>
+        <td>None</td>
+        <td>ods </td>
+      </tr>
+      <tr class="xml-file">
+        <td>read_open_document_spreadsheets</td>
+        <td>None</td>
+        <td>ods</td>
+      </tr>
+      <tr class="xml-file">
+        <td>write_open_document_presentations</td>
+        <td>None</td>
+        <td>odp presentations</td>
+      </tr>
+      <tr class="xml-file">
+        <td>read_open_document_presentations</td>
+        <td>None</td>
+        <td>odp files</td>
+      </tr>
+      <tr class="xml-file">
+        <td>write_scrolls_xml</td>
+        <td>None</td>
+        <td>My own file format, for use with books and long documents.</td>
+      </tr>
+      <tr class="xml-file">
+        <td>read_scrolls_xml </td>
+        <td>None</td>
+        <td>Reads in a book.</td>
+      </tr>
+      <tr class="standard-file">
+        <td>write_text_files</td>
+        <td>file_ending (linux_or_mac/windows)</td>
+        <td>txt files</td>
+      </tr>
+      <tr class="standard-file">
+        <td>read_text_files</td>
+        <td>file_ending (linux_or_mac/windows)</td>
+        <td>txt files</td>
+      </tr>
+      <tr class="standard-file">
+        <td>write_web_pages</td>
+        <td>type (legacy/modern)</td>
+        <td>htm or html files, legacy being HTML4, modern - HTML5</td>
+      </tr>
+      <tr class="standard-file">
+        <td>read_web_pages</td>
+        <td>type (legacy/modern)</td>
+        <td>htm or html files from HTML 4 onwards</td>
+      </tr>
+      <tr class="binary-file">
+        <td>write_ms_doc_files</td>
+        <td>office-version (1997/2000/2003/2007/2010/2013)</td>
+        <td>doc, docx that can be read in Libreoffice</td>
+      </tr>
+      <tr class="binary-file">
+        <td>read_ms_doc_files</td>
+        <td>office-version (1997/2000/2003/2007/2010/2013)</td>
+        <td>doc, docx that can be read in Libreoffice</td>
+      </tr>
+      <tr class="binary-file">
+         <td>read_ms_excel_files</td>
+         <td>office-version (1997/2000/2003/2007/2010/2013)</td>
+         <td>xls and template files</td>
+      </tr>
+      <tr class="binary-file">
+         <td>write_ms_excel_files</td>
+         <td>office-version (1997/2000/2003/2007/2010/2013)</td>
+         <td>xls and templates, files that Libreoffice can handle.</td>
+      </tr>
+      <tr class="binary-file">
+         <td>read_ms_powerpoint_files</td>
+         <td>office-version (1997/2000/2003/2007/2010/2013)</td>
+         <td>ppt, files that Libreoffice can handle.</td>
+       </tr>
+       <tr class="binary-file">
+         <td>write_ms_powerpoint_files</td>
+         <td>office-version (1997/2000/2003/2007/2010/2013)</td>
+         <td>ppt, and template files.</td>
+       </tr>
+     </tbody>
+   </table>
+   <h2>Layout Order</h2>
+   <p>The layout has various parts that need to be in a certain order. Each application has a menu bar under a title bar displaying the name of the program, a common bar for commonly used functions and a file port and status bar. The file port contains the opened file, while the status bar is for updates that refresh often. </p><p>The tool pane is optional, and mobile layouts won't have one. In the tool pane you can have tool boxes, which look like field sets, full of icons. Below the tool pane, there is a help/error message area called the help box.</p>
+   <h4>Layout Tag Order</h4>
+    <ol>
+      <li>menu_bar</li>
+      <li>common_bar</li>
+      <li>file_port</li>
+      <li>status_bar</li>
+      <li>tool_pane</li>
+    </ol>
+  <h2>Menu Bar Creation</h2>
+  
+
+</div>
+
+
+  </div>
+</div><!-- content -->
+<div class="footer">
+  <p>All content made by Hazel Windle &copy;, 2013.</p>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script></script>
+</body>
+</html>

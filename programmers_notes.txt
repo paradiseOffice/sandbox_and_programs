@@ -36,3 +36,6 @@ Dialog boxes - non-modal : close button top right corner. Non resizeable.
               Modal: OK and cancel buttons, resizeable by program event, but not by the user.
               quick_menu : A hide button on the top edge with arrows. No bloody rounded corners on everything.
               confirm : A small diddy dialog box, that flashes in animated mode, or has a red border round it.
+              
+2013-08-09
+ A Python xml library for reading,writing, validating, and moving nodes in the dom around is required, but not installed on either system currently.

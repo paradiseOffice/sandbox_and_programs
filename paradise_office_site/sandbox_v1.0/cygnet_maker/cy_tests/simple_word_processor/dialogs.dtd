@@ -1,4 +1,4 @@
-<!DOCTYPE dialog_box [
+<!DOCTYPE dialog [
 <!ELEMENT dialog (tab*,field_box+)>
   <!ATTLIST dialog type (quick_menu|modal|non-modal|confirm) #REQUIRED>
   <!ATTLIST dialog name CDATA #REQUIRED>
@@ -75,6 +75,7 @@
       <!ATTLIST whole_num_field name CDATA #REQUIRED>
       <!ATTLIST whole_num_field plugin CDATA #REQUIRED>
       <!ATTLIST whole_num_field options CDATA #IMPLIED>
+      <!ATTLIST whole_num_field valid (cvv_credit_card|integer) "integer">
     <!ELEMENT currency_field EMPTY>
       <!ATTLIST currency_field name CDATA #REQUIRED>
       <!ATTLIST currency_field plugin CDATA #REQUIRED>
@@ -100,7 +101,7 @@
       <!ATTLIST upload_text plugin CDATA #REQUIRED>
       <!ATTLIST upload_text options CDATA >
  
- ==================== ADDED STUFF - CHECK THROUGH WITH ALL DIALOGS DURING DEBUG ------
+
   <!ELEMENT icon EMPTY>
         <!ATTLIST icon name CDATA #REQUIRED>
         <!ATTLIST icon acckey CDATA>
@@ -116,6 +117,8 @@
         <!ATTLIST large_icon open_browser (upload_box|download_box|print_box) #IMPLIED>
         <!ATTLIST large_icon opens_dialog CDATA #IMPLIED>
         <!ATTLIST large_icon options CDATA #IMPLIED>
+        <!ATTLIST large_icon align (left|right|centre) #IMPLIED>
+        
   <!ELEMENT control EMPTY (combo_box|spinbox|checkbox_wLabel|radio_btns_wLabel|button|slider|progress_bar|text_field|date_field|time_field|colour_swatches|clipboard_entries_list)+>
         <!ATTLIST control name CDATA #REQUIRED>
         <!ATTLIST control spans (1 icon|2 icons|3 icons|4 icons) #REQUIRED>
@@ -143,6 +146,7 @@
           <!ATTLIST button command (new|open_upload|save_download|save_as_dl|close_file|convert_bfile|                 prepare_statment|log_in|log_out|add_data|query_data|describe_tables|set_up_keys|security_settings|delete_data|update_data|alter_tables|create_tables|create_forms|alter_forms|insert_data_in_forms|create_reports|modify_reports|lexigraphic_checker|ok|cancel) #IMPLIED>
           <!ATTLIST button plugin CDATA #IMPLIED>
           <!ATTLIST button options CDATA #IMPLIED>
+          <!ATTLIST button (left|right|centre) #IMPLIED>
         <!ELEMENT slider EMPTY>
           <!ATTLIST slider min CDATA #REQUIRED>
           <!ATTLIST slider max CDATA #REQUIRED>
@@ -161,6 +165,7 @@
           <!ATTLIST text_field spans (10 chars|25 chars|50 chars|100 chars) "50 chars">
           <!ATTLIST text_field plugin CDATA #REQUIRED>
           <!ATTLIST text_field options CDATA #REQUIRED>
+          <!ATTLIST text_field valid (credit_card_num|custom_card|email_address|national_insurance|post_code|zip_code|short_text|uk_mobile_num|uk_phone_num|us_mobile_num|us_phone_num|web_address) "short_text">
         <!ELEMENT date_field EMPTY>
           <!ATTLIST date_field name CDATA #REQUIRED>
           <!ATTLIST date_field min CDATA #IMPLIED>

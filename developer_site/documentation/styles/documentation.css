@@ -1,0 +1,12 @@
+table#file_formats tr td { }
+
+#file_formats thead { }
+#file_formats th { }
+#file_formats tbody { }
+#file_formats td { }
+
+tr.binary-file { }
+
+tr.standard-file { }
+
+tr.xml-file { }

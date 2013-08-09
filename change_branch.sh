@@ -2,4 +2,4 @@
 
 # Change from a separate branch into master
 
-git-checkout master
+git checkout master
