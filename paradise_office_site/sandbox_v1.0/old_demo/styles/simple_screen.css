@@ -1,0 +1,44 @@
+/* simple_screen 700w x 600h pixels base, 
+ * resizing makes the file_port larger or smaller.
+ * 
+ * Copyright (c) 2013 Hazel Windle
+ */
+.title_bar-skel, .menu_bar-skel, .common_bar-skel, .status_bar 
+{ width: 700px; /* computed */  }
+.title_bar-skel { height: 25px; top: 0px;  }
+.title_bar-skel h1 { font-size: 10pt;  }
+
+.menu_bar-skel { height: 36px; 
+                 top: 0px; 
+                 left: 15px; border: 1px maroon solid; }
+                 
+                 
+.common_bar-skel { height: 40px; 
+                   top: 0px; 
+                   left: 15px; border: 1px maroon solid; }
+            
+                   
+.window {  width: 100%; height: 100%; }
+
+.file_port { width: 510px; /* computed 700 - tool pane width */ 
+             height: 474px; /* computed 600 - (25 + 36 + 40 + 25)*/ 
+             left: 15px; 
+             top: 0px; 
+             padding: 2px; }
+#file1 { width: 100%; height: 100%; }
+
+.tool_pane-skel { width: 180px; 
+                  height: 478px; /* computed +4 */ 
+                  left: 533px; /* computed + 23 */  
+                  top: 0px; 
+                   }
+
+                   
+.help_box-skel { width: 180px; 
+                 height: 120px; 
+                 left: 0px; 
+                 top: 340px; /* computed, tool_pane height - 138/120px */ }  
+                 
+.status_bar { height: 25px; left: 0px; top: 590px; 
+              padding-left: 150px;  }
+.settings_menu { width: 100px; left: 0px; top: 0px;  }

@@ -47,10 +47,11 @@
     <li>JQuery 1.10.2</li>
     <li>JQuery UI latest stable version</li>
     <li>A Python or PHP graphing library</li>
+    <li>Python lxml xml library</li>
     <li>Firefox 22 to test everything in, with its Javascript debuggers.</li>
     <li>Opera 11.60, Firefox 11, Internet Explorer 9, and random 'phones and tablets from Tesco to test with.</li></ul>
 <h3>Engineering Trade Offs</h3>
-<p>I will only convert the binary formats below for now, for this first release as I'm only one woman and I anticipate this will take me a long time. </p>
+<p>I will only convert the binary formats below for now. </p>
 <ul><li>Doc format (all these are MS 07, 2000, XP, 2003 formats)</li><li>XLS format</li><li>PPT format</li></ul><p>Other binary formats will be converted from in later releases.</p>
 <h3>Coding Conventions Guidelines</h3>
 <p>Camel case variables, e.g. someVariable. No underscores for variable names, that's for functions. A comment next to each initialised variable describing the data type and use. Names no longer than 30 characters. Functions to be named similar but with the following code prepended, then an underscore and the function name.
@@ -68,7 +69,7 @@
 <h3>Protocol That Isn't HTTPS</h3>
 <p>LDAP may be used to store calendar information and contacts. The POP, IMAP and SMTP servers may be connected to, to collect email. Plain HTTP will be used for the developer site, www.linux-paradise.co.uk. HTTPS will be used for www.paradise-office.co.uk.</p>
 <h3>Algorithms or Design Patterns</h3>
-<h3>Planning for Requiremnts Tracebility</h3>
+<h3>Planning for Requirements Tracebility</h3>
 <p>Any feature requirements and their unit tests will be numbered, and a green highlight applied when the test passes. For small bugs, amber will be used. A failed test or missing functions will mean no highlight is applied.</p>
 <h3>Testing the Software</h3>
 <p>The unit test Python module shall be used. For UI tests, a written (on paper) test plan shall be used with boxes for comments.</p>
@@ -76,7 +77,7 @@
 <h3>Software Maintainence</h3>
 <p>A new requirements specification will be done for each new release. Bugs will be categorised and dealt with, once enough bugs have been fixed, a new point release will come out.</p>
 <h3>Interfaces for End Users</h3>
-<p>Each word will be surrounded by a hash (#) on either side. For instance, #screen[ui]# would be used for a screen layout. The Python Cygnet Maker would parse each of these words as a token. A program maker app in the browser could easily make Cygnet files.</p>
+<p>A program maker program may be used to produce the XML for people who don't know how to use XML.</p>
 <h3>Directory Structure for the Source Code</h3>
 <ul>
   <li>/developer_site</li>
@@ -100,9 +101,8 @@
     <li>/pages (first office app)</li>
     <ul>
       <li>/layout</li>
-      <li>/print</li>
-      <li>/formatting</li>
-      <li>/modules</li>
+      <li>/icons</li>
+      <li>/plugins</li>
       <li>/language</li>
     </ul></ol>
 </ul>
@@ -110,7 +110,7 @@
 <h4>Git Conventions</h4>
 <p>Create a new branch for each new feature, and for when tidying up any rendering issues with browsers (CSS). Upload to the repository once a day, and checkout (download from there) each morning.</p>
 <h3>Cygnet Script</h3>
-<p>A little like #screen[ui]#. Looks for the brackets first after breaking up each word in between hashes. Then searches in the UI section for 'screen', and calls the appropriate function.</p>
+<p>Written in XML with a DTD. Looks for the brackets first after breaking up each word in between hashes. Then searches in the UI section for 'screen', and calls the appropriate function.</p>
 
 </div>
 

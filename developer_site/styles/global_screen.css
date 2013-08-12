@@ -1,10 +1,8 @@
 @font-face {
-    font-family: header-font;
-    src: url('../images/fonts/Marvel-Bold.ttf');
     font-family: links-font;
     src: url('../images/fonts/Anonymous_Pro_B.ttf');
 }
-a.masthead { border: 0; text-decoration: none; }
+a.masthead, .masthead, a { border: 0; color: #000000; text-decoration: none; }
 
 body {
  margin: 0;
@@ -36,31 +34,23 @@ div.main-content {
 /* end of page layout */
  
 .masthead {
-    width: 100%; height: 250px;
+    width: 100%; height: 150px;
     background-color: #1961FB;
-    background-image: url('../ui/banner_logo.png'),
-     url('../ui/blue_gradient.png');
-    background-repeat: no-repeat, repeat-x;
-    background-position: left, center;
+    background-image: url('../ui/blue_gradient.png');
+    background-repeat: repeat-x;
+    background-position: center;
 
  }
-#trees { position:absolute; z-index: 5000; top: 0px; right: 0px; }
+
 .masthead h1, h2 {
-   color: #ffffff;
-  text-align: center;  
-  margin: 0; padding-bottom: 0px; padding-top: 50px;   
-}
-.masthead h1  {  
-  font-family: header-font, "times new roman", serif;
-  font-size: 36pt; 
-  font-weight: bold;
-}
-.masthead h2  {
-  color: #ffffff;
-  font-size: 16pt;
-  font-family: arial, "sans serif";
-  font-style: italic; text-decoration: none;
-}
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;  
+} /* hidden content for blind folks */
+
 
 /* darker blue is: #043496; */
 
@@ -101,23 +91,23 @@ div.main-content {
 }
 div#features_link {
  position: absolute;
- top: 250px; left: 0px;
+ top: 150px; left: 0px;
 }
 div#dev_link {
     position: absolute;
-    top: 250px; left: 200px;
+    top: 150px; left: 200px;
 }
 div#doc_link {
     position: absolute;
-    top: 250px; left: 400px;
+    top: 150px; left: 400px;
 }
 div#contact_link {
-    position: absolute;
-    top: 250px; left: 600px;
+    position: absolute; z-index: 1;
+    top: 150px; left: 600px;
 }
-#twit { position: absolute; top: 250px; right: 160px; }
-#diasp { position: absolute; top: 250px; right: 80px; }
-#git { position: absolute; top: 250px; right: 0px; }
+#twit { position: absolute; z-index: 0; top: 150px; right: 160px; }
+#diasp { position: absolute; z-index: 0; top: 150px; right: 80px; }
+#git { position: absolute; z-index: 0; top: 150px; right: 0px; }
 /* ends the link bit */
 .side-bar {
   padding: 2px;

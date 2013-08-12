@@ -1,4 +1,33 @@
-    <div id="large_icon1" class="large_icon">New</div>
-    <div id="large_icon2" class="large_icon" onclick="saveTextAsFile()"> Save to File</div>
-    <div id="large_icon3" class="large_icon">Spellcheck</div>
-    <div id="large_icon4" class="large_icon">Wiki</div> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Common Bar</title>
+  <link rel="stylesheet" type="text/css" href="styles/browser_reset.css" />
+  <link rel="stylesheet" type="text/css" href="styles/base_common_bar.css" />
+  <link rel="stylesheet" type="text/css" href="styles/common-bar_simple-screen.css" />
+  </head>
+  <body>
+  
+    <div id="large_icon1" class="large_icon">
+      <a href="#">
+      <div id="img_large1" class="img"></div>
+      <span class="name">New</span>
+      </a>
+    </div>
+    <div id="large_icon2" class="large_icon" onclick="saveTextAsFile()"> 
+      <div id="img_large2" class="img"></div>
+      <span class="name">Save</span>
+    </div>
+    <div id="large_icon3" class="large_icon">
+      <form method="get" action="#"> <!-- spellcheck.php -->
+      <input type="text" id="spellcheck" class="text_field" name="spellcheck" placeholder="word look up" /> 
+      <button class="ctl-btn" type="submit" id="search" title="Spellcheck" />
+    </div>
+    <div id="large_icon4" class="large_icon">
+      <div id="img_large4" class="img"></div>
+      <span class="name">Wikipedia</span>
+    </div> 
+
+  </body>
+</html>

@@ -48,6 +48,7 @@
     <ul>
       <li>Abililty to save either a cookie, session information or both.</li>
       <li>Javascript could be disabled or an older browser could be used.</li>
+      <li>Lightweight events going to Node.js server.</li>
       <li>SVG and PNG can't be used properly in Internet Explorers earlier than version 9.</li>
       <li>Database data has to be kept on the client side always (other database servers can be connected to).</li>
     </ul>
@@ -60,7 +61,7 @@
       <li>They may be suspicious of internet privacy because of Google and the NSA.</li>
     </ul>
   <li><h4>Resources</h4></li>
-    <p>To start with, they'll only be one application server.</p>
+    <p>To start with, they'll only be one application server that isn't ready for production due to slow speeds and lack of support.</p>
   <li><h4>Standards</h4></li>
     <ul>
       <li>Adhere to HTML 5 and XHTML 1.0 in places.</li>
@@ -70,21 +71,21 @@
       <li>All text to be in UTF-8 encoding.</li>
     </ul>
   <li><h4>Interoperability</h4></li>
-    <p>The open document XML file formats used in Libreoffice are to be used and will be the default format to save in.</p>
+    <p>The open document XML file formats used in Libreoffice are to be used and will be the default format to save in. Other supplementary XML file formats will be created and included.</p>
   <li><h4>Protocols</h4></li>
     <p>Will be used over port 443 for secure http traffic.</p>
   <li><h4>Data</h4></li>
     <p>The program source will be kept on github. All data will be the responsibility of the user. When in beta testing, warnings will be given to the user if any data could get mangled.</p>
   <li><h4>Security</h4></li>
-    <p>A user must login over https, and the passwords will have a salt added to them, and be encrypted. The encryption method is yet to be decided.</p>
+    <p>A user must login over https, and the passwords will have a salt and pepper added to them, and be encrypted. The encryption method will be via a SSL certificate and any other default encryption methods for OpenSuse Linux passwords.</p>
   <li><h4>Memory</h4></li>
-    <p>Nginx may be used instead of Apache to preserve memory. PHP closures could also be used.</p>
+    <p>Program in a way to preserve memory, using smaller data types. PHP closures could also be used.</p>
   <li><h4>Performance / Network</h4></li>
-    <p>A VPS will be a slow one to test things at first, then I'll upgrade to a gigabit ethernet one.</p>
+    <p>A VPS will be a slow one to test things at first, then I'll upgrade to a gigabit ethernet one. Multiple servers in different countries could be used to speed up the connections.</p>
   <li><h4>Testing</h4></li>
-    <p>I don't own a tablet, nor do I own a Windows PC with Internet Explorer. I'll have to test things some other way.</p>
+    <p>I'll do tablet testing in Tesco, where they have a range of tablets and phones for testing. I will also try installing Internet Explorer in Wine.</p>
   <li><h4>Quality Goals</h4></li>
-    <p>It should be good enough to have no discernable speed lapses or crashes compared to Libreoffice 4.0.4.2.</p>
+    <p>It should be good enough to have no discernable speed lapses or crashes compared to Libreoffice 4.0.</p>
 </ol>
 </div>
 
@@ -117,12 +118,12 @@
   <ul>
     <li><h4>PHP</h4></li>
     <p>This will be used mainly for cookie and session management, and for accessing databases.</p>
-    <li><h4>Python</h4></li>
-    <p>This will be the main language for doing computationally heavy programming work, for example, maths.</p>
+    <li><h4>Python, lxml</h4></li>
+    <p>This will be the main language for doing computationally heavy programming work, for example, maths. The lxml library will be used for XML and XHTML processing.</p>
     <li><h4>Postgresql 9.1</h4></li>
     <p>This will be used to get at and filter data. No data tables are kept on the server permanently however.</p>
-    <li><h4>JQuery 1.9</h4></li>
-    <p>This will be used for client side events, and will be as plain as possible. More animations will be used for modern browsers.</p>
+    <li><h4>JQuery 1.10, JQueryUI</h4></li>
+    <p>This will be used for client side events, and will be as plain as possible. JQuery UI will be used for creating tabs, and dialog boxes, to keep things consistent instead of reinventing the wheel by writing my own tabs etc. More animations will be used for modern browsers.</p>
     <li><h4>Javascript</h4></li>
     <p>Used for event handler threads (to capture clicks etc).</p>
     <li><h4>XHTML 1.0, CSS 2.1</h4></li>
@@ -135,13 +136,13 @@
 <h3>Errors</h3>
   <p>A separate error handling thread could be employed in all 3 of the languages.</p>
 <h3>Concurrency</h3>
-  <p>AJAX will be considered.</p>
+  <p>AJAX will be used, along with Node.js javascript parts.</p>
 <h3>Management of Resources</h3>
-  <p>Algorithms will be kept as simple as possible, with no triple nested loops or anything worse than O log n. The smallest variable value possible will be used.</p>
+  <p>Algorithms will be kept as simple as possible, with no triple nested loops or anything bad like that. The smallest variable value possible will be used.</p>
 <h3>UI Design</h3>
   <p>I liked the look of the KDE office suite Calligra, so I modelled that for desktop PC's. Mobiles will have more options on the common bar and menus, with a scrolling ability. I also want something that is easy to create custom themes for, complete with company logo and colours. I also want the user to be able to change the size stylesheet via a menu. This would help visually impaired people. I also want colourful icons that aren't too bland. Maybe you could tap or click an icon several times to select a different option.</p>
 <h3>The Future</h3>
-  <p>A lot of documentation should exist to attract developers and provide an easy route to extension. I will also look into the Dart language.</p>
+  <p>A lot of documentation should exist to attract developers and provide an easy route to extension. </p>
 </div>
 
 <div class="sys_arch">
@@ -258,11 +259,12 @@
 </ul>
 <h4>dialogs/</h4>
 <ul>
-  <li>confirmation_box</li>
-  <ul><li>(info_message in appearence)</li>
-    <li>yes_no_buttons</li>
+  <li>dialog</li>
+    <ul><li>modal - ok, cancel buttons</li>
+      <li>confirm - (ok, cancel, Yes|No question)</li>
+      <li>non-modal - close button</li>
+      <li>quick_menu - hide button on the top edge</li>
     </ul>
-  <li>dialog_box</li>
   <ul><li>tab</li>
     <li>field_box</li>
     <li>font_preview</li>
