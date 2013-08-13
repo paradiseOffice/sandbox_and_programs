@@ -1,0 +1,21 @@
+.large_icon { position: absolute; top: 0px; margin: 2px 0;
+  /* default theme image, belongs in a theme */
+  background-image: url('../../ui/large-icon-bg.svg'); background-size: 100% 100%;
+}
+span.name, .img { display: inline-block; }
+span.name { vertical-align: top; }
+.img { position: relative; left: 0px; top: 0px;
+  background-size: 100% 100%; /* newer supported browsers only */ }
+a, .large_icon, span.name, .img { text-decoration: none; color: black; }
+input.text_field { border: 1px solid #333333; }
+.ctl-btn { position: relative; top: -4px; right: 0px;
+           border: 1px solid #ccc; 
+           background-color: #ffffff; 
+           background-size: 100% 100%;
+}
+#large_icon1 { left: 0px; }
+/* width and height values in common-bar_simple-screen.css */
+#img_large1 { background-image: url('../../icons/common/filenew.png'); }
+#img_large2 { background-image: url('../../icons/common/document-save.png'); }
+button#search { background-image: url('../../icons/internet/search.png'); }
+#img_large4 { background-image: url('../../icons/text/format-text-direction-ltr.png'); }

@@ -1,0 +1,9 @@
+Project Management
+
+1. Write tests (document as you go along) - 19/09/2013
+2. Code the modules, starting with script to automate building pages. 
+(document, blog etc) - 20/11/2013
+3. Beta test, and build up a community. (3 months) - 1/2/2014
+4. Start charging/donating for it.
+5. Bug fixing and maintainence (6 months).
+6. Do requirements for next version. (next Oct 2014)
