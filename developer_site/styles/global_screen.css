@@ -74,11 +74,13 @@ overflow:hidden;
   background-image: url('../ui/base_link.png');
 }
 .toplinks div a {
+  display: block;
+  width: 200px; height: 60px;
   color: #DE304B;
   text-decoration: none;
-  font-family: links-font, arial, "sans-serif";
-  font-size: 14pt; font-weight: bold;
-  line-height: 250%; margin-left: 40px;
+  font-family: cantarell, arial, sans-serif;
+  font-size: 16pt; font-weight: bold; padding: 3px;
+  padding-top: 12px;  text-align: center;
 }
 
 .toplinks div:hover {
@@ -153,7 +155,7 @@ div#contact_link {
   background-color:#9E9E9E;
   color: #000000;
 }
-
+.main-content a { text-decoration: underline; color: #DE304B; }
 
 .main-content table {
   border-collapse: separate;

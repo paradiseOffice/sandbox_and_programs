@@ -6,7 +6,7 @@
         <name>Simple Word Processor</name>
         <description>Edit and create short texts.</description>
         <created date="20130724" />
-        <modified date="20130727" />
+        <modified date="20130816" />
       </app_info>
       <author_info> 
         <name>Hazel Windle</name>
@@ -15,7 +15,7 @@
       </author_info>
       <security> 
         <encryption method="md5" />
-        <keyfile link="check_20130809.md5" />
+        <keyfile link="check20130816.md5" />
         <originating domain="http://www.paradise-office.co.uk" />
       </security>
       <language locale="en-gb" text="en-gb" direction="ltr" />
@@ -85,14 +85,14 @@
       </menu_bar>
 
       <common_bar>
-	<large_icon name="Print" acckey="Win + P" pic="print.png" plugin="print" open_browser="print_box" />
-	<large_icon name="Time" acckey="Win + T" pic="clock.png" plugin="current_time" options="now" />
-	<large_icon name="Wikipedia" acckey="Win + W" pic="wiki.png" plugin="research_wiki" opens_dialog="dialog_wiki_research_pane.xml" />
+	<large_icon name="Print" acckey="Win + P" pic="icons/common/document-print.png" plugin="print" open_browser="print_box" />
+	<large_icon name="Time" acckey="Win + T" pic="icons/common/time.png" plugin="current_time" options="now" />
+	<large_icon name="Wikipedia" acckey="Win + W" pic="icons/text/book.png" plugin="research_wiki" opens_dialog="dialog_wiki_research_pane.xml" />
 	<control name="Dictionary" acckey="Win + D" spans="large_icon">
 	  <text_field name="Enter word" opens_dialog="dialog_lookup.xml" />
-	  <button name="Look Up" pic="book.png" />
+	  <button name="Look Up" pic="icons/internet/search.png" />
 	</control>
-	<large_icon name="Grammar" acckey="Win + G" pic="grammar.png" command="lexigraphic_checker" opens_dialog="dialog_grammar.xml" />
+	<large_icon name="Grammar" acckey="Win + G" pic="icons/text/grammar.png" command="lexigraphic_checker" opens_dialog="dialog_grammar.xml" />
       </common_bar>
       
       <tool_pane>
@@ -103,15 +103,16 @@
 	  <control name="font_size" spans="1 icon">
 	    <spinbox default="12" step_size="1" plugin="format_words" options="font_size" />
 	  </control>
-	  <icon name="bold" acckey="Ctrl + B" pic="text_bold.png" plugin="format_words" options="bold" />
-	  <icon name="underline" acckey="Ctrl + U" pic="text_underline.png" plugin="format_words" options="underline" />
-	  <icon name="italic" acckey="Ctrl + I" pic="text_italic.png" plugin="format_words" options="italic" />
-	  <icon name="all caps" acckey="Ctrl Shift + U" pic="all_caps.png" plugin="all_caps" />
+	  <icon name="bold" acckey="Ctrl + B" pic="icons/text/format-text-bold.png" plugin="format_words" options="bold" />
+	  <icon name="underline" acckey="Ctrl + U" pic="icons/text/format-text-underline.\
+png" plugin="format_words" options="underline" />
+	  <icon name="italic" acckey="Ctrl + I" pic="icons/text/format-text-italic.png" plugin="format_words" options="italic" />
+	  <icon name="all caps" acckey="Ctrl Shift + U" pic="icons/text/pencil.png" plugin="all_caps" />
 	  <control name="Text colour" spans="1 icon">
-      <combo_box type="drop down" pic="text_colour.png" plugin="format_words" options="text_colour" />
+      <combo_box type="drop down" plugin="format_words" options="text_colour" />
 	  </control>
 	  <control name="Highlight colour" spans="1 icon">
-      <combo_box type="drop down" pic="highlight_colour.png" plugin="format_words" options="highlight_colour" />
+      <combo_box type="drop down" plugin="format_words" options="highlight_colour" />
 	  </control>
     <icon name="super script" pic="super_script.png" plugin="format_words" />
     <icon name="sub script" pic="sub_script.png" plugin="format_words" />

@@ -1,0 +1,19 @@
+<!-- Input: Cygnet XML files for the application. Shelves, for commands, plugins and pictures (the URI's checked).
+
+Output: the meta information to go into each HTML file. -->
+
+  
+  <meta name="title" content="" />  
+  <meta name="description" content="" /> 
+  <meta name="created" content="IE=8" />  
+  <meta name="modified" content />
+  <meta name="name" content="Hazel " />
+  <meta name="email" />
+  <meta name="company" />
+  <meta name="enc-method" />
+  <meta name="enc-keyfile" />
+  <meta name="enc-origin" />
+  <meta name="lang-locale" />
+  <meta name="lang-text" />
+  <meta name="lang-dir" />
+  <meta name="formats-read" content="

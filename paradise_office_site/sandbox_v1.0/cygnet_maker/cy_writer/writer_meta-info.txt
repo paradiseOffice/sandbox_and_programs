@@ -1,0 +1,21 @@
+<!-- Input: Cygnet XML files for the application. Shelves, for commands, plugins and pictures (the URI's checked).
+
+Output: the meta information to go into each HTML file. -->
+
+  
+  <title>Simple Word Processor</title>  
+  <meta name="app-description" content="Edit and create short texts." /> 
+  <meta name="keywords" content="text word processor" />
+  <!-- keywords computed (nouns) from the title and description -->
+  <meta name="app-created" content="20130724" />  
+  <meta name="app-modified" content="20130816" />
+  <meta name="auth-name" content="Hazel Windle" />
+  <meta name="auth-email" content="lead-dev@linux-paradise.co.uk" />
+  <meta name="auth-company" content="Paradise Software" />
+  <meta name="enc-success" content="yes" />
+  <!-- A sep. program checks the md5 sigs of the XML -->
+  <meta name="lang-locale" content="en-gb" />
+  <meta name="lang-text" content="en-gb" />
+  <meta name="lang-dir" content="ltr" />
+  <meta name="formats-read" content="read_open_document_word_files read_ms_doc_files read_text_files read_web_pages read_scrolls_xml" />
+  <meta name="formats-write" content="write_open_document_word_files write_ms_doc_files write_text_files write_web_pages write_scrolls_xml" />

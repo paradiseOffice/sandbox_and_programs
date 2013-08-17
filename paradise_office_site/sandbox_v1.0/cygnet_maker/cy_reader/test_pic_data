@@ -1,0 +1,14 @@
+# The first key in the dictionary is the name (attribute), followed by the
+# exact name from the XML. pic is the picture URI. status gets added 
+# and is either 'ok' or 'picture not here'
+
+print = { 'name': 'Print', 'pic': 'icons/common/document-print.png', 'status': '' }
+time = {'name': 'Time', 'pic': 'icons/common/time.png', 'status': '' }
+wiki = { 'name': 'Wikipedia', 'pic': 'icons/text/book.png', 'status': '' }
+look_up = {'name': 'Look Up', 'pic': 'icons/internet/search.png', 'status': '' }
+grammar = {'name': 'Grammar', 'pic': 'icons/text/grammar.png', 'status': '' }
+bold = {'name': 'bold', 'pic': 'icons/text/format-text-bold.png', 'status': '' }
+underline = {'name': 'underline', 'pic': 'icons/text/format-text-underline.png', 'status': '' }
+italic = {'name': 'italic', 'pic': 'icons/text/format-text-italic.png', 'status': '' }
+all_caps = {'name': 'all caps', 'pic': 'icons/text/pencil.png',  'status': '' }
+sup_script =
