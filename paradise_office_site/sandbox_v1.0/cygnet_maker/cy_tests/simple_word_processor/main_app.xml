@@ -114,22 +114,25 @@ png" plugin="format_words" options="underline" />
 	  <control name="Highlight colour" spans="1 icon">
       <combo_box type="drop down" plugin="format_words" options="highlight_colour" />
 	  </control>
-    <icon name="super script" pic="super_script.png" plugin="format_words" />
-    <icon name="sub script" pic="sub_script.png" plugin="format_words" />
+    <icon name="super script" pic="icons/text/superscript.png" plugin="format_words" />
+    <icon name="sub script" pic="icons/text/subscript.png" plugin="format_words" />
 	  <control name="Styles" spans="3 icons">
 	    <combo_box type="drop down" plugin="styles_list" />
 	  </control>
-	  <icon name="add style" pic="add_style.png" plugin="add_style" />
+	  <icon name="add style" pic="icons/text/styles.png" plugin="add_style" />
 	</tool_box>
 	<tool_box name="paragraph">
-	  <icon name="Left" acckey="Ctrl + L" pic="left_just.png" plugin="justify" options="left" />
-	  <icon name="Centre" pic="centre_just.png" plugin="justify" options="centre" />
-	  <icon name="Right" acckey="Ctrl + R" pic="right_just.png" plugin="justify" options="right" />
-	  <icon name="Justify" acckey="Ctrl + J" pic="justify_just.png" plugin="justify" options="justify" />
-	  <icon name="first line indent" pic="1st_line_indent.png" plugin="1st_line_indent" />
-	  <icon name="Drop cap" pic="drop_cap.png" plugin="drop_cap" />
-	  <icon name="Increase Indent" pic="increase_indent.png" plugin="indent" options="increase" />
-	  <icon name="Decrease Indent" pic="decrease_indent.png" plugin="indent" options="decrease" />
+	  <icon name="Left" acckey="Ctrl + L" pic="icons/text/format-justify-left.png'" plugin="justify" options="left" />
+	  <icon name="Centre" pic="icons/text/format-justify-center.\
+png" plugin="justify" options="centre" />
+	  <icon name="Right" acckey="Ctrl + R" pic="icons/text/format-justify-right.png" plugin="justify" options="right" />
+	  <icon name="Justify" acckey="Ctrl + J" pic="icons/text/format-justify-fill.p\
+ng" plugin="justify" options="justify" />
+	  <icon name="first line indent" pic="icons/text/sticky-notes\
+.png" plugin="1st_line_indent" />
+	  <icon name="Drop cap" pic="icons/text/drop_cap.png" plugin="drop_cap" />
+	  <icon name="Increase Indent" pic="icons/text/format-indent-more.png" plugin="indent" options="increase" />
+	  <icon name="Decrease Indent" pic="icons/text/format-indent-less.png" plugin="indent" options="decrease" />
 	  <control name="line height" spans="2 icons">
 	    <spinbox default="1" step_size="0.5" plugin="line_height" /><label name="line" />
 	  </control>

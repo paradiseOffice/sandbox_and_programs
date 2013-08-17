@@ -10,20 +10,20 @@
         <label name="Size: " /><spinbox default="12" step_size="1"
         plugin="format_words" options="font_size" /><label name="pt" />
         <control name="Text colour">
-        <combo_box type="drop down" pic="text_colour.png" plugin="format_words" />
+        <combo_box type="drop down"  plugin="format_words" />
         </control>
         <control name="Highlight colour" spans="1 icon">
-        <combo_box type="drop down" pic="highlight_colour.png"
-        plugin="format_words" />
+        <combo_box type="drop down" 
+        plugin="format_words" /></control>
       </row>
       <row num="3">
         <button name="Add colours" plugin="add_colours"
         command="color_picker" />
-        <icon name="bold" acckey="Ctrl + B" pic="text_bold.png"
+        <icon name="bold" acckey="Ctrl + B" pic="icons/text/format-text-bold.png"
         plugin="format_words" />
-        <icon name="underline" acckey="Ctrl + U" pic="text_underline.png"
+        <icon name="underline" acckey="Ctrl + U" pic="icons/text/format-text-underline.png"
         plugin="format_words" />
-        <icon name="italic" acckey="Ctrl + I" pic="text_italic.png"
+        <icon name="italic" acckey="Ctrl + I" pic="icons/text/format-text-italic.png"
         plugin="format_words" />
       </row>
     </field_box>
