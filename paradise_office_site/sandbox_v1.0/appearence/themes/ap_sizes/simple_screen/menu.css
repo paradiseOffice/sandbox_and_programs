@@ -1,0 +1,9 @@
+/* (c) Copyright 2013 Hazel Windle 
+ * 
+ * Sizes for the menus.
+ * 
+ */
+
+ul.menu li a { font-size: 153.9%; padding-top: 2px; padding-left: 3px; }
+ul.menu .menu_item { padding-right: 10px; } /* these can be put in all one group. */
+ul.menu li a { width: auto; height: 30px; }

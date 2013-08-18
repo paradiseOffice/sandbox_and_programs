@@ -1,0 +1,5 @@
+alter tables
+
+Take away a column, and add a column. Rename a third column.
+
+If the changes go through onto the database (cli, or check the sql) then it's passed.

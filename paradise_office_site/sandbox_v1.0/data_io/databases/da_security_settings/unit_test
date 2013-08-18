@@ -1,0 +1,6 @@
+Change the db password.
+Login again.
+
+Add a user in order to use a db.
+Take off the delete permission, login under that user
+Try and delete one record

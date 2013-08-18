@@ -1,0 +1,4 @@
+add a primary key to the num field
+
+add an author's table with web addresses.
+Try to create a foreign key linking the Amazon table with the author's table

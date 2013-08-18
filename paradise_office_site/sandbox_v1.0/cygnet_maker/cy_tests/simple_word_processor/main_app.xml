@@ -42,7 +42,7 @@
 	  <menu_item name="Save As" acckey="Ctrl Shift + A" command="save_as_dl" opens_dialog="dialog_saveas.xml" />
 	  <menu_item name="Convert File" acckey="Alt + V" command="convert_bfile" opens_dialog="dialog_convert.xml" />
 	  <menu_item name="Print Preview" acckey="Alt + P" command="print_view" opens_dialog="dialog_print_preview.xml" />
-	  <menu_item name="Print" acckey="Ctrl + P" plugin="print" open_browser="print_box" />
+	  <menu_item name="Print File" acckey="Ctrl + P" plugin="print" open_browser="print_box" />
 	  <menu_item name="Close File" acckey="Ctrl + W" command="close_file" opens_dialog="dialog_confirm.xml" />
         </menu>
         <menu name="Edit" acckey="E">
@@ -75,7 +75,7 @@
 	  <menu_item name="Words" acckey="W" plugin="format_words" opens_dialog="dialog_format_words.xml" />
 	  <menu_item name="Paragraph" acckey="P" plugin="format_para" opens_dialog="dialog_format_para.xml" />
 	  <menu_item name="Text Frame" acckey="T" plugin="format_frame" opens_dialog="dialog_format_frame.xml" />
-	  <menu_item name="Table" acckey="a" plugin="format_table" opens_dialog="dialog_format_table.xml" />
+	  <menu_item name="Style Table" acckey="a" plugin="format_table" opens_dialog="dialog_format_table.xml" />
 	  <menu_item name="Picture" acckey="I" plugin="format_pic" opens_dialog="dialog_format_pic.xml" />
 	  <menu_item name="Page" acckey="G" plugin="format_pages" opens_dialog="dialog_format_pages.xml" />
 	</menu>
@@ -114,8 +114,8 @@ png" plugin="format_words" options="underline" />
 	  <control name="Highlight colour" spans="1 icon">
       <combo_box type="drop down" plugin="format_words" options="highlight_colour" />
 	  </control>
-    <icon name="super script" pic="icons/text/superscript.png" plugin="format_words" />
-    <icon name="sub script" pic="icons/text/subscript.png" plugin="format_words" />
+    <icon name="Superscript" pic="icons/text/superscript.png" plugin="format_words" options="sup_script" />
+    <icon name="Subscript" pic="icons/text/subscript.png" plugin="format_words"  options="sub_script" />
 	  <control name="Styles" spans="3 icons">
 	    <combo_box type="drop down" plugin="styles_list" />
 	  </control>
