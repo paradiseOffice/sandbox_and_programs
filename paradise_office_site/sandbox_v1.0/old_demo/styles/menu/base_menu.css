@@ -4,16 +4,15 @@
  * 
  */
 
-ul.menu { font-family: arial, sans-serif; display: none;  }
+.menu { position: absolute; background: #BBAAFF;  color: #000000; 
+          font-family: arial, sans-serif; 
+          display: none;  }
 
-span.acckey { text-decoration: underline; text-align: right; color: #1c1c1c; }
-ul.menu, ul.menu li {
-  list-style: none outside none;
+.menuAcckey { text-align: right; color: #1c1c1c;  }
+.menu, .menu tr { border-top: 1px solid black; 
   margin: 0; padding: 0; }
-ul.menu li a { display: inline;  }
-ul.menu .menu_item { background: #BBAAFF;  color: #000000; }
+.menu .name tr { background: #BBAAFF;  color: #000000; }
 
-ul.menu li:hover > a.menu_item { background: #CCCCFF; } /* not sup. IE9 */
-ul.menu a:hover { text-decoration: none;  }
-ul.menu a:active { text-decoration: underline;  }
-ul.menu a:link, ul.menu a:visited { text-decoration: none; }
+tr a:hover { background: #CCCCFF; text-decoration: underline; }
+.menu_item a:active { text-decoration: none;  }
+.menu_item a:link, .menu_item a:visited { text-decoration: none; }

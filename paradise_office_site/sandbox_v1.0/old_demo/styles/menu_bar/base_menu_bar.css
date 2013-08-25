@@ -23,10 +23,3 @@ ul.all-menus a:active { text-decoration: none;
 }
 ul.all-menus a:link, ul.all-menus a:visited { text-decoration: none; }
 
-/* Bit that gets the menus to show on hover */
-li:hover ul.menu { display: block; position: absolute; width: 150px; height: auto; 
-  top: 36px;  }
-.menu#File { left: 0px; }
-.menu#Edit { left: 152px; }
-.menu#View { left: 304px; }
-.menu#Format { left: 456px; }
