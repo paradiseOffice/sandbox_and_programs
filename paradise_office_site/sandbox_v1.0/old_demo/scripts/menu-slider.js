@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('#menuLink1').hover ( function() {
       $('#menu1')
         .stop(true, true)
-        .delay(10)
+        .delay(60)
         .show(200)
         .delay(5000)
         .hide(200);
@@ -17,7 +17,7 @@ $(document).ready(function() {
       $('#menuLink2').hover ( function() {
       $('#menu2')
         .stop(true, true)
-        .delay(10)
+        .delay(60)
         .show(200)
         .delay(5000)
         .hide(200);
@@ -30,7 +30,7 @@ $(document).ready(function() {
       $('#menuLink3').hover ( function() {
       $('#menu3')
         .stop(true, true)
-        .delay(10)
+        .delay(60)
         .show(200)
         .delay(5000)
         .hide(200);
@@ -43,7 +43,7 @@ $(document).ready(function() {
       $('#menuLink4').hover ( function() {
       $('#menu4')
         .stop(true, true)
-        .delay(10)
+        .delay(60)
         .show(200)
         .delay(5000)
         .hide(200);
@@ -56,7 +56,7 @@ $(document).ready(function() {
       $('#menuLink5').hover ( function() {
       $('#menu5')
         .stop(true, true)
-        .delay(10)
+        .delay(60)
         .show(200)
         .delay(5000)
         .hide(200);
@@ -69,7 +69,7 @@ $(document).ready(function() {
       $('#menuLink6').hover ( function() {
       $('#menu6')
         .stop(true, true)
-        .delay(10)
+        .delay(60)
         .show(200)
         .delay(5000)
         .hide(200);
@@ -82,7 +82,7 @@ $(document).ready(function() {
       $('#menuLink7').hover ( function() {
       $('#menu7')
         .stop(true, true)
-        .delay(10)
+        .delay(60)
         .show(200)
         .delay(5000)
         .hide(200);
@@ -95,7 +95,7 @@ $(document).ready(function() {
       $('#menuLink8').hover ( function() {
       $('#menu8')
         .stop(true, true)
-        .delay(10)
+        .delay(60)
         .show(200)
         .delay(5000)
         .hide(200);
@@ -108,7 +108,7 @@ $(document).ready(function() {
       $('#menuLink9').hover ( function() {
       $('#menu9')
         .stop(true, true)
-        .delay(10)
+        .delay(60)
         .show(200)
         .delay(5000)
         .hide(200);
@@ -121,7 +121,7 @@ $(document).ready(function() {
       $('#menuLink10').hover ( function() {
       $('#menu10')
         .stop(true, true)
-        .delay(10)
+        .delay(60)
         .show(200)
         .delay(5000)
         .hide(200);

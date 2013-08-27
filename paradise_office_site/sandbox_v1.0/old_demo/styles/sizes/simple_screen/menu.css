@@ -9,7 +9,9 @@
 .menu { width: 200px; height: auto; 
   top: 36px; z-index: 7000;
   font: 14px arial, sans-serif; 
+
 }
+
 .menu.menu_item { height: 30px;  } /* these can be put in all one group. */
 
 .menuAcckey { font: 12px arial, sans-serif; padding-right: 3px; }

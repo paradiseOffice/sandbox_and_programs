@@ -6,7 +6,10 @@
 
 .menu { position: absolute; background: #BBAAFF;  color: #000000; 
           font-family: arial, sans-serif; 
-          display: none;  }
+          display: none; 
+          border: 2px solid #CCAAEE;
+          
+}
 
 .menuAcckey { text-align: right; color: #1c1c1c;  }
 .menu, .menu tr { border-top: 1px solid black; 
