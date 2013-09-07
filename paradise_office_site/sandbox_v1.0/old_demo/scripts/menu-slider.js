@@ -1,135 +1,148 @@
 /* For animating CSS drop down menus */
-$(document).ready(function() {
-   
-    $('#menuLink1').hover ( function() {
-      $('#menu1')
-        .stop(true, true)
-        .delay(60)
-        .show(200)
-        .delay(5000)
-        .hide(200);
-      });
-    
-      $(document).click ( function() {
-         $('#menu1').hide(); 
-      });
-      
-      $('#menuLink2').hover ( function() {
-      $('#menu2')
-        .stop(true, true)
-        .delay(60)
-        .show(200)
-        .delay(5000)
-        .hide(200);
-      });
-    
-      $(document).click ( function() {
-         $('#menu2').hide(); 
-      });
+var showDuration = 500;
+var hideDuration = 500;
 
-      $('#menuLink3').hover ( function() {
-      $('#menu3')
-        .stop(true, true)
-        .delay(60)
-        .show(200)
-        .delay(5000)
-        .hide(200);
-      });
-    
-      $(document).click ( function() {
-         $('#menu3').hide(); 
-      });
+$(document).ready(function() {
+  $('#menuLink1').hover ( function() {
+    $('.menu').css('display', 'none');
+    $('#menu1').show(showDuration, function() {
+      $(this).animate({opacity: 1.0, height: 'toggle'}, 5000);
       
-      $('#menuLink4').hover ( function() {
-      $('#menu4')
-        .stop(true, true)
-        .delay(60)
-        .show(200)
-        .delay(5000)
-        .hide(200);
-      });
-    
-      $(document).click ( function() {
-         $('#menu4').hide(); 
-      });
+      });                     
+    }, 
+    function() {
+    $('#menu1').hide(hideDuration);
+    });
+    $(document).click ( function() {
+         $('#menu1').hide(hideDuration);
+    }); 
+     
+  $('#menuLink2').hover ( function() {
+    $('.menu').css('display', 'none');
+    $('#menu2').show(showDuration, function() {
+      $(this).animate({opacity: 1.0, height: 'toggle'}, 5000);
       
-      $('#menuLink5').hover ( function() {
-      $('#menu5')
-        .stop(true, true)
-        .delay(60)
-        .show(200)
-        .delay(5000)
-        .hide(200);
-      });
+      });                     
+    }, 
+    function() {
+    $('#menu2').hide(hideDuration);
+    });
+    $(document).click ( function() {
+         $('#menu2').hide(hideDuration);
+    }); 
     
-      $(document).click ( function() {
-         $('#menu5').hide(); 
-      });
+    $('#menuLink3').hover ( function() {
+    $('.menu').css('display', 'none');
+    $('#menu3').show(showDuration, function() {
+      $(this).animate({opacity: 1.0, height: 'toggle'}, 5000);
       
-      $('#menuLink6').hover ( function() {
-      $('#menu6')
-        .stop(true, true)
-        .delay(60)
-        .show(200)
-        .delay(5000)
-        .hide(200);
-      });
+      });                     
+    }, 
+    function() {
+    $('#menu3').hide(hideDuration);
+    });
+    $(document).click ( function() {
+         $('#menu3').hide(hideDuration);
+    }); 
     
-      $(document).click ( function() {
-         $('#menu6').hide(); 
-      });
+    $('#menuLink4').hover ( function() {
+    $('.menu').css('display', 'none');
+    $('#menu4').show(showDuration, function() {
+      $(this).animate({opacity: 1.0, height: 'toggle'}, 5000);
       
-      $('#menuLink7').hover ( function() {
-      $('#menu7')
-        .stop(true, true)
-        .delay(60)
-        .show(200)
-        .delay(5000)
-        .hide(200);
-      });
+      });                     
+    }, 
+    function() {
+    $('#menu4').hide(hideDuration);
+    });
+    $(document).click ( function() {
+         $('#menu4').hide(hideDuration);
+    }); 
     
-      $(document).click ( function() {
-         $('#menu7').hide(); 
-      });
+    $('#menuLink5').hover ( function() {
+    $('.menu').css('display', 'none');
+    $('#menu5').show(showDuration, function() {
+      $(this).animate({opacity: 1.0, height: 'toggle'}, 5000);
       
-      $('#menuLink8').hover ( function() {
-      $('#menu8')
-        .stop(true, true)
-        .delay(60)
-        .show(200)
-        .delay(5000)
-        .hide(200);
-      });
+      });                     
+    }, 
+    function() {
+    $('#menu5').hide(hideDuration);
+    });
+    $(document).click ( function() {
+         $('#menu5').hide(hideDuration);
+    }); 
     
-      $(document).click ( function() {
-         $('#menu8').hide(); 
-      });
+    $('#menuLink6').hover ( function() {
+    $('.menu').css('display', 'none');    
+    $('#menu6').show(showDuration, function() {
+      $(this).animate({opacity: 1.0, height: 'toggle'}, 5000);
       
-      $('#menuLink9').hover ( function() {
-      $('#menu9')
-        .stop(true, true)
-        .delay(60)
-        .show(200)
-        .delay(5000)
-        .hide(200);
-      });
+      });                     
+    }, 
+    function() {
+    $('#menu6').hide(hideDuration);
+    });
+    $(document).click ( function() {
+         $('#menu6').hide(hideDuration);
+    }); 
     
-      $(document).click ( function() {
-         $('#menu9').hide(); 
-      });
+    $('#menuLink7').hover ( function() {
+    $('.menu').css('display', 'none');
+    $('#menu7').show(showDuration, function() {
+      $(this).animate({opacity: 1.0, height: 'toggle'}, 5000);
       
-      $('#menuLink10').hover ( function() {
-      $('#menu10')
-        .stop(true, true)
-        .delay(60)
-        .show(200)
-        .delay(5000)
-        .hide(200);
-      });
+      });                     
+    }, 
+    function() {
+    $('#menu7').hide(hideDuration);
+    });
+    $(document).click ( function() {
+         $('#menu7').hide(hideDuration);
+    }); 
     
-      $(document).click ( function() {
-         $('#menu10').hide(); 
-      });
+    $('#menuLink8').hover ( function() {
+    $('.menu').css('display', 'none');
+    $('#menu8').show(showDuration, function() {
+      $(this).animate({opacity: 1.0, height: 'toggle'}, 5000);
       
+      });                     
+    }, 
+    function() {
+    $('#menu8').hide(hideDuration);
+    });
+    $(document).click ( function() {
+         $('#menu8').hide(hideDuration);
+    }); 
+    
+    $('#menuLink9').hover ( function() {
+    $('.menu').css('display', 'none');
+    $('#menu9').show(showDuration, function() {
+      $(this).animate({opacity: 1.0, height: 'toggle'}, 5000);
+      
+      });                     
+    }, 
+    function() {
+    $('#menu9').hide(hideDuration);
+    });
+    $(document).click ( function() {
+         $('#menu9').hide(hideDuration);
+    }); 
+    
+    $('#menuLink10').hover ( function() {
+    $('.menu').css('display', 'none');
+    $('#menu10').show(showDuration, function() {
+      $(this).animate({opacity: 1.0, height: 'toggle'}, 5000);
+      
+      });                     
+    }, 
+    function() {
+    $('#menu10').hide(hideDuration);
+    });
+    $(document).click ( function() {
+         $('#menu10').hide(hideDuration);
+    }); 
 });
-  
+
+    
+      
