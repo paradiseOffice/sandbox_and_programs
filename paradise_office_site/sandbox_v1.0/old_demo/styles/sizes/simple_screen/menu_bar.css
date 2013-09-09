@@ -1,9 +1,0 @@
-/* (c) Copyright 2013 Hazel Windle 
- * 
- * Sizes for the menu bar. Drop down menus are separate.
- * 
- */
-
-.menuLink { font-size: 153.9%; padding-top: 2px; padding-left: 3px; }
-ul.all-menus .menuLink { padding-right: 10px; } /* links up with menu to align it */
-ul.all-menus li a { width: 100px; height: 30px; }

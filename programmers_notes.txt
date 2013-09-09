@@ -42,3 +42,11 @@ Dialog boxes - non-modal : close button top right corner. Non resizeable.
 
 2013-08-15
 Spell check idea: parse the sentence then produce nearest matches - computer is reading for context.
+
+2013-09-09
+Cygnet Writer - wrapper py. program with init. in each ui module, unit test in each module.
+Each office program extends the Django base templates for screen, phone etc.
+Threads - js could use mobile js lib for swipes and finger motions like pinches, on tablets/mobiles.
+Do browser feature detection on login. Progressive enhancement on the sales site. 
+
+Py_linker is now handled by Django controllers (views) in views.py files.

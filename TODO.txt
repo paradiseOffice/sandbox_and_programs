@@ -1,131 +1,44 @@
 To Do (coding)
-  - Finish menus so they look / work right
 
- - threads/processing/th_py_linker
+   1. Update blog and twitter/Diaspora
+      with Django news and 4 step struggles with Python otherwise.
+   2. Create full icon set for a:
+        Jotter - text editor
+	Pages - word processor
+	general
+	Ledger - spreadsheet for accounting
+	Postbox - email client
+	Save as SVG and test
+   3. Change demo to mostly utilise jQuery UI
+   4. Research CSS3 and finish default pro theme
+   5. Install test server and harden
+   6. Do other two themes and matching icons.
+   7. Get CSS chooser to work in settings menu
+   8. Do screen resize javascript
+   9. Test demo on multiple browsers and tablets
+   10. Delete extra demo files, put in soft links where needed.
+   11. Create little Python wrapper files and unit tests for building each medium sized web chunk.
+   12. Do other size css things, and screen size testing js/html.
+   13. Update blog and document progress.
+   14. Create javascript listeners (events, selections).
+   15. Hook on behaviours with Django views
+   16. Create Python scripts for file conversion.
+   17. Create Python scripts for new/open/close.
+   18. Create PHP scripts for saves, mail access.
+   19. Build Cygnet maker pieces starting with (view) validation.
+   20. Write word processor test output.
+   21. Write unit and regression tests in Python and javascript.
+   22. Test it.
+   23. Write other file_ports
+   24. Test those.
+   25. Do help messages
+   26. Translate help strings.
 
- - Cygnet Maker reader
-	- validate.py
-	- check_commands_links.py
-	- caller_to_writer.py
-	- main.py
-
- - Cygnet Maker validation bits
- - Cygnet Writer
-	- copy_skel_meta_info.php
-	- security_checker.php
-	- main_title_dialog_links.php
-	- build_dialogs.php
-	- build_common_bar_icons.php
-	- build_menus.php
-	- build_file_port.php
-	- build_tool_boxes.php
-	- build_status_bar.php
-
-Test build: Glorified typewriter in .xml
-
-===============================================================================
-appearence/messaging
- - Read Node.js book, do examples on home lamp server
-  - Create fatal error box and error list
-  - Create list of error messages (numbered)
-  - Try translating some into Finnish, German French and Spanish
-  - Create text/word processing help messages (numbered)
-  - Do simple translations for them
-  - Do text/word processing info messages (coded)
-  - Do simple Google translations for them
-  - Create both long and short tool tip texts (coded)
-  - Translate them
-  - Do text/word processing status messages
-  - Translate them
-
-   - Read jQuery/Javascript books, do some exercises relevant to this.
-
-appearence/themes
-  - ap_base_skel
-  - default_pro_theme
-  - gorilla icon set
-  - scripts
-  - sizes (all screens but not access ones)
-  - any ui gfx
-  - access_pro visually impaired theme
-
-data_io/databases
-  - security_settings
-  - login
-  - logout
-  - create databases/tables
-  - prepare_statement
-  - describe tables
-  - add data
-  - alter tables
-  - set up keys
-  - update data
-  - create reports
-  - create forms
-  - insert data in forms
-  - query data
-  - modify reports
-  - delete data
-  - alter forms
-
-=======================================================================================
-
-formats/binary
-  - read_doc
-  - write_doc
-  - read_ppt
-  - write_ppt
-  - read_xls
-  - write_xls
-
-(and with an x on the end)
-
-formats/open_doc
-  - read_odp
-  - write_odp
-  - read_ods
-  - write_ods
-  - read_odt
-  - write_odt
-
-formats/standards
-  - read_html
-  - write_html
-  - read_txt
-  - write_txt
-
-formats/xml
-  - read_scrolls_xml
-  - write_scrolls_xml
-
------------------------------------------------------------------
-data_io/files
-
-  - close_file
-  - convert_bfile
-  - new
-  - open_upload
-  - save_as_dl
-  - save_download
-
-threads/events (node.js for simple, js for modern)
-  - main_listener
-  - keypad
-  - main_keys
-  - mouse
-  - system (html Php based)
-  - main (Python celery demo)
-
-ui_widgets/container_elements (check, tidy up and comment)
-
-ui_widgets/dialogs (create, model some on jQuery UI interface)
-
-ui_widgets/labels - layout
-
-ui_widgets/user_controls (with validation py links)
-
-=============================================================================
+============================================================================
+Next Steps:
 
 1. Design and program 'Pages', a simple free word processor
 2. Design and program 'Plan', a simple project manager
-3. Design and program 'Grids', a simple spreadsheet focused on accounting.
+3. Design and program 'Ledger', a simple spreadsheet focused on accounting.
+4. Design and program 'Jotter', a text editor
+5. Design and program 'Postbox', an email client

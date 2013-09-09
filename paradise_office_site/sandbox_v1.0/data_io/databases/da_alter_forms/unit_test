@@ -1,6 +1,0 @@
-alter_forms
-
-Input: A form (HTML)
-Output: A form altered by the user.
-
-Try resizing boxes, deleting a box and adding radio buttons. if the saved form looks the same then it's OK.

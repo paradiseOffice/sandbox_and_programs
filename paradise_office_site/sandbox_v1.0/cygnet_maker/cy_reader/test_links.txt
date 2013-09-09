@@ -1,2 +1,0 @@
-../cy_tests/simple_word_processor/main_app.xml
-../cy_tests/simple_word_processor/dialog_format_words.xml
