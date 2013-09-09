@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE dialog PUBLIC "-//paradise-office//DTD cygnet-dialog 0.1//EN" "http://www.linux-paradise.co.uk/DTDs/cygnet/dialogs.dtd">
+  <dialog type="modal" name="Format Pages">
+    <tab name="Background">
+      <field_box>
+      <row num="1">  
+        <label name="Page colour" />
+        <combo_box type="drop down" default="white" pic="bg_colour.png"
+      plugin="page_bg_colour" />
+        <label name="Border" />
+        <combo_box type="drop down" default="none" plugin="fancy_page_border" />
+      </row>
+      <row num="2">
+        <label name="Watermark" />
+        <upload_pic name="Upload photo" type="with_text_field"
+      pic="page_bg_watermark.png" plugin="set_watermark" />
+      </row>
+
+      <field_box name="Page numbering">
+        <row num="3">
+          <checkbox_wLabel name="On" plugin="add_page_nums"
+        />
+        </row>
+        <row num="4">
+          <radio_btns_wLabel group="number_style" name="1, 2, 3, 4"
+      options="decimal" />
+          <checkbox_wLabel name="1 of page total" options="1_of_n" />
+        </row>
+        <row num="5">
+          <radio_btns_wLabel group="number_style" name="i, ii, iii, iv"
+      options="lower_arabic" />
+          <checkbox_wLabel name="Today's date to left of number"
+        options="today_left" />
+        </row>
+        <row num="6">
+          <radio_btns_wLabel group="number_style" name="I, II, III, IV"
+      options="upper_arabic" />
+          <label name="Pages not numbered: " />
+        </row>
+        <row num="7">
+          <radio_btns_wLabel group="number_style" name="A, B, C, D"
+      options="letters_upper" />
+          <spinbox default="1" step_size="1" options="omit_nums_start" />
+          <spinbox default="1" step_size="1" options="omit_nums_stop" />
+        </row>
+      </field_box>
+    </tab>
+
+    <tab name="Print Options">
+      <field_box name="Orientation" width="50%" height="100%">
+        <row num="1">
+        <radio_btns_wLabel group="portrait_options" name="All pages"
+      options="all_portrait" />
+        <large_icon name="Portrait" pic="portrait_pages.png" spans="3 rows" options="portrait_set" />
+      </row>
+
+      <row num="2">
+        <radio_btns_wLabel group="portrait_options" name="Page range: "
+      options="p_page_range" />
+      </row>
+      <row num="3">
+        <spinbox default="1" step_size="1" options="start_portrait" />
+        <spinbox default="1" step_size="1" options="stop_portrait" />
+      </row>
+      <row num="4">
+        <radio_btns_wLabel group="landscape_options" name="All pages"
+      options="all_landscape" />
+      </row>
+
+      <row num="5">
+        <large_icon name="Landscape" pic="landscape_pages.png" spans="2 rows" options="landscape_set" />
+        <radio_btns_wLabel group="landscape_options" name="Page range: "
+      options="l_page_range" />
+      </row>
+      <row num="6">
+        <spinbox default="1" step_size="1" options="start_landscape" />
+        <spinbox default="1" step_size="1" options="stop_landscape" />
+      </row>
+
+      </field_box>
+      <field_box name="Margins" height="70%">
+        <row num="1">
+          <label name="Left: " /><spinbox default="1" step_size="0.25"
+      plugin="set_margins" 
+      options="left_margin" /><label name="cm" />
+        </row>
+        <row num="2">
+          <label name="Right: " /><spinbox default="1" step_size="0.25"  plugin="set_margins"  options="right_margin" /><label name="cm" />
+        </row>
+        <row num="3">
+          <label name="Top: " /><spinbox default="1" step_size="0.25"  plugin="set_margins"   options="top_margin" /><label name="cm" />
+        </row>
+        <row num="4">
+          <label name="Bottom: " /><spinbox default="1" step_size="0.25"
+      plugin="set_margins" options="bottom_margin" /><label name="cm" />
+        </row>
+      </field_box>
+      <field_box name="Print preview" height="30%">
+        <large_icon name="Colour print preview" pic="col_print_view.png"
+      plugin="set_print_view_colours" options="colour" />
+        <large_icon name="Greyscale print preview" pic="grey_print_view.png"
+      plugin="set_print_view_colours" options="greyscale" />
+      </field_box>
+    </tab>
+    
+    <button name="OK" command="ok" /><button name="Cancel" command="cancel" />
+  </dialog>

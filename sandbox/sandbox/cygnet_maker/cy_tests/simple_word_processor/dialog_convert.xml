@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE dialog PUBLIC "-//paradise-office//DTD cygnet-dialog 0.1//EN" "http://www.linux-paradise.co.uk/DTDs/cygnet/dialogs.dtd">
+  <dialog name="Convert file" type="modal">
+    <field_box>
+      <row num="1">
+        <label name="DOC_TITLE"></label>
+      </row>
+      <row num="2">
+        <combo_box name="Copy 1" plugin="file_type_list" />
+        <combo_box name="Copy 2" plugin="file_type_list" />
+      </row>
+    </field_box>
+      <button name="Convert files" command="ok" /><button name="Cancel" command="cancel" />
+  </dialog>

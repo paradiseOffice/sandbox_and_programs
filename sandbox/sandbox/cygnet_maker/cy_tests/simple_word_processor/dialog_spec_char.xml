@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE dialog PUBLIC "-//paradise-office//DTD cygnet-dialog 0.1//EN" "http://www.linux-paradise.co.uk/DTDs/cygnet/dialogs.dtd">
+  <dialog name="Add special character" type="modal">
+    <field_box>
+      <row num="1">
+        <combo_box name="Pick font" type="drop down" plugin="font_list" />
+      </row>
+      <row num="2">
+        <font_preview spans="3 rows" name="Character table" type="glyph_table" options="get_font" plugin="font_list" />
+      </row>
+      <row num="3"></row>
+      <row num="4"></row>
+      <row num="5">
+        <button name="Insert" plugin="add_glyph" />
+        <button name="Use symbols font" plugin="font_list" options="open symbol" />
+      </row>
+    </field_box>
+    
+    <button name="OK" command="ok" /><button name="Cancel" command="cancel" />
+  </dialog>

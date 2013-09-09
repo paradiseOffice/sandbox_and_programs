@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE dialog PUBLIC "-//paradise-office//DTD cygnet-dialog 0.1//EN" "http://www.linux-paradise.co.uk/DTDs/cygnet/dialogs.dtd">
+  <dialog type="quick_menu" name="Word definition">
+    <field_box>
+      <row num="1">
+        <heading_label plugin="word_lookup" options="passed_word" />
+      </row>
+      <row num="2">
+        <label name="Pronunciation" />
+        <label plugin="word_lookup" options="pronounced" />
+      </row>
+      <row num="3">
+        <heading_label name="Means" />
+      </row>
+      <row num="4">
+        <label name="Definition" plugin="word_lookup" options="def" />
+      </row>
+      <row num="5"></row>
+    </field_box>
+    
+  </dialog>

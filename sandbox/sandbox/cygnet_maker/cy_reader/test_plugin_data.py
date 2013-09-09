@@ -1,0 +1,149 @@
+# The first key in the dictionary is the name (attribute), followed by the
+# exact name from the XML. plugin is the plugin name. URL is the URL to the 
+# Python file. status gets added and is either 'ok', 'plugin script not here',
+# or 'plugin is Python 2.7. Please use Python 3' options is the options attr.
+
+print_file = {'name': 'Print File', 'plugin': 'print', 'options': '', 'URL': '', 'status': '' }
+cut = {'name': 'Cut', 'plugin': 'cut_words', 'options': '', 'URL': '', 'status': '' }
+copy = {'name': 'Copy', 'plugin': 'copy_words', 'options': '', 'URL': '', 'status': '' }
+paste = {'name': 'Paste', 'plugin': 'paste_words', 'options': '', 'URL': '', 'status': '' }
+clipboard = {'name': 'Clipboard', 'plugin': 'clipboard_words', 'options': '', 'URL': '', 'status': '' }
+delete = {'name': 'Delete', 'plugin': 'del_words', 'options': '', 'URL': '', 'status': '' }
+zoom10 = {'name': '10% Zoom', 'plugin': 'zoom_up_page', 'options': '10', 'URL': '', 'status': '' }
+zoom25 = {'name': '25% Zoom', 'plugin': 'zoom_up_page', 'options': '25', 'URL': '', 'status': '' }
+zoom50 = {'name': '50% Zoom', 'plugin': 'zoom_up_page', 'options': '50', 'URL': '', 'status': '' }
+zoom100 = {'name': '100% Zoom', 'plugin': 'zoom_up_page', 'options': '100', 'URL': '', 'status': '' }
+zoom125 = {'name': '125% Zoom', 'plugin': 'zoom_up_page', 'options': '125', 'URL': '', 'status': '' }
+zoom150 = {'name': '150% Zoom', 'plugin': 'zoom_up_page', 'options': '150', 'URL': '', 'status': '' }
+zoomWidth = {'name': 'Fit Page Width', 'plugin': 'zoom_up_page', 'options': 'fitWidth', 'URL': '', 'status': '' }
+zoomHeight = {'name': 'Fit Page Height', 'plugin': 'zoom_up_page', 'options': 'fitHeight', 'URL': '', 'status': '' }
+breaks = {'name': 'Break', 'plugin': 'text_breaks', 'options': '', 'URL': '', 'status': '' }
+spec_char = {'name': 'Special Character', 'plugin': 'spec_char', 'options': '', 'URL': '', 'status': '' }
+ins_table = {'name': 'Table', 'plugin': 'insert_table', 'options': '', 'URL': '', 'status': '' }
+ins_ref = {'name': 'Reference', 'plugin': 'insert_ref', 'options': '', 'URL': '', 'status': '' }
+ins_link = {'name': 'Link', 'plugin': 'insert_link', 'options': '', 'URL': '', 'status': '' }
+ins_text = {'name': 'Text File', 'plugin': 'insert_text', 'options': '', 'URL': '', 'status': '' }
+words = {'name': 'Words', 'plugin': 'format_words', 'options': '', 'URL': '', 'status': '' }
+paragraph = {'name': 'Paragraph', 'plugin': 'format_para', 'options': '', 'URL': '', 'status': '' }
+text_frame = {'name': 'Text Frame', 'plugin': 'format_frame', 'options': '', 'URL': '', 'status': '' }
+form-table = {'name': 'Style Table', 'plugin': 'format_table', 'options': '', 'URL': '', 'status': '' }
+pic = {'name': 'Picture', 'plugin': 'format_pic', 'options': '', 'URL': '', 'status': '' }
+page = {'name': 'Page', 'plugin': 'format_pages', 'options': '', 'URL': '', 'status': '' }
+about = {'name': 'About', 'plugin': 'show_about', 'options': '', 'URL': '', 'status': '' }
+li-print = {'name': 'Print', 'plugin': 'print', 'options': '', 'URL': '', 'status': '' }
+time = {'name': 'Time', 'plugin': 'current_time', 'options': 'now', 'URL': '', 'status': '' }
+wiki = {'name': 'Wikipedia', 'plugin': 'research_wiki', 'options': '', 'URL': '', 'status': '' }
+# Control name, plugin the first child of control or a sibling
+font_picker = {'name': 'font_picker', 'plugin': 'font_list', 'options': '', 'URL': '', 'status': '' }
+font_size = {'name': 'font_size', 'plugin': 'format_words', 'options': 'font_size', 'URL': '', 'status': '' }
+bold = {'name': 'bold', 'plugin': 'format_words', 'options': 'bold', 'URL': '', 'status': '' }
+underline = {'name': 'underline', 'plugin': 'format_words', 'options': 'underline', 'URL': '', 'status': '' }
+italic = {'name': 'italic', 'plugin': 'format_words', 'options': 'italic', 'URL': '', 'status': '' }
+all_caps = {'name': 'all caps', 'plugin': 'all_caps', 'options': '', 'URL': '', 'status': '' }
+text_col = {'name': 'Text colour', 'plugin': 'format_words', 'options': 'text_colour', 'URL': '', 'status': '' }
+highlight_col = {'name': 'Highlight colour', 'plugin': 'format_words', 'options': 'highlight_colour', 'URL': '', 'status': '' }
+sup_script = {'name': 'Superscript', 'plugin': 'format_words', 'options': 'sup_script', 'URL': '', 'status': '' }
+sub_script = {'name': 'Subscript', 'plugin': 'format_words', 'options': 'sub_script', 'URL': '', 'status': '' }
+styles = {'name': 'Styles', 'plugin': 'styles_list', 'options': '', 'URL': '', 'status': '' }
+add_style = {'name': 'add style', 'plugin': 'add_style', 'options': '', 'URL': '', 'status': '' }
+left_just = {'name': 'Left', 'plugin': 'justify', 'options': 'left', 'URL': '', 'status': '' }
+centre_just = {'name': 'Centre', 'plugin': 'justify', 'options': 'centre', 'URL': '', 'status': '' }
+right_just = {'name': 'Right', 'plugin': 'justify', 'options': 'right', 'URL': '', 'status': '' }
+fill_just = {'name': 'Justify', 'plugin': 'justify', 'options': 'justify', 'URL': '', 'status': '' }
+first_line = {'name': 'first line indent', 'plugin': '1st_line_indent', 'options': '', 'URL': '', 'status': '' }
+drop_cap = {'name': 'Drop cap', 'plugin': 'drop_cap', 'options': '', 'URL': '', 'status': '' }
+inc_indent = {'name': 'Increase Indent', 'plugin': 'indent', 'options': 'increase', 'URL': '', 'status': '' }
+dec_indent = {'name': 'Decrease Indent', 'plugin': 'indent', 'options': 'decrease', 'URL': '', 'status': '' }
+line_height = {'name': 'line height', 'plugin': 'line_height', 'options': '', 'URL': '', 'status': '' }
+left_tab = {'name': 'left tab stop', 'plugin': 'set_tabs', 'options': 'left_cm', 'URL': '', 'status': '' }
+word_count = {'name': 'Word count', 'plugin': 'word_count', 'options': '', 'URL': '', 'status': '' }
+
+main-app_db = {}
+main-app_db['print_file'] = print_file
+main-app_db['cut'] = cut
+main-app_db['copy'] = copy
+main-app_db['paste'] = paste
+main-app_db['clipboard'] = clipboard
+main-app_db['delete'] = delete
+main-app_db['zoom10'] = zoom10
+main-app_db['zoom25'] = zoom25
+main-app_db['zoom50'] = zoom50
+main-app_db['zoom100'] = zoom100
+main-app_db['zoom125'] = zoom125
+main-app_db['zoom150'] = zoom150
+main-app_db['zoomWidth'] = zoomWidth
+main-app_db['zoomHeight'] = zoomHeight
+main-app_db['breaks'] = breaks
+main-app_db['spec_char'] = spec_char
+main-app_db['ins_table'] = ins_table
+main-app_db['ins_ref'] = ins_ref
+main-app_db['ins_link'] = ins_link
+main-app_db['ins_text'] = ins_text
+main-app_db['words'] = words
+main-app_db['paragraph'] = paragraph
+main-app_db['text_frame'] = text_frame
+main-app_db['form-table'] = form-table
+main-app_db['pic'] = pic
+main-app_db['page'] = page
+main-app_db['about'] = about
+main-app_db['li-print'] = li-print
+main-app_db['time'] = time
+main-app_db['wiki'] = wiki
+main-app_db['font_picker'] = font_picker
+main-app_db['font_size'] = font_size
+main-app_db['bold'] = bold
+main-app_db['italic'] = italic
+main-app_db['underline'] = underline
+main-app_db['all_caps'] = all_caps
+main-app_db['text_col'] = text_col
+main-app_db['highlight_col'] = highlight_col
+main-app_db['sup_script'] = sup_script
+main-app_db['sub_script'] = sub_script
+main-app_db['styles'] = styles
+main-app_db['add_style'] = add_style
+main-app_db['left_just'] = left_just
+main-app_db['centre_just'] = centre_just
+main-app_db['right_just'] = right_just
+main-app_db['fill_just'] = fill_just
+main-app_db['first_line'] = first_line
+main-app_db['drop_cap'] = drop_cap
+main-app_db['inc_indent'] = inc_indent
+main-app_db['dec_indent'] = dec_indent
+main-app_db['line_height'] = line_height
+main-app_db['left_tab'] = left_tab
+main-app_db['word_count'] = word_count
+
+
+d-font = {'name': 'Font:', 'plugin': 'font_list', 'options': '', 'URL': '', 'status': '' }
+# child of a control or label...
+d-size = {'name': 'Size:', 'plugin': 'format_words', 'options': 'font_size', 'URL': '', 'status': '' }
+d-text_col = {'name': 'Text colour', 'plugin': 'format_words', 'options': 'text_colour', 'URL': '', 'status': '' }
+d-highlight_col = {'name': 'Highlight colour', 'plugin': 'format_words', 'options': 'highlight_colour', 'URL': '', 'status': '' }
+d-add_col = {'name': 'Add colours', 'plugin': 'add_colours', 'options': '', 'URL': '', 'status': '' }
+d-bold = {'name': 'bold', 'plugin': 'format_words', 'options': 'bold', 'URL': '', 'status': '' }
+d-underline = {'name': 'underline', 'plugin': 'format_words', 'options': 'underline', 'URL': '', 'status': '' }
+d-italic = {'name': 'italic', 'plugin': 'format_words', 'options': 'italic', 'URL': '', 'status': '' }
+d-upper = {'name': 'UPPERCASE', 'plugin': 'format_words', 'options': 'upper', 'URL': '', 'status': '' }
+d-sup_script = {'name': 'Superscript', 'plugin': 'format_words', 'options': 'sup_script', 'URL': '', 'status': '' }
+d-lower = {'name': 'lowercase', 'plugin': 'format_words', 'options': 'lower', 'URL': '', 'status': '' }
+d-sub_script = {'name': 'Subscript', 'plugin': 'format_words', 'options': 'sub_script', 'URL': '', 'status': '' }
+d-title_case = {'name': 'Title Case', 'plugin': 'format_words', 'options': 'title', 'URL': '', 'status': '' }
+
+d-format-words_db = {}
+d-format-words_db['d-font'] = d-font
+d-format-words_db['d-size'] = d-size
+d-format-words_db['d-text_col'] = d-text_col
+d-format-words_db['d-highlight_col'] = d-highlight_col
+d-format-words_db['d-add_col'] = d-add_col
+d-format-words_db['d-bold'] = d-bold
+d-format-words_db['d-underline'] = d-underline
+d-format-words_db['d-italic'] = d-italic
+d-format-words_db['d-upper'] = d-upper
+d-format-words_db['d-sup_script'] = d-sub_script
+d-format-words_db['d-lower'] = d-lower
+d-format-words_db['d-sub_script'] = d-sub_script
+d-format-words_db['d-title_case'] = d-title_case
+
+if __name__ == '__main__':	# When run as a script
+  for key in db:
+    print(key, '=>\n	', db[key])
