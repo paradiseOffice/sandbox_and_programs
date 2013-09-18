@@ -1,0 +1,37 @@
+
+settings menu
+warning
+info
+error
+notice
+ dialog_close
+ dialog_hide
+ dialog_ok
+ dialog_cancel
+
+new_tab
+close_tab
+
+busy_cursor
+
+New file (plain, with white space in the middle)
+Open_file
+Save
+Save_as
+convert
+print
+print_preview
+close_file
+
+Cut
+Copy
+paste
+zoom_in
+zoom_out 
+zoom_orig
+find
+goto
+delete
+about
+settings
+
