@@ -1,4 +1,33 @@
-
+﻿GBP
+euro
+dollar
+con_formatting
 new account
 single entry
 double entry
+add_transaction
+edit_transaction
+add_formula
+edit_formula
+import_file (for later)
+export_file (for later)
+tax_details
+payroll
+loan_cc_calc
+add_cur_conv_field
+invoices_list
+add_invoice
+edit_invoice
+purchase_ledger
+sales_ledger
+reconcile
+income
+spending
+cash_flow
+wages_benefits_UK
+vat_info
+add_forecast
+add_report
+add_chart
+add_goalseek
+add_sensitivity_analysis

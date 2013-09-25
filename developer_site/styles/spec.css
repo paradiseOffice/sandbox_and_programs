@@ -1,19 +1,19 @@
-body.spec
-body#sandbox
+body.spec { }
+body#sandbox { }
 
-.header
-.printHeader
+.header { }
+.printHeader { }
 
-#titlePage
-.introduction
-.sys_overview
-.goals
-.dev_methods
-.strategies
-.sys_arch
-.subsystems
-.policies
-.detailed_design
-.subsystem_details
-.glossary
-.biblo
+#titlePage { }
+.introduction { }
+.sys_overview { }
+.goals { }
+.dev_methods { }
+.strategies { }
+.sys_arch { }
+.subsystems { }
+.policies { }
+.detailed_design { }
+.subsystem_details { }
+.glossary { }
+.biblo { }

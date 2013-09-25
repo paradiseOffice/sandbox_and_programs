@@ -127,7 +127,7 @@ div#contact_link {
   font-size: 16pt;
 }
 .main-content h2 {
-  font-size: 14pt;
+  font-size: 14pt; 
 }
 .main-content h3, h4 {
   color:#DE304B;
@@ -151,6 +151,13 @@ div#contact_link {
   margin-left: auto;
   margin-right: auto;
 }
+img.icon {
+  border: 0;
+  float: right;
+  margin-left: auto;
+}
+p.app_descr { }
+
 .main-content .aside {
   background-color:#9E9E9E;
   color: #000000;
@@ -169,3 +176,5 @@ div#contact_link {
   padding: 10px;
   border: 1px #9E9E9E solid;
 }
+div.section { position: relative; top: 40px; }
+
