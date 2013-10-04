@@ -1,6 +1,0 @@
-
-Jotter - text editor
-Pages - word processor (2)
-Ledger - ss for accounts 
-Planner - Project management
-Postbox - email client

@@ -1,46 +1,47 @@
-﻿dictionary
+﻿header_footer 
+dictionary    
 just_centre
 just_left
 just_right
 just_justify
-colour_highlight
-colour_picker
-colour_background
-colour_text
-border_left
-border_right
+colour_highlight ( highlighter pen, ring and tip/line alpha )
+colour_picker ( little sucker thingy and colour swatches in background )
+colour_background ( C with alpha background )
+colour_text ( C outline with inside of text alpha )
+border_left ( dotted grey grid with thick black line on left )
+border_right 
 border_bottom
 border_top
-border_middle
-border_all
-border_round_all
-font_picker
-add_image
-translate
-indent_less
-indent_more
-superscript
-subscript
-strikethrough
-bold
-italic
-underline
-bullet_list
-pic_list
-number_list
-add_table
-add_row
-delete_row
-add_column
+border_middle ( black lines in a cross )
+border_all ( whole square a border )
+border_round_all ( rounded corners )
+font_picker ( F O N T in a square with pencil shading )
+add_image ( just the frame, put steam engine bitmap in it )
+translate ( uss (return) u (umlauts) german ss )
+indent_less ( like normal 6 lines)
+indent_more ( like normal 6 lines )
+superscript ( 2 then small nd )
+subscript ( H then sub 2 )
+strikethrough ( D with strikethrough )
+bold ( B )
+italic ( i )
+underline ( U )
+bullet_list ( 6 lines with circle bullets )
+pic_list ( 4 lines with coloured star for each bullet )
+number_list ( 6 lines with numbers )
+add_table ( Table grid )
+add_row ( green row in grid )
+delete_row ( red row in grid )
+add_column 
 delete_column
-merge_cells
-split_cells
-table_format
-insert_page_break
-insert_spec_char
-export_to_pdf
-import_pdf
-show_formatting
-doc_info
-spell_check
-grammar_check
+merge_cells ( Merged cell above 2 cols )
+split_cells ( As above but red line in between merged cell )
+table_format ( A coloured table grid )
+insert_page_break ( two sheets of paper with wide gap coloured green )
+insert_spec_char ( Put weird Greek symbol here )
+export_to_pdf ( red pdf on a folded corner piece of paper )
+import_pdf ( green pdf " ")
+show_formatting ( little paragraph symbol )
+doc_info ( document with magnifying glass over it )
+spell_check ( green tick and ABC )
+grammar_check ( little blackboard with silly font on it )

@@ -1,29 +1,33 @@
 ﻿fetch_all_mail 
 fetch_accounts_mail
-new_folder
-create_filter
-enable_filter
-compose_email
-reply_to_email
-reply_all
-create_email_list
-new_contact
-edit_contact
-del_contact
-inbox
-outbox
-sent_mail_all
-junk_folder
-bin
-junk_filter
-spam
-not_spam_mail
-forward
-previous
-next
-gpg_signature
-import_messages
-setup_accounts
-setup_project_dir
-project
-folder
+new_folder (folder with circle and cross in the corner)
+create_filter (funnel,yellow)
+enable_filter (funnel, green)
+disable_filter (funnel, red)
+compose_email ( pencil )
+attach_file ( paperclip )
+reply_to_email ( Backwards arrow with reply written on it )
+reply_all ( Reply All)
+create_email_list ( Group (return) List )
+new_contact ( Add (return) Contact )
+edit_contact ( Edit (return) Contact )
+del_contact ( Remove (return) Contact )
+inbox ( in tray )
+outbox ( out tray )
+sent_mail_all ( All Sent Mail )
+sent_mail ( Sent Mail )
+send ( @ Send )
+junk_folder ( Jail bars with a letter in it )
+bin ( Wire waste paper basket ) 
+junk_filter ( Piece of fried spam dropping into a funnel )
+spam ( Piece of fried spam )
+not_spam_mail ( Fried spam with red not circle over it )
+forward ( forward arrow with forward written on it )
+previous (in general as back)
+next  (in general as goto )
+gpg_signature ( little padlock )
+import_messages ( goto arrow and envelope )
+setup_accounts ( a little globe ) bitmap
+setup_project_dir ( a folder with a little gantt chart on it )
+project ( a little gantt chart )
+folder ( plain folder )
