@@ -13,22 +13,22 @@ import_file (for later) bmp
 export_file (for later) bmp
 tax_details *
 payroll     *
-loan_cc_calc  
-add_cur_conv_field
-invoices_list
-add_invoice
-edit_invoice
-purchase_ledger
-sales_ledger
-reconcile
-income  
-spending 
-property  (house)
-cash_flow (up and down bars with year above in dark grey)
-wages_benefits_UK (one person and a pound sign)
-vat_info (VAT %)
-add_forecast  (a crystal ball with currency signs in it)
-add_report (a document with report, a chart pic and writing)
+loan_cc_calc  *
+add_cur_conv_field *
+invoices_list	   *
+add_invoice	   *
+edit_invoice	   *
+purchase_ledger	   *
+sales_ledger	   *
+reconcile	   *
+income  	   *
+spending 	   *
+property  (house)  *
+cash_flow (up and down bars with year above in dark grey) *
+wages_benefits_UK (one person and a pound sign) *
+vat_info (VAT %)  *
+add_forecast  (a crystal ball with currency signs in it)	*
+add_report (a document with report, a chart pic and writing)	*
 add_chart (a pie chart)
 add_goalseek  (a football and goal)
 add_sensitivity_analysis ( what if? )
