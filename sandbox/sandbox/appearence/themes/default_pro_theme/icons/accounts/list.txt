@@ -29,6 +29,6 @@ wages_benefits_UK (one person and a pound sign) *
 vat_info (VAT %)  *
 add_forecast  (a crystal ball with currency signs in it)	*
 add_report (a document with report, a chart pic and writing)	*
-add_chart (a pie chart)
-add_goalseek  (a football and goal)
-add_sensitivity_analysis ( what if? )
+add_chart (a pie chart)						*
+add_goalseek  (a football and goal)				*
+add_sensitivity_analysis ( what if? )				*

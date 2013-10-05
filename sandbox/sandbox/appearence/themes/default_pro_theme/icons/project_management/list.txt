@@ -10,11 +10,11 @@ daily_task_list  ( 27/09/2013 (enter) To Do )
 edit_critical_path ( lines with arrows on it in red )
 gantt_tasks ( gantt chart with Tasks
 gantt_resources ( gantt chart with dollar sign )
-set_up_currency ( £ sign with pencil )
+set_currency ( £ sign with pencil )
 set_working_hours ( Working (return) Hours )
 header ( box with header in it )
 footer ( box with footer in it )
 worst_estimate ( hourglass with a little sand in it )
 best_estimate ( hourglass with more sand in it )
-risks ( no icon or just risks )
+risks ( no icon or just risks )	*
 add_link ( little chain link )
