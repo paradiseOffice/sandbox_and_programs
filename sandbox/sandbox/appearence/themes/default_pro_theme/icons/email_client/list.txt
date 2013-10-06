@@ -1,30 +1,30 @@
-﻿fetch_all_mail 
-fetch_accounts_mail
-new_folder (folder with circle and cross in the corner)
-add_filter (funnel,yellow)
-enable_filter (funnel, green)
-disable_filter (funnel, red)
-compose_email ( pencil )
-attach_file ( paperclip )
-reply ( Backwards arrow with reply written on it )
-reply_all ( Reply All)
-group_list ( Group (return) List )
-new_contact ( Add (return) Contact )
-edit_contact ( Edit (return) Contact )
-del_contact ( Remove (return) Contact )
-inbox ( in tray )
-outbox ( out tray )
-sent_mail_all ( All Sent Mail )
-sent_mail ( Sent Mail )
-send ( @ Send )
-junk_folder ( Jail bars with a letter in it )
-bin ( Wire waste paper basket ) 
-junk_filter ( Piece of fried spam dropping into a funnel )
-spam ( Piece of fried spam )
-not_spam_mail ( Fried spam with red not circle over it )
-forward ( forward arrow with forward written on it )
-previous (in general as back)
-next  (in general as goto )
+﻿fetch_all_mail		* 
+check_mailbox		*
+new_folder (folder with circle and cross in the corner)*
+add_filter (funnel,yellow)*
+enable_filter (funnel, green)*
+disable_filter (funnel, red)*
+compose_email ( pencil )	*
+attach_file ( paperclip )	*
+reply ( Backwards arrow with reply written on it )*
+reply_all ( Reply All)*
+group_list ( Group (return) List )	*
+new_contact ( Add (return) Contact )	*
+edit_contact ( Edit (return) Contact )	*
+del_contact ( Remove (return) Contact )	*
+inbox ( in tray )			*
+outbox ( out tray )			*
+sent_mail_all ( All Sent Mail )		*
+sent_mail ( Sent Mail )			*
+send ( @ Send )				*
+junk_folder ( Jail bars with a letter in it )	*
+bin ( Wire waste paper basket ) 	*
+spam_filter ( Piece of fried spam dropping into a funnel )*
+spam ( Piece of fried spam )		*
+not_spam_mail ( Fried spam with red not circle over it )*
+forward ( forward arrow with forward written on it )	*
+previous (in general as back)*
+next  (in general as goto )*
 gpg_sign ( little padlock )
 import_mail ( goto arrow and envelope )
 setup_accounts ( a little globe ) bitmap
