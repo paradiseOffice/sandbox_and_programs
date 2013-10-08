@@ -25,9 +25,9 @@ not_spam_mail ( Fried spam with red not circle over it )*
 forward ( forward arrow with forward written on it )	*
 previous (in general as back)*
 next  (in general as goto )*
-gpg_sign ( little padlock )
-import_mail ( goto arrow and envelope )
-setup_accounts ( a little globe ) bitmap
-setup_project_dir ( a folder with a little gantt chart on it )
-project ( a little gantt chart )
-folder ( plain folder )
+gpg_sign ( little padlock )*
+import_mail ( goto arrow and envelope )*
+setup_accounts ( a little globe ) bitmap*
+setup_project_dir ( a folder with a little gantt chart on it )*
+project ( a little gantt chart )*
+folder ( plain folder )*

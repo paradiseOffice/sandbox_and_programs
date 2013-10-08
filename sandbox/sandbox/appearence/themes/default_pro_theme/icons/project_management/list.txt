@@ -1,9 +1,9 @@
-﻿edit_main_project   
-add_calendar      
-holidays
-people  
-teams 
-resources   
+﻿edit_main_project   *
+add_calendar        *
+holidays	    *
+people 		    * 
+teams 		    *
+resources	*
 master_task_list ( 2014 (enter) To Do )
 weekly_task_list ( 7 boxes To Do )
 daily_task_list  ( 27/09/2013 (enter) To Do )
