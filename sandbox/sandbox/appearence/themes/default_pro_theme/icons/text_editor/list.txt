@@ -1,7 +1,7 @@
-﻿uppercase
-lowercase 
-set_font  
-tab_width 
-unix_or_dos
-save_all
+﻿uppercase	*
+lowercase 	*
+set_font  	*
+tab_width 	*
+unix_or_dos	*
+save_all	*
 
