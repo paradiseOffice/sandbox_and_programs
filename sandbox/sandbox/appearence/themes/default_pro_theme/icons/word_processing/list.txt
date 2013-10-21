@@ -15,33 +15,33 @@ border_top	*
 border_middle ( black lines in a cross )*
 border_all ( whole square a border )*
 border_round_all ( rounded corners )*
-font_picker ( F O N T in a square with pencil shading )
-add_image ( just the frame, put steam engine bitmap in it )
-translate ( uss (return) u (umlauts) german ss )
-indent_less ( like normal 6 lines)
-indent_more ( like normal 6 lines )
-superscript ( 2 then small nd )
-subscript ( H then sub 2 )
-strikethrough ( D with strikethrough )
-bold ( B )
-italic ( i )
-underline ( U )
-bullet_list ( 6 lines with circle bullets )
-pic_list ( 4 lines with coloured star for each bullet )
-number_list ( 6 lines with numbers )
-add_table ( Table grid )
-add_row ( green row in grid )
-delete_row ( red row in grid )
-add_column 
-delete_column
-merge_cells ( Merged cell above 2 cols )
-split_cells ( As above but red line in between merged cell )
-table_format ( A coloured table grid )
-insert_page_break ( two sheets of paper with wide gap coloured green )
-insert_spec_char ( Put weird Greek symbol here )
-export_to_pdf ( red pdf on a folded corner piece of paper )
-import_pdf ( green pdf " ")
-show_formatting ( little paragraph symbol )
-doc_info ( document with magnifying glass over it )
-spell_check ( green tick and ABC )
-grammar_check ( little blackboard with silly font on it )
+font_picker ( F O N T in a square with pencil shading )*
+add_image ( just the frame, put steam engine bitmap in it )*
+translate ( uss (return) u (umlauts) german ss )*
+indent_less ( like normal 6 lines)   	       *
+indent_more ( like normal 6 lines )	       *
+superscript ( 2 then small nd )	  *
+subscript ( H then sub 2 )    	  *
+strikethrough ( D with strikethrough )*
+bold ( B )    	       *
+italic ( i )	       *
+underline ( U )	       *
+bullet_list ( 6 lines with circle bullets )*
+pic_list ( 4 lines with coloured star for each bullet )*
+number_list ( 6 lines with numbers )*
+add_table ( Table grid )   	   *
+add_row ( green row in grid )	   *
+delete_row ( red row in grid )	   *
+add_column			*
+delete_column			*      
+merge_cells ( Merged cell above 2 cols )*
+split_cells ( As above but red line in between merged cell )*
+table_format ( A coloured table grid ) 	       *
+insert_page_break ( two sheets of paper with wide gap coloured green )*
+insert_spec_char ( Put weird Greek symbol here )*
+export_to_pdf ( red pdf on a folded corner piece of paper )*
+import_pdf ( green pdf " ")*
+show_formatting ( little paragraph symbol )*
+doc_info ( document with magnifying glass over it )*
+spell_check ( green tick and ABC )  *
+grammar_check ( little blackboard with silly font on it )*
