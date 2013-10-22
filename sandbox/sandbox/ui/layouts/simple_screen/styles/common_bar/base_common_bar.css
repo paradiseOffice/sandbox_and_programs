@@ -15,7 +15,7 @@ input.text_field { border: 1px solid #333333; }
 }
 #large_icon1 { left: 0px; }
 /* width and height values in common-bar_simple-screen.css */
-#img_large1 { background-image: url('../../icons/common/filenew.png'); }
-#img_large2 { background-image: url('../../icons/common/document-save.png'); }
-button#search { background-image: url('../../icons/internet/search.png'); }
-#img_large4 { background-image: url('../../icons/text/format-text-direction-ltr.png'); }
+#img_large1 { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/general/128/new_file_128x128.png'); }
+#img_large2 { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/general/128/save_file_128x128.png'); }
+button#search { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/word_processing/64/dictionary_64x64.png'); }
+#img_large4 { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/general/wikipedia.png'); }

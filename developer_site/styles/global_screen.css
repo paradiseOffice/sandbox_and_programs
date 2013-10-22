@@ -42,7 +42,7 @@ div.main-content {
 
  }
 
-.masthead h1, h2 {
+.masthead h1, .masthead h2 {
 position:absolute;
 left:-10000px;
 top:auto;
