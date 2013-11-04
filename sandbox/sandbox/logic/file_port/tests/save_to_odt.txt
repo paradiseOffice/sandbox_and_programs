@@ -1,0 +1,4 @@
+1. Save a html file (large one) to odf using Saves.saveToOdf
+2. Compare that to the html screenshots.
+3. Note any changes of documents as a bug
+4. Use a lot of HTML files including ones with 'cells', and ones with slides or graphs.
