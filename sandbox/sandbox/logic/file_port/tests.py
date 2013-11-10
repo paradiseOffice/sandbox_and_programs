@@ -1,16 +1,15 @@
 #!/usr/bin/python3.3
 """
-This file demonstrates writing tests using the unittest module. These will pass
-when you run "manage.py test".
+ run "manage.py test", set up test_paradise db first.
 
-Replace this with more appropriate tests for your application.
+There are some manual tests, more to do with Libreoffice than this code.
 """
 import os, sys, mimetypes
 from django.test import TestCase
-from createNewTab import CreateNewTab
-from fileChanges import FileChanges
-from rewriteOdf import RewriteOdf
-from saves import Saves
+from open.createNewTab import CreateNewTab
+from dataHandling.data import FileChanges
+from xml_html.rewriteOdf import RewriteOdf
+from save.saves import Saves
 
 # have included mimetype handler for magic number reading/checking.
 
@@ -77,8 +76,7 @@ class LoadUploadedDoc(TestCase):
           
 # RewriteOdf.convertWeirdFile(file) - see manual tests dir.
 # Test for conversion of doc, pdf, docx, xls, xlt, dot, xlsx, ppt, pptx, rtf, and make sure an odf type is returned.
-# mimetypes: application/vnd.oasis.opendocument.text (odt)
-# ott: application/
+# mimetypes: in conversion/mime_list.txt
 #
 
 class Chomper(TestCase):
@@ -117,7 +115,10 @@ class DataInOut(TestCase):
         Data from a python script on server to the client.
         """
         dataJson = FileChanges.dataWriter({ '<p></p>': 'Some paragraph',                  '<h1></h1>': 'A heading', '<h3 id="prices"></h3>': 'Prices' })
-        testJson = " " # complete this
+        testJson = '{ <p>: "Some paragraph",
+                    </p>\n<h1>: "A heading",
+                    </h1>\n<h3 id="prices">: "Prices",
+                     </h3>\n: "" }' # check this in browser ajax call. 
         assertEquals(dataJson, testJson)
         
 class Saves(TestCase):

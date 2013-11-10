@@ -2,24 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-     <title>Paradise Office - Glorified Typewriter</title>
+     <title>File Port Test</title>
   
 <script type="text/JavaScript"
-src="/home/hazel/bin/jquery_dl/jquery-1.10.2.min.js">
-</script>
-<script type="text/JavaScript" src="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/ui/layouts/simple_screen/scripts/resize-screen.js">
-</script>
-<script type="text/JavaScript" src="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/ui/layouts/simple_screen/scripts/menu-slider.js"></script>
-     <link rel="stylesheet" type="text/css" href="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/ui/layouts/simple_screen/styles/reset.css" />
-     <link rel="stylesheet" type="text/css" href="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/ui/layouts/simple_screen/styles/basic_skel.css" />
-     <link rel="stylesheet" type="text/css" href="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/ui/layouts/simple_screen/styles/sizes/simple_screen/sizes_skel.css" />
-     
+src="../../../../libraries/lib-jqueryui/js/jquery-2.0.3.js"></script>
+<script type="text/JavaScript" src="../../ui/layouts/simple_screen/scripts/resize-screen.js"></script>
+<script type="text/JavaScript" src="../../ui/layouts/simple_screen/scripts/menu-slider.js"></script>
+<script type="text/javascript" src="../../../../libraries/lib-jqueryui/js/jquery-ui-1.10.3.custom.js"></script>
+<script type="text/JavaScript" src="../../ui/layouts/simple_screen/scripts/file_port_tabs.js" ></script>
+     <link rel="stylesheet" type="text/css" href="../../ui/layouts/simple_screen/styles/reset.css" />
+     <link rel="stylesheet" type="text/css" href="../../ui/layouts/simple_screen/styles/basic_skel.css" />
+     <link rel="stylesheet" type="text/css" href="../../ui/layouts/simple_screen/styles/sizes/simple_screen/sizes_skel.css" />
+     <link rel="stylesheet" type="text/css" href="../../appearence/themes/default_pro_theme/styles/jquery-ui-1.10.3.custom.css" />
 </head>     
 <body>
 
   <div class="window">
     <div class="file_port" >
+    
+      <div id="tabrow" class="tabs-top">
+        <ul>
+          <li><a href="#file1">File 1</a></li>
+          <li><a href="#file2">File 2</a></li>
+          <li><a href="#file3">File 3</a></li>
+        </ul>
+     
+     
       <div id="file1" contenteditable></div>
+      <div id="file2" contenteditable></div>
+      <div id="file3" contenteditable></div>
+      
+    </div>
   </div>
   
   
