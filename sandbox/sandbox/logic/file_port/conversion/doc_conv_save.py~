@@ -1,0 +1,26 @@
+#!/usr/bin/python3.3
+
+import os, sys, mimetypes, subprocess
+   
+def odf_to_binary(file):
+    filename = file
+    def file_tester(i):
+        testfile = sys.argv[1]
+        #print(testfile)
+        if not os.path.exists(testfile): print("File doesn't exist")
+        contenttype, encoding = mimetypes.guess_type(testfile)
+        if contenttype == None or encoding is not None:
+            contenttype = '?/?'
+        # if is to be saved as odf, pdf, html, txt,csv go to standards_save.py
+        mimeInfo = 'fileSave' + str(i)
+        fileinfo = open(mimeInfo, 'w')
+        fileinfo.write(testfile + "\n")
+        fileinfo.write(contenttype)
+        fileinfo.close()
+        return contenttype, mimeInfo
+    # subprocess..
+    contenttype, mimeInfo = file_tester(1)
+    returned = subprocess.check_output(['odf_to_binary.sh', mimeInfo])
+
+if __name__ == '__main__':
+    odf_to_binary(sys.argv[1]) # pass an argument first with the rel. filepath

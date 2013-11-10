@@ -1,0 +1,20 @@
+/* for bug_report form */
+fieldset { border: 1px solid magenta; }
+label { display: inline-block; 
+  font-size: 12pt; font-variant: small-caps; width: 120px; }
+select { width: 200px;  }
+label[for=system] {  }
+#system {  }
+label[for=os] {  }
+#os {  }
+label[for=browser] {  }
+#browser {  }
+
+label[for=email] { position: relative; }
+input#email { position: relative; width: 250px; }
+label[for=subject] { position: relative;  }
+input#problem { position: relative; width: 350px; }
+label[for=description] { position: relative;  }
+textarea#description { display: block; width: 600px; height: 300px; }
+
+input#send-button { display: block; border: 1px solid magenta; }

@@ -1,0 +1,180 @@
+@font-face {
+    font-family: links-font;
+    src: url('../images/fonts/Anonymous_Pro_B.ttf');
+}
+a.masthead, .masthead, a { border: 0; color: #000000; text-decoration: none; }
+
+body {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ overflow: auto;
+ height: 100%;
+ background-color: #ffffff;
+ color: #000000;
+ font-family: arial, "sans serif";
+}	
+/* www.linux-paradise.co.uk/ for abs. urls on menus, gfx */
+
+div.content {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+div.side-bar {
+  float: right; 
+  width: 170px;   
+}
+.side-bar #twitter { height: 500px; }
+
+div.main-content {
+  margin-right: 180px; float: left;
+  word-wrap: break-word;
+}
+/* end of page layout */
+ 
+.masthead {
+    width: 100%; height: 150px;
+    background-color: #1961FB;
+    background-image: url('../ui/blue_gradient.png');
+    background-repeat: repeat-x;
+    background-position: center;
+
+ }
+
+.masthead h1, .masthead h2 {
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;  
+} /* hidden content for blind folks */
+
+
+/* darker blue is: #043496; */
+
+
+.footer { clear: both;
+  
+  width: 900px; height: 22px;
+  padding: 5px 5px 5px 5px; margin: 0 auto;
+  color: #999999;
+  font-size: 10pt;
+}
+/* end of header and footer part */
+.toplinks { 
+    width: 100%; height: 60px; 
+    background-color: #9E9E9E;
+   }
+.toplinks div {
+  display: block;
+  width: 200px; height: 60px;
+  background-color: #9E9E9E;
+  background-image: url('../ui/base_link.png');
+}
+.toplinks div a {
+  display: block;
+  width: 200px; height: 60px;
+  color: #DE304B;
+  text-decoration: none;
+  font-family: cantarell, arial, sans-serif;
+  font-size: 16pt; font-weight: bold; padding: 3px;
+  padding-top: 12px;  text-align: center;
+}
+
+.toplinks div:hover {
+  background-image: url('../ui/base_link_hover.png');
+  color: #80003B;
+}
+.toplinks div:active {
+    background-image: url('../ui/base_link_active.png');
+    color: #DE304B;
+}
+div#features_link {
+ position: absolute;
+ top: 150px; left: 0px;
+}
+div#dev_link {
+    position: absolute;
+    top: 150px; left: 200px;
+}
+div#doc_link {
+    position: absolute;
+    top: 150px; left: 400px;
+}
+div#contact_link {
+    position: absolute; z-index: 1;
+    top: 150px; left: 600px;
+}
+#twit { position: absolute; z-index: 0; top: 150px; right: 160px; }
+#diasp { position: absolute; z-index: 0; top: 150px; right: 80px; }
+#git { position: absolute; z-index: 0; top: 150px; right: 0px; }
+/* ends the link bit */
+.side-bar {
+  padding: 2px;
+  background-color: #dddddd;
+}
+.main-content {
+  margin: 10px;
+}
+.main-content h1, h2 {
+  color: #80003B;
+  font-weight: bold;
+}
+.main-content h1 {
+  text-decoration: underline;
+  font-size: 16pt;
+}
+.main-content h2 {
+  font-size: 14pt; 
+}
+.main-content h3, h4 {
+  color:#DE304B;
+  font-weight: bold;
+}
+.main-content h3 {
+  font-size: 14pt;
+}
+.main-content h4 {
+  font-size: 13pt;
+}
+
+.main-content p {
+  font-size: 12pt;
+  
+}
+
+.main-content img {
+  display: block;
+  border: solid 1px grey;
+  margin-left: auto;
+  margin-right: auto;
+}
+img.icon {
+  border: 0;
+  float: right;
+  margin-left: auto;
+}
+p.app_descr { }
+
+.main-content .aside {
+  background-color:#9E9E9E;
+  color: #000000;
+}
+.main-content a { text-decoration: underline; color: #DE304B; }
+
+.main-content table {
+  border-collapse: separate;
+  border-spacing: 20px;
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-content td {
+  padding: 10px;
+  border: 1px #9E9E9E solid;
+}
+div.section { position: relative; top: 40px; }
+
