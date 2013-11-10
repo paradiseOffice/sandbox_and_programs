@@ -10,7 +10,7 @@ fi
 if [ -z $2 ]
 then 
   echo "No file type to convert to..."
-  return 1
+  exit 1
 fi
 conv=$2
 echo "$conv"
@@ -23,52 +23,167 @@ echo "init mimetype: $filetype"
 #echo "init baseName: $baseName"
 echo "File ending: $fileending"
 
-#if # rewrite as giant case [["$conv"="doc"||"$conv"="docx"&&"$filetype"="application/vnd.oasis.opendocument.text"||"$filetype"="application/vnd.oasis.opendocument.text-template"]]
-#then
-#    conv_type="$conv"
-#elif [ "$conv" = "dot" || "$conv" = "dotx" && "$filetype" = "application/vnd.oasis.opendocument.text" || "$filetype" = "application/vnd.oasis.opendocument.text-template" ]
-#then
-#    conv_type="$conv"
-#elif [ "$conv" = "ott" && "$filetype" = "application/vnd.oasis.opendocument.text" ]
-#then
-#    conv_type="$conv"
-#elif [ "$conv" = "xls" || "$conv" = "xlsx" && "$filetype" = "application/vnd.oasis.opendocument.spreadsheet" || "$filetype" = "application/vnd.oasis.opendocument.spreadsheet-template" ]
-#then
-#    conv_type="$conv"
-#elif [ "$conv" = "xlt" || "$conv" = "xltx" || "$conv" = "ots" && "$filetype" = "application/vnd.oasis.opendocument.spreadsheet" || "$filetype" = "application/vnd.oasis.opendocument.spreadsheet-template" ]
-#then
-#    conv_type="$conv"
-#elif [ "$conv" = "ppt" || "$conv" = "pptx" && "$filetype" = "application/vnd.oasis.opendocument.presentation" || "$filetype" = "application/vnd.oasis.opendocument.presentation-template" ]
-#then
-#    conv_type="$conv"
-#elif [ "$conv" = "otp" || "$conv" = "potx" || "$conv" = "pot" && "$filetype" = "application/vnd.oasis.opendocument.presentation" || "$filetype" = "application/vnd.oasis.opendocument.presentation-template" ]
-#then
-#    conv_type="$conv"
-#elif [ "$conv" = "pdf" && "$filetype" = "application/vnd.oasis.opendocument.text" || "$filetype" = "application/vnd.oasis.opendocument.text-template" || "$filetype" = "application/vnd.oasis.opendocument.spreadsheet" || "$filetype" = "application/vnd.oasis.opendocument.spreadsheet-template" || "$filetype" = "application/vnd.oasis.opendocument.presentation" || "$filetype" = "application/vnd.oasis.opendocument.presentation-template" ]
-#then
-#    conv_type="$conv"
-#elif [ "$conv" = "txt" || "$conv" = "csv" && "$filetype" = "application/vnd.oasis.opendocument.text" || "$filetype" = "application/vnd.oasis.opendocument.text-template" || "$filetype" = "application/vnd.oasis.opendocument.spreadsheet" || "$filetype" = "application/vnd.oasis.opendocument.spreadsheet-template" || "$filetype" = "application/vnd.oasis.opendocument.presentation" || "$filetype" = "application/vnd.oasis.opendocument.presentation-template" ]
-#then
-    #`./txt_to_html.py $filename`
-#    echo "Convert text to html"
-#    conv_type="$conv"
-#elif [ "$conv" = "sql" ]
-#then
-#    echo "Not implemented yet"
-#    conv_type="$conv"
-#elif [ "$conv" = "html" || "$conv" = "xhtml" ]
-#then
-    #`./saveHtml.py $filename`
-#    echo "Copying html..."
-#    conv_type="$conv"
-#elif [ "$conv" = "xml" ]
-#then 
-    #`./saveXml.py $filename`
-#    echo "Converting html to xml via XSLT..."
-#    conv_type="$conv"
-#else:
-#    echo "Wrong document type to convert to!"
-#    return 2
-#fi
+case $filetype in
+  application/vnd.oasis.opendocument.text)
+    if [ $conv = "doc" ]
+    then
+      conv_type="doc"
+    elif [ $conv = "docx" ]
+    then
+      conv_type="docx"
+    elif [[ $conv = "dot" || $conv = "dotx" ]]
+    then
+      conv_type="$conv"
+    # Standards if-elif starts here
+    elif [ $conv = "pdf" ]
+    then
+      conv_type="pdf"
+    elif [ $conv = "html" ]
+    then
+      conv_type="html"
+    elif [ $conv = "txt" ]
+    then
+      conv_type="txt"
+    else
+      echo "conv_type=\"None\" "
+      exit 1
+    fi
+    # end of standards bit
+    ;;
+  application/vnd.oasis.opendocument.text-template)
+    if [ $conv = "doc" ]
+    then
+      conv_type="doc"
+    elif [ $conv = "docx" ]
+    then
+      conv_type="docx"
+    elif [[ $conv = "dot" || $conv = "dotx" ]]
+    then
+      conv_type="dot"
+    elif [ $conv = "odt" ]
+    then
+      conv_type="odt"
+    # Standards if-elif starts here
+    elif [ $conv = "pdf" ]
+    then
+      conv_type="pdf"
+    elif [ $conv = "html" ]
+    then
+      conv_type="html"
+    elif [ $conv = "txt" ]
+    then
+      conv_type="txt"
+    else
+      echo "conv_type=\"None\" "
+      exit 1
+    fi
+    # end of standards bit
+    ;;
+  application/vnd.oasis.opendocument.spreadsheet)
+    if [ $conv = "xls" ]
+    then
+      conv_type="xls"
+    elif [ $conv = "xlsx" ]
+    then
+      conv_type="xlsx"
+    elif [ $conv = "xlt" ]
+    then
+      conv_type="xlt"
+    elif [ $conv = "xltx" ]
+    then
+      conv_type="xltx"
+    elif [ $conv = "ots" ]
+    then
+      conv_type="ots"
+    # Standards if-elif starts here
+    elif [ $conv = "pdf" ]
+    then
+      conv_type="pdf"
+    elif [ $conv = "html" ]
+    then
+      conv_type="html"
+    elif [ $conv = "csv" ]
+    then
+      conv_type="csv"
+    else
+      echo "conv_type=\"None\" "
+      exit 1
+    fi
+    # end of standards bit
+    ;;    
+  application/vnd.oasis.opendocument.spreadsheet-template)
+    if [ $conv = "xlt" ]
+    then
+      conv_type="xlt"
+    elif [ $conv = "xltx" ]
+    then
+      conv_type="xltx"
+    elif [ $conv = "ods" ]
+    then
+      conv_type="ods"
+    # Standards if-elif starts here
+    elif [ $conv = "pdf" ]
+    then
+      conv_type="pdf"
+    elif [ $conv = "html" ]
+    then
+      conv_type="html"
+    elif [ $conv = "csv" ]
+    then
+      conv_type="csv"
+    else
+      echo "conv_type=\"None\" "
+      exit 1
+    fi
+    # end of standards bit
+    ;;    
+  application/vnd.oasis.opendocument.presentation | application/vnd.oasis.opendocument.presentation-template)
+    if [ $conv = "ppt" ]
+    then
+      conv_type="ppt"
+    elif [ $conv = "pptx" ]
+    then
+      conv_type="pptx"
+    elif [ $conv = "pot" ]
+    then
+      conv_type="pot"
+    elif [ $conv = "potx" ]
+    then
+      conv_type="potx"
+    elif [ $conv = "otp" ]
+    then
+      conv_type="otp"
+    elif [ $conv = "odp" ]
+    then
+      conv_type="odp"
+    # Standards if-elif starts here
+    elif [ $conv = "pdf" ]
+    then
+      conv_type="pdf"
+    elif [ $conv = "html" ]
+    then
+      conv_type="html"
+    elif [ $conv = "html-js" ]
+    then
+      conv_type="html-js"
+    else
+      echo "conv_type=\"None\" "
+      exit 1
+    fi
+    # end of standards bit
+    ;;
+  *) echo "Wrong file type inputted" ;;
+esac
 
-#libreoffice --headless --nologo --invisible --convert-to $conv_type $filename
+if [[ $conv = "html" || $conv = "html-js" || $conv = "xml" ]]
+then
+  `./sgml_save.py $filename $conv_type`
+elif [ $conv = "pdf" ]
+then
+  pdftohtml pdf"$filename.pdf" "$filename"
+elif [[ $conv = "txt" || $conv = "csv" || $conv = "sql" ]]
+then
+  `./text_save.py $filename $conv_type`
+else
+  libreoffice --headless --nologo --invisible --convert-to $conv_type $filename
+fi
