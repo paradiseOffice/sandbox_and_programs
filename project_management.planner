@@ -25,7 +25,7 @@
         <task id="3" name="ii. Test Javascript get - set selection using rangy" note="" work="7200" start="20131020T000000Z" end="20131020T100000Z" work-start="20131020T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
           <constraint type="must-start-on" time="20131020T000000Z"/>
         </task>
-        <task id="4" name="iii. Code the resizing javascript bit. " note="" work="3600" start="20131020T000000Z" end="20131020T090000Z" work-start="20131020T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <task id="4" name="iii. Code the resizing javascript bit. " note="" work="3600" start="20131020T000000Z" end="20131020T090000Z" work-start="20131020T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
           <constraint type="must-start-on" time="20131020T000000Z"/>
         </task>
         <task id="5" name="iv. Make sure the javascript selection returns html nodes" note="" work="3600" start="20131020T000000Z" end="20131020T090000Z" work-start="20131020T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
@@ -55,7 +55,7 @@
       <task id="17" name="3. Email viewer file port sub class (django templates)" note="" work="28800" start="20131026T000000Z" end="20131027T170000Z" work-start="20131027T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20131026T000000Z"/>
       </task>
-      <task id="18" name="4. Write document convertors and file upload, dl that uses libreoffice headless views.py" note="" work="57600" start="20131028T000000Z" end="20131029T170000Z" work-start="20131028T080000Z" percent-complete="50" priority="0" type="normal" scheduling="fixed-work">
+      <task id="18" name="4. Write document convertors and file upload, dl that uses libreoffice headless views.py" note="" work="57600" start="20131028T000000Z" end="20131029T170000Z" work-start="20131028T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
         <constraint type="must-start-on" time="20131028T000000Z"/>
       </task>
       <task id="19" name="5. Test and document the GUI, icons, resizer, conversions, and file port output." note="" work="28800" start="20131030T000000Z" end="20131030T170000Z" work-start="20131030T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">

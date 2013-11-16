@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE file PUBLIC "-//paradise-office//DTD text-processing 1.0//EN" "http://www.linux-paradise.co.uk/development/DTDs/text-processing_1.dtd">
+<file>
+  <documentInfo>
+    <docLayout>
+      <pagespread />
+      <media />
+      <columns />
+    </docLayout>
+    <author>
+      <firstname></firstname>
+      <lastname></lastname>
+      <title></title>
+      <email></email>
+    </author>
+    <company>
+      <name></name>
+      <department></department>
+    </company>
+    <modified />
+    <created />
+  </documentInfo>
+  
+  <document>
+    <header>
+      <logo />
+      <title></title>
+      <shown />
+    </header>
+    <frontmatter>
+      <cover></cover>
+      <titlePage></titlePage>
+      <toc></toc>
+      <copyrights></copyrights>
+      <preamble></preamble>
+    </frontmatter>
+    
+    <mainmatter>
+      <heading1></heading1>
+      <heading2></heading2>
+      <heading3></heading3>
+      <heading4></heading4>
+      <heading5></heading5>
+      <heading6></heading6>
+      <part></part>
+      <chapter></chapter>
+      <list></list>
+      <image />
+      <caption></caption>
+      <preformatted xml:space="preserve"></preformatted>
+      <textbox></textbox>
+      <table>
+	<heading></heading>
+	<columns />
+	<rows />
+	<cell></cell>
+	<mathcell></mathcell>
+	<tablefoot></tablefoot>
+      </table>
+      <aside></aside>
+      <blockquote></blockquote>
+      <quote></quote>
+      <cite></cite>
+      <acronym></acronym>
+      <autofield />
+      <address></address>
+      <URI></URI>
+      <outline>
+	<level1></level1>
+	<level2></level2>
+	<level3></level3>
+	<level4></level4>
+	<level5></level5>
+	<level6></level6>
+	<level7></level7>
+	<level8></level8>
+	<level9></level9>
+	<level10></level10>
+      </outline>
+      <para></para>
+      <break />
+      <legend>
+	<item></item>
+	<descr></descr>
+      </legend>
+      
+      <chart></chart>
+    </mainmatter>
+    
+    <backmatter>
+      <glossary>
+	<definition>
+	  <term></term>
+	  <def></def>
+	</definition>
+      </glossary>
+      <biblo>
+	<ref></ref>
+	<text></text>
+      </biblo>
+      <index>
+	<letter />
+	<term></term>
+      </index>
+      <colophon>
+	<details></details>
+      </colophon>
+    </backmatter>
+    
+    <footer>
+      <pagenumbers />
+      <doctitle /> 
+      <shown />
+    </footer>
+  </document>  
+</file>
