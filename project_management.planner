@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="" company="" manager="" phase="" project-start="20131010T000000Z" mrproject-version="2" calendar="1">
+<project name="" company="" manager="" phase="" project-start="20131122T000000Z" mrproject-version="2" calendar="1">
   <properties/>
   <phases/>
   <calendars>
@@ -9,7 +9,7 @@
       <day-type id="2" name="Use base" description="Use day from base calendar"/>
     </day-types>
     <calendar id="1" name="Default">
-      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="0"/>
+      <default-week mon="0" tue="0" wed="0" thu="0" fri="0" sat="1" sun="1"/>
       <overridden-day-types>
         <overridden-day-type id="0">
           <interval start="0800" end="1200"/>
@@ -20,147 +20,50 @@
     </calendar>
   </calendars>
   <tasks>
-    <task id="1" name="A. Build Document Conversion Framework" note="" work="414000" start="20131010T000000Z" end="20131030T170000Z" work-start="20131010T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="2" name="1. Complete iframes implementation along with get/set selection" note="" work="187200" start="20131010T000000Z" end="20131020T100000Z" work-start="20131010T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <task id="3" name="ii. Test Javascript get - set selection using rangy" note="" work="7200" start="20131020T000000Z" end="20131020T100000Z" work-start="20131020T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-          <constraint type="must-start-on" time="20131020T000000Z"/>
-        </task>
-        <task id="4" name="iii. Code the resizing javascript bit. " note="" work="3600" start="20131020T000000Z" end="20131020T090000Z" work-start="20131020T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
-          <constraint type="must-start-on" time="20131020T000000Z"/>
-        </task>
-        <task id="5" name="iv. Make sure the javascript selection returns html nodes" note="" work="3600" start="20131020T000000Z" end="20131020T090000Z" work-start="20131020T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-          <constraint type="must-start-on" time="20131020T000000Z"/>
-        </task>
-        <task id="6" name="v. Design file-port " note="" work="28800" start="20131010T000000Z" end="20131010T170000Z" work-start="20131010T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
-        <task id="7" name="vi. odf/pdf to html functions" note="" work="28800" start="20131010T000000Z" end="20131010T170000Z" work-start="20131010T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-        <task id="8" name="vii. html to pdf/odf functions" note="" work="28800" start="20131010T000000Z" end="20131010T170000Z" work-start="20131010T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-        <task id="9" name="viii. Draw subclasses" note="" work="28800" start="20131010T000000Z" end="20131010T170000Z" work-start="20131010T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
-        <task id="10" name="ix. Finish Django old demo" note="" work="28800" start="20131010T000000Z" end="20131010T170000Z" work-start="20131010T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-        <task id="11" name="x. Write unit tests" note="" work="28800" start="20131010T000000Z" end="20131010T170000Z" work-start="20131010T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work"/>
-      </task>
-      <task id="12" name="2. Complete XML and scheme odf viewer for the file ports." note="" work="111600" start="20131021T000000Z" end="20131025T140000Z" work-start="20131021T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <task id="13" name="i. Set grid, accounts, db, and calendar views up as django templates / class hier." note="" work="18000" start="20131021T000000Z" end="20131021T140000Z" work-start="20131021T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-          <constraint type="must-start-on" time="20131021T000000Z"/>
-        </task>
-        <task id="14" name="ii. Unzip an odf file and try to get them viewed correctly in a browser. Test" note="" work="18000" start="20131022T000000Z" end="20131022T140000Z" work-start="20131022T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-          <constraint type="must-start-on" time="20131022T000000Z"/>
-        </task>
-        <task id="15" name="iii. Create an email and (hopefully standard) accounts XML format, with XLST transforms" note="" work="57600" start="20131023T000000Z" end="20131024T170000Z" work-start="20131023T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-          <constraint type="must-start-on" time="20131023T000000Z"/>
-        </task>
-        <task id="16" name="iv. Create python file port code" note="" work="18000" start="20131025T000000Z" end="20131025T140000Z" work-start="20131025T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
-          <constraint type="must-start-on" time="20131025T000000Z"/>
-        </task>
-      </task>
-      <task id="17" name="3. Email viewer file port sub class (django templates)" note="" work="28800" start="20131026T000000Z" end="20131027T170000Z" work-start="20131027T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131026T000000Z"/>
-      </task>
-      <task id="18" name="4. Write document convertors and file upload, dl that uses libreoffice headless views.py" note="" work="57600" start="20131028T000000Z" end="20131029T170000Z" work-start="20131028T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131028T000000Z"/>
-      </task>
-      <task id="19" name="5. Test and document the GUI, icons, resizer, conversions, and file port output." note="" work="28800" start="20131030T000000Z" end="20131030T170000Z" work-start="20131030T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <task id="20" name="i. Test on tablets and phones too. Go to Tesco or Apple retailers. Take test plan." note="" work="28800" start="20131030T000000Z" end="20131030T170000Z" work-start="20131030T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-          <constraint type="must-start-on" time="20131030T000000Z"/>
-        </task>
+    <task id="1" name="Design programs that aren't in the sandbox" note="" work="1404000" start="20131122T000000Z" end="20131225T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="3" type="normal" scheduling="fixed-work">
+      <task id="2" name="Jotter" note="" work="691200" start="20131122T000000Z" end="20131225T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="3" name="Pages, Pages+" note="" work="597600" start="20131122T000000Z" end="20131220T150000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="4" name="Ledger, Ledger+" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="5" name="Postbox, Postbox+" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="6" name="Plantt, Plantt+" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="7" name="Cygnet Maker" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
+    <task id="8" name="Document server and start security procedures" note="" work="835200" start="20131122T000000Z" end="20131226T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="9" name="Distro and Programs installed" note="" work="720000" start="20131122T000000Z" end="20131226T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="10" name="Monitoring Procedures" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="11" name="Security procedures" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="12" name="Uptime and load monitoring" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="13" name="Test LO headless" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
+    <task id="14" name="Read security, Office UX" note="" work="86400" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="15" name="Apache" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="16" name="Linux security" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="17" name="UX, Office" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    </task>
+    <task id="18" name="Do dev site, documentation and new Program feature plans" note="" work="604800" start="20131122T000000Z" end="20131220T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="19" name="Update sandbox specs" note="" work="259200" start="20131122T000000Z" end="20131204T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="20" name="Do XML - XHMTL - XML XSLT with LO files" note="" work="100800" start="20131231T000000Z" end="20140103T120000Z" work-start="20131231T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="21" name="Books db, const. - then odf" note="" work="100800" start="20131231T000000Z" end="20140103T120000Z" work-start="20131231T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <constraint type="must-start-on" time="20131231T000000Z"/>
       </task>
     </task>
-    <task id="21" name="B. Set up server in Chicago" note="" work="201600" start="20131101T000000Z" end="20131108T170000Z" work-start="20131101T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="22" name="i. Install Apache, fail2ban and iptables rules. Do ssh keygen and passphrase." note="" work="18000" start="20131101T000000Z" end="20131101T140000Z" work-start="20131101T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131101T000000Z"/>
-      </task>
-      <task id="23" name="ii. Install postgresql, and PHP. Test using own test db of window shopping. Test remote db." note="" work="28800" start="20131102T000000Z" end="20131103T170000Z" work-start="20131103T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131102T000000Z"/>
-      </task>
-      <task id="24" name="iii. Document Paradise Office server setup and routines. eg. deleting tmp dirs." note="" work="28800" start="20131104T000000Z" end="20131104T170000Z" work-start="20131104T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131104T000000Z"/>
-      </task>
-      <task id="25" name="iv. Install and configure Django and git. Do git push to server, put test on htdocs." note="" work="10800" start="20131105T000000Z" end="20131105T110000Z" work-start="20131105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131105T000000Z"/>
-      </task>
-      <task id="26" name="v. Test the test app and convert files, etc. Do a test plan for server speed,network speed" note="" work="28800" start="20131105T000000Z" end="20131105T170000Z" work-start="20131105T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131105T000000Z"/>
-      </task>
-      <task id="27" name="vi. Complete and upload documentation. Do a crude benchmark test for later." note="" work="28800" start="20131106T000000Z" end="20131106T170000Z" work-start="20131106T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131106T000000Z"/>
-      </task>
-      <task id="28" name="vii. Do SSL using certificate And a basic login/start page. Try and break into server" note="" work="57600" start="20131107T000000Z" end="20131108T170000Z" work-start="20131107T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131107T000000Z"/>
+    <task id="22" name="Change to jQuery UI, Django fully" note="" work="57600" start="20131122T000000Z" end="20131125T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <task id="23" name="Do mobile app stuff, IE stuff" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+      <task id="24" name="Redo jQuery UI CSS to fit theme" note="" work="28800" start="20131122T170000Z" end="20131125T170000Z" work-start="20131125T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+        <predecessors>
+          <predecessor id="1" predecessor-id="25" type="FS"/>
+        </predecessors>
       </task>
     </task>
-    <task id="29" name="C. Add editing features for basic operations" note="" work="576000" start="20131010T000000Z" end="20131201T170000Z" work-start="20131010T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="30" name="i. Complete file IO programs in Django or PHP, test manually" note="" work="0" start="20131109T000000Z" end="20131109T000000Z" work-start="20131110T080000Z" percent-complete="0" priority="0" type="milestone" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131109T000000Z"/>
-      </task>
-      <task id="31" name="ii. Prepare unit tests for all programs, views.py and a regression testing suite to run daily." note="" work="28800" start="20131111T000000Z" end="20131111T170000Z" work-start="20131111T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131111T000000Z"/>
-      </task>
-      <task id="32" name="iii. Make bug tracker" note="" work="201600" start="20131010T000000Z" end="20131017T170000Z" work-start="20131010T080000Z" percent-complete="100" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131112T000000Z"/>
-        <task id="33" name="Fix bugs" note="" work="201600" start="20131010T000000Z" end="20131017T170000Z" work-start="20131010T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
-      </task>
-      <task id="34" name="iv. Data in / out Python classes/programs. Test with get/set selection" note="" work="28800" start="20131118T000000Z" end="20131118T170000Z" work-start="20131118T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131118T000000Z"/>
-      </task>
-      <task id="35" name="v. Add cut, copy, paste for all file ports." note="" work="57600" start="20131119T000000Z" end="20131120T170000Z" work-start="20131119T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131119T000000Z"/>
-      </task>
-      <task id="36" name="vi. Complete Cygnet reader and writer, test on the Chicago server" note="" work="259200" start="20131121T000000Z" end="20131201T170000Z" work-start="20131121T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131121T000000Z"/>
-      </task>
-    </task>
-    <task id="37" name="D. Start design for client side website, cygnet maker" note="" work="201600" start="20131201T000000Z" end="20131208T170000Z" work-start="20131201T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="38" name="Do site look" note="" work="86400" start="20131201T000000Z" end="20131203T170000Z" work-start="20131201T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131201T000000Z"/>
-      </task>
-      <task id="39" name="Implement PHP form with multiple pages for building an app." note="" work="57600" start="20131204T000000Z" end="20131205T170000Z" work-start="20131204T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131204T000000Z"/>
-      </task>
-      <task id="40" name="Code sample test plugins to create an action when a button is pressed." note="" work="57600" start="20131206T000000Z" end="20131208T170000Z" work-start="20131206T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131206T000000Z"/>
-      </task>
-    </task>
-    <task id="41" name="E. Themes and dialogs" note="" work="288000" start="20131209T000000Z" end="20131218T170000Z" work-start="20131209T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="42" name="i. Redo 3 themes to make the colours, graphics stand out and look nice." note="" work="28800" start="20131209T000000Z" end="20131209T170000Z" work-start="20131209T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131209T000000Z"/>
-      </task>
-      <task id="43" name="ii. Implement jQueryUI classes on all GUI elements and a test dialog." note="" work="86400" start="20131210T000000Z" end="20131212T170000Z" work-start="20131210T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131210T000000Z"/>
-      </task>
-      <task id="44" name="iii. Tweak jQuery css so it doesn't look like it's just come off theme roller" note="" work="28800" start="20131213T000000Z" end="20131213T170000Z" work-start="20131213T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131213T000000Z"/>
-      </task>
-      <task id="45" name="iv. Set up and test mobile device and IE/iPad CSS on actual devices" note="" work="57600" start="20131214T000000Z" end="20131216T170000Z" work-start="20131215T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131214T000000Z"/>
-      </task>
-      <task id="46" name="v. Re-upload and test the program's basic operations including on mobile devices" note="" work="28800" start="20131216T000000Z" end="20131216T170000Z" work-start="20131216T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131216T000000Z"/>
-      </task>
-      <task id="47" name="vi. Document everything done so far, upload to site, blog, twitter, diaspora" note="" work="57600" start="20131217T000000Z" end="20131218T170000Z" work-start="20131217T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131217T000000Z"/>
-      </task>
-    </task>
-    <task id="48" name="F. Programs Design" note="" work="144000" start="20131218T000000Z" end="20131229T170000Z" work-start="20131218T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <task id="49" name="i. Jotter (use Cygnet Maker)" note="" work="28800" start="20131218T000000Z" end="20131218T170000Z" work-start="20131218T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131218T000000Z"/>
-      </task>
-      <task id="50" name="ii. Pages and Pages plus (implement plus features later)" note="" work="28800" start="20131219T000000Z" end="20131219T170000Z" work-start="20131219T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131219T000000Z"/>
-      </task>
-      <task id="51" name="iii. Postbox and Postbox plus  (implement plus features later)" note="" work="28800" start="20131220T000000Z" end="20131220T170000Z" work-start="20131220T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131220T000000Z"/>
-      </task>
-      <task id="52" name="iv. Plantt and Plantt plus (implement plus features later)" note="" work="28800" start="20131227T000000Z" end="20131227T170000Z" work-start="20131227T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <constraint type="must-start-on" time="20131227T000000Z"/>
-      </task>
-      <task id="53" name="v. Ledger and Ledger plus  (implement plus features later)" note="" work="28800" start="20131228T000000Z" end="20131229T170000Z" work-start="20131229T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-        <task id="54" name="Learn accounting and business tax" note="" work="28800" start="20131228T000000Z" end="20131229T170000Z" work-start="20131229T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-          <constraint type="must-start-on" time="20131228T000000Z"/>
-        </task>
-      </task>
-    </task>
-    <task id="55" name="G. Project Manage creating each app (separate plan per app)" note="" work="28800" start="20131230T000000Z" end="20131230T170000Z" work-start="20131230T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
-      <constraint type="must-start-on" time="20131230T000000Z"/>
-    </task>
+    <task id="25" name="Finish Default theme" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="26" name="Finish standards file conversion, test" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="27" name="File port and file_IO" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="28" name="Database parts, back end links" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="29" name="Plugin, selection data managers Python" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="30" name="Complete Cygnet Maker and any XSLT2.0 doc bits" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="31" name="Create Cygnet Maker front end" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="32" name="Create other apps, with cygnet maker" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
+    <task id="33" name="Test all apps" note="" work="28800" start="20131122T000000Z" end="20131122T170000Z" work-start="20131122T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work"/>
   </tasks>
   <resource-groups/>
   <resources/>

@@ -1,21 +1,13 @@
 .app_window-skel, .title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel, #file1, .help_box-skel, .status_bar, .settings_menu { position: relative; }
-
 .app_window-skel { margin: 0; padding: 0; height: 100%; width: 100%; }
-
 
 .title_bar-skel h1 {  text-align: right; }
 
 .file_port { position: absolute; border: 1px solid black; overflow-x: hidden;
- overflow-y: auto;    
- 
-}
-.file_port#tabrow {
-    height: auto; }
+ overflow-y: auto;    }
+.file_port#tabrow {  height: auto; }
 .file_port .tabs-top { position: relative; }
-.file_port .tabs-top .file_port .ui-tabs-panel {
-    height: auto; 
-    overflow: auto;
-    }
+.file_port .tabs-top .file_port .ui-tabs-panel {  height: auto; overflow: auto;  }
 .file_port .tabs-top .file_port .ui-tabs-nav {
     position: absolute !important;
     left: 0px;
@@ -35,3 +27,8 @@
 .help_box-skel { border: 1px black solid; }
 .status_bar { position: absolute; }
 .settings_menu { position: absolute; }
+
+body {
+    background: #ccc url(../ui/top_bg.png) repeat-x ; }
+
+ .file_port, .tool_pane-skel, .status_bar { background: #e9dfe9; }

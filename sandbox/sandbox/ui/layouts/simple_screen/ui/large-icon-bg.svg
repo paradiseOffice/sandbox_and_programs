@@ -15,13 +15,13 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="drawing.svg">
+   sodipodi:docname="large-icon-bg.svg">
   <defs
      id="defs4">
     <linearGradient
        id="linearGradient3765">
       <stop
-         style="stop-color:#bab5a8;stop-opacity:1;"
+         style="stop-color:#b8a57c;stop-opacity:1;"
          offset="0"
          id="stop3767" />
       <stop
@@ -58,15 +58,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.58059859"
-     inkscape:cx="-43.261863"
+     inkscape:cx="232.55714"
      inkscape:cy="-172.46234"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1440"
-     inkscape:window-height="828"
-     inkscape:window-x="-3"
-     inkscape:window-y="-3"
+     inkscape:window-height="837"
+     inkscape:window-x="-4"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -80,7 +80,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
