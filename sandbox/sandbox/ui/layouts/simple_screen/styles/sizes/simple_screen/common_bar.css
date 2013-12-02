@@ -1,18 +1,46 @@
-/* goes with base_common.css . (c) 2013 Hazel Windle */
+/*******************************************************************
+ * 
+ * Paradise Office Cygnet API
+ * Copyright (c) 2013 Hazel Windle
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *  Email me at: lead-dev@linux-paradise.co.uk if you have any problems or questions.
+ *
+************************************************************************/
 
-.large_icon { width: 100px; height: 36px; }
-span.name { padding-top: 8px; padding-bottom: 4px; width: 60px; }
+
+/* goes with base_common.css */
+
+.large_icon { 
+    /* padding-left: 2px; padding-right: 2px; */
+    width: 130px; height: 36px; 
+    
+}
+span.name { padding-top: 8px; padding-bottom: 4px; width: 90px; font-size: 120%; }
 .img { width: 30px; height: 30px; margin: 2px; }
-input.text_field {  margin-top: 6px; margin-bottom: 3px;
-                    width: 66px; height: 20px; }
-.ctl-btn { height: 20px; width: 20px; }
+input.text_field {  width: 86px; height: 25px; }
+.ctl-btn { height: 25px; width: 25px; }
 
-#large_icon2 { left: 100px; }
-#large_icon3 { left: 200px; }
-#large_icon4 { left: 300px; }
-#large_icon5 { left: 400px; }
-#large_icon6 { left: 500px; }
-#large_icon7 { left: 600px; }
-#large_icon8 { left: 700px; }
-#large_icon9 { left: 800px; }
-#large_icon10 { left: 900px; }
+#large_icon1 { left: 0px; }
+#large_icon2 { left: 130px; }
+#large_icon3 { left: 260px; }
+#large_icon4 { left: 390px; }
+#large_icon5 { left: 520px; }
+#large_icon6 { left: 650px; }
+#large_icon7 { left: 780px; }
+#large_icon8 { left: 910px; }
+#large_icon9 { left: 1040px; }
+#large_icon10 { left: 1170px; }

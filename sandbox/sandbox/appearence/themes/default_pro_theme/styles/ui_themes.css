@@ -1,0 +1,67 @@
+/*******************************************************************
+ * 
+ * Paradise Office Cygnet API
+ * Copyright (c) 2013 Hazel Windle
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *  Email me at: lead-dev@linux-paradise.co.uk if you have any problems or questions.
+ *
+************************************************************************/
+/* all things: font settings */
+@font-face {
+    font-family: buttons;
+    src: 
+        url('fonts/body/Ubuntu-C.ttf') format('truetype');
+}
+.app_window-skel, .title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel, #file1, .help_box-skel, .status_bar, .settings_menu {
+  font-family:  arial, sans-serif;
+}
+
+/* end of all things: font settings */
+
+/* Common bar: large icons */
+.common_bar-skel .large_icon {
+      background-image: url('images/large-icon-bg.svg'); 
+      -webkit-background-size: cover;
+      background-size: cover;
+      -moz-background-size: cover;
+      
+      font-family: buttons, tahoma, sans-serif; 
+      font-weight: bold;
+}
+
+.common_bar-skel .img { 
+    background-size: contain; 
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+}
+.common_bar-skel a, .large_icon, span.name, .img { 
+    text-decoration: none; color: #444444; 
+}
+.common_bar-skel input.text_field { border: 1px solid #333333; }
+.common_bar-skel .ctl-btn {   
+    border: 1px solid #e9dfe9; 
+    background-color: #e9dfe9;  
+    background-size: 100% 100%;
+}
+
+/* these should go in a program specific CSS file to deal with icons, pics */
+#img_large1 { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/general/128/new_file_128x128.png'); }
+#img_large2 { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/general/128/save_file_128x128.png'); }
+button#search { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/word_processing/64/dictionary_64x64.png'); }
+#img_large4 { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/general/wikipedia.png'); }
+
+/* end of common bar and large icons */
