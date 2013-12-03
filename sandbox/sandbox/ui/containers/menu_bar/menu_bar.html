@@ -2,21 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-     <title>Paradise Office - Glorified Typewriter</title>
-  
-<script type="text/JavaScript"
-src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-</script>
-<script type="text/JavaScript" src="scripts/resize-screen.js">
-</script>  
-     <link rel="stylesheet" type="text/css" href="styles/reset.css" />
-     <link rel="stylesheet" type="text/css" href="styles/menu_bar/base_menu_bar.css" />
+     <title>Menu Bar</title>  
+     <link rel="stylesheet" type="text/css" href="../../../sandbox/sandbox/ui/layouts/simple_screen/styles/menu_bar/base_menu_bar.css" />
      <!-- choosing the screen size/type -->
-    <link rel="stylesheet" type="text/css" href="styles/sizes/simple_screen/menu_bar.css" />
+    <link rel="stylesheet" type="text/css" href="../../../sandbox/sandbox/ui/layouts/simple_screen/styles/sizes/simple_screen/menu_bar.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../sandbox/sandbox/appearence/themes/default_pro_theme/styles/ui_themes.css" />
+    <link rel="stylesheet" type="text/css" href="../../../sandbox/sandbox/ui/layouts/simple_screen/styles/menu/base_menu.css" />
 </head>
 <body>
 
-<ul class="all-menus">
+<div class="menu_bar-skel">
+  <ul class="all-menus">
       <li><a id="menuLink1" title="File" class="menuLink" href=""><span class="acckey">F</span>ile</a>
       <!-- 'File' menu from menu goes in here -->
       <table class="menu" title="File" id="menu1" >
@@ -118,6 +114,7 @@ src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
 </table> 
       </li>
 </ul>
+</div>
 <!-- the program inserts the menus into this before putting it into the menu-bar of the skeleton page. -->
     
 </body>
