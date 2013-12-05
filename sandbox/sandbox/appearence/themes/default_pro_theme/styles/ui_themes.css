@@ -57,6 +57,7 @@
     background-color: #e9dfe9;  
     background-size: 100% 100%;
 }
+.common_bar-skel span.acckey { text-decoration: underline; }
 
 /* these should go in a program specific CSS file to deal with icons, pics */
 #img_large1 { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/general/128/new_file_128x128.png'); }
@@ -65,3 +66,47 @@ button#search { background-image: url('/home/hazel/Documents/new_linux_paradise/
 #img_large4 { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/general/wikipedia.png'); }
 
 /* end of common bar and large icons */
+
+/* start of menu bar */
+.menu_bar-skel ul.all-menus { 
+  font: arial, sans-serif;
+}
+.menu_bar-skel span.acckey { text-decoration: underline; }
+.menu_bar-skel ul.all-menus, .menu_bar-skel  ul.all-menus li {
+  list-style: none outside none;
+}
+.menu_bar-skel ul.all-menus .menuLink { 
+  background: #BBAAFF;
+  border: 1px solid white; 
+  border-radius: 5px;
+  color: #000000;
+}
+.menu_bar-skel ul.all-menus li:hover > a.menuLink { 
+    text-shadow: 2px 2px #ffffff; /* not sup. IE9 */   
+} 
+.menu_bar-skel ul.all-menus a:hover { text-decoration: none; background: #d7c9ff; }
+.menu_bar-skel ul.all-menus a:active { 
+    text-decoration: none;  
+    font-style: italic;
+}
+.menu_bar-skel ul.all-menus a:link, .menu_bar-skel ul.all-menus a:visited { 
+    text-decoration: none; 
+}
+
+/* menu parts */
+.menu {
+    background: #BBAAFF;  color: #000000; 
+    border: 2px solid #CCAAEE;  
+    font-family: arial, sans-serif; 
+}
+.menu.name, .menuAcckey { font: 14px arial, sans-serif; }
+.menuAcckey { font: 12px arial, sans-serif; }
+.menu .name tr { background: #BBAAFF;  color: #000000; }
+tr a:hover { background: #CCCCFF; text-decoration: underline; }
+.menu_item a:active { text-decoration: none;  }
+.menu_item a:link, .menu_item a:visited { text-decoration: none; }
+.menu, .menu tr { border-top: 1px solid black; }
+.menuAcckey { text-align: right; color: #1c1c1c;  }
+  /* end of menu parts */
+/* end of menu bar stuff */
+

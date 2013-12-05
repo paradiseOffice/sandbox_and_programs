@@ -58,13 +58,14 @@
     <!ATTLIST layout effects (none|animation) #REQUIRED "none">
   <!ELEMENT menu_bar (menu)+>
     <!ATTLIST menu_bar no_of_menus CDATA #REQUIRED "1">
-    <!ELEMENT menu (menu_item)+>
+    <!ELEMENT menu (menu_item)+ (separator)+>
       <!ATTLIST menu name CDATA #REQUIRED>
       <!ATTLIST menu acckey CDATA #REQUIRED>
+      <!ELEMENT separator EMPTY>
       <!ELEMENT menu_item EMPTY>
         <!ATTLIST menu_item name CDATA #REQUIRED>
         <!ATTLIST menu_item acckey CDATA #REQUIRED>
-        <!ATTLIST menu_item command (new|open_upload|save_download|save_as_dl|close_file|convert_bfile|                 prepare_statment|log_in|log_out|add_data|query_data|describe_tables|set_up_keys|security_settings|delete_data|update_data|alter_tables|create_tables|create_forms|alter_forms|insert_data_in_forms|create_reports|modify_reports|lexigraphic_checker|ok|cancel) #IMPLIED>
+        <!ATTLIST menu_item command (new|open_upload|save_download|save_as_dl|close_file|convert_bfile|undo|redo|undo_history| prepare_statment|log_in|log_out|add_data|query_data|describe_tables|set_up_keys|security_settings|delete_data|update_data|alter_tables|create_tables|create_forms|alter_forms|insert_data_in_forms|create_reports|modify_reports|lexigraphic_checker|ok|cancel) #IMPLIED>
         <!ATTLIST menu_item open_browser (upload_box|download_box|print_box) #IMPLIED>
         <!ATTLIST menu_item opens_dialog CDATA #IMPLIED>
         <!ATTLIST menu_item plugin CDATA #IMPLIED>

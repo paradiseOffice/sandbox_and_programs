@@ -23,32 +23,16 @@
 
 /* Base styles for the menu bar. Drop down menus are separate. */
 .menu_bar-skel ul.all-menus { 
-  font: arial, sans-serif;
   position: relative; top: 0px; left: 0px;  
 }
-.menu_bar-skel span.acckey { text-decoration: underline; }
 .menu_bar-skel ul.all-menus, .menu_bar-skel  ul.all-menus li {
-  list-style: none outside none;
   margin: 0; padding: 0; 
 }
-.menu_bar-skel ul.all-menus li a { display: block; float: left; }
-.menu_bar-skel ul.all-menus .menuLink { 
-  background: #BBAAFF;
-  border: 1px solid white; 
-  border-radius: 5px;
-  color: #000000;
+.menu_bar-skel ul.all-menus li a, .menu_bar-skel ul.all-menus li { 
+    display: block; float: left; 
 }
 
-.menu_bar-skel ul.all-menus li:hover > a.menuLink { 
-    text-shadow: 2px 2px #ffffff; /* not sup. IE9 */
-    
-} 
-.menu_bar-skel ul.all-menus a:hover { text-decoration: none; background: #CCBBFF; }
-.menu_bar-skel ul.all-menus a:active { 
-    text-decoration: none;  
-    font-style: italic;
-}
-.menu_bar-skel ul.all-menus a:link, .menu_bar-skel ul.all-menus a:visited { 
-    text-decoration: none; 
-}
+/* menu specific bits */
+.menu { position: absolute; display: none;  }
+.menu, .menu tr { margin: 0; padding: 0; }
 

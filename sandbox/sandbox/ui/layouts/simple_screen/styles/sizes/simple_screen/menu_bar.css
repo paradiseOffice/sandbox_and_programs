@@ -25,4 +25,27 @@
 
 .menuLink { font-size: 153.9%; padding-top: 2px; padding-left: 3px; }
 ul.all-menus .menuLink { padding-right: 10px; } /* links up with menu to align it */
+
 ul.all-menus li a { width: 100px; height: 30px; }
+.menu.menu_item { height: 30px;  }
+/* Sizes for the menus. */
+
+.menu.name { padding-top: 2px; padding-left: 3px; }
+.menu { 
+    z-index: 7000;
+    height: auto;
+  width: 200px;  top: 36px; 
+}
+
+.menuAcckey { padding-right: 3px; }
+
+.menu#menu1 { left: 0px; }
+.menu#menu2 { left: 115px; }
+.menu#menu3 { left: 230px; }
+.menu#menu4 { left: 345px; }
+.menu#menu5 { left: 460px; }
+.menu#menu6 { left: 575px; }
+.menu#menu7 { left: 690px; }
+.menu#menu8 { left: 805px; }
+.menu#menu9 { left: 920px; }
+.menu#menu10 { left: 920px; }
