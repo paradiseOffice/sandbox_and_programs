@@ -22,17 +22,4 @@
 ************************************************************************/
 
 /* Base styles for the menu bar. Drop down menus are separate. */
-.menu_bar-skel ul.all-menus { 
-  position: relative; top: 0px; left: 0px;  
-}
-.menu_bar-skel ul.all-menus, .menu_bar-skel  ul.all-menus li {
-  margin: 0; padding: 0; 
-}
-.menu_bar-skel ul.all-menus li a, .menu_bar-skel ul.all-menus li { 
-    display: block; float: left; 
-}
-
-/* menu specific bits */
-.menu { position: absolute; display: none;  }
-.menu, .menu tr { margin: 0; padding: 0; }
 

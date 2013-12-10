@@ -29,7 +29,8 @@
 .app_window-skel, .title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel, #file1, .help_box-skel, .status_bar, .settings_menu {
   font-family:  arial, sans-serif;
 }
-
+body {  background: #ccc url('images/top_bg.png') repeat-x ; }
+ .file_port, .tool_pane-skel, .status_bar { background: #e9dfe9; }
 /* end of all things: font settings */
 
 /* Common bar: large icons */
@@ -68,45 +69,68 @@ button#search { background-image: url('/home/hazel/Documents/new_linux_paradise/
 /* end of common bar and large icons */
 
 /* start of menu bar */
-.menu_bar-skel ul.all-menus { 
-  font: arial, sans-serif;
+.menu_bar-skel ul.all-menus, .menu_bar-skel ul li { 
+  font: arial, sans-serif; list-style: none;
 }
 .menu_bar-skel span.acckey { text-decoration: underline; }
-.menu_bar-skel ul.all-menus, .menu_bar-skel  ul.all-menus li {
-  list-style: none outside none;
+.all-menus, .all-menus li {  
+    background: -moz-linear-gradient(top,  #1c1c1c 0%, #dddddd 80%); 
 }
-.menu_bar-skel ul.all-menus .menuLink { 
-  background: #BBAAFF;
-  border: 1px solid white; 
-  border-radius: 5px;
-  color: #000000;
+.all-menus ul { margin: 0; }
+.all-menus ul.menu, .menu li { background: #850044; border-radius: 5px; padding: 0; }
+.all-menus ul.menu { border-radius: 5px; padding: 0; }
+.all-menus ul li { 
+    text-align: center; 
+    float: left; 
+    margin: 0;
+    padding: 0; 
 }
-.menu_bar-skel ul.all-menus li:hover > a.menuLink { 
-    text-shadow: 2px 2px #ffffff; /* not sup. IE9 */   
-} 
-.menu_bar-skel ul.all-menus a:hover { text-decoration: none; background: #d7c9ff; }
-.menu_bar-skel ul.all-menus a:active { 
-    text-decoration: none;  
-    font-style: italic;
+.all-menus li:hover { background: rgba(128,0,50,0.5); }
+.all-menus a { color: #fff; text-decoration: none; padding: 10px; }
+.all-menus ul.menu { 
+    background: rgba(0,0,0,0.8); 
+    border-radius: 0 0 5px 5px; 
 }
-.menu_bar-skel ul.all-menus a:link, .menu_bar-skel ul.all-menus a:visited { 
-    text-decoration: none; 
+.all-menus ul.menu li { 
+    text-align: left; 
+    border-bottom: 1px solid rgba(0,0,0,0.3); 
 }
-
-/* menu parts */
-.menu {
-    background: #BBAAFF;  color: #000000; 
-    border: 2px solid #CCAAEE;  
-    font-family: arial, sans-serif; 
-}
-.menu.name, .menuAcckey { font: 14px arial, sans-serif; }
+/* bit that actually makes things visible */
+.all-menus ul li { transition: .5s all linear; }
+/*
+.menu.name { font: 14px arial, sans-serif; }
 .menuAcckey { font: 12px arial, sans-serif; }
-.menu .name tr { background: #BBAAFF;  color: #000000; }
-tr a:hover { background: #CCCCFF; text-decoration: underline; }
+.menu .name { background: #BBAAFF;  color: #000000; }
+.menu li a:hover { background: #CCCCFF; text-decoration: underline; }
+.menu, .menu li { border-top: 1px solid black; }
+.menuAcckey { text-align: right; color: #1c1c1c;  }
 .menu_item a:active { text-decoration: none;  }
 .menu_item a:link, .menu_item a:visited { text-decoration: none; }
-.menu, .menu tr { border-top: 1px solid black; }
-.menuAcckey { text-align: right; color: #1c1c1c;  }
+*/
   /* end of menu parts */
 /* end of menu bar stuff */
 
+/* status bar rules --------------------------------------------------------*/
+
+/* end of status bar */
+/* settings menu rules */
+
+/* end of settings menu rules */
+
+
+/* For the tool pane and Help box ------------------------------------------------*/
+div#messages p { border: 1px solid #ccc; border-radius: 5px; }
+div#messages p.info { border-color: #ccc; border-radius: 5px; }
+div#messages p.warn { border-color: #FF9900; }
+div#messages p.error { border-color: #FF0000; }
+div#messages p.help { border-color: #6699FF; }
+p { font-family: arial, sans-serif; font-size: 100%; color: #1c1c1c; }
+/* end of help box (lower down on tool pane) */
+
+/* tool_box rules, 
+ * the icon pics get linked into the html file, cell bg changes on hover  
+ */
+table.tool_box { border: 1px solid #1c1c1c; margin-bottom: 5px; }
+td.odd { background: #eeeeee; }
+td.even { background: #b8a57c; }
+/* end of tool_box rules */

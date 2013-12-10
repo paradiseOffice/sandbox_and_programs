@@ -21,10 +21,3 @@
  *
 ************************************************************************/
 
-/* For the tool pane and Help box */
-div#messages p { border: 1px solid #ccc; border-radius: 5px; }
-div#messages p.info { border-color: #ccc; border-radius: 5px; }
-div#messages p.warn { border-color: #FF9900; }
-div#messages p.error { border-color: #FF0000; }
-div#messages p.help { border-color: #6699FF; }
-p { font-family: arial, sans-serif; font-size: 100%; color: #1c1c1c; }

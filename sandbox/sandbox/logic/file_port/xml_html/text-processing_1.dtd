@@ -41,12 +41,12 @@
     <!ELEMENT frontmatter (cover,titlePage,toc,copyrights,preamble)*>
       <!ELEMENT cover (#PCDATA|image+)>
       <!ELEMENT titlePage (#PCDATA|heading1|heading2|heading3|heading4|image)*>
-      <!ELEMENT toc (#PCDATA|list|outline|heading1|heading2|heading3|heading4|heading5|heading6)*>
+      <!ELEMENT toc (#PCDATA|link|list|outline|heading1|heading2|heading3|heading4|heading5|heading6)*>
       <!ELEMENT copyrights (#PCDATA)>
       
       <!ELEMENT preamble (#PCDATA)>
       
-    <!ELEMENT mainmatter (#PCDATA|heading1|heading2|heading3|heading4|heading5|heading6|part|chapter|list|image|caption|preformatted|textbox|table|aside|blockquote|quote|cite|acronym|autofield|address|URI|outline|para|break|legend|chart)*>
+    <!ELEMENT mainmatter (#PCDATA|heading1|heading2|heading3|heading4|heading5|heading6|part|chapter|list|image|caption|preformatted|textbox|table|aside|blockquote|quote|cite|acronym|autofield|address|link|URI|outline|para|break|legend|chart)*>
       <!ELEMENT heading1 (#PCDATA)>
 	<!ATTLIST heading1 id ID #REQUIRED>
 	<!ATTLIST heading1 class CDATA #IMPLIED>
@@ -85,7 +85,9 @@
 	<!ATTLIST preformatted xml:space CDATA "preserve">
 	<!ATTLIST preformatted id ID #REQUIRED>
 	<!ATTLIST preformatted class CDATA #IMPLIED>
-      
+     <!ELEMENT link (#PCDATA)>
+        <!ATTLIST link ref CDATA #REQUIRED>
+        <!ATTLIST link class CDATA #IMPLIED>
       <!ELEMENT textbox (#PCDATA)>
 	<!ATTLIST textbox id ID #REQUIRED>
 	<!ATTLIST textbox class CDATA #IMPLIED>
@@ -201,7 +203,7 @@
 	<!ATTLIST def id ID #REQUIRED>
 	<!ATTLIST def class CDATA #IMPLIED>
 	
-      <!ELEMENT biblo (#PCDATA|ref|text)*>
+      <!ELEMENT biblo (#PCDATA|ref|link|text)*>
 	<!ELEMENT ref (#PCDATA)>
 	<!ATTLIST ref id ID #REQUIRED>
 	<!ATTLIST ref class CDATA #IMPLIED>

@@ -4,6 +4,7 @@
 if [ -z $1 ]
 then 
   echo "No fileinfo string given on the command line"
+  exit 2
 else
   fileinfo=$1
 fi
@@ -172,7 +173,9 @@ case $filetype in
     fi
     # end of standards bit
     ;;
-  *) echo "Wrong file type inputted" ;;
+  *) echo "Wrong file type inputted"
+     exit 3
+  ;;
 esac
 
 if [[ $conv = "html" || $conv = "html-js" || $conv = "xml" ]]

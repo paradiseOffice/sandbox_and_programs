@@ -1,33 +1,5 @@
-/*******************************************************************
- * 
- * Paradise Office Cygnet API
- * Copyright (c) 2013 Hazel Windle
- *
- *  This program is free software; you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 2 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License along
- *  with this program; if not, write to the Free Software Foundation, Inc.,
- *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
- *
- *  Email me at: lead-dev@linux-paradise.co.uk if you have any problems or questions.
- *
-************************************************************************/
+
 
 /* common_bar-skel structural css */
-.common_bar-skel .large_icon { 
-    position: absolute; top: 0px; 
-}
-.common_bar-skel .img { float: left; }
-.common_bar-skel span.name { display: block; margin-left: 42px; }
-.common_bar-skel .img { position: relative; left: 0px; top: 0px;  }
-.common_bar-skel .ctl-btn { position: relative; top: 5px; left: -3px; }
-form { position: relative; top: 2px; left: 2px; }
+
 /* width and height values in common-bar_simple-screen.css */

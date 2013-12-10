@@ -4,6 +4,7 @@
 if [ -z $1 ]
 then 
   echo "No fileinfo string given on the command line"
+  exit 2
 else
   fileinfo=$1
 fi
@@ -53,7 +54,9 @@ case $filetype in
   application/vnd.ms-powerpoint | application/vnd.openxmlformats-officedocument.presentationml.presentation | application/vnd.oasis.opendocument.presentation-template)
     conv_type="odp" ;;
   # other file endings to be in standards.py /sh bits
-  *) echo "File type not recognised" ;;
+  *) echo "File type not recognised"
+     exit 3
+  ;;
   esac
 
 #echo "Filename: " $filename

@@ -21,8 +21,5 @@
  *
 ************************************************************************/
 
-/* Styling for tool_box, the icon pics get added into the html file.  */
-table.tool_box { border: 1px solid #1c1c1c; margin-bottom: 5px; }
-td.odd { background: #eeeeee; }
-td.even { background: #b8a57c; }
+
 

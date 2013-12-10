@@ -1,0 +1,124 @@
+/*******************************************************************
+ * 
+ * Paradise Office Cygnet API
+ * Copyright (c) 2013 Hazel Windle
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *  Email me at: lead-dev@linux-paradise.co.uk if you have any problems or questions.
+ *
+************************************************************************/
+
+
+/* The basic structure for the HTML skeleton, with spaces for each of the common components */
+.app_window-skel, .title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel, #file1, .help_box-skel, .status_bar, .settings_menu 
+{ position: relative; }
+.app_window-skel { margin: 0; padding: 0; height: 100%; width: 100%; }
+.tool_pane-skel { position: absolute;  }
+.help_box-skel { border: 1px black solid; }
+.status_bar { position: absolute; }
+.settings_menu { position: absolute; }
+ /* end of basic structure --------------------------------------------------*/
+ 
+ /* title bar displaying the program name */
+ .title_bar-skel h1 {  text-align: right; }
+ /* end of title bar */
+ 
+ /* the file port and tabs for each file open */
+.file_port { position: absolute; border: 1px solid black; overflow-x: hidden;
+ overflow-y: auto;    }
+.file_port#tabrow {  height: auto; }
+.file_port .tabs-top { position: relative; }
+.file_port .tabs-top .file_port .ui-tabs-panel {  height: auto; overflow: auto;  }
+.file_port .tabs-top .file_port .ui-tabs-nav {
+    position: absolute !important;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    padding: 0 0 0 0;
+  }
+.file_port .tabs-top .file_port .ui-tabs-nav li {  }
+.file_port .ui-tabs-selected {  }   
+#file1, #file2, #file3 { position: absolute; background: #ffffff; border: 0; }
+#file1:focus, #file2:focus, #file3:focus {  border: 0; outline: 0; background: #ffffff; }
+/* end of file port ------------------------------------------------------------------ */
+
+/* start of menu bar drop down menus */
+.menu_bar-skel ul.all-menus { 
+  position: relative; top: 0px; left: 0px;  
+}
+.menu_bar-skel ul.all-menus, .menu_bar-skel  ul.all-menus li {
+  margin: 0; padding: 0; 
+}
+.menu_bar-skel ul.all-menus li a, .menu_bar-skel ul.all-menus li { 
+    display: block; float: left; 
+}
+.all-menus ul li { display: block; }
+.all-menus a { display: block; }
+.all-menus ul.menu { position: relative; }
+.all-menus ul.menu li { float: none; }
+/* menu specific bits */ /*
+.menu { position: absolute; display: block;  }
+ul .menu_item { display: block; float: left; }
+*/ /* 
+ul.all-menus .menuLink { 
+    padding-right: 10px; 
+    width: 100px; height: 30px; 
+    font-size: 153.9%; 
+    padding-top: 2px; padding-left: 3px;
+} 
+.menu .menu_item li { height: 30px; width: 200px;  }
+Sizes for the (old) menus. 
+.menu .name { float: left; padding-top: 2px; padding-left: 3px; }
+.menu { 
+    z-index: 7000;
+  min-height: 90px; max-height: 600px; 
+  width: 200px;  top: 36px; 
+}
+.menuAcckey { }
+.menu#menu1 { left: 0px; }
+.menu#menu2 { left: 115px; }
+.menu#menu3 { left: 230px; }
+.menu#menu4 { left: 345px; }
+.menu#menu5 { left: 460px; }
+.menu#menu6 { left: 575px; }
+.menu#menu7 { left: 690px; }
+.menu#menu8 { left: 805px; }
+.menu#menu9 { left: 920px; }
+.menu#menu10 { left: 920px; } */
+/* end of menu bar css */
+
+/* common bar for large icons, below menu bar */
+.common_bar-skel .large_icon { 
+    position: absolute; top: 0px; 
+}
+.common_bar-skel .img { float: left; }
+.common_bar-skel span.name { display: block; margin-left: 42px; }
+.common_bar-skel .img { position: relative; left: 0px; top: 0px;  }
+.common_bar-skel .ctl-btn { position: relative; top: 5px; left: -3px; }
+form { position: relative; top: 2px; left: 2px; }
+/* end of common bar settings */
+
+/* status bar rules */
+
+/* end of status bar */
+
+/* settings menu rules */
+
+/* end of settings menu rules */
+
+/* tool box rules, or help box rules/tool pane */
+
+/* end of tool pane stuff */

@@ -1,0 +1,22 @@
+File menu
+New (new text tab)
+Open (Opens dos text same as unix)
+Save (can save to c, etc or in a different encoding)
+Save As (change name, encoding or both)
+Save All (saves all open tabs)
+Print Preview
+Print (Quicker version of the above)
+Close File
+
+
+Edit Menu
+Undo 
+Redo
+Undo history (last 20 changes by default (words))
+seperator
+Cut
+Copy 
+Paste
+Clipboard
+
+Insert Menu
