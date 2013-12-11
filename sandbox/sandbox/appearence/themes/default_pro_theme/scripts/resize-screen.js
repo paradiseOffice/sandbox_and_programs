@@ -6,6 +6,7 @@
  resize any pixel values if needed. 
 */
 
+
 var checkWidth = function() {
   // innerWidth, innerHeight works when page is zoomed.
   var viewportWidth = jQuery(window).innerWidth();

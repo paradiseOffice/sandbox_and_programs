@@ -28,117 +28,38 @@ src="../../../sandbox/sandbox/appearence/themes/default_pro_theme/jqueryui/devel
     <h1>Document Title - Glorified Typewriter</h1>
   </div>
   <div class="menu_bar-skel">
-  
-<ul role="menu_bar" class="all-menus">
-      <li role="menu_button" aria-haspopup="true" tabindex="0"><a id="menuLink1" title="File" class="menuLink" href=""><span class="acckey">F</span>ile</a>
-      <!-- menu 1 from menu goes in here -->
-<ul role="menu" class="menu" title="File" id="menu1" aria-hidden="true" >
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name" >New</span>
-    <span class="menuAcckey">Ctrl + N</span></a>
-  </li>
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Open</span>
-    <span class="menuAcckey">Ctrl + O</span></a>
-  </li>
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Save</span>
-    <span class="menuAcckey">Ctrl + S</span></a>
-  </li>
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Save As </span>
-    <span class="menuAcckey">Ctrl Shift + A</span></a>
-  </li>
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Close file </span>
-    <span class="menuAcckey">Ctrl + W</span></a>
-  </li>
-</ul>
-      </li>
-      <li role="menu_button" aria-haspopup="true" tabindex="0">
-      <a id="menuLink2" title="Edit" class="menuLink" href=""><span class="acckey">E</span>dit</a>
-      <!-- 2nd menu from menu goes in here (match on id tags) -->
-<ul role="menu" aria-hidden="true" class="menu" title="Edit" id="menu2">
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Cut </span>
-    <span class="menuAcckey">Ctrl + X</span></a>
-  </li>
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Copy </span>
-    <span class="menuAcckey">Ctrl + C</span></a>
-  </li>
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Paste </span>
-    <span class="menuAcckey">Ctrl + V</span></a>
-  </li>  
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Delete </span>
-    <span class="menuAcckey">Del</span></a>
-  </li>  
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Select All </span>
-    <span class="menuAcckey">Ctrl + A</span></a>
-  </li>  
-</ul>
-      </li>
-      <li role="menu_button" aria-haspopup="true" tabindex="0">
-      <a id="menuLink3" title="View" class="menuLink" href=""><span class="acckey">V</span>iew</a>
-      <!-- 3rd menu from menu goes in here -->
-<ul role="menu" aria-hidden="true" class="menu" title="View" id="menu3">
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Zoom In </span>
-    <span class="menuAcckey">Ctrl ++</span></a>
-  </li>
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Zoom Out </span>
-    <span class="menuAcckey">Ctrl --</span></a>
-  </li>  
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Go To Line </span>
-    <span class="menuAcckey">Ctrl + G</span></a>
-  </li>  
-</ul>
-      </li>
-      <li role="menu_button" aria-haspopup="true" tabindex="0">
-      <a id="menuLink4" title="Format" class="menuLink" href=""><span class="acckey">F</span>ormat</a>
-      <!-- 4th menu from menu goes in here -->
-<ul role="menu" aria-hidden="true" class="menu" title="Format" id="menu4">
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Change Font </span>
-    <span class="menuAcckey"></span></a>
-  </li>
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Indentation </span>
-    <span class="menuAcckey"></span></a>
-  </li>  
-  <li class="menu_item" role="menu_item" tabindex="-1">
-    <a href=""><span class="menuIcon"></span>
-    <span class="name">Highlighting </span>
-    <span class="menuAcckey"></span></a>
-  </li>
-</ul> 
-      </li>
-        </ul><!-- menu bar end-->
-        
+    <nav role="navigation" aria-label="Main menu">
+    <ul role="menubar">
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">F</span>ile</a>
+            <ul class="submenu" role="menu" aria-hidden="true">
+                <li role="menuitem" tabindex="-1"><a href="#"><span class="acckey">N</span>ew</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#"><span class="acckey">O</span>pen</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#"><span class="acckey">S</span>ave</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Save <span class="acckey">A</span>s</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#" title="Ctrl + W"><span class="acckey">C</span>lose File</a></li>
+            </ul>
+        </li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Services</a>
+            <ul class="submenu" role="menu" aria-hidden="true">
+                <li role="menuitem" tabindex="-1"><a href="#">Abrasion</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Peel</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Wax</a></li>
+            </ul>
+        </li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Contact</a>
+            <ul class="submenu" role="menu" aria-hidden="true">
+                <li role="menuitem" tabindex="-1"><a href="#">Telephone</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Letter</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Email </a></li>
+            </ul>
+        </li>
+    </ul>
+  </nav>
+
   </div>
   <div class="common_bar-skel">
-    
-        <a href="#">
+  
+     <a href="#">
     <div id="large_icon1" class="large_icon">
       <div id="img_large1" class="img"></div>
       <span class="name">New</span>      
@@ -163,11 +84,10 @@ src="../../../sandbox/sandbox/appearence/themes/default_pro_theme/jqueryui/devel
       <span class="name">Wikipedia</span>
     </div>
     </a>
-    
-  </div>
-
-  <div class="window">
-    <div class="file_port" >
+  
+  </div><!-- common bar -->
+<div class="window">
+  <div class="file_port" >
       <div id="file1" contenteditable></div>
   </div>
 		
@@ -203,18 +123,17 @@ src="../../../sandbox/sandbox/appearence/themes/default_pro_theme/jqueryui/devel
 
   
      <div class="help_box-skel">
-        
         <div id="messages">
-    <p class="warn">Warning</p>
-    <p class="error">Error</p>
-    <p class="info">Information</p>
-    <p class="help">Help</p>
-  </div>
-      </div>
-		</div>
-	</div>
-
-	<div class="status_bar">
+            <p class="warn">Warning</p>
+            <p class="error">Error</p>
+            <p class="info">Information</p>
+            <p class="help">Help</p>
+        </div>
+     </div><!-- help box -->
+     
+  </div><!-- tool pane -->
+</div><!-- window -->
+  <div class="status_bar">
     <div class="settings_menu">Settings</div>Updates
   </div>
 

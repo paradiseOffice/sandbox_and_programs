@@ -28,7 +28,6 @@
 .title_bar-skel, .menu_bar-skel, .common_bar-skel, .status_bar 
 { width: 700px; /* computed */  }
 .title_bar-skel { height: 25px; top: 0px;  }
-.title_bar-skel h1 { font-size: 10pt;  }
 
 .menu_bar-skel { height: 36px; 
                  top: 0px; 
@@ -40,7 +39,7 @@
                    left: 15px;  }
             
                    
-.window {  width: 100%; height: 100%; }
+.window { width: 100%; height: 100%; }
 
 .file_port { width: 510px; /* computed 700 - tool pane width */ 
              height: 474px; /* computed 600 - (25 + 36 + 40 + 25)*/ 
@@ -67,36 +66,12 @@
 /* end of skeleton sizes */
 
 /* menu bar sizes */
-/* THIS BIT MAY BE BROKEN OR SOMETHING
-ul.all-menus .menuLink { 
-    padding-right: 10px; 
-    width: 100px; height: 30px; 
-    font-size: 153.9%; 
-    padding-top: 2px; padding-left: 3px;
-} 
-.menu .menu_item li { height: 30px; width: 200px;  }
-Sizes for the (old) menus. 
-.menu .name { float: left; padding-top: 2px; padding-left: 3px; }
-.menu { 
-    z-index: 7000;
-  min-height: 90px; max-height: 600px; 
-  width: 200px;  top: 36px; 
-}
-.menuAcckey { }
-.menu#menu1 { left: 0px; }
-.menu#menu2 { left: 115px; }
-.menu#menu3 { left: 230px; }
-.menu#menu4 { left: 345px; }
-.menu#menu5 { left: 460px; }
-.menu#menu6 { left: 575px; }
-.menu#menu7 { left: 690px; }
-.menu#menu8 { left: 805px; }
-.menu#menu9 { left: 920px; }
-.menu#menu10 { left: 920px; } */
-.all-menus, .all-menus li { height: 30px; }
-.all-menus ul li  { width: 200px; }
-.all-menus ul.menu { height: 0px; overflow: hidden; }
-.all-menus ul li:hover ul.menu { height: 600px; }
+nav { height: 34px; }
+nav li { height: 30px; }
+nav ul li { width: 100px; } 
+nav ul.submenu { width: 180px; }
+nav ul.submenu li { width: 180px; }
+
 /* end of menu bar sizes */
 
 /* common bar rules --------------------------------------------------------------- */

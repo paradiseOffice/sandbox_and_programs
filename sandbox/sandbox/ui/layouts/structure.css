@@ -56,48 +56,26 @@
 /* end of file port ------------------------------------------------------------------ */
 
 /* start of menu bar drop down menus */
-.menu_bar-skel ul.all-menus { 
+nav { 
   position: relative; top: 0px; left: 0px;  
 }
-.menu_bar-skel ul.all-menus, .menu_bar-skel  ul.all-menus li {
-  margin: 0; padding: 0; 
+ nav ul.submenu {  padding: 0; }
+nav ul li { 
+    display: block; 
+    float: left; 
+    margin: 0;
+    padding: 0; 
 }
-.menu_bar-skel ul.all-menus li a, .menu_bar-skel ul.all-menus li { 
-    display: block; float: left; 
+nav ul.submenu { 
+    position: relative; 
+    height: 0px; overflow: hidden; 
 }
-.all-menus ul li { display: block; }
-.all-menus a { display: block; }
-.all-menus ul.menu { position: relative; }
-.all-menus ul.menu li { float: none; }
-/* menu specific bits */ /*
-.menu { position: absolute; display: block;  }
-ul .menu_item { display: block; float: left; }
-*/ /* 
-ul.all-menus .menuLink { 
-    padding-right: 10px; 
-    width: 100px; height: 30px; 
-    font-size: 153.9%; 
-    padding-top: 2px; padding-left: 3px;
-} 
-.menu .menu_item li { height: 30px; width: 200px;  }
-Sizes for the (old) menus. 
-.menu .name { float: left; padding-top: 2px; padding-left: 3px; }
-.menu { 
-    z-index: 7000;
-  min-height: 90px; max-height: 600px; 
-  width: 200px;  top: 36px; 
-}
-.menuAcckey { }
-.menu#menu1 { left: 0px; }
-.menu#menu2 { left: 115px; }
-.menu#menu3 { left: 230px; }
-.menu#menu4 { left: 345px; }
-.menu#menu5 { left: 460px; }
-.menu#menu6 { left: 575px; }
-.menu#menu7 { left: 690px; }
-.menu#menu8 { left: 805px; }
-.menu#menu9 { left: 920px; }
-.menu#menu10 { left: 920px; } */
+nav ul.submenu li { float: none;  }
+nav a { display: block;  }
+/* bit that actually makes things visible */
+nav ul li { transition: .5s all linear; } 
+nav ul li:hover ul.submenu { height: auto; } 
+
 /* end of menu bar css */
 
 /* common bar for large icons, below menu bar */
