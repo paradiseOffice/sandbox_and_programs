@@ -26,16 +26,20 @@
     src: 
         url('fonts/body/Ubuntu-C.ttf') format('truetype');
 }
-.app_window-skel, .title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel, #file1, .help_box-skel, .status_bar, .settings_menu {
+.title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel, #file1, .help_box-skel, .status_bar, .settings_menu {
   font-family:  arial, sans-serif;
 }
 /* end of all things: font settings */
 /* title bar */
-.title_bar-skel h1 { font-size: 10pt;  }
-/* skeleton */
-.app_window-skel { border: 1px solid #302111; }
-.title_bar-skel { border: 1px solid black; }
+.title_bar-skel { background: #6193CF; }
+.title_bar-skel h1 {  
+     text-align: right; 
+     font-weight: bold;
+}
 
+/* skeleton */
+.window { background: #e9dfe9; }
+header { background: #e9dfe9 url('images/top_bg.png') repeat-x; }
 /* end of skeleton */
 
 /* Common bar: large icons */
@@ -109,9 +113,39 @@ span.acckey { text-decoration: underline; }
 /* end of menu bar stuff */
 
 /* status bar rules --------------------------------------------------------*/
-
+.status_bar { background: #e9dfe9; }
 /* end of status bar */
 /* settings menu rules */
+
+.settings_menu  nav li { 
+    height: 30px; 
+    background: -moz-linear-gradient(bottom,  #1c1c1c 0%,  
+                                     #dddddd 80%); 
+}
+
+.settings_menu  .submenu li { background: #850044; border-radius: 5px; padding: 0; }
+.settings_menu nav ul.submenu { border-radius: 5px; padding: 0; }
+.settings_menu nav ul li { 
+    
+    width: 140px; 
+    text-align: center; 
+
+}
+
+.settings_menu nav li:hover { background: rgba(128,0,50,0.5); }
+.settings_menu nav a { color: #fff; text-decoration: none; padding: 10px; }
+.settings_menu nav ul.submenu { 
+    background: rgba(0,0,0,0.8); 
+    top: -300px; 
+    border-radius: 5px 5px 0 0;
+    
+}
+.settings_menu nav ul.submenu li { 
+   
+    text-align: left; font-size: 0.7em;
+    border-top: 1px solid rgba(0,0,0,0.3); 
+}
+
 
 /* end of settings menu rules */
 

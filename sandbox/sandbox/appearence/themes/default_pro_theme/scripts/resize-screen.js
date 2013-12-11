@@ -11,22 +11,31 @@ var checkWidth = function() {
   // innerWidth, innerHeight works when page is zoomed.
   var viewportWidth = jQuery(window).innerWidth();
   var viewportHeight = jQuery(window).innerHeight();
-  var toolbarHeight = 136; // for simple screen size
-  var toolPane = 190; // for simple screen only
-  // if sizecss == x then toolbarHeight = this, or a case menu.
-//$(".title-bar").height() + $(".menu-bar").height() + $(".common-bar").height() + $(".status-bar").height();
-  toolbarHeight = parseInt(toolbarHeight);
+  var titlebar = jQuery('.title_bar-skel').height();
+  var menubar = jQuery('.menu_bar-skel').height();
+  var commonbar = jQuery('.common_bar-skel').height();
+  var statusbar = jQuery('.status_bar').height();
+  
+  var toolPane = jQuery('.tool_pane-skel').width();
+  var toolbarHeight = parseInt(titlebar + menubar + commonbar + statusbar - 15); 
+  console.log(toolbarHeight);
+  console.log(toolPane);
+  
+  // toolbarHeight = parseInt(toolbarHeight);
   toolPane = parseInt(toolPane);
   viewportHeight = viewportHeight - toolbarHeight;
   viewportHeight = parseInt(viewportHeight);  
-  viewportWidth = viewportWidth - toolPane ;
+  fileportWidth = viewportWidth - toolPane ;
   viewportWidth = parseInt(viewportWidth);
-  var  margin = 30;
-  jQuery('.file_port').css("width", viewportWidth - margin);
-  jQuery('.file_port').css("height", viewportHeight);
-  jQuery('.tool_pane-skel').css("left", viewportWidth);
-  jQuery('.status_bar').css("top", viewportHeight + toolbarHeight - 25);
-
+  var  margin = 45;
+  jQuery('.file_port').css("width", fileportWidth - margin);
+  jQuery('.file_port').css("height", viewportHeight - parseInt(statusbar) - 10);
+  jQuery('.file').css("height", viewportHeight - parseInt(statusbar) - 10);
+  jQuery('.tool_pane-skel').css("left", fileportWidth - 10 );
+  jQuery('.status_bar').css("top", viewportHeight + toolbarHeight - parseInt(statusbar));
+  jQuery('.status_bar').css("width", fileportWidth + 20 );
+  jQuery('.window').css("height", viewportHeight);
+  jQuery('.window').css("width", viewportWidth);
 };
 jQuery(document).ready(function() {
   checkWidth();

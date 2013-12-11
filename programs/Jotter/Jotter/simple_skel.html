@@ -23,17 +23,18 @@ src="../../../sandbox/sandbox/appearence/themes/default_pro_theme/jqueryui/devel
 </head>
 <body>
 
-<div class="app_window-skel">
+
   <div class="title_bar-skel">
     <h1>Document Title - Glorified Typewriter</h1>
   </div>
+  <header>
   <div class="menu_bar-skel">
     <nav role="navigation" aria-label="Main menu">
     <ul role="menubar">
         <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">F</span>ile</a>
             <ul class="submenu" role="menu" aria-hidden="true">
-                <li role="menuitem" tabindex="-1"><a href="#"><span class="acckey">N</span>ew</a></li>
-                <li role="menuitem" tabindex="-1"><a href="#"><span class="acckey">O</span>pen</a></li>
+                <li role="menuitem" tabindex="-1"><a id="link1" href="#"><span class="acckey">N</span>ew</a></li>
+                <li role="menuitem" tabindex="-1"><a href="dialog-open.php"><span class="acckey">O</span>pen</a></li>
                 <li role="menuitem" tabindex="-1"><a href="#"><span class="acckey">S</span>ave</a></li>
                 <li role="menuitem" tabindex="-1"><a href="#">Save <span class="acckey">A</span>s</a></li>
                 <li role="menuitem" tabindex="-1"><a href="#" title="Ctrl + W"><span class="acckey">C</span>lose File</a></li>
@@ -86,10 +87,20 @@ src="../../../sandbox/sandbox/appearence/themes/default_pro_theme/jqueryui/devel
     </a>
   
   </div><!-- common bar -->
-<div class="window">
+  </header>
+<section class="window">
   <div class="file_port" >
-      <div id="file1" contenteditable></div>
-  </div>
+      <div id="tabrow" class="tabs-top">
+        <ul>
+          <li><a href="#file1">File 1</a></li>
+          <li><a href="#file2">File 2</a></li>
+          <li><a href="#file3">File 3</a></li>
+        </ul>     
+      <article id="file1" class="file" contenteditable></article>
+      <div id="file2" class="file" contenteditable></div>
+      <div id="file3" class="file" contenteditable></div>
+    </div><!-- tab row -->
+  </div><!-- file port -->
 		
 <div class="tool_pane-skel">
     <table id="Words" class="tool_box">
@@ -132,13 +143,10 @@ src="../../../sandbox/sandbox/appearence/themes/default_pro_theme/jqueryui/devel
      </div><!-- help box -->
      
   </div><!-- tool pane -->
-</div><!-- window -->
+</section><!-- window -->
   <div class="status_bar">
     <div class="settings_menu">Settings</div>Updates
   </div>
-
-</div> 
-
 
 
 

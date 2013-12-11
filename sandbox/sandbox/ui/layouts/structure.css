@@ -21,19 +21,22 @@
  *
 ************************************************************************/
 
+/* For the file styles... */
+@import url('../../../sandbox/sandbox/ui/containers/file_port/doc/text_port.css');
 
 /* The basic structure for the HTML skeleton, with spaces for each of the common components */
-.app_window-skel, .title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel, #file1, .help_box-skel, .status_bar, .settings_menu 
+.title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel,  .help_box-skel, .status_bar, .settings_menu 
 { position: relative; }
-.app_window-skel { margin: 0; padding: 0; height: 100%; width: 100%; }
 .tool_pane-skel { position: absolute;  }
 .help_box-skel { border: 1px black solid; }
 .status_bar { position: absolute; }
 .settings_menu { position: absolute; }
+.menu_bar-skel { z-index: 7000; }
  /* end of basic structure --------------------------------------------------*/
  
  /* title bar displaying the program name */
- .title_bar-skel h1 {  text-align: right; }
+ .title_bar-skel { width: 100%; }
+ .title_bar-skel h1 {  padding-right: 30px; }
  /* end of title bar */
  
  /* the file port and tabs for each file open */
@@ -51,8 +54,7 @@
   }
 .file_port .tabs-top .file_port .ui-tabs-nav li {  }
 .file_port .ui-tabs-selected {  }   
-#file1, #file2, #file3 { position: absolute; background: #ffffff; border: 0; }
-#file1:focus, #file2:focus, #file3:focus {  border: 0; outline: 0; background: #ffffff; }
+
 /* end of file port ------------------------------------------------------------------ */
 
 /* start of menu bar drop down menus */
@@ -90,10 +92,26 @@ form { position: relative; top: 2px; left: 2px; }
 /* end of common bar settings */
 
 /* status bar rules */
-
+.status_bar { }
 /* end of status bar */
 
 /* settings menu rules */
+.settings_menu nav { position: absolute;  }
+.settings_menu  nav li { position: relative; }
+.settings_menu nav ul { margin: 0; }
+.settings_menu nav ul.submenu { border-radius: 5px; padding: 0; }
+.settings_menu nav ul li { 
+    display: block; 
+    float: left; 
+    margin: 0;
+    padding: 0; 
+}
+.settings_menu nav a { display: block;  }
+.settings_menu nav ul.submenu {    
+    position: relative;     
+    height: 0px; overflow: hidden; 
+}
+.settings_menu nav ul.submenu li { float: none; }
 
 /* end of settings menu rules */
 
