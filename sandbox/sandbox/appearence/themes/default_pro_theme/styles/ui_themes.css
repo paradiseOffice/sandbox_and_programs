@@ -26,7 +26,7 @@
     src: 
         url('fonts/body/Ubuntu-C.ttf') format('truetype');
 }
-.title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel, #file1, .help_box-skel, .status_bar, .settings_menu {
+.title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel, .help_box-skel, .status_bar, .settings_menu {
   font-family:  arial, sans-serif;
 }
 /* end of all things: font settings */
@@ -39,7 +39,9 @@
 
 /* skeleton */
 .window { background: #e9dfe9; }
-header { background: #e9dfe9 url('images/top_bg.png') repeat-x; }
+header { background: #e9dfe9 url('images/top_bg.png') repeat-x; 
+    background-size: contain ;
+}
 /* end of skeleton */
 
 /* Common bar: large icons */
@@ -80,31 +82,21 @@ button#search { background-image: url('/home/hazel/Documents/new_linux_paradise/
 /* start of menu bar */
 nav li { background: #bbaaff; }
 .top_link { 
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-    border-bottom: 2px solid #bbaaff;
-    border-radius: 5px 5px 0 0;
+    
     font-family: arial, tahoma, sans-serif;
-    font-size: 1.4em; font-weight: bold;
+     font-weight: bold;
 }
 nav ul { margin: 0; }
 nav ul.submenu, .submenu li { background: #bbaaff; padding: 0; }
-nav ul.submenu { margin-top: -11px; padding: 0; }
+nav ul.submenu { padding: 0; }
 nav ul li { text-align: center; }
 nav li:hover { background: rgba(120,120,170,0.5); }
-nav a { color: #fff; text-decoration: none; padding: 10px; }
-nav ul.submenu { 
-    background: rgba(0,0,0,0.8); 
-    border-radius: 0 0 5px 5px; 
-    
-}
+nav a { color: #fff; text-decoration: none; }
+nav ul.submenu { background: rgba(0,0,0,0.8); }
 nav ul.submenu li { 
     text-align: left; 
     font-family: arial, tahoma, sans-serif;
-    font-size: 1.2em; font-weight: normal;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid rgba(0,0,0,0.3); 
+    font-weight: normal;
 }
  /* other formatting - accessibility */
 span.acckey { text-decoration: underline; }
@@ -117,52 +109,31 @@ span.acckey { text-decoration: underline; }
 /* end of status bar */
 /* settings menu rules */
 
-.settings_menu  nav li { 
-    height: 30px; 
-    background: -moz-linear-gradient(bottom,  #1c1c1c 0%,  
-                                     #dddddd 80%); 
-}
-
-.settings_menu  .submenu li { background: #850044; border-radius: 5px; padding: 0; }
-.settings_menu nav ul.submenu { border-radius: 5px; padding: 0; }
-.settings_menu nav ul li { 
-    
-    width: 140px; 
-    text-align: center; 
-
-}
-
-.settings_menu nav li:hover { background: rgba(128,0,50,0.5); }
-.settings_menu nav a { color: #fff; text-decoration: none; padding: 10px; }
-.settings_menu nav ul.submenu { 
-    background: rgba(0,0,0,0.8); 
-    top: -300px; 
-    border-radius: 5px 5px 0 0;
-    
-}
-.settings_menu nav ul.submenu li { 
-   
-    text-align: left; font-size: 0.7em;
-    border-top: 1px solid rgba(0,0,0,0.3); 
-}
-
-
+.settings_menu  nav li { background: #d8ced8; }
+.settings_menu .top_link { font-weight: bold; font-style: italic; }
+.settings_menu  .submenu li { background: #e9dfe9; padding: 0; }
+.settings_menu nav ul.submenu {  padding: 0; }
+.settings_menu nav ul li { text-align: left; }
+.settings_menu nav li:hover { background: rgba(130,130,170,0.5); }
+.settings_menu nav a { color: #000; text-decoration: none;  }
+.settings_menu nav ul.submenu { background: rgba(0,0,0,0.8); }
+.settings_menu nav ul.submenu li { text-align: left; }
 /* end of settings menu rules */
 
 
 /* For the tool pane and Help box ------------------------------------------------*/
-div#messages p { border: 1px solid #ccc; border-radius: 5px; }
+div#messages p {  border-radius: 5px; }
 div#messages p.info { border-color: #ccc; border-radius: 5px; }
 div#messages p.warn { border-color: #FF9900; }
 div#messages p.error { border-color: #FF0000; }
 div#messages p.help { border-color: #6699FF; }
-p { font-family: arial, sans-serif; font-size: 100%; color: #1c1c1c; }
+div#messages p { font-family: arial, sans-serif; font-size: 100%; color: #1c1c1c; }
 /* end of help box (lower down on tool pane) */
 
 /* tool_box rules, 
  * the icon pics get linked into the html file, cell bg changes on hover  
  */
-table.tool_box { border: 1px solid #1c1c1c; margin-bottom: 5px; }
+
 td.odd { background: #eeeeee; }
 td.even { background: #b8a57c; }
 /* end of tool_box rules */

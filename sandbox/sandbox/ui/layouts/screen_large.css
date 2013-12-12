@@ -22,80 +22,80 @@
 ************************************************************************/
 
 /* skeleton html sizes for main scaffolding 
- * simple_screen 860w x 600h pixels base, 
+ * large screen 1400w x 1000h pixels base at least, 
  * resizing makes the file_port larger or smaller.
  */
 .title_bar-skel, .menu_bar-skel, .common_bar-skel, .status_bar 
-{  /* computed width? */  }
-.title_bar-skel { height: 25px; top: 0px;  }
-.title_bar-skel h1 { font-size: 12pt;  }
+{  /* computed width*/  }
+.title_bar-skel { height: 30px; top: 0px;  }
+.title_bar-skel h1 { font-size: 14pt;  }
 
-.menu_bar-skel { height: 36px; 
+.menu_bar-skel { height: 50px; 
                  top: 0px; 
                  left: 15px; }
                  
                  
-.common_bar-skel { height: 40px; 
+.common_bar-skel { height: 50px; 
                    top: 0px; 
                    left: 15px;  }
 /* .window height, width computed in resize-screen script */
-.file_port { width: 510px; /* computed 700 - tool pane width */ 
-             height: 474px; /* computed 600 - (25 + 36 + 40 + 25)*/ 
+.file_port { width: 710px; /* computed 700 - tool pane width */ 
+             height: 674px; /* computed 600 - (25 + 36 + 40 + 25)*/ 
              left: 15px; 
              top: 0px; 
-             padding: 2px; }
+             padding: 5px; }
 .file { width: 100%; height: 99%; }
 
-.tool_pane-skel { width: 180px; 
+.tool_pane-skel { width: 250px; 
                   height: 478px; /* computed +4 */ 
                   left: 533px; /* computed + 23 */  
                   top: 0px; 
                    }
 
                    
-.help_box-skel { width: 180px; 
-                 height: 120px; 
+.help_box-skel { width: 280px; 
+                 height: 200px; 
                  left: 0px; 
                  top: 20px; /* always 20px under any tool boxes */ }  
                  
-.status_bar { height: 25px; left: 0px; 
-              padding-left: 150px;  } /* top, width computed */
-.settings_menu { width: 100px; left: 0px; top: 0px;  }
+.status_bar { height: 30px; left: 0px; 
+              padding-left: 160px;  } /* top, width computed */
+.settings_menu { width: 150px; left: 0px; top: 0px;  }
 /* end of skeleton sizes */
 
 /* menu bar sizes */
-nav { height: 34px; } /* space for borders separating each menu tab */
-nav li { height: 30px; }
-nav ul li { width: 100px; } 
-nav ul.submenu { width: 180px; }
-nav ul.submenu li { width: 180px; }
+nav { height: 46px; } /* space for borders separating each menu tab */
+nav li { height: 40px; }
+nav ul li { width: 130px; } 
+nav ul.submenu { width: 200px; }
+nav ul.submenu li { width: 200px; }
 .top_link { 
-    border-top: 2px solid white;
-    border-left: 2px solid white;
-    border-right: 2px solid white;
-    border-bottom: 2px solid #bbaaff;
-    border-radius: 5px 5px 0 0;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    border-bottom: 3px solid #bbaaff;
+    border-radius: 7px 7px 0 0;
     
-    font-size: 1.4em; 
+    font-size: 1.7em; 
 }
 nav ul.submenu li { 
-    font-size: 1.2em;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid rgba(0,0,0,0.3); 
+    font-size: 1.4em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid rgba(0,0,0,0.3); 
 }
-nav ul.submenu { margin-top: -11px; border-radius: 0 0 5px 5px;  }
-nav a { padding: 10px; }
+nav ul.submenu { margin-top: -11px; border-radius: 0 0 7px 7px;  }
+nav a { padding: 15px; }
 /* end of menu bar sizes */
 
 /* common bar rules --------------------------------------------------------------- */
 .large_icon { 
     /* padding-left: 2px; padding-right: 2px; */
-    width: 130px; height: 36px;  
+    width: 130px; height: 45px;  
 }
-span.name { padding-top: 8px; padding-bottom: 4px; width: 90px; font-size: 120%; }
-.img { width: 30px; height: 30px; margin: 2px; }
-input.text_field {  width: 86px; height: 25px; }
-.ctl-btn { height: 25px; width: 25px; }
+span.name { padding-top: 10px; padding-bottom: 4px; width: 70px; font-size: 120%; }
+.img { width: 40px; height: 40px; margin: 2px; }
+input.text_field {  width: 86px; height: 40px; }
+.ctl-btn { height: 35px; width: 35px; }
 #large_icon1 { left: 0px; }
 #large_icon2 { left: 130px; }
 #large_icon3 { left: 260px; }
@@ -112,29 +112,28 @@ input.text_field {  width: 86px; height: 25px; }
 
 /* end of status bar */
 /* settings menu rules ------------------------------------------------------------- */
-.settings_menu nav { height: 34px; } /* space for borders separating each menu tab */
-.settings_menu nav li { height: 30px; }
+.settings_menu nav { height: 35px; } /* space for borders separating each menu tab */
+.settings_menu nav li { height: 35px; }
 .settings_menu nav ul li { width: 140px; } 
 .settings_menu nav ul.submenu { width: 140px; }
 .settings_menu nav ul.submenu li { 
     width: 140px;
-    font-size: 0.7em;
-    border-top: 1px solid rgba(0,0,0,0.3); 
+    font-size: 0.8em;
+    border-top: 2px solid rgba(0,0,0,0.3); 
 }
-.settings_menu .top_link { border: 0; }
 .settings_menu .submenu li {  }
 .settings_menu nav a { padding: 10px; }
 .settings_menu nav ul.submenu {
-    top: -180px; 
-    border-radius: 5px 5px 0 0;
+    top: -205px; 
+    border-radius: 7px 7px 0 0;
 }
 /* end of settings menu rules */
 
 /* tool box/pane rules */
-.tool_box { margin: 2px; }
-.icon { width: 45px; height: 45px; }
-img { width: 39px; /* -6 px for margins/padding */ height: 39px; margin: 2px; }
-div#messages { padding: 2px; height: 98%; border: 1px solid #ccc; }
-table.tool_box { border: 1px solid #1c1c1c; margin-bottom: 5px; }
+.tool_box { margin: 5px; }
+.icon { width: 50px; height: 50px; }
+img { width: 46px; /* -6 px for margins/padding */ height: 46px; margin: 2px; }
+div#messages { padding: 5px; height: 98%;  }
+table.tool_box { border: 2px solid #1c1c1c; margin-bottom: 10px; }
 /* end of tool pane rules */
 

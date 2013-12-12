@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-     <title>File Port Test</title>
+     <title>Paradise Office - Glorified Typewriter</title>
   
 <script type="text/JavaScript"
 src="../../../sandbox/sandbox/appearence/themes/default_pro_theme/jqueryui/development-bundle/jquery-1.9.1.js">
@@ -20,33 +20,30 @@ src="../../../sandbox/sandbox/appearence/themes/default_pro_theme/jqueryui/devel
      <link rel="stylesheet" type="text/css" href="../../../sandbox/sandbox/appearence/themes/default_pro_theme/styles/ui_themes.css" />
      <!-- jquery UI -->
      <link rel="stylesheet" type="text/css" href="../../../sandbox/sandbox/appearence/themes/default_pro_theme/jqueryui/css/default-pro/jquery-ui-1.10.3.custom.min.css" />
-</head>     
+</head>
 <body>
 
-  <div class="window">
-    <div class="file_port" >
+<div class="status_bar">
+<div class="settings_menu">
+  <nav role="navigation" aria-label="Main menu">
+    <ul role="menubar">
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Services</a>
+            <ul class="submenu" role="menu" aria-hidden="true">
+                <li role="menuitem" tabindex="-1"><a href="#">Set Language</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Ledger</a></li>
+                <li class="separator" tabindex="-1"> </li>
+                <li role="menuitem" tabindex="-1"><a href="#">High Contrast</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Default Pro</a></li>
+                <li class="label" tabindex="-1">Themes</li>
+            </ul>
+        </li>
+    </ul>
+  </nav>
+</div>
+
+    <table class="statuses">
     
-      <div id="tabrow" class="tabs-top">
-        <ul>
-          <li><a href="#file1-wrapper">File 1</a></li>
-          <li><a href="#file2-wrapper">File 2</a></li>
-          <li><a href="#file3-wrapper">File 3</a></li>
-        </ul>
-     
-     
-      <div id="file1-wrapper" >
-        <div id="file1" contenteditable="contenteditable">&nbsp; </div>
-      </div>
-      <div id="file2-wrapper" >
-        <div id="file1" contenteditable="contenteditable">&nbsp; </div>
-      </div>
-      <div id="file3-wrapper" >
-        <div id="file1" contenteditable="contenteditable">&nbsp; </div>
-      </div>
-      
-    </div><!-- tabrow -->
-  </div>
-  
-  
+    </table>
+    </div>
 </body>
 </html>

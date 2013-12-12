@@ -1,0 +1,7 @@
+body#jotter { 
+    background: #6193CF url('../../appearence/themes/default_pro_theme/icons/programs/jotter_256x256.png')  no-repeat left; 
+}
+
+header { }
+header h1 { }
+.dialog { position: relative; left: 300px; top: 200px; }
