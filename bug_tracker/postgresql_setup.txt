@@ -1,0 +1,20 @@
+1. Make sure there is a user called postgres
+2. Switch to root, and use 'passwd postgres [new pass]' to change the password.
+3. Login under the postgres account, by using su - postgres
+4. Start the database client by typing 'psql '.
+4a. CREATE DATABASE [dbname]
+5. Create a new user.
+ CREATE USER [username] WITH PaSSWORD 'pass' ;
+ GRANT select, insert ON [dbname].* TO username
+
+6. Log in with psql -d [dbname] -U (same as username in Linux) -W (asks for password).
+7. CREATE TABLE [table name] (
+	id SERIAL UNIQUE NOT NULL,
+	name varchar(40),
+	price numeric(6,2),
+	PRIMARY KEY(id) );
+
+
+
+To backup, use pg_dump -U postgres [dbname] > [data dump name].sql
+To restore, pg_restore -U postgres [dbname] [db dump]

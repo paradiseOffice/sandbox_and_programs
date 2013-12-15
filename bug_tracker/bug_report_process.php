@@ -11,6 +11,8 @@
   $program = $_POST['program'];
   $subjectline .= "{$_POST['problem']}";
   $description = trim($_POST['description']);
+  $status = trim($_POST['status']);
+  $severity = trim($_POST['severity']);
 
   if(
     empty($_POST['system']) ||
@@ -18,13 +20,15 @@
     empty($_POST['browser']) ||
      empty($_POST['problem']) ||
      empty($_POST['resolution']) ||
-    empty($_POST['description']))
+    empty($_POST['description']) ||
+    empty($_POST['status']) ||
+    empty($_POST['severity']) )
 {
     $errors .= "\n Please fill in all fields.";
 }
  
  if ($_POST[action] == "send-button") {
-    $insert = "INSERT INTO bugs(problem,system,os,browser,resolution,program,description) VALUES ('{$problem}', '{$system}', '{$os}', '{$browser}', '{$resolution}', '{$description}'); ";
+    $insert = "INSERT INTO bugs(problem,system,os,browser,resolution,program,description,status,severity) VALUES ('{$problem}', '{$system}', '{$os}', '{$browser}', '{$resolution}', '{$description}', '{$status}', '{$severity}' ); ";
     pg_query($insert);
     $errors .= "\n Your bug was successfully saved.";
   } else {
@@ -68,7 +72,7 @@
 
   <div class="main-content">
   <div id="main_content">
-    <h2>Bug Reporting</h2>
+    <h2>Developer's Bug Reporter</h2>
  <form action="bug_report_process.php" method="POST">
     <fieldset id="details">
       <div class="row" id="1">
@@ -138,8 +142,21 @@
      </select></div></fieldset>
       <label for="description">Description</label>
       <textarea name="description" id="description" placeholder="Type bug details into here"></textarea>
-
-
+      <div class="row" id="6">
+	<label for="status">Status</label>
+	<select id="status" name="status">
+	  <option value="New">New</option>
+	  <option value="In Progress">In Progress</option>
+	  <option value="Fixed">Fixed</option>
+	</select>
+	<label for="severity">Severity</label>
+	<select id="severity" name="severity">
+	  <option value="Critical">Critical</option>
+	  <option value="bad">Bad</option>
+	  <option value="back-end">Back-end</option>
+	  <option value="cosmetic">Cosmetic</option>
+ 	</select>
+      </div>
       <input type="submit" name="send-button" id="send-button" value="Send" />
     </form>
  
