@@ -14,6 +14,8 @@
 	price numeric(6,2),
 	PRIMARY KEY(id) );
 
+	8. To update:
+	update bugs set status = "New:In Progress:Fixed" set severity = "Critical/bad/back-end/cosmetic" WHERE id = num;
 
 
 To backup, use pg_dump -U postgres [dbname] > [data dump name].sql
