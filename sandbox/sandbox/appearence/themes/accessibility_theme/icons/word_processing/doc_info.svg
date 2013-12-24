@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg3175"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="New document 8">
+  <defs
+     id="defs3177" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="375"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="845"
+     inkscape:window-x="-4"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3180">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#fcfcfc;fill-opacity:1;stroke:#000000;stroke-width:3.46977592;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect4802"
+       width="553.65314"
+       height="635.836"
+       x="22.166916"
+       y="277.20685" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#fcfcfc;fill-opacity:1;stroke:#626262;stroke-width:0.69999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path4871"
+       sodipodi:cx="357.14542"
+       sodipodi:cy="140.76723"
+       sodipodi:rx="58.030621"
+       sodipodi:ry="55.973843"
+       d="m 301.00179,126.60939 a 58.030621,55.973843 0 1 1 -0.85117,3.62928"
+       sodipodi:start="3.3973071"
+       sodipodi:end="9.6140029"
+       sodipodi:open="true"
+       transform="matrix(3.4858194,0,0,3.4716336,-997.26756,43.873468)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#626262;stroke-width:0.69999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path4871-0"
+       sodipodi:cx="357.14542"
+       sodipodi:cy="140.76723"
+       sodipodi:rx="58.030621"
+       sodipodi:ry="55.973843"
+       d="m 301.00179,126.60939 a 58.030621,55.973843 0 1 1 -0.85117,3.62928"
+       sodipodi:start="3.3973071"
+       sodipodi:end="9.6140029"
+       sodipodi:open="true"
+       transform="matrix(3.1338192,0,0,3.1066609,-873.846,95.249641)" />
+    <path
+       style="fill:none;stroke:#545454;stroke-width:2.33220196;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 377.86569,681.0502 c 0,0 74.4711,85.03012 121.05364,107.36569 5.99487,2.87443 14.50519,-0.085 19.41434,-4.56872 4.4445,-4.05943 8.15251,-11.63093 5.71003,-17.13285 C 504.65959,723.04948 398.42196,660.49081 398.42196,660.49081 z"
+       id="path4891"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssscc" />
+    <flowRoot
+       transform="matrix(3.4697759,0,0,3.4697759,-1780.3414,105.4935)"
+       xml:space="preserve"
+       id="flowRoot4649"
+       style="font-size:14px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+         id="flowRegion4651"><rect
+           id="rect4653"
+           width="169.3961"
+           height="26.813957"
+           x="532.87421"
+           y="19.386419" /></flowRegion><flowPara
+         id="flowPara4655">document info</flowPara></flowRoot>  </g>
+</svg>

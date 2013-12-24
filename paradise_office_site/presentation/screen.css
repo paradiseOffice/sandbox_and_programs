@@ -1,1 +1,44 @@
- 
+body#home { }
+body#home h1 { }
+body#home div { }
+body#home a { }
+body#home a:visited { }
+body#home a:active { }
+body#home a:hover { }
+
+body.video-slide .bullets { display: none; }
+body.video-slide .images { display: none; }
+
+body.image-slide .video { display: none; }
+body.image-slide .bullets { display: none; }
+
+body.bullets-slide .video { display: none; }
+body.bullets-slide .images { display: none; }
+
+ul { }
+li.bullet-header-text { }
+div.bullets-img { }
+div#bullet-something { }
+
+.images img { display: none; width: 350px; height: 250px; }
+.images img.display { display: block; }
+
+div.link-area { }
+.link-area .nav { }
+.link-area .themes { }
+
+div.link { }
+div.link-img { }
+.link a { }
+.link a:hover { }
+.link a:visited { }
+.link a:active { }
+a.link-text { }
+
+div.footer { }
+div.footer a { }
+div.footer a:hover { }
+div.footer a:visited { }
+div.footer a:active { }
+.footer a#handouts { }
+

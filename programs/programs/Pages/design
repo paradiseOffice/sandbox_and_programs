@@ -1,0 +1,123 @@
+Pages
+
+Tag Line
+Type up text rich documents or change existing files.
+
+App Description
+Change, print and format documents by styling text, including simple tables and images or create your own document from scratch. Opens common file types from Libreoffice and Microsoft Word. Also can be used to edit and save PDF files.
+
+Pages+ description
+As with pages, without any advertisements. More data source options for database or addressbook intergration. Mail merge, the ability to record and play back a sequence of actions and a simple footnotes utility. Access and modify document information, or check the grammar of text. More file saving customisation and a simple biblography.
+
+Menus
+
+1. File
+   1. New
+   2. Use Template
+   3. Open File
+   4. Save
+   5. Save As
+   6. Save All
+   7. Document Info (+)
+   8. XML Settings (+)
+   9. Print View
+   10. Quick Print
+   11. Close File
+
+2. Edit
+   1. Undo
+   2. Redo
+   3. Undo History
+   4. Cut
+   5. Copy
+   6. Paste
+   7. Paste Special
+   8. Clipboard
+   9. Select All
+   10. Styles
+   11. Colours
+   12. Find & Replace
+
+3. View
+   1. Zoom In
+   2. Zoom Out
+   3. Zoom Original
+   4. Bookmarks
+   5. Header & Footer
+   6. Changes
+   7. Data Sources (+)
+   8. Data Fields (+)
+   9. Outline Layout
+   10. Print Layout
+   11. Non-printing Characters
+   12. Rulers
+
+4. Insert
+   1. Page Break
+   2. Landscape Page
+   3. Columns
+   4. Table
+   5. Text Box
+   6. Comment
+   7. Field (+)
+   8. Link
+   9. Picture
+   10. Movie & Sound
+   11. File
+   12. References (+)
+
+5. Format
+   1. Clear Formatting
+   2. Change Case
+   3. Characters
+   4. Lists
+   5. Paragraphs
+   6. Section
+   7. Page
+   8. Table
+   9. Text Box
+   10. Picture
+   11. Biblography (+)
+
+6. Table
+   1. Insert
+   2. Delete
+   3. Rename
+   4. Select
+   5. Head
+   6. Foot
+   7. Merge/Split Cells
+   8. Table Designs
+   9. Alignment
+   10. Text Wrap
+   11. Properties
+
+7. Tools
+   1. Add Language
+   2. Change Language
+   3. Spellcheck
+   4. Grammar Check (+)
+   5. Word Count
+   6. Thesaurus
+   7. Encyclopedia
+   8. Outline Options
+   9. Macros (+)
+   10. Line Numbering
+
+8. Help
+   1. Search
+   2. Guidebook
+   3. About
+
+Toolboxes
+
+1st - Letters
+B I U , font colour
+highlight, text bg colour, superscript, subscript
+(3 boxes)Font quick menu. Font size spinbox
+
+2nd - Paragraph
+Left, centre, right, justified
+Indent more, indent less, bullet list, numbered list
+Full border, rounded border, top border, left  border
+Line spacing (1) spinbox (1),  insert page break, insert table

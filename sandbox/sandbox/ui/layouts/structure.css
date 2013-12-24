@@ -118,3 +118,7 @@ form { position: relative; top: 2px; left: 2px; }
 /* tool box rules, or help box rules/tool pane */
 
 /* end of tool pane stuff */
+
+/* for hiding all dialogs until needed */
+.dialog { display: none; }
+.advanced_dialog { display: none; }

@@ -33,8 +33,8 @@ src="../../../sandbox/sandbox/appearence/themes/default_pro_theme/jqueryui/devel
     <ul role="menubar">
         <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">F</span>ile</a>
             <ul class="submenu" role="menu" aria-hidden="true">
-                <li role="menuitem" tabindex="-1"><a id="link1" href="#"><span class="acckey">N</span>ew</a></li>
-                <li role="menuitem" tabindex="-1"><a href="dialog-open.php"><span class="acckey">O</span>pen</a></li>
+                <li role="menuitem" tabindex="-1"><a id="new_file" href="#"><span class="acckey">N</span>ew</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#" id="open_file"><span class="acckey">O</span>pen</a></li>
                 <li role="menuitem" tabindex="-1"><a href="#"><span class="acckey">S</span>ave</a></li>
                 <li role="menuitem" tabindex="-1"><a href="#">Save <span class="acckey">A</span>s</a></li>
                 <li role="menuitem" tabindex="-1"><a href="#" title="Ctrl + W"><span class="acckey">C</span>lose File</a></li>
@@ -92,20 +92,12 @@ src="../../../sandbox/sandbox/appearence/themes/default_pro_theme/jqueryui/devel
   <div class="file_port" >
       <div id="tabrow" class="tabs-top">
         <ul>
-          <li><a href="#file1-wrapper">File 1</a></li>
-          <li><a href="#file2-wrapper">File 2</a></li>
-          <li><a href="#file3-wrapper">File 3</a></li>
+          <li><a href="#wrapper-file1">Untitled_1</a></li>
         </ul>
      
      
-      <div id="file1-wrapper" >
-        <div id="file1" contenteditable="contenteditable">&nbsp; </div>
-      </div>
-      <div id="file2-wrapper" >
-        <div id="file1" contenteditable="contenteditable">&nbsp; </div>
-      </div>
-      <div id="file3-wrapper" >
-        <div id="file1" contenteditable="contenteditable">&nbsp; </div>
+      <div id="wrapper-file1" >
+        <div id="file1" contenteditable> </div>
       </div>
       
     </div><!-- tabrow -->

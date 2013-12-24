@@ -33,7 +33,7 @@ def binary_to_odf(file):
         mimeInfo = 'fileOpen' + str(i)
         fileinfo = open(mimeInfo, 'w', encoding="utf-8")
         fileinfo.write(testfile + "\n")
-        fileinfo.write(contenttype + "\n")
+        fileinfo.write(contenttype + "/" + encoding + "\n")
         fileinfo.close()
         
         return contenttype, mimeInfo, standards
