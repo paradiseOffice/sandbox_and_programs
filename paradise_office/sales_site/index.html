@@ -1,36 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-    <title>Home - Paradise Office</title>
-    <meta name="" content="" />
-<script type="text/JavaScript" src="../presentation/jquery/jquery-1.9.1.js"></script>
-<script type="text/JavaScript" src="../presentation/jquery/jquery-ui.min-1.10.3.js" ></script>
-<link rel="stylesheet" type="text/css" href="../presentation/jquery/jquery-ui.css" /> 
-    <link rel="stylesheet" type="text/css" href="screen.css" />
-</head>
-<body id="landing">
-
-<header>
-  <div id="logo"></div>
-  <div id="header_text">
-    <h1>Paradise Office</h1>
-    <h2>Build Your Own Office</h2>
-  </div>
-  <div id="donate">Donate</div>
-</header>
-
-<div id="container">
-  <nav>
-    Accordian
-  </nav>
-  <div id="content">
-    <div class="demo_vid"><video src="Bill_Gates.mpg" controls> </video></div>
+{% extends "master_template.html" %}
+{% block content %}
+<div class="demo_vid"><video src="Bill_Gates.mpg" controls> </video></div>
     <div id="switch">3 reasons to switch office suites</div>
-  </div><!-- content -->
-  <footer>Put social media down here out of the road. </footer>
-
-</div><!-- container -->
-
-</body>
-</html>
+{% endblock %}

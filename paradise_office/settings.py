@@ -36,6 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'paradise_office.sales_site',
+    'paradise_office.sandbox',
+    'paradise_office.programs',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -80,3 +83,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+TEMPLATE_DIRS = (
+  "/home/hazel/Documents/paradise_office/paradise_office/programs/Jotter",
+  "/home/hazel/Documents/paradise_office/paradise_office/programs/Ledger",
+  "/home/hazel/Documents/paradise_office/paradise_office/programs/Pages",
+  "/home/hazel/Documents/paradise_office/paradise_office/programs/Plantt",
+  "/home/hazel/Documents/paradise_office/paradise_office/programs/Postbox",
+  "/home/hazel/Documents/paradise_office/paradise_office/programs/Ledger_plus",
+  "/home/hazel/Documents/paradise_office/paradise_office/programs/Pages_plus",
+  "/home/hazel/Documents/paradise_office/paradise_office/programs/Plantt_plus",
+  "/home/hazel/Documents/paradise_office/paradise_office/programs/Postbox_plus",
+  "/home/hazel/Documents/paradise_office/paradise_office/sales_site/",
+  "/home/hazel/Documents/paradise_office/paradise_office/sandbox/",
+)
