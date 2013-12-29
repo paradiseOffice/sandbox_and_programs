@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title>Home - Paradise Office</title>
+    <meta name="" content="" />
+<script type="text/JavaScript" src="presentation/jquery/jquery-1.9.1.js"></script>
+<script type="text/JavaScript" src="presentation/jquery/jquery-ui.min-1.10.3.js" ></script>
+<!--<script type="text/JavaScript">
+$(function() {
+  $( "#rainbow-menu#dl-head a" ).click(function() {
+    $( "#rainbow-menu div#downloads" ).show(400);
+  });  
+  $( "#rainbow-menu h3 #help-link a" ).click(function() {
+    $( "#rainbow-menu div#support" ).show(400);
+  });
+});
+</script>-->
+    <link rel="stylesheet" type="text/css" href="presentation/jquery/jquery-ui.css" /> 
+    <link rel="stylesheet" type="text/css" href="styles/screen.css" />
+</head>
+<body id="landing">
+
+<header>
+  <div id="logo"></div>
+  <div id="header_text">
+    <h1>Paradise Office</h1>
+    <h2>Build Your Own Office</h2>
+  </div>
+  <div id="donate">Donate</div>
+</header>
+
+<div id="container">
+  <nav id="rainbow-menu">
+    <h3><a href="presentation/index.html">Benefits</a></h3>
+    <h3 id="dl-head"><a href="#">Download</a></h3>
+    <div class="subnav" id="downloads">
+    <ul>
+      <li><a href="#">Requirements</a></li>
+      <li><a href="#">Installation</a></li>
+    </ul>
+    </div>
+    <h3 id="help-link"><a href="#">Support</a></h3>
+    <div class="subnav" id="support">
+    <ul>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Tutorials</a></li>
+      <li><a href="#">Tickets</a></li>
+      <li><a href="#">Plans</a></li>
+    </ul>
+    </div>
+    <h3><a href="#">Forum</a></h3>
+    <h3><a href="http://www.linux-paradise.co.uk" target="blank">Development</a></h3>
+    
+  </nav>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div><!-- content -->
+  <footer>&copy; Hazel Windle 2013. <a href="#" id="twitter">Tweet, tweet</a><a href="#" id="github">Git</a> </footer>
+
+</div><!-- container -->
+
+</body>
+</html>
