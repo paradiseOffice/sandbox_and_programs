@@ -1,6 +1,6 @@
 <?php
   require_once('/home/hazel/Exercises/PHP/variables.inc');
-  $db = pg_connect($host, $db, $user, $password);
+  $db = pg_connect($string);
   
   $errors = '';
   $ouremail = 'lead-dev@linux-paradise.co.uk';
@@ -9,7 +9,6 @@
   $browser = $_POST['browser'];
   $resolution = $_POST['resolution'];
   $program = $_POST['program'];
-  $subjectline .= "{$_POST['problem']}";
   $description = trim($_POST['description']);
   $status = trim($_POST['status']);
   $severity = trim($_POST['severity']);
