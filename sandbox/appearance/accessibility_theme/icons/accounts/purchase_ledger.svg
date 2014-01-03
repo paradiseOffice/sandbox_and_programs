@@ -14,7 +14,7 @@
    id="svg3191"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 5">
+   sodipodi:docname="purchase_ledger.svg">
   <defs
      id="defs3193" />
   <sodipodi:namedview
@@ -24,15 +24,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="375"
-     inkscape:cy="520"
+     inkscape:zoom="0.60910589"
+     inkscape:cx="372.04724"
+     inkscape:cy="525.36022"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1440"
      inkscape:window-height="845"
-     inkscape:window-x="-4"
+     inkscape:window-x="-2"
      inkscape:window-y="-3"
      inkscape:window-maximized="1" />
   <metadata
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,18 +52,19 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#000000;stroke-width:2.1596489;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 655.16248,792.87987 -639.928756,0 65.447436,-454.4947 c 0,0 9.943382,-18.07061 18.179563,-23.63375 13.037437,-8.8059 45.449447,-12.72584 45.449447,-12.72584 l 458.13097,-5.45394 110.89652,450.85878 -41.81332,10.90785 -103.62498,-443.58685 30.90565,-18.17978 c 0,0 -23.27274,7.25224 -32.72372,14.54383 -9.2163,7.11082 -21.81569,27.2697 -21.81569,27.2697 z"
+       style="fill:none;stroke:#110b02;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 655.16248,792.87987 -639.928756,0 65.447436,-454.4947 c 0,0 9.943382,-18.07061 18.179563,-23.63375 13.037437,-8.8059 45.449447,-12.72584 45.449447,-12.72584 l 458.13097,-5.45394 110.89652,450.85878 -41.81332,10.90785 -106.64161,-446.60348 33.92228,-15.16315 c 0,0 -23.27274,7.25224 -32.72372,14.54383 -9.2163,7.11082 -21.81569,27.2697 -21.81569,27.2697 z"
        id="path3897"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccsccccccscc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:2.1596489;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 669.70628,758.33827 c -5.42036,1.75046 1.35482,6.37981 0,9.08992 -0.38334,0.7665 -1.05139,1.43469 -1.81807,1.81796 -0.54207,0.27103 -1.38937,-0.42851 -1.81806,0 -0.85702,0.85702 1.21192,3.63595 0,3.63595 -2.23884,0 5.54814,-9.18405 -3.63577,0 -1.21264,1.21246 1.21228,2.42352 0,3.63598 -0.42869,0.42847 -1.38973,-0.42851 -1.81806,0 -0.0576,0.0583 0,5.01301 0,5.45394 0,0.60596 0,2.42396 0,1.81796 0,-1.212 1.21192,-3.63595 0,-3.63595 -3.54759,0 -1.16585,4.14937 -1.81807,5.45394 -0.38334,0.76653 -1.43472,1.05146 -1.81806,1.81796 -0.26996,0.54203 0,1.21199 0,1.81799 0,0.606 0,1.21199 0,1.81799"
-       id="path3899"
-       inkscape:connector-curvature="0" />
+       style="fill:none;stroke:#110b02;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 440.42793,163.46198 c 0,0 40.87852,14.22281 53.29378,31.17185 14.03912,19.16589 22.12196,59.32705 22.12196,59.32705 l 8.04434,42.23281 -38.21064,1.00554 8.04434,-36.19955 2.01109,-29.16075 z"
+       id="path3765"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscccccc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1.79970729;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:#ffffff;stroke:#110b02;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1"
        d="m 82.498864,336.56718 103.624986,0 c 0,0 56.08752,-100.06718 78.17317,-143.62031 18.22095,-35.93242 72.4285,-44.04194 112.71458,-43.63149 36.68452,0.37372 79.12809,12.97668 101.80692,41.8135 32.21225,40.95899 5.45384,147.25629 5.45384,147.25629 l 58.17518,0 z"
        id="path3901"
        inkscape:connector-curvature="0"
@@ -71,7 +72,7 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot3903"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:none;stroke:#353535;stroke-width:0.51393634;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:none;stroke:#110b02;stroke-width:0.47594441;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold"
        transform="matrix(3.8173627,0,0,4.6257707,-1995.5727,-2474.2794)"><flowRegion
          id="flowRegion3905"><rect
            id="rect3907"
@@ -79,9 +80,25 @@
            height="107.07613"
            x="540.93671"
            y="626.07782"
-           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:none;stroke:#353535;stroke-width:0.51393634;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold" /></flowRegion><flowPara
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:none;stroke:#110b02;stroke-width:0.47594441;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold" /></flowRegion><flowPara
          id="flowPara3909"
-         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:none;stroke:#353535;stroke-width:0.51393634;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold">Purchase</flowPara><flowPara
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:none;stroke:#110b02;stroke-width:0.47594441;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold">Purchase</flowPara><flowPara
          id="flowPara3911"
-         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:none;stroke:#353535;stroke-width:0.51393634;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold">Ledger</flowPara></flowRoot>  </g>
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:none;stroke:#110b02;stroke-width:0.47594441;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold">Ledger</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#110b02;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 670.69732,759.74911 -15.08315,32.17738 z"
+       id="path2990"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#110b02;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 244.347,300.21586 c 0,0 15.14776,-74.5628 39.21619,-102.56541 15.83936,-18.42843 35.67457,-29.03715 57.31596,-34.18846 27.785,-6.61368 59.02052,-4.74217 85.47117,6.03326 18.72017,7.6262 36.78925,21.35551 46.25499,39.21618 14.68122,27.70162 12.42076,61.62385 7.0388,92.50998 -2.23884,12.84834 -14.07761,36.19955 -14.07761,36.19955 l -236.30265,-1.00554 z"
+       id="path2992"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssssccc" />
+    <path
+       style="fill:none;stroke:#110b02;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 244.347,301.22141 236.30265,-2.01109 z"
+       id="path3763"
+       inkscape:connector-curvature="0" />
+  </g>
 </svg>

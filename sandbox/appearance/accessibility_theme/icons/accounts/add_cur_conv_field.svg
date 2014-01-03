@@ -14,7 +14,7 @@
    id="svg3437"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 15">
+   sodipodi:docname="add_cur_conv_field.svg">
   <defs
      id="defs3439" />
   <sodipodi:namedview
@@ -25,14 +25,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="375"
+     inkscape:cx="-125"
      inkscape:cy="520"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1440"
      inkscape:window-height="845"
-     inkscape:window-x="-4"
+     inkscape:window-x="-2"
      inkscape:window-y="-3"
      inkscape:window-maximized="1" />
   <metadata
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -66,8 +66,21 @@
          id="flowPara3844"
          style="font-size:144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#6f6f6f;stroke-width:0.39493051;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu">£</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
+       id="flowRoot2990"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:none;fill-opacity:1;stroke:#110b02;font-family:Sans;stroke-opacity:1;stroke-width:0.35223528;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(5.678023,0,0,5.678023,-221.30674,-872.19188)"><flowRegion
+         id="flowRegion2992"><rect
+           id="rect2994"
+           width="477.14285"
+           height="642.85712"
+           x="42.857143"
+           y="152.36218"
+           style="fill:none;stroke:#110b02;stroke-opacity:1;stroke-width:0.35223528;stroke-miterlimit:4;stroke-dasharray:none" /></flowRegion><flowPara
+         id="flowPara2996"
+         style="font-size:144px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Bold;fill:none;stroke:#110b02;stroke-opacity:1;stroke-width:0.35223528;stroke-miterlimit:4;stroke-dasharray:none">£</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
        id="flowRoot3846"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#6f6f6f;stroke-width:0.19172379;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#110b02;stroke-width:0.13647147000000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans"
        transform="matrix(15.96978,0,0,13.448608,-4252.7035,-4068.5195)"><flowRegion
          id="flowRegion3848"><rect
            id="rect3850"
@@ -75,7 +88,7 @@
            height="187.88837"
            x="279.81226"
            y="307.37469"
-           style="fill:none;stroke:#6f6f6f;stroke-width:0.19172379;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" /></flowRegion><flowPara
+           style="fill:none;stroke:#110b02;stroke-width:0.13647147000000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" /></flowRegion><flowPara
          id="flowPara3854"
-         style="font-size:64px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#6f6f6f;stroke-width:0.19172379;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold">€</flowPara></flowRoot>  </g>
+         style="font-size:64px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#110b02;stroke-width:0.13647147000000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold">€</flowPara></flowRoot>  </g>
 </svg>

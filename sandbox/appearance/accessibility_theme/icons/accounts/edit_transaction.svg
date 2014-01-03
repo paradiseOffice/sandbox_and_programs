@@ -14,7 +14,7 @@
    id="svg4509"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 46">
+   sodipodi:docname="edit_transaction.svg">
   <defs
      id="defs4511" />
   <sodipodi:namedview
@@ -25,8 +25,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="375"
-     inkscape:cy="521.42857"
+     inkscape:cx="-125"
+     inkscape:cy="522.85714"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,13 +52,13 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#000000;stroke-width:4.35167456px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;stroke:#110b02;stroke-width:4.35167456000000019px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 682.98019,494.02989 70.637418,497.1382 c 0,0 -27.161021,-10.22282 -34.19176,-21.75837 -5.956007,-9.77225 -12.59849,-27.79585 -3.108314,-34.19172 C 145.34866,365.69809 356.60458,229.82105 356.60458,229.82105 L 387.688,211.17104 667.43849,438.0798 c 0,0 15.86729,14.88625 18.65005,24.86668 2.79665,10.03022 -3.10835,31.08341 -3.10835,31.08341 z"
        id="path4158-0"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccsscccsc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:4.35167456px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;stroke:#110b02;stroke-width:4.35167456000000019px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 671.24111,699.26591 58.898384,696.1576 c 0,0 -27.161021,10.22282 -34.191717,21.75837 -5.956049,9.77225 -12.598533,27.79584 -3.108357,34.19172 112.01136,75.49002 323.26719,211.3671 323.26719,211.3671 L 375.9489,982.12476 655.69941,755.216 c 0,0 15.86729,-14.88625 18.65006,-24.86669 2.79664,-10.03021 -3.10836,-31.0834 -3.10836,-31.0834 z"
        id="path4158-8-9"
        inkscape:connector-curvature="0"
@@ -66,7 +66,7 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot4223"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#585858;stroke-width:0.31996787;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#110b02;stroke-width:0.31996786999999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans"
        transform="matrix(5.5899814,0,0,8.2723663,-1532.7865,-6788.5502)"><flowRegion
          id="flowRegion4225"><rect
            id="rect4227"
@@ -74,7 +74,7 @@
            height="80.307129"
            x="287.3884"
            y="863.96875"
-           style="fill:#ffffff;fill-opacity:1;stroke:#585858;stroke-width:0.31996787;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" /></flowRegion><flowPara
+           style="fill:none;fill-opacity:1;stroke:#110b02;stroke-width:0.31996786999999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" /></flowRegion><flowPara
          id="flowPara4229"
-         style="font-size:44px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#585858;stroke-width:0.31996787;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans Bold">Edit</flowPara></flowRoot>  </g>
+         style="font-size:44px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#110b02;stroke-width:0.31996786999999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans Bold">Edit</flowPara></flowRoot>  </g>
 </svg>

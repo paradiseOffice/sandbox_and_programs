@@ -14,7 +14,7 @@
    id="svg4300"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 34">
+   sodipodi:docname="con_formatting.svg">
   <defs
      id="defs4302" />
   <sodipodi:namedview
@@ -25,7 +25,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="375"
+     inkscape:cx="-125"
      inkscape:cy="522.85714"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,28 +52,28 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#585858;stroke-width:3.66425204;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#110b02;stroke-width:2;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4020"
        width="176.13882"
        height="438.58429"
        x="20.796415"
        y="409.621" />
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#585858;stroke-width:3.90876245;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#110b02;stroke-width:2;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4020-1"
        width="175.89432"
        height="499.76318"
        x="203.79294"
        y="349.71582" />
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#585858;stroke-width:4.01484728;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#110b02;stroke-width:2;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4020-3"
        width="175.78822"
        height="527.57684"
        x="382.53229"
        y="321.849" />
     <rect
-       style="fill:#ffffff;fill-opacity:1;stroke:#585858;stroke-width:4.08267355;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#110b02;stroke-width:2;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4020-7"
        width="156.17659"
        height="614.06018"

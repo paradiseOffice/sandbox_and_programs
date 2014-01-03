@@ -14,7 +14,7 @@
    id="svg3445"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 18">
+   sodipodi:docname="add_forecast.svg">
   <defs
      id="defs3447" />
   <sodipodi:namedview
@@ -25,14 +25,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="375"
+     inkscape:cx="-125"
      inkscape:cy="520"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1440"
      inkscape:window-height="845"
-     inkscape:window-x="-4"
+     inkscape:window-x="-2"
      inkscape:window-y="-3"
      inkscape:window-maximized="1" />
   <metadata
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,14 +52,14 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:none;stroke:#000000;stroke-width:4.23410034px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:none;stroke:#110b02;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
        d="m 611.72387,668.41062 45.36538,3.02434 18.14613,42.341 24.19488,3.02438 21.1705,39.31663 c 0,0 -92.58382,123.92746 -353.84979,127.02301 C 142.85848,885.79273 21.974193,771.23876 21.974193,771.23876 l 12.09746,-45.36534 33.267921,-6.04875 21.170502,-51.41405 36.292254,-3.02437 z"
        id="path3875"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccscccccc" />
     <path
        sodipodi:type="arc"
-       style="fill:#ffffff;fill-opacity:1;stroke:#545454;stroke-width:0.69999999;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:#ffffff;fill-opacity:1;stroke:#110b02;stroke-width:0.52047977;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="path3877"
        sodipodi:cx="610.35712"
        sodipodi:cy="379.50504"
@@ -70,19 +70,20 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot3879"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       transform="matrix(8.636918,-1.7260781,1.7260781,8.636918,-5210.206,-1683.6817)"><flowRegion
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#110b02;font-family:Sans;-inkscape-font-specification:Sans;stroke-opacity:1;stroke-width:0.20033577999999999;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(9.1697062,-2.0887239,1.8325552,10.451519,-5554.5584,-2167.499)"><flowRegion
          id="flowRegion3881"><rect
            id="rect3883"
            width="29.285715"
            height="42.142857"
            x="549.28571"
-           y="345.21933" /></flowRegion><flowPara
+           y="345.21933"
+           style="stroke:#110b02;stroke-opacity:1;fill:none;stroke-width:0.20033577999999999;stroke-miterlimit:4;stroke-dasharray:none" /></flowRegion><flowPara
          id="flowPara3885"
-         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold">£</flowPara></flowRoot>    <flowRoot
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold;stroke:#110b02;stroke-opacity:1;fill:none;stroke-width:0.20033577999999999;stroke-miterlimit:4;stroke-dasharray:none">£</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3887"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#545454;stroke-width:0.29945254;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#110b02;stroke-width:0.23574669;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans"
        transform="matrix(7.7351655,0,0,9.3046314,-4250.6803,-2735.4639)"><flowRegion
          id="flowRegion3889"><rect
            id="rect3891"
@@ -90,43 +91,46 @@
            height="42.857143"
            x="592.14288"
            y="317.36218"
-           style="fill:none;stroke:#545454;stroke-width:0.29945254;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" /></flowRegion><flowPara
+           style="fill:none;stroke:#110b02;stroke-width:0.23574669;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" /></flowRegion><flowPara
          id="flowPara3895"
-         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#545454;stroke-width:0.29945254;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans Bold">¥</flowPara></flowRoot>    <flowRoot
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#110b02;stroke-width:0.23574669;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans Bold">¥</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3879-4"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       transform="matrix(8.7269252,1.1901578,-1.1901578,8.7269252,-3848.8926,-3271.0324)"><flowRegion
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#110b02;font-family:Sans;-inkscape-font-specification:Sans;stroke-opacity:1;stroke-width:0.20033579000000001;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(9.2652655,1.4402077,-1.2635754,10.560436,-4109.2692,-4088.3492)"><flowRegion
          id="flowRegion3881-7"><rect
            id="rect3883-8"
            width="29.285715"
            height="42.142857"
            x="549.28571"
-           y="345.21933" /></flowRegion><flowPara
+           y="345.21933"
+           style="stroke:#110b02;stroke-opacity:1;fill:none;stroke-width:0.20033579000000001;stroke-miterlimit:4;stroke-dasharray:none" /></flowRegion><flowPara
          id="flowPara3885-9"
-         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold">£</flowPara></flowRoot>    <flowRoot
+         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold;stroke:#110b02;stroke-opacity:1;fill:none;stroke-width:0.20033579000000001;stroke-miterlimit:4;stroke-dasharray:none">£</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3924"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       transform="matrix(4.2341005,0,0,4.0559875,-2318.8783,-1017.8235)"><flowRegion
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#110b02;font-family:Sans;-inkscape-font-specification:Sans;stroke-opacity:1;stroke-width:0.42578709999999997;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(4.4952907,0,0,4.908143,-2484.8726,-1361.7453)"><flowRegion
          id="flowRegion3926"><rect
            id="rect3928"
            width="36.42857"
            height="55.714287"
            x="586.42859"
-           y="379.50504" /></flowRegion><flowPara
+           y="379.50504"
+           style="stroke:#110b02;stroke-opacity:1;fill:none;stroke-width:0.42578709999999997;stroke-miterlimit:4;stroke-dasharray:none" /></flowRegion><flowPara
          id="flowPara3930"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold">$</flowPara></flowRoot>    <flowRoot
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold;stroke:#110b02;stroke-opacity:1;fill:none;stroke-width:0.42578709999999997;stroke-miterlimit:4;stroke-dasharray:none">$</flowPara></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot3924-1"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-       transform="matrix(4.1551354,-0.8139144,0.8139144,4.1551354,-2264.5104,-806.49014)"><flowRegion
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#110b02;font-family:Sans;-inkscape-font-specification:Sans;stroke-opacity:1;stroke-width:0.41673524000000001;stroke-miterlimit:4;stroke-dasharray:none"
+       transform="matrix(4.4114545,-0.98491631,0.86412258,5.0281217,-2427.1508,-1106.0113)"><flowRegion
          id="flowRegion3926-4"><rect
            id="rect3928-1"
            width="36.42857"
            height="55.714287"
            x="586.42859"
-           y="379.50504" /></flowRegion><flowPara
+           y="379.50504"
+           style="stroke:#110b02;stroke-opacity:1;fill:none;stroke-width:0.41673524000000001;stroke-miterlimit:4;stroke-dasharray:none" /></flowRegion><flowPara
          id="flowPara3930-2"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold">$</flowPara></flowRoot>  </g>
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold;stroke:#110b02;stroke-opacity:1;fill:none;stroke-width:0.41673524000000001;stroke-miterlimit:4;stroke-dasharray:none">$</flowPara></flowRoot>  </g>
 </svg>

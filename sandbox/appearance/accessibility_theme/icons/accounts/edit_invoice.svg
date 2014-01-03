@@ -14,7 +14,7 @@
    id="svg3121"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 2">
+   sodipodi:docname="edit_invoice.svg">
   <defs
      id="defs3123" />
   <sodipodi:namedview
@@ -25,14 +25,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="375"
+     inkscape:cx="-125"
      inkscape:cy="520"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1440"
      inkscape:window-height="845"
-     inkscape:window-x="-4"
+     inkscape:window-x="-2"
      inkscape:window-y="-3"
      inkscape:window-maximized="1" />
   <metadata
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -52,7 +52,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:none;stroke:#585858;stroke-width:2.82434297;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#110b02;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect3049-0"
        width="684.72412"
        height="772.35254"
@@ -61,32 +61,30 @@
     <flowRoot
        xml:space="preserve"
        id="flowRoot3051-7"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#110b02;font-family:Sans;-inkscape-font-specification:Sans;stroke-opacity:1;stroke-width:0.42237658;stroke-miterlimit:4;stroke-dasharray:none"
        transform="matrix(4.3042681,0,0,5.2090798,-118.96027,-2760.5757)"><flowRegion
          id="flowRegion3053-9"><rect
            id="rect3055-3"
            width="142.4315"
            height="49.497475"
            x="39.39595"
-           y="562.9433" /></flowRegion><flowPara
+           y="562.9433"
+           style="fill:none;stroke:#110b02;stroke-opacity:1;stroke-width:0.42237658;stroke-miterlimit:4;stroke-dasharray:none" /></flowRegion><flowPara
          id="flowPara3057-9"
-         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:none;stroke:#353535;stroke-width:0.60000002;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold">Invoice</flowPara></flowRoot>    <path
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:none;stroke:#110b02;stroke-width:0.42237658;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold">Invoice</flowPara></flowRoot>    <path
        sodipodi:type="arc"
-       style="fill:none;stroke:#353535;stroke-width:0.60000002;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#110b02;stroke-width:0.47629129;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="path3827-5"
        sodipodi:cx="132.58252"
        sodipodi:cy="681.88873"
        sodipodi:rx="51.770317"
        sodipodi:ry="53.285545"
-       d="m 82.495627,668.41086 a 51.770317,53.285545 0 1 1 -0.759341,3.45498"
-       sodipodi:start="3.3973071"
-       sodipodi:end="9.6140029"
-       sodipodi:open="true"
+       d="m 184.35284,681.88873 a 51.770317,53.285545 0 1 1 -103.540638,0 51.770317,53.285545 0 1 1 103.540638,0 z"
        transform="matrix(4.2699595,0,0,4.129438,-217.12111,-2184.92)" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot4223-4"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#585858;stroke-width:0.31996787;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#110b02;stroke-width:0.52295199;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans"
        transform="matrix(3.5651534,0,0,4.1025902,-866.43473,-3029.3004)"><flowRegion
          id="flowRegion4225-0"><rect
            id="rect4227-8"
@@ -94,7 +92,7 @@
            height="80.307129"
            x="287.3884"
            y="863.96875"
-           style="fill:#ffffff;fill-opacity:1;stroke:#585858;stroke-width:0.31996787;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" /></flowRegion><flowPara
+           style="fill:none;fill-opacity:1;stroke:#110b02;stroke-width:0.52295199;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" /></flowRegion><flowPara
          id="flowPara4229-6"
-         style="font-size:44px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#585858;stroke-width:0.31996787;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans Bold">Edit</flowPara></flowRoot>  </g>
+         style="font-size:44px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:none;fill-opacity:1;stroke:#110b02;stroke-width:0.52295199;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans Bold">Edit</flowPara></flowRoot>  </g>
 </svg>
