@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+     <title>Paradise Office - Glorified Typewriter</title>
+  
+<script type="text/JavaScript"
+src="../../paradise_office/sandbox/appearence/themes/default_pro_theme/jqueryui/development-bundle/jquery-1.9.1.js">
+</script>
+<script type="text/JavaScript"
+src="../../paradise_office/sandbox/appearence/themes/default_pro_theme/jqueryui/development-bundle/ui/minified/jquery-ui.custom.min.js" ></script>
+<script type="text/JavaScript" src="../../paradise_office/sandbox/appearence/themes/default_pro_theme/scripts/resize-screen.js">
+</script>
+<script type="text/JavaScript" src="../../paradise_office/sandbox/appearence/themes/default_pro_theme/scripts/file_port_tabs.js"></script>
+
+     <link rel="stylesheet" type="text/css" href="../../paradise_office/sandbox/ui/layouts/reset.css" />
+     <!-- choosing the screen size/type -->
+     <link rel="stylesheet" type="text/css" href="../../paradise_office/sandbox/ui/layouts/screen_860x600.css" />
+     <link rel="stylesheet" type="text/css" href="../../paradise_office/sandbox/ui/layouts/structure.css" />
+     <link rel="stylesheet" type="text/css" href="../../paradise_office/sandbox/ui/dialogs/dialogs.css" />
+     <link rel="stylesheet" type="text/css" href="../../paradise_office/sandbox/appearence/themes/default_pro_theme/styles/ui_themes.css" />
+     <!-- jquery UI -->
+     <link rel="stylesheet" type="text/css" href="../../paradise_office/sandbox/appearence/themes/default_pro_theme/jqueryui/css/default-pro/jquery-ui-1.10.3.custom.min.css" />
+</head>
+<body>
+
+<div class="status_bar">
+<div class="settings_menu">
+  <nav role="navigation" aria-label="Main menu">
+    <ul role="menubar">
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Services</a>
+            <ul class="submenu" role="menu" aria-hidden="true">
+                <li role="menuitem" tabindex="-1"><a href="#">Set Language</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Ledger</a></li>
+                <li class="separator" tabindex="-1"> </li>
+                <li role="menuitem" tabindex="-1"><a href="#">High Contrast</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Default Pro</a></li>
+                <li class="label" tabindex="-1">Themes</li>
+            </ul>
+        </li>
+    </ul>
+  </nav>
+</div>
+
+    <table class="statuses">
+    
+    </table>
+    </div>
+</body>
+</html>
