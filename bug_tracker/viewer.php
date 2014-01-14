@@ -45,7 +45,7 @@
     <h2>Trouble In Paradise</h2>
     <?php
       require_once('/home/hazel/Exercises/PHP/variables.inc');
-      if ($db = pg_connect($string)) {
+      if ($db = pg_connect("$string")) {
         $select = "select * from bugs GROUP BY severity";
         $allrows = pg_query($db, $select);
         if (pg_num_rows($allrows) > 0) {

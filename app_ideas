@@ -1,74 +1,10 @@
-jotter - text editor
-uppercase, lowercase
-set font
-syntax highlighting
-tab width
-Unix or DOS file endings
-line numbers
-Save all
-csv: change separators 
-
-Pages - word processor 
-see simple word processor in cygnet reader tests
-Add bullet and numbered lists, along with picture bullet lists and outlines up to 5 levels.
 
 
-Ledger - Accounting spreadsheet
-       Simple budgeting per account
 
-       Tax returns, self assessment
 
-       Payroll
 
-       Credit card and loan calculation
 
-       Currency conversion fields
 
-       Invoice ledger
 
-       Purchase ledger
-       
-       Sales ledger
-
-       Income
-
-       Expenditure
-
-       Business cash flow sheets
-
-       VAT
-
-       Financial forecasts
-
-       Graphs/Charts
-
-       Reports
-
-       Goalseek sheets
-
-       Sensitivity Analysis (general)
-
-Plantt - project management
-
-Tasks, subtasks
-Critical tasks, priorities
-Calendar
-Teams and personnel
-Working Hours
-Best/worst deadline time
-Reports
-To-do lists for each member of team
-Link to work sheets or specs for each project/task/subtask
-
-Postbox
-Search through 1 or multiple inboxes
-Supports imap, pop including some webmail
-Easy to use with Exchange or sendmail/postfix
-Inline attachment virus scanning
-Spam filters that learn, spam/ham
-Folders 
-Projects with timeline of mail eg. a week
-Digital signing and encryption (easy to use)
-Tor option
 
 

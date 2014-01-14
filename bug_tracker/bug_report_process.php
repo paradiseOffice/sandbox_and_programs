@@ -1,9 +1,8 @@
 <?php
   require_once('/home/hazel/Exercises/PHP/variables.inc');
-  $db = pg_connect($string);
+  $db = pg_connect("$string");
   
   $errors = '';
-  $ouremail = 'lead-dev@linux-paradise.co.uk';
   $system = $_POST['system'];
   $os = $_POST['os'];
   $browser = $_POST['browser'];
@@ -26,7 +25,7 @@
     $errors .= "\n Please fill in all fields.";
 }
  
- if ($_POST[action] == "send-button") {
+ if ($_POST[submit] == "send-button") {
     $insert = "INSERT INTO bugs(problem,system,os,browser,resolution,program,description,status,severity) VALUES ('{$problem}', '{$system}', '{$os}', '{$browser}', '{$resolution}', '{$description}', '{$status}', '{$severity}' ); ";
     pg_query($insert);
     $errors .= "\n Your bug was successfully saved.";

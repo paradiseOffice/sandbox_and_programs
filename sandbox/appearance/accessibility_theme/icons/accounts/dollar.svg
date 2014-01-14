@@ -7,16 +7,78 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448819"
-   height="1052.3622047"
+   width="902.71997"
+   height="902.72296"
    id="svg3452"
    version="1.1"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="dollar.svg">
   <defs
-     id="defs3454" />
+     id="defs3454">
+    <linearGradient
+       id="linearGradient3787">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3789" />
+      <stop
+         style="stop-color:#dddddd;stop-opacity:1;"
+         offset="1"
+         id="stop3791" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3769">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3771" />
+      <stop
+         id="stop3777"
+         offset="0.103125"
+         style="stop-color:#ed0000;stop-opacity:1;" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0.1897295"
+         id="stop3779" />
+      <stop
+         id="stop3781"
+         offset="0.34165522"
+         style="stop-color:#ed0000;stop-opacity:1;" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0.34165522"
+         id="stop3783" />
+      <stop
+         id="stop3785"
+         offset="0.45686555"
+         style="stop-color:#ed0000;stop-opacity:1;" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop3773" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3787"
+       id="linearGradient3793"
+       x1="38.915543"
+       y1="701.13879"
+       x2="93.457222"
+       y2="607.25128"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3787"
+       id="linearGradient3799"
+       gradientUnits="userSpaceOnUse"
+       x1="38.915543"
+       y1="701.13879"
+       x2="93.457222"
+       y2="607.25128" />
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -24,17 +86,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.71243681"
-     inkscape:cx="47.143139"
-     inkscape:cy="586.97495"
+     inkscape:zoom="0.60625516"
+     inkscape:cx="379.41337"
+     inkscape:cy="461.82821"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1440"
-     inkscape:window-height="845"
-     inkscape:window-x="-2"
-     inkscape:window-y="-3"
-     inkscape:window-maximized="1" />
+     inkscape:window-height="851"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     fit-margin-top="2"
+     fit-margin-left="30"
+     fit-margin-right="30"
+     fit-margin-bottom="2" />
   <metadata
      id="metadata3457">
     <rdf:RDF>
@@ -50,305 +116,115 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot3884"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#110b02;stroke-opacity:1;font-family:Sans;-inkscape-font-specification:Sans;stroke-width:0.39138327;stroke-miterlimit:4;stroke-dasharray:none"
-       transform="matrix(8.0007915,0,0,6.8621233,-256.41537,-4003.7515)"
-       inkscape:export-filename="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/dollar.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90"><flowRegion
-         id="flowRegion3886"><rect
-           id="rect3888"
-           width="179.28572"
-           height="180.71428"
-           x="28.571428"
-           y="559.50507"
-           style="fill:none;stroke:#110b02;stroke-opacity:1;stroke-width:0.39138327;stroke-miterlimit:4;stroke-dasharray:none" /></flowRegion><flowPara
-         id="flowPara3890"
-         style="font-size:160px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#110b02;stroke-opacity:1;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L;stroke-width:0.39138327;stroke-miterlimit:4;stroke-dasharray:none">$</flowPara></flowRoot>    <g
-       id="g3784">
-      <rect
-         y="89.469765"
-         x="266.69031"
-         height="892.71082"
-         width="40.705376"
-         id="rect3782"
-         style="fill:#000093;stroke:#000088;stroke-width:0.74099999999999999;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;fill-opacity:1" />
+     id="layer1"
+     transform="translate(4.0671905,-85.286367)">
+    <g
+       transform="matrix(7.9016216,0,0,6.8046239,-76.413697,-3964.5319)"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient3793);fill-opacity:1;stroke:#110b02;stroke-width:0.67479873;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;font-family:Sans;-inkscape-font-specification:Sans"
+       id="flowRoot3884">
       <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/dollar.png"
+         d="m 96.5625,632.861 0,-17.76 c -5.439995,-4.48 -12.320013,-6.88001 -25.76,-8.48 l 0,-10.08 -5.44,0 0,10.08 c -10.07999,1.11999 -14.560005,2.56 -19.84,6.72 -5.439995,4.31999 -8.64,10.72 -8.64,17.6 0,7.51999 2.560006,13.12 8.96,19.04 4.639995,4.47999 8.160011,6.88 19.52,13.28 l 0,45.12 c -15.039985,-0.16 -23.520004,-7.68002 -27.36,-24.48 l -2.4,0 0,20.8 c 9.59999,5.91999 16.320013,7.68 29.76,8.16 l 0,13.92 5.44,0 0,-13.92 c 11.839988,-1.92 16.800006,-3.84001 22.56,-8.48 5.279995,-4.48 8.32,-11.04001 8.32,-18.72 0,-5.44 -1.28,-11.20001 -3.2,-14.4 -3.999996,-6.56 -8.320019,-9.76002 -27.68,-20.96 l 0,-39.36 c 13.439987,1.59999 20.640003,8.32001 23.36,21.92 l 2.4,0 m -31.36,14.88 c -13.279987,-8.96 -16.48,-12.96001 -16.48,-20.32 0,-8.8 5.440011,-14.24001 16.48,-16.48 l 0,36.8 m 5.6,18.24 c 14.879985,9.27999 18.24,13.60001 18.24,23.52 0,10.55999 -5.760012,16.48 -18.24,18.88 l 0,-42.4"
+         style="font-size:160px;line-height:125%;fill:url(#linearGradient3799);stroke:#110b02;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L"
+         id="path3031" />
+    </g>
+    <g
+       id="g3784"
+       transform="matrix(0.98760499,0,0,0.99162076,176.8234,5.6711797)">
+      <path
+         style="fill:#000093;fill-opacity:1;stroke:#000088;stroke-width:0.741;stroke-miterlimit:4;stroke-opacity:1"
+         d="m 266.69031,89.469765 40.70537,0 0,892.710815 -40.70537,0 z"
+         id="rect3782" />
+      <path
          transform="matrix(0.69227518,0,0,0.79283157,161.94781,-344.47551)"
-         inkscape:transform-center-y="-1.9851719"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-width:1.00020349;stroke-miterlimit:4;stroke-opacity:1"
          inkscape:transform-center-x="-0.064657055"
-         d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="false"
-         sodipodi:arg2="1.5853448"
-         sodipodi:arg1="0.95702624"
-         sodipodi:r2="13.576127"
-         sodipodi:r1="38.44556"
-         sodipodi:cy="595.93359"
-         sodipodi:cx="181.42857"
-         sodipodi:sides="5"
-         id="path3902"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-opacity:1;stroke-width:1.00020348;stroke-miterlimit:4;stroke-dasharray:none"
-         sodipodi:type="star" />
-      <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/dollar.png"
-         transform="matrix(0.69227518,0,0,0.79283157,161.94781,463.84971)"
-         inkscape:transform-center-y="-1.9851651"
-         inkscape:transform-center-x="-0.064653035"
-         d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="false"
-         sodipodi:arg2="1.5853448"
-         sodipodi:arg1="0.95702624"
-         sodipodi:r2="13.576127"
-         sodipodi:r1="38.44556"
-         sodipodi:cy="595.93359"
-         sodipodi:cx="181.42857"
-         sodipodi:sides="5"
-         id="path3902-7"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-opacity:1;stroke-width:1.00020348;stroke-miterlimit:4;stroke-dasharray:none"
-         sodipodi:type="star" />
-      <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/dollar.png"
-         transform="matrix(0.69227518,0,0,0.79283157,161.94781,396.48929)"
-         inkscape:transform-center-y="-1.985164"
-         inkscape:transform-center-x="-0.064649201"
-         d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="false"
-         sodipodi:arg2="1.5853448"
-         sodipodi:arg1="0.95702624"
-         sodipodi:r2="13.576127"
-         sodipodi:r1="38.44556"
-         sodipodi:cy="595.93359"
-         sodipodi:cx="181.42857"
-         sodipodi:sides="5"
-         id="path3902-5"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-opacity:1;stroke-width:1.00020348;stroke-miterlimit:4;stroke-dasharray:none"
-         sodipodi:type="star" />
-      <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/dollar.png"
-         transform="matrix(0.69227518,0,0,0.79283157,161.94781,329.12884)"
-         inkscape:transform-center-y="-1.9851694"
-         inkscape:transform-center-x="-0.064648812"
-         d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="false"
-         sodipodi:arg2="1.5853448"
-         sodipodi:arg1="0.95702624"
-         sodipodi:r2="13.576127"
-         sodipodi:r1="38.44556"
-         sodipodi:cy="595.93359"
-         sodipodi:cx="181.42857"
-         sodipodi:sides="5"
-         id="path3902-3"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-opacity:1;stroke-width:1.00020348;stroke-miterlimit:4;stroke-dasharray:none"
-         sodipodi:type="star" />
-      <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/dollar.png"
-         transform="matrix(0.69227518,0,0,0.79283157,161.94781,261.76839)"
-         inkscape:transform-center-y="-1.9851679"
-         inkscape:transform-center-x="-0.064650366"
-         d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="false"
-         sodipodi:arg2="1.5853448"
-         sodipodi:arg1="0.95702624"
-         sodipodi:r2="13.576127"
-         sodipodi:r1="38.44556"
-         sodipodi:cy="595.93359"
-         sodipodi:cx="181.42857"
-         sodipodi:sides="5"
-         id="path3902-0"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-opacity:1;stroke-width:1.00020348;stroke-miterlimit:4;stroke-dasharray:none"
-         sodipodi:type="star" />
-      <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/dollar.png"
-         transform="matrix(0.69227518,0,0,0.79283157,161.94781,194.40799)"
-         inkscape:transform-center-y="-1.9851725"
-         inkscape:transform-center-x="-0.064648812"
-         d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="false"
-         sodipodi:arg2="1.5853448"
-         sodipodi:arg1="0.95702624"
-         sodipodi:r2="13.576127"
-         sodipodi:r1="38.44556"
-         sodipodi:cy="595.93359"
-         sodipodi:cx="181.42857"
-         sodipodi:sides="5"
-         id="path3902-8"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-opacity:1;stroke-width:1.00020348;stroke-miterlimit:4;stroke-dasharray:none"
-         sodipodi:type="star" />
-      <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/dollar.png"
-         transform="matrix(0.69227518,0,0,0.79283157,161.94781,127.04751)"
          inkscape:transform-center-y="-1.9851719"
-         inkscape:transform-center-x="-0.064651675"
          d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="false"
-         sodipodi:arg2="1.5853448"
-         sodipodi:arg1="0.95702624"
-         sodipodi:r2="13.576127"
-         sodipodi:r1="38.44556"
-         sodipodi:cy="595.93359"
-         sodipodi:cx="181.42857"
-         sodipodi:sides="5"
-         id="path3902-7-5"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-opacity:1;stroke-width:1.00020348;stroke-miterlimit:4;stroke-dasharray:none"
-         sodipodi:type="star" />
+         id="path3902" />
       <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/dollar.png"
+         transform="matrix(0.69227518,0,0,0.79283157,161.94781,463.84971)"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-width:1.00020349;stroke-miterlimit:4;stroke-opacity:1"
+         inkscape:transform-center-x="-0.064653035"
+         inkscape:transform-center-y="-1.9851651"
+         d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
+         id="path3902-7" />
+      <path
+         transform="matrix(0.69227518,0,0,0.79283157,161.94781,396.48929)"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-width:1.00020349;stroke-miterlimit:4;stroke-opacity:1"
+         inkscape:transform-center-x="-0.064649201"
+         inkscape:transform-center-y="-1.985164"
+         d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
+         id="path3902-5" />
+      <path
+         transform="matrix(0.69227518,0,0,0.79283157,161.94781,329.12884)"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-width:1.00020349;stroke-miterlimit:4;stroke-opacity:1"
+         inkscape:transform-center-x="-0.064648812"
+         inkscape:transform-center-y="-1.9851694"
+         d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
+         id="path3902-3" />
+      <path
+         transform="matrix(0.69227518,0,0,0.79283157,161.94781,261.76839)"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-width:1.00020349;stroke-miterlimit:4;stroke-opacity:1"
+         inkscape:transform-center-x="-0.064650366"
+         inkscape:transform-center-y="-1.9851679"
+         d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
+         id="path3902-0" />
+      <path
+         transform="matrix(0.69227518,0,0,0.79283157,161.94781,194.40799)"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-width:1.00020349;stroke-miterlimit:4;stroke-opacity:1"
+         inkscape:transform-center-x="-0.064648812"
+         inkscape:transform-center-y="-1.9851725"
+         d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
+         id="path3902-8" />
+      <path
+         transform="matrix(0.69227518,0,0,0.79283157,161.94781,127.04751)"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-width:1.00020349;stroke-miterlimit:4;stroke-opacity:1"
+         inkscape:transform-center-x="-0.064651675"
+         inkscape:transform-center-y="-1.9851719"
+         d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
+         id="path3902-7-5" />
+      <path
          transform="matrix(0.69227518,0,0,0.79283157,161.94781,59.687101)"
-         inkscape:transform-center-y="-1.9851687"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-width:1.00020349;stroke-miterlimit:4;stroke-opacity:1"
          inkscape:transform-center-x="-0.064651675"
+         inkscape:transform-center-y="-1.9851687"
          d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="false"
-         sodipodi:arg2="1.5853448"
-         sodipodi:arg1="0.95702624"
-         sodipodi:r2="13.576127"
-         sodipodi:r1="38.44556"
-         sodipodi:cy="595.93359"
-         sodipodi:cx="181.42857"
-         sodipodi:sides="5"
-         id="path3902-5-1"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-opacity:1;stroke-width:1.00020348;stroke-miterlimit:4;stroke-dasharray:none"
-         sodipodi:type="star" />
+         id="path3902-5-1" />
       <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/dollar.png"
          transform="matrix(0.69227518,0,0,0.79283157,161.94781,-7.6733057)"
-         inkscape:transform-center-y="-1.9851692"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-width:1.00020349;stroke-miterlimit:4;stroke-opacity:1"
          inkscape:transform-center-x="-0.064651286"
+         inkscape:transform-center-y="-1.9851692"
          d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="false"
-         sodipodi:arg2="1.5853448"
-         sodipodi:arg1="0.95702624"
-         sodipodi:r2="13.576127"
-         sodipodi:r1="38.44556"
-         sodipodi:cy="595.93359"
-         sodipodi:cx="181.42857"
-         sodipodi:sides="5"
-         id="path3902-3-1"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-opacity:1;stroke-width:1.00020348;stroke-miterlimit:4;stroke-dasharray:none"
-         sodipodi:type="star" />
+         id="path3902-3-1" />
       <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/dollar.png"
          transform="matrix(0.69227518,0,0,0.79283157,161.94781,-75.033806)"
-         inkscape:transform-center-y="-1.9851686"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-width:1.00020349;stroke-miterlimit:4;stroke-opacity:1"
          inkscape:transform-center-x="-0.064655173"
+         inkscape:transform-center-y="-1.9851686"
          d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="false"
-         sodipodi:arg2="1.5853448"
-         sodipodi:arg1="0.95702624"
-         sodipodi:r2="13.576127"
-         sodipodi:r1="38.44556"
-         sodipodi:cy="595.93359"
-         sodipodi:cx="181.42857"
-         sodipodi:sides="5"
-         id="path3902-0-8"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-opacity:1;stroke-width:1.00020348;stroke-miterlimit:4;stroke-dasharray:none"
-         sodipodi:type="star" />
+         id="path3902-0-8" />
       <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/dollar.png"
          transform="matrix(0.69227518,0,0,0.79283157,161.94781,-142.3942)"
-         inkscape:transform-center-y="-1.9851692"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-width:1.00020349;stroke-miterlimit:4;stroke-opacity:1"
          inkscape:transform-center-x="-0.064651286"
+         inkscape:transform-center-y="-1.9851692"
          d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="false"
-         sodipodi:arg2="1.5853448"
-         sodipodi:arg1="0.95702624"
-         sodipodi:r2="13.576127"
-         sodipodi:r1="38.44556"
-         sodipodi:cy="595.93359"
-         sodipodi:cx="181.42857"
-         sodipodi:sides="5"
-         id="path3902-8-0"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-opacity:1;stroke-width:1.00020348;stroke-miterlimit:4;stroke-dasharray:none"
-         sodipodi:type="star" />
+         id="path3902-8-0" />
       <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/dollar.png"
          transform="matrix(0.69227518,0,0,0.79283157,161.94781,-277.1151)"
-         inkscape:transform-center-y="-1.9851685"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-width:1.00020349;stroke-miterlimit:4;stroke-opacity:1"
          inkscape:transform-center-x="-0.064648424"
+         inkscape:transform-center-y="-1.9851685"
          d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="false"
-         sodipodi:arg2="1.5853448"
-         sodipodi:arg1="0.95702624"
-         sodipodi:r2="13.576127"
-         sodipodi:r1="38.44556"
-         sodipodi:cy="595.93359"
-         sodipodi:cx="181.42857"
-         sodipodi:sides="5"
-         id="path3902-38"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-opacity:1;stroke-width:1.00020348;stroke-miterlimit:4;stroke-dasharray:none"
-         sodipodi:type="star" />
+         id="path3902-38" />
       <path
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/dollar.png"
          transform="matrix(0.69227518,0,0,0.79283157,161.94781,-209.75468)"
-         inkscape:transform-center-y="-1.9851652"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-width:1.00020349;stroke-miterlimit:4;stroke-opacity:1"
          inkscape:transform-center-x="-0.064654978"
+         inkscape:transform-center-y="-1.9851652"
          d="m 203.57143,627.36216 -22.34036,-17.85388 -22.85032,17.19638 10.07649,-26.76409 -23.41586,-16.41798 28.56798,1.31276 8.37852,-27.34325 7.57948,27.57543 28.59408,-0.48108 -23.8836,15.72979 z"
-         inkscape:randomized="0"
-         inkscape:rounded="0"
-         inkscape:flatsided="false"
-         sodipodi:arg2="1.5853448"
-         sodipodi:arg1="0.95702624"
-         sodipodi:r2="13.576127"
-         sodipodi:r1="38.44556"
-         sodipodi:cy="595.93359"
-         sodipodi:cx="181.42857"
-         sodipodi:sides="5"
-         id="path3902-2"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000088;stroke-opacity:1;stroke-width:1.00020348;stroke-miterlimit:4;stroke-dasharray:none"
-         sodipodi:type="star" />
+         id="path3902-2" />
     </g>
   </g>
 </svg>

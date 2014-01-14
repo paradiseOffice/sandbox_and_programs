@@ -70,20 +70,20 @@ nav ul li { width: 130px; }
 nav ul.submenu { width: 200px; }
 nav ul.submenu li { width: 200px; }
 .top_link { 
-    border-top: 3px solid white;
-    border-left: 3px solid white;
-    border-right: 3px solid white;
-    border-bottom: 3px solid #bbaaff;
-    border-radius: 7px 7px 0 0;
+    border-top: 3px solid #DBE1E4;
+    border-left: 3px solid #DBE1E4;
+    border-right: 3px solid #DBE1E4;
+    border-bottom: 3px solid #6193CF;
+    border-radius: 3px 3px 0 0;
     
-    font-size: 1.7em; 
+    font-size: 1.6em; 
 }
 nav ul.submenu li { 
     font-size: 1.4em;
     padding-bottom: 0.5em;
-    border-bottom: 2px solid rgba(0,0,0,0.3); 
+    border-bottom: 2px solid rgba(0,0,0,0.7); 
 }
-nav ul.submenu { margin-top: -11px; border-radius: 0 0 7px 7px;  }
+nav ul.submenu { margin-top: -13px; border-radius: 0 0 3px 3px;  }
 nav a { padding: 15px; }
 /* end of menu bar sizes */
 
@@ -92,8 +92,9 @@ nav a { padding: 15px; }
     /* padding-left: 2px; padding-right: 2px; */
     width: 130px; height: 45px;  
 }
-span.name { padding-top: 10px; padding-bottom: 4px; width: 70px; font-size: 120%; }
+span.name { padding-top: 10px; padding-bottom: 4px; width: 70px; font-size: 140%; }
 .img { width: 40px; height: 40px; margin: 2px; }
+/* comment out the two lines below */
 input.text_field {  width: 86px; height: 40px; }
 .ctl-btn { height: 35px; width: 35px; }
 #large_icon1 { left: 0px; }
@@ -114,25 +115,30 @@ input.text_field {  width: 86px; height: 40px; }
 /* settings menu rules ------------------------------------------------------------- */
 .settings_menu nav { height: 35px; } /* space for borders separating each menu tab */
 .settings_menu nav li { height: 35px; }
-.settings_menu nav ul li { width: 140px; } 
-.settings_menu nav ul.submenu { width: 140px; }
+.settings_menu nav ul li, .settings_menu nav ul.submenu { width: 140px; } 
 .settings_menu nav ul.submenu li { 
     width: 140px;
-    font-size: 0.8em;
-    border-top: 2px solid rgba(0,0,0,0.3); 
+    font-size: 1em;
+    border-bottom: 2px solid rgba(0,0,0,0.7); 
+    
 }
 .settings_menu .submenu li {  }
 .settings_menu nav a { padding: 10px; }
 .settings_menu nav ul.submenu {
-    top: -205px; 
-    border-radius: 7px 7px 0 0;
+    top: -270px; 
+    border-radius: 0 0 3px 3px;
 }
 /* end of settings menu rules */
 
 /* tool box/pane rules */
 .tool_box { margin: 5px; }
-.icon { width: 50px; height: 50px; }
-img { width: 46px; /* -6 px for margins/padding */ height: 46px; margin: 2px; }
+.icon, .icon img { width: 50px; height: 50px; }
+img { 
+  width: 46px; height: 46px; 
+  /* -6 px for margins/padding */ 
+  border: 1px solid; 
+  border-radius: 4px; 
+}
 div#messages { padding: 5px; height: 98%;  }
 table.tool_box { border: 2px solid #1c1c1c; margin-bottom: 10px; }
 /* end of tool pane rules */

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg3334"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="loans_cc.svg">
+  <defs   id="defs3336" >
+      <linearGradient id="linearGradientBlue">
+          <stop
+               style="stop-color:#146bd5;stop-opacity:1;"
+               offset="0"
+               id="stopDarkBlue" />
+          <stop
+               style="stop-color:#000080;stop-opacity:1;"
+               offset="1"
+               id="stopMedBlue" />
+    </linearGradient>
+      <radialGradient
+        inkscape:collect="always"
+        xlink:href="#linearGradientBlue"
+        id="radialGradientBlue"
+        cx="250.17847"
+        cy="380.18292"
+        fx="602.17847"
+        fy="384.18292"
+        r="840.903091"
+        gradientTransform="matrix(1.1043576,0.14326663,-0.14756996,1.1377058,-6.1480366,-139.39274)"
+        gradientUnits="userSpaceOnUse" />
+      <linearGradient id="linearGradientYellow">
+          <stop
+               style="stop-color:#e3f700;stop-opacity:1;"
+               offset="0"
+               id="stopDarkYellow" />
+          <stop
+               style="stop-color:#d2cc00;stop-opacity:1;"
+               offset="1"
+               id="stopLightYellow" />
+    </linearGradient>
+      <radialGradient
+        inkscape:collect="always"
+        xlink:href="#linearGradientYellow"
+        id="radialGradientYellow"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="matrix(1.1043576,0.14326663,-0.14756996,1.1377058,-6.1480366,-139.39274)"
+        cx="602.17847"
+        cy="384.18292"
+        fx="602.17847"
+        fy="384.18292"
+        r="84.903091" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-125"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="845"
+     inkscape:window-x="-2"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3339">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#radialGradientBlue);stroke:#000080;stroke-width:4;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3822"
+       width="701.45087"
+       height="471.98001"
+       x="16.417395"
+       y="260.20816"
+       ry="54.760109" />
+    <path
+       style="fill:#dddddd;stroke:#dddddd;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 120.72258,638.31375 c 0,0 11.34995,-124.58147 47.06814,-167.52066 43.66242,-52.48968 187.61797,-95.84939 187.61797,-95.84939 0,0 -1.62126,-20.61164 -14.56582,-33.71379 -14.30042,-14.47471 -38.92895,-19.01713 -38.92895,-19.01713 0,0 -151.68732,44.36923 -188.88331,97.06054 -41.058762,58.16341 -52.283489,203.3947 -52.283489,203.3947 0,0 10.936689,20.14259 20.861045,23.46861 12.606872,4.22522 39.114414,-7.82288 39.114414,-7.82288 z"
+       id="path3824"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscscscsc" />
+    <path
+       style="fill:#3b3b3b;stroke:#3b3b3b;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 124.8577,637.23366 c 0,0 20.94647,21.00579 38.7979,23.916 17.91313,2.92028 37.40152,-11.95804 37.40152,-11.95804 0,0 2.87235,-98.16585 28.05105,-135.91276 20.56607,-30.83155 121.08517,-57.4988 121.08517,-57.4988 0,0 12.3933,-27.34125 13.03801,-39.43071 0.71882,-13.4746 -12.27429,-37.2705 -12.27429,-37.2705 0,0 -146.12989,48.07835 -185.95947,94.63821 -37.98709,44.40646 -40.13989,163.5166 -40.13989,163.5166 z"
+       id="path3826"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscscscsc" />
+    <rect
+       style="fill:url(#radialGradientYellow);;stroke:#e3dd00;stroke-width:5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3828"
+       width="112.47599"
+       height="108.78825"
+       x="552.88422"
+       y="314.96893"
+       ry="18.438686" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3830"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
+       transform="matrix(3.6506738,0,0,4.7502834,-99.845656,-1431.502)"><flowRegion
+         id="flowRegion3832"><rect
+           id="rect3834"
+           width="175.76654"
+           height="30.304577"
+           x="41.921329"
+           y="420.51178"
+           style="fill:none;fill-opacity:1;stroke:none" /></flowRegion><flowPara
+         id="flowPara3836"
+         style="font-size:13px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#110b02;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans Bold">Loans and Credit Cards</flowPara></flowRoot>  </g>
+</svg>

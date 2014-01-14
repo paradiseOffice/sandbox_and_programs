@@ -213,17 +213,17 @@
 }
 /* to make room for the icon, a width needs to be set here */
 .ui-button-icon-only {
-	width: 1.8em;
+	width: 1.6em;
 }
 /* button elements seem to need a little more width */
 button.ui-button-icon-only {
-	width: 1.6em;
+	width: 1.4em;
 }
 .ui-button-icons-only {
-	width: 1.8em;
+	width: 1.6em;
 }
 button.ui-button-icons-only {
-	width: 1.8em;
+	width: 1.6em;
 }
 
 /* button text element */
@@ -232,24 +232,24 @@ button.ui-button-icons-only {
 	line-height: normal;
 }
 .ui-button-text-only .ui-button-text {
-	padding: .4em 1.3em;
+	padding: .4em 1.2em;
 }
 .ui-button-icon-only .ui-button-text,
 .ui-button-icons-only .ui-button-text {
-	padding: .4em;
+	padding: .3em;
 	text-indent: -9999999px;
 }
 .ui-button-text-icon-primary .ui-button-text,
 .ui-button-text-icons .ui-button-text {
-	padding: .4em 1em .4em 2.1em;
+	padding: .3em 0.8em .3em 0.8em;
 }
 .ui-button-text-icon-secondary .ui-button-text,
 .ui-button-text-icons .ui-button-text {
-	padding: .4em 2.1em .4em 1em;
+	padding: .3em 0.8em .3em 0.8em;
 }
 .ui-button-text-icons .ui-button-text {
-	padding-left: 2.1em;
-	padding-right: 2.1em;
+	padding-left: 1.1em;
+	padding-right: 1.1em;
 }
 /* no icon support for input elements, provide padding by default */
 input.ui-button {
@@ -768,7 +768,7 @@ button.ui-button::-moz-focus-inner {
 .ui-tabs .ui-tabs-panel {
 	display: block;
 	border-width: 0;
-	padding: 0.8em 0.8em;
+	padding: 0.4em 0.4em;
 	background: none;
 }
 .ui-tooltip {
@@ -787,17 +787,17 @@ body .ui-tooltip {
 ----------------------------------*/
 .ui-widget {
 	font-family: Verdana,Arial,sans-serif;
-	font-size: 1.5em;
+	font-size: 1.4em;
 }
 .ui-widget .ui-widget {
-	font-size: 1.5em;
+	font-size: 1.4em;
 }
 .ui-widget input,
 .ui-widget select,
 .ui-widget textarea,
 .ui-widget button {
 	font-family: Verdana,Arial,sans-serif;
-	font-size: 1.5em;
+	font-size: 1.4em;
 }
 .ui-widget-content {
 	border: 1px solid #222222;
