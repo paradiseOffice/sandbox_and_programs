@@ -141,7 +141,22 @@ div#messages p { font-family: arial, sans-serif; font-size: 100%; color: #1c1c1c
 .tool_pane-skel td.odd { background: #110b02; border-color:  #110b02; }
 .tool_pane-skel td.even { background: #000080; border-color: #000080; }
 .tool_pane-skel td a:hover img { 
-  background: rgba(100,100,100,0.9); 
+  background: rgba(180,180,180,0.9); 
   border-color: #ffffff;
 }
 /* end of tool_box rules */
+
+/* file_port */
+.file_port textarea { background: #ffffff; }
+.file_port textarea:focus { 
+  border: 3px solid #000080; 
+  outline: 0;
+}
+.file_port textarea::selection
+{
+  background: #aaaaaa;
+}
+.file_port textarea::-moz-selection
+{
+  background: #aaaaaa;
+}

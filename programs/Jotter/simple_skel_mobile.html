@@ -91,23 +91,47 @@ src="../../sandbox/appearance/default_pro_theme/jqueryui/development-bundle/ui/m
   </header>
 <section class="window">
   <div class="file_port" >
+    
       <div id="tabrow" class="tabs-top">
         <ul>
-          <li><a href="#file1">File 1</a></li>
-          <li><a href="#file2">File 2</a></li>
-          <li><a href="#file3">File 3</a></li>
-        </ul>     
-      <div id="file1" class="file" contenteditable></div>
-      <div id="file2" class="file" contenteditable></div>
-      <div id="file3" class="file" contenteditable></div>
-    </div><!-- tab row -->
-  </div><!-- file port -->
+          <li><a href="#file1-wrapper">File 1</a></li>
+          <li><a href="#file2-wrapper">File 2</a></li>
+          <li><a href="#file3-wrapper">File 3</a></li>
+        </ul>
+     
+     
+      <div id="file1-wrapper" >
+        <textarea id="file1" ></textarea>
+      </div>
+      <div id="file2-wrapper" >
+        <textarea id="file1" >&nbsp; </textarea>
+      </div>
+      <div id="file3-wrapper" >
+        <textarea id="file3" >Something &nbsp; </textarea>
+      </div>
+      
+    </div><!-- tabrow -->
+  </div><!-- file_port -->
 		
 
 </section><!-- window -->
-  <div class="status_bar">
-    <div class="settings_menu">Settings</div>Updates
-  </div>
+<div class="status_bar">
+<div class="settings_menu">
+  <nav role="navigation" aria-label="Main menu">
+    <ul role="menubar">
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Settings</a>
+            <ul class="submenu" role="menu" aria-hidden="true">
+                <li role="menuitem" tabindex="-1"><a href="#">Set Language</a></li>
+                <hr />
+                <li class="label" tabindex="-1">Themes</li>
+                <li role="menuitem" tabindex="-1"><a href="#">Contrast</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Default Pro</a></li>
+                
+            </ul>
+        </li>
+    </ul>
+  </nav>
+</div>
 
 
 

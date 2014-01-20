@@ -46,18 +46,41 @@ src="../../sandbox/appearance/default_pro_theme/jqueryui/development-bundle/ui/m
                 <li role="menuitem" tabindex="-1"><a href="#" title="Ctrl + W"><span class="acckey">C</span>lose File</a></li>
             </ul>
         </li>
-        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Services</a>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">E</span>dit</a>
             <ul class="submenu" role="menu" aria-hidden="true">
-                <li role="menuitem" tabindex="-1"><a href="#">Abrasion</a></li>
-                <li role="menuitem" tabindex="-1"><a href="#">Peel</a></li>
-                <li role="menuitem" tabindex="-1"><a href="#">Wax</a></li>
+                <li role="menuitem" tabindex="-1" title="Ctrl + z"><a href="#">Undo</a></li>
+                <li role="menuitem" tabindex="-1" title="Shift + Ctrl + z"><a href="#">Redo</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Un<span class="acckey">d</span>o History</a></li>
+                <hr />
+                <li role="menuitem" tabindex="-1" title="Ctrl + x"><a href="#">Cut</a></li>
+                <li role="menuitem" tabindex="-1" title="Ctrl + c"><a href="#">Copy</a></li>
+                <li role="menuitem" tabindex="-1" title="Ctrl + v"><a href="#">Paste</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#"><span class="acckey">C</span>lippings</a></li>
+                <hr />
+                <li role="menuitem" tabindex="-1" title="Ctrl + F"><a href="#">Find &amp; Replace</a></li>
             </ul>
         </li>
-        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Contact</a>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">I</span>nsert</a>
             <ul class="submenu" role="menu" aria-hidden="true">
-                <li role="menuitem" tabindex="-1"><a href="#">Telephone</a></li>
-                <li role="menuitem" tabindex="-1"><a href="#">Letter</a></li>
-                <li role="menuitem" tabindex="-1"><a href="#">Email </a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Character</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Date/Time</a></li>
+                <hr />
+                <li role="menuitem" tabindex="-1"><a href="#">Spellcheck</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Sort</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Manage Fields</a></li>
+            </ul>
+        </li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">O</span>ptions</a>
+            <ul class="submenu" role="menu" aria-hidden="true">
+              <li role="menuitem" tabindex="-1"><a href="#">Change Font</a></li>
+              <li role="menuitem" tabindex="-1"><a href="#">Set Tab Width</a></li>
+              <li role="menuitem" tabindex="-1"><a href="#">Line Numbers</a></li>
+              <hr />
+              <li role="menuitem" tabindex="-1"><a href="#">UPPER CASE</a></li>
+              <li role="menuitem" tabindex="-1"><a href="#">lower case</a></li>
+              <li role="menuitem" tabindex="-1"><a href="#">Title Case</a></li>
+              <hr />
+              <li role="menuitem" tabindex="-1"><a href="#">Highlighting</a></li>
             </ul>
         </li>
     </ul>
@@ -69,11 +92,11 @@ src="../../sandbox/appearance/default_pro_theme/jqueryui/development-bundle/ui/m
      <a href="#">
     <div id="large_icon1" class="large_icon">
       <div id="img_large1" class="img"></div>
-      <span class="name">New</span>      
+      <span class="name">Spellcheck</span>      
     </div>
     </a>
     <a href="#">
-    <div id="large_icon2" class="large_icon" onclick="saveTextAsFile()"> 
+    <div id="large_icon2" class="large_icon" > 
       <div id="img_large2" class="img"></div>
       <span class="name">Save</span>
     </div>
@@ -96,18 +119,27 @@ src="../../sandbox/appearance/default_pro_theme/jqueryui/development-bundle/ui/m
   </header>
 <section class="window">
   <div class="file_port" >
+    
       <div id="tabrow" class="tabs-top">
         <ul>
-          <li><a href="#wrapper-file1">Untitled_1</a></li>
+          <li><a href="#file1-wrapper">File 1</a></li>
+          <li><a href="#file2-wrapper">File 2</a></li>
+          <li><a href="#file3-wrapper">File 3</a></li>
         </ul>
      
      
-      <div id="wrapper-file1" >
-        <div id="file1" contenteditable="contenteditable"> </div>
+      <div id="file1-wrapper" >
+        <textarea id="file1" ></textarea>
+      </div>
+      <div id="file2-wrapper" >
+        <textarea id="file1" >&nbsp; </textarea>
+      </div>
+      <div id="file3-wrapper" >
+        <textarea id="file3" >Something &nbsp; </textarea>
       </div>
       
     </div><!-- tabrow -->
-  </div><!-- file port -->
+  </div><!-- file_port -->
 		
 <div class="tool_pane-skel">
     <table id="Words" class="tool_box">
@@ -151,9 +183,28 @@ src="../../sandbox/appearance/default_pro_theme/jqueryui/development-bundle/ui/m
      
   </div><!-- tool pane -->
 </section><!-- window -->
-  <div class="status_bar">
-    <div class="settings_menu">Settings</div>Updates
-  </div>
+<div class="status_bar">
+<div class="settings_menu">
+  <nav role="navigation" aria-label="Main menu">
+    <ul role="menubar">
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Settings</a>
+            <ul class="submenu" role="menu" aria-hidden="true">
+                <li role="menuitem" tabindex="-1"><a href="#">Set Language</a></li>
+                <hr />
+                <li class="label" tabindex="-1">Themes</li>
+                <li role="menuitem" tabindex="-1"><a href="#">Contrast</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Default Pro</a></li>
+                
+            </ul>
+        </li>
+    </ul>
+  </nav>
+</div>
+
+    <table class="statuses">
+    
+    </table>
+    </div>
 
 
 

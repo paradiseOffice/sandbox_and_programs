@@ -31,10 +31,10 @@ src="../../../sandbox/sandbox/appearence/themes/default_pro_theme/jqueryui/devel
             <ul class="submenu" role="menu" aria-hidden="true">
                 <li role="menuitem" tabindex="-1"><a href="#">Set Language</a></li>
                 <hr />
-                <li class="label" tabindex="-1">Themes</li>
+                <li class="separator" tabindex="-1"> </li>
                 <li role="menuitem" tabindex="-1"><a href="#">Contrast</a></li>
                 <li role="menuitem" tabindex="-1"><a href="#">Default Pro</a></li>
-                
+                <li class="label" tabindex="-1">Themes</li>
             </ul>
         </li>
     </ul>

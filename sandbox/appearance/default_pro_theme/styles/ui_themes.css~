@@ -144,11 +144,11 @@ td.even { background: #b8a57c; }
   border: 2px solid #b8a57c; 
   outline: 0;
 }
-.file_port textarea::selection
+.file_port textarea.file::selection
 {
-  background-color: #aaaaaa;
+  background: #aaaaaa;
 }
-.file_port textarea::-moz-selection
+.file_port textarea.file::-moz-selection
 {
-  background-color: #aaaaaa;
+  background: #aaaaaa;
 }

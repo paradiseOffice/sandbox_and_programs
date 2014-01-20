@@ -145,3 +145,18 @@ div#messages p { font-family: arial, sans-serif; font-size: 100%; color: #1c1c1c
   border-color: #ffffff;
 }
 /* end of tool_box rules */
+
+/* file_port */
+.file_port textarea { background: #ffffff; }
+.file_port textarea:focus { 
+  border: 3px solid #000080; 
+  outline: 0;
+}
+.file_port textarea::selection
+{
+  background: #aaaaaa;
+}
+.file_port textarea::-moz-selection
+{
+  background: #aaaaaa;
+}
