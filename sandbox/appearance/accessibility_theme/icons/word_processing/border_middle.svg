@@ -25,15 +25,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="-117.85714"
+     inkscape:cx="-610.71428"
      inkscape:cy="520"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1440"
-     inkscape:window-height="851"
+     inkscape:window-height="824"
      inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-y="24"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata3161">
@@ -53,17 +53,17 @@
      id="layer1">
     <path
        inkscape:connector-curvature="0"
-       style="fill:none;stroke:#110b02;stroke-width:3.90430998999999979;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3.90431002999999999, 23.42586015999999915;stroke-dashoffset:0"
+       style="fill:#ffffff;stroke:#3b3b3b;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:12, 36;stroke-dashoffset:0;fill-opacity:1"
        d="m 27.447446,231.1515 650.751534,0 0,658.63945 -650.751534,0 z"
        id="path3056" />
     <path
        inkscape:connector-curvature="0"
-       style="fill:none;stroke:#110b02;stroke-width:11.71292973000000082;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:none;stroke:#110b02;stroke-width:25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        d="m 336.06148,233.12345 1.97191,650.75153 z"
        id="path3054" />
     <path
        inkscape:connector-curvature="0"
-       style="fill:none;stroke:#110b02;stroke-width:11.71292973000000082;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:none;stroke:#110b02;stroke-width:25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        d="M 27.447446,556.52724 678.19898,554.55529 z"
        id="rect3846-2" />
   </g>

@@ -140,8 +140,8 @@ div#messages p { font-family: arial, sans-serif; font-size: 100%; color: #1c1c1c
 .tool_pane-skel td a img { background: #ffffff; }
 .tool_pane-skel td.odd { background: #110b02; border-color:  #110b02; }
 .tool_pane-skel td.even { background: #000080; border-color: #000080; }
-.tool_pane-skel .icon:hover { 
-  background: rgba(88,88,88,0.9); 
+.tool_pane-skel td a:hover img { 
+  background: rgba(100,100,100,0.9); 
   border-color: #ffffff;
 }
 /* end of tool_box rules */
