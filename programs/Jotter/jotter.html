@@ -13,7 +13,7 @@ src="../../sandbox/appearance/default_pro_theme/jqueryui/development-bundle/jque
 src="../../sandbox/appearance/default_pro_theme/jqueryui/development-bundle/ui/minified/jquery-ui.custom.min.js" ></script>
 <script type="text/JavaScript" src="../../sandbox/appearance/default_pro_theme/scripts/resize-screen.js">
 </script>
-<script type="text/JavaScript" src="../../sandbox/appearance/default_pro_theme/scripts/file_port_tabs.js"></script>
+<script type="text/JavaScript" src="../../sandbox/logic/file_port/file_port_tabs.js"></script>
 <!--<script type="text/JavaScript" src="../../sandbox/logic/file_port/open/new.js"></script>-->
 
      <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/reset.css" />
@@ -25,7 +25,7 @@ src="../../sandbox/appearance/default_pro_theme/jqueryui/development-bundle/ui/m
      <!-- jquery UI -->
      <link rel="stylesheet" type="text/css" href="../../sandbox/appearance/default_pro_theme/jqueryui/css/default-pro/jquery-ui-1.10.3.custom.min.css" />
 </head>
-<body>
+<body onload="checkWidth();">
 
 
   <div class="title_bar-skel">
@@ -121,7 +121,7 @@ src="../../sandbox/appearance/default_pro_theme/jqueryui/development-bundle/ui/m
   <div class="file_port" >
     <div id="tabrow" class="tabs-top">
       <ul>
-        <li><a href="#file1-wrapper">File 1</a></li>
+        <li class="ui-tabs-nav"><a href="#file1-wrapper">File 1</a></li>
         <li><a href="#file2-wrapper">File 2</a></li>
         <li><a href="#file3-wrapper">File 3</a></li>
       </ul>     

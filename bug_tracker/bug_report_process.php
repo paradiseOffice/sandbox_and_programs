@@ -1,12 +1,11 @@
 <?php
-  require_once('/home/hazel/Exercises/PHP/variables.inc');
-  $db = pg_connect("$string");
   
   $errors = '';
   $system = $_POST['system'];
   $os = $_POST['os'];
   $browser = $_POST['browser'];
   $resolution = $_POST['resolution'];
+  $problem = $_POST['problem'];
   $program = $_POST['program'];
   $description = trim($_POST['description']);
   $status = trim($_POST['status']);
@@ -24,13 +23,17 @@
 {
     $errors .= "\n Please fill in all fields.";
 }
- 
- if ($_POST[submit] == "send-button") {
+     // require_once('/home/hwindle/Exercises/PHP/variables.inc'); selinux prob
+    $db = mysqli_connect('127.0.0.1', 'dev', '4935ujheo', 'paradise');
+
+ if ($_POST['send-button'] && $db != NULL) {
     $insert = "INSERT INTO bugs(problem,system,os,browser,resolution,program,description,status,severity) VALUES ('{$problem}', '{$system}', '{$os}', '{$browser}', '{$resolution}', '{$description}', '{$status}', '{$severity}' ); ";
-    pg_query($insert);
+    mysqli_query($db, $insert);
     $errors .= "\n Your bug was successfully saved.";
-  } else {
-    $errors .= "\n Unable to insert record!" . pg_last_error() ;
+  } 
+  else 
+  {
+    $errors .= "\n Unable to insert record!" . mysqli_error_list($db);
   }
     
 ?>

@@ -44,26 +44,32 @@
   <div id="main_content">
     <h2>Trouble In Paradise</h2>
     <?php
-      require_once('/home/hazel/Exercises/PHP/variables.inc');
-      if ($db = pg_connect("$string")) {
+      // require_once('/home/hwindle/Exercises/PHP/variables.inc'); selinux prob
+      $db = mysqli_connect('127.0.0.1', 'dev', '4935ujheo', 'paradise');
+
+      if ($db != NULL ) {
         $select = "select * from bugs GROUP BY severity";
-        $allrows = pg_query($db, $select);
-        if (pg_num_rows($allrows) > 0) {
+        $allrows = mysqli_query($db, $select);
+        if (mysqli_num_rows($allrows) > 0) {
           print("<div class=\"bug\">\n");
-        while ($row = pg_fetch_object($allrows)) {
-          print("<h3>$row->id . $row->program - $row->problem</h3>\n");
-          print("<div id=\"descr\">$row->description</div>\n");
-          print("<div id=\"computer\">$row->os $row->browser $row->system  $row->resolution</div>\n");
-          print("<table class=\"statuses\">\n<tr><td id=\"status\">$row->status</td>\n<td id=\"severity\">$row->severity</td>
+        while ($row = $allrows->fetch_assoc()) {
+          print("<h3>$row["id"] . $row["program"] - $row["problem"]</h3>\n");
+          print("<div id=\"descr\">$row["description"]</div>\n");
+          print("<div id=\"computer\">$row["os"] $row["browser"] $row["system"]  $row['resolution']</div>\n");
+          print("<table class=\"statuses\">\n<tr><td id=\"status\">$row["status"]</td>\n<td id=\"severity\">$row["severity"]</td>
   </tr>\n</table>\n");
         }
         print("</div>\n");
-      } else {
+      } 
+      else 
+      {
         print("<p class=\"error\">No bugs found.</p>");
-      }
-    } else {
-      print("<p class=\"error\">Connection to the database has failed.</p>");
-    }
+      } // mysqli num rows if
+  } 
+  else 
+  {
+    print("<p class=\"error\">Connection to the database has failed.</p>");
+  }
 
 ?>
 </div><!-- content -->

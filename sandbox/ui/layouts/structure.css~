@@ -27,9 +27,19 @@
 /* The basic structure for the HTML skeleton, with spaces for each of the common components */
 .title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel,  .help_box-skel, .status_bar, .settings_menu 
 { position: relative; }
-.tool_pane-skel { position: absolute;  }
-.help_box-skel { border: 1px black solid; }
-.status_bar { position: absolute; }
+.tool_pane-skel { 
+  position: absolute; right: 0px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+.help_box-skel { 
+  border: 1px black solid; 
+  margin: 0 auto;
+}
+.status_bar { 
+  position: absolute; 
+  width: 100%;
+}
 .settings_menu { position: absolute; }
 .menu_bar-skel { z-index: 7000; }
  /* end of basic structure --------------------------------------------------*/

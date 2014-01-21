@@ -13,7 +13,8 @@ src="../../sandbox/appearance/default_pro_theme/jqueryui/development-bundle/jque
 src="../../sandbox/appearance/default_pro_theme/jqueryui/development-bundle/ui/minified/jquery-ui.custom.min.js" ></script>
 <script type="text/JavaScript" src="../../sandbox/appearance/default_pro_theme/scripts/resize-screen.js">
 </script>
-<script type="text/JavaScript" src="../../sandbox/appearance/default_pro_theme/scripts/file_port_tabs.js"></script>
+<script type="text/JavaScript" src="../../sandbox/logic/file_port/file_port_tabs.js"></script>
+<!--<script type="text/JavaScript" src="../../sandbox/logic/file_port/open/new.js"></script>-->
 
      <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/reset.css" />
      <!-- choosing the screen size/type -->
@@ -118,25 +119,21 @@ src="../../sandbox/appearance/default_pro_theme/jqueryui/development-bundle/ui/m
   </header>
 <section class="window">
   <div class="file_port" >
-    
-      <div id="tabrow" class="tabs-top">
-        <ul>
-          <li><a href="#file1-wrapper">File 1</a></li>
-          <li><a href="#file2-wrapper">File 2</a></li>
-          <li><a href="#file3-wrapper">File 3</a></li>
-        </ul>
-     
-     
+    <div id="tabrow" class="tabs-top">
+      <ul>
+        <li class="ui-tabs-nav"><a href="#file1-wrapper">File 1</a></li>
+        <li><a href="#file2-wrapper">File 2</a></li>
+        <li><a href="#file3-wrapper">File 3</a></li>
+      </ul>     
       <div id="file1-wrapper" >
-        <textarea id="file1" ></textarea>
+        <div id="file1" class="file" contenteditable="contenteditable"></div>
       </div>
       <div id="file2-wrapper" >
-        <textarea id="file1" >&nbsp; </textarea>
+        <div id="file2" class="file" contenteditable="contenteditable"></div>
       </div>
       <div id="file3-wrapper" >
-        <textarea id="file3" >Something &nbsp; </textarea>
-      </div>
-      
+        <div id="file3" class="file" contenteditable="contenteditable"></div>
+      </div>      
     </div><!-- tabrow -->
   </div><!-- file_port -->
 		
