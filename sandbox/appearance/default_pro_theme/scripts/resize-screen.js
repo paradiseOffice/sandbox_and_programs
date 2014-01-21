@@ -17,7 +17,7 @@ var checkWidth = function() {
   var statusbar = jQuery('.status_bar').height();
   
   var toolPane = jQuery('.tool_pane-skel').width();
-  var toolbarHeight = parseInt(titlebar + menubar + commonbar + statusbar - 15); 
+  var toolbarHeight = parseInt(titlebar + menubar + commonbar + statusbar); 
   console.log(toolbarHeight);
   console.log(toolPane);
   
@@ -27,16 +27,17 @@ var checkWidth = function() {
   viewportHeight = parseInt(viewportHeight);  
   fileportWidth = viewportWidth - toolPane ;
   viewportWidth = parseInt(viewportWidth);
-  var  margin = 45;
+  var  margin = 0;
   jQuery('.file_port').css("width", fileportWidth - margin);
-  jQuery('.file_port').css("height", viewportHeight - parseInt(statusbar) - 10);
-  jQuery('.file').css("height", viewportHeight - parseInt(statusbar) - 10);
-  jQuery('.tool_pane-skel').css("left", fileportWidth - 10 );
+  jQuery('.file_port').css("height", viewportHeight - parseInt(statusbar) );
+  jQuery('.file').css("height", viewportHeight - parseInt(statusbar));
+  jQuery('.tool_pane-skel').css("left", fileportWidth  );
   jQuery('.status_bar').css("top", viewportHeight + toolbarHeight - parseInt(statusbar));
-  jQuery('.status_bar').css("width", fileportWidth + 20 );
+  jQuery('.status_bar').css("width", fileportWidth );
   jQuery('.window').css("height", viewportHeight);
   jQuery('.window').css("width", viewportWidth);
 };
+
 jQuery(document).ready(function() {
   checkWidth();
   $(window).resize(checkWidth);
