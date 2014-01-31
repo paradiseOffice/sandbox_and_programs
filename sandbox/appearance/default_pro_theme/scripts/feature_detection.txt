@@ -1,0 +1,23 @@
+
+IE versions 	Supported standard object
+10+ 	window.atob
+9+ 	document.addEventListener
+8+ 	document.querySelector
+7+ 	window.XMLHttpRequest
+6+ 	document.compatMode
+
+
+if (document.all && !document.querySelector) {
+    alert('IE7 or lower');
+}
+
+if (document.all && document.querySelector && !document.addEventListener) {
+    alert('IE8');
+}
+
+if (!document.all) {
+    alert('IE11+ or not IE');
+}
+
+
+

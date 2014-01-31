@@ -21,17 +21,18 @@
  *
 ************************************************************************/
 
-/* For the file styles... */
+/* For the file styles... 
 @import url('../../../sandbox/sandbox/ui/containers/file_port/doc/text_port.css');
-
+*/
 /* The basic structure for the HTML skeleton, with spaces for each of the common components */
 .title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel,  .help_box-skel, .status_bar, .settings_menu 
-{ position: relative; }
+{ position: relative; color: #000000; }
 .tool_pane-skel { 
   position: absolute; right: 0px;
   margin-left: 30px;
   margin-right: 10px;
 }
+body { overflow: hidden; }
 .help_box-skel { 
   border: 1px black solid; 
   margin: 0 auto;
@@ -50,8 +51,8 @@
  /* end of title bar */
  
  /* the file port and tabs for each file open */
-.file_port { position: absolute; border: 1px solid black; overflow-x: hidden;
- overflow-y: hidden;    }
+.file_port { position: absolute; border: 1px solid black; overflow-x: none;
+ overflow-y: scroll;    }
 .file_port#tabrow {  height: auto; }
 .file_port .tabs-top { position: relative; }
 .file_port .tabs-top .file_port .ui-tabs-panel {  height: auto; overflow: auto;  }
@@ -66,9 +67,10 @@
 .file_port .ui-tabs-selected {  }   
 .wrapper-file { height: 100%; width: 100%; }
 .file_port textarea { 
-  overflow: auto;
+  overflow: none;
   border: none;
   resize: none;
+  color: #000000;
 }
 /* end of file port ------------------------------------------------------------------ */
 

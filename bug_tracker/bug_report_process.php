@@ -24,10 +24,10 @@
     $errors .= "\n Please fill in all fields.";
 }
      // require_once('/home/hwindle/Exercises/PHP/variables.inc'); selinux prob
-    $db = mysqli_connect('127.0.0.1', 'dev', '4935ujheo', 'paradise');
+    $db = mysqli_connect('127.0.0.1', 'hazel', '4935ujheo', 'paradise');
 
- if ($_POST['send-button'] && $db != NULL) {
-    $insert = "INSERT INTO bugs(problem,system,os,browser,resolution,program,description,status,severity) VALUES ('{$problem}', '{$system}', '{$os}', '{$browser}', '{$resolution}', '{$description}', '{$status}', '{$severity}' ); ";
+ if ($_POST['send-button']) {
+    $insert = "INSERT INTO bugs(problem,system,os,browser,resolution,program,description,status,severity) VALUES ('{$problem}', '{$system}', '{$os}', '{$browser}', '{$resolution}', '{$description}', '{$status}', '{$severity}' ) ";
     mysqli_query($db, $insert);
     $errors .= "\n Your bug was successfully saved.";
   } 

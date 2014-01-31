@@ -1,0 +1,149 @@
+Internet Explorer browser of versions 10 and older can be detected in JavaScript by checking existence of the nonstandard document.all object available only in IE10 and older.
+
+Exact version of IE can be detected by additional checking of existence of standard global objects added in specific IE versions.
+
+Such objects for versions of IE up to 10 inclusive are listed in the following table.
+IE versions 	Supported standard object
+10+ 	window.atob
+9+ 	document.addEventListener
+8+ 	document.querySelector
+7+ 	window.XMLHttpRequest
+6+ 	document.compatMode
+
+By checking existence of these objects and combining such checks when needed, it is possible to reliably filter a specific IE version or a range of IE versions up to 10 inclusive.
+
+This technique works reliably including cases when code minification is used.
+Examples
+
+Code in the following condition runs only in IE7 and lower:
+
+if (document.all && !document.querySelector) {
+    alert('IE7 or lower');
+}
+
+The next one runs in IE8, but not in IE7 or IE9+:
+
+if (document.all && document.querySelector && !document.addEventListener) {
+    alert('IE8');
+}
+
+Condition in the following example is true if browser is IE11+ or not IE:
+
+if (!document.all) {
+    alert('IE11+ or not IE');
+}
+Using inside behaviors (*.htc)
+
+HTML Components (*.htc) are HTML documents of a special type that contain JavaScript scripts. Such documents are attached to HTML elements by using the nonstandard behavior CSS-property supported only in IE. To use IE-version detection with global object checking, htc file should contain the DOCTYPE declaration like any other valid HTML document:
+
+<!DOCTYPE html>
+
+Otherwise, all indication objects listed above (except for window.XMLHttpRequest) will not exist regardless of IE version.
+
+Also, since the behavior feature is supported only in IE, checking for the document.all is unneeded in this case.
+Browser-version detection and good practices
+
+Generally speaking, feature availability should be detected directly. For example, to determine if the querySelector() JavaScript-method is available, existence of the querySelector object itself should be checked. Otherwise, script may consider a feature unavailable while actually it is available, and vice versa.
+
+However, IE is often the only browser where a certain feature is unavailable, so it may be impractical to do formally full-featured, but slow checks in other browsers in such cases.
+
+For example, to check support for the display: table CSS-property, we should formally do it following way:
+
+    create a temporary element;
+    set table as value of its style.display DOM-property;
+    compare actual style.display value with the table string.
+
+But considering that display: table is for a long time supported by all browsers other than IE, and that IE supports it as of version 8, it is enough just to check IE version indirectly:
+
+if (document.all && !document.querySelector) { // IE7 or lower
+    alert('{display: table} is not supported');
+}
+
+Such check will be done much faster while being quite future-proof.
+Other ways to detect IE version
+Conditional compilation
+
+Caution
+    As of IE11 (at least version for Windows 7), conditional compilation feature is unavailable.
+
+Sometimes conditional compilation is used for IE version detection. Conditional compilation involves nonstandard conditions supported only in IE and typically wrapped in JavaScript comments to ensure that code is syntactically correct and compatible with other browsers.
+
+Detection of IE version in this case is based on univocal correspondence between versions of IE and JavaScript engine used in speficic version of IE:
+IE version 	10 	9 	8 	7 	6
+JavaScript-engine version 	10 	9 	5.8 	5.7 	5.6
+
+For example, the following code can be used to detect IE versions from 3 to 10:
+
+var ieVersion = /*@cc_on (function() {switch(@_jscript_version) {case 1.0: return 3; case 3.0: return 4; case 5.0: return 5; case 5.1: return 5; case 5.5: return 5.5; case 5.6: return 6; case 5.7: return 7; case 5.8: return 8; case 9: return 9; case 10: return 10;}})() || @*/ 0;
+
+Unfortunately, conditional compilation is unsafe when using in combination with JavaScript-code minification (e. g. with Google Closure Compiler) since comments are usually removed by minification algorithms.
+
+Besides, using conditional compilation to detect IE version works correctly only in true IE versions. In compatibility modes emulating previous versions of IE (such feature is available in IE8+ via a panel that can be opened with F12 key), the @_jscript_version service-constant contains version number of JavaScript engine of true version of IE regardless of whether IE is operating in old-version emulation mode or not. This potentially makes it harder to debug JavaScript scripts to make them work in different versions of IE.
+The document.documentMode property
+
+A more usable and predictable method than conditional compilation is using the nonstandard document.documentMode property that contains number of IE version with regard to mode of emulation of a previous version of IE if such mode is enabled:
+
+if (document.all && document.documentMode && 8 === document.documentMode) {
+    alert('IE8 or IE9+ in IE8 compatibility mode');
+}
+
+Account must be taken that this property is available only in IE8+, so distinguishing IE versions older than 8 is impossible with this property. To detect a range of versions lower than 8, a more complex condition is required:
+
+if (document.all && (!document.documentMode || (document.documentMode && document.documentMode < 8))) {
+    alert('IE7 or lower or IE8+ in IE7 compatibility mode');
+}
+
+It should be taken into account that, since the only purpose of the document.documentMode property is IE version detection, it’s possible that its support will be dropped in the future like how support for conditional comments has been dropped.
+Conditional comments
+
+Caution
+    As of version 10, support for conditional comments in Internet Explorer has been dropped.
+
+Conditional comments are a nonstandard feature based on HTML comments and available only in IE9 and older IE versions.
+
+To detect IE version in JavaScript, conditional HTML comments can be used different ways.
+
+    Initializing JavaScript variables in static HTML code:
+
+    in HTML file:
+        <script>
+            var ie = false;
+        </script>
+        <!--[if lte IE 7]><script>
+            ie = 7;
+        </script><![endif]-->
+    in JavaScript file:
+        if (7 === ie) {
+            alert('IE7 or lower');
+        }
+
+    Using conditional comments in static HTML code suffers from limited flexibility and leads to HTML-code pollution and scattering logic to several files, making it harder to work with such code.
+
+    Dynamic generation of a temporary HTML element containing a node inside a conditional comment, and then checking if the conditional comment has been processed by browser (if condition inside a conditional comment is true, IE automatically replaces the conditional comment with its content in DOM tree):
+
+    var test = document.createElement('div');
+    test.innerHTML = '<!--[if lte IE 7]>1<![endif]-->';
+
+    if ('1' === test.innerHTML) {
+        alert('IE7 or lower');
+    }
+
+    Compared with checking global objects, this method is less graceful and may work slower.
+
+Live demo
+    Your browser is IE11+ or not IE. 
+
+Sections:
+
+        Websites
+        Music
+        Blog
+        Articles
+        Projects
+        Misc
+        About
+        Contact
+
+© 2001–2014 Marat Tanalin
+
+Republication of any portions of any content from this website is prohibited

@@ -41,6 +41,8 @@
 .window { background: #e9dfe9; }
 header { background: #e9dfe9 url('images/top_bg.png') repeat-x; 
     background-size: contain ;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
 }
 /* end of skeleton */
 

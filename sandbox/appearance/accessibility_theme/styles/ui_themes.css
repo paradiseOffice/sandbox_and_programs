@@ -41,6 +41,8 @@
 .window { background: #6193cf; }
 header { background: #6193cf url('images/top_bg.png') repeat-x; 
     background-size: contain ;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
 }
 /* end of skeleton */
 

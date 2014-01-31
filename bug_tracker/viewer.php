@@ -45,19 +45,21 @@
     <h2>Trouble In Paradise</h2>
     <?php
       // require_once('/home/hwindle/Exercises/PHP/variables.inc'); selinux prob
-      $db = mysqli_connect('127.0.0.1', 'dev', '4935ujheo', 'paradise');
+      $db = mysqli_connect('127.0.0.1', 'hazel', '4935ujheo', 'paradise');
 
       if ($db != NULL ) {
         $select = "select * from bugs GROUP BY severity";
         $allrows = mysqli_query($db, $select);
-        if (mysqli_num_rows($allrows) > 0) {
+        if (mysqli_num_rows($allrows) > 0) 
+        {
           print("<div class=\"bug\">\n");
         while ($row = $allrows->fetch_assoc()) {
-          print("<h3>$row["id"] . $row["program"] - $row["problem"]</h3>\n");
-          print("<div id=\"descr\">$row["description"]</div>\n");
-          print("<div id=\"computer\">$row["os"] $row["browser"] $row["system"]  $row['resolution']</div>\n");
-          print("<table class=\"statuses\">\n<tr><td id=\"status\">$row["status"]</td>\n<td id=\"severity\">$row["severity"]</td>
+          print("<h3>$row[\"id\"] . $row[\"program\"] - $row[\"problem\"]</h3>\n");
+          print("<div id=\"descr\">$row[\"description\"]</div>\n");
+          print("<div id=\"computer\">$row[\"os\"] $row[\"browser\"] $row[\"system\"]  $row[\"resolution\"]</div>\n");
+          print("<table class=\"statuses\">\n<tr><td id=\"status\">$row[\"status\"]</td>\n<td id=\"severity\">$row[\"severity\"]</td>
   </tr>\n</table>\n");
+          }
         }
         print("</div>\n");
       } 
