@@ -125,11 +125,15 @@ input.text_field {  width: 86px; height: 25px; }
 .settings_menu nav ul.submenu { width: 140px; }
 .settings_menu nav ul.submenu li { 
     width: 140px;
-    font-size: 0.7em;
     border-top: 1px solid rgba(0,0,0,0.3); 
 }
-.settings_menu .top_link { border: 0; }
-.settings_menu .submenu li {  }
+.settings_menu #programs_menu { border: 0; font-size: 1.4em; }
+.settings_menu .submenu li { 
+  text-align: center;
+  font-size: 1.0em; 
+  font-style: normal; 
+  font-weight: normal; 
+}
 .settings_menu nav a { padding: 10px; }
 .settings_menu nav ul.submenu {
     top: -180px; 

@@ -110,12 +110,17 @@ span.acckey { text-decoration: underline; }
 .status_bar { background: #e9dfe9; }
 /* end of status bar */
 /* settings menu rules */
-
-.settings_menu  nav li { background: #d8ced8; }
-.settings_menu .top_link { font-weight: bold; font-style: italic; }
+.settings_menu #programs_menu { 
+  background: url(../../programs_menu.png); 
+  background-size: cover cover;
+  font-weight: bold; font-style: italic;
+  text-align: right;
+}
+/* .settings_menu ul li { background: #d8ced8; } */
+.settings_menu #programs_menu {  }
 .settings_menu  .submenu li { background: #e9dfe9; padding: 0; }
 .settings_menu nav ul.submenu {  padding: 0; }
-.settings_menu nav ul li { text-align: left; }
+.settings_menu nav ul li { text-align: left;  }
 .settings_menu nav li:hover { background: rgba(130,130,170,0.5); }
 .settings_menu nav a { color: #000; text-decoration: none;  }
 .settings_menu nav ul.submenu { background: rgba(0,0,0,0.8); }

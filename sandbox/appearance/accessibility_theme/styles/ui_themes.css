@@ -114,7 +114,10 @@ span.acckey { text-decoration: underline; }
 .status_bar { background: #146ad5; }
 /* end of status bar */
 /* settings menu rules */
-
+.settings_menu { 
+  background: url(../../programs_menu.png); 
+  background-size: cover cover;
+}
 .settings_menu  nav li { background: #6193cf; }
 .settings_menu .top_link { font-weight: bold; font-style: italic; }
 .settings_menu  .submenu li { padding: 0; }
