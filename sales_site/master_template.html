@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
     <title>Home - Paradise Office</title>
     <meta name="" content="" />
 <script type="text/JavaScript" src="presentation/jquery/jquery-1.9.1.js"></script>
-<script type="text/JavaScript" src="presentation/jquery/jquery-ui.min-1.10.3.js" ></script>
-<!--<script type="text/JavaScript">
-$(function() {
-  $( "#rainbow-menu#dl-head a" ).click(function() {
-    $( "#rainbow-menu div#downloads" ).show(400);
-  });  
-  $( "#rainbow-menu h3 #help-link a" ).click(function() {
-    $( "#rainbow-menu div#support" ).show(400);
-  });
-});
-</script>-->
-    <link rel="stylesheet" type="text/css" href="presentation/jquery/jquery-ui.css" /> 
+<script type="text/javascript" src="../js_libs/modernizr.custom.min.js"></script>
+<noscript>
+<h2>Javascript not present</h2><p>Please turn on javascript by altering your web browser settings. <a target="blank" href="http://www.btny.purdue.edu/enablejavascript.html">Additional help for turning this setting on</a>.</p>
+</noscript>
+<!-- CDN for js -->
+
     <link rel="stylesheet" type="text/css" href="styles/screen.css" />
 </head>
 <body id="landing">
@@ -54,8 +48,7 @@ $(function() {
     
   </nav>
   <div id="content">
-    {% block content %}
-    {% endblock %}
+   
   </div><!-- content -->
   <footer>&copy; Hazel Windle 2013. <a href="#" id="twitter">Tweet, tweet</a><a href="#" id="github">Git</a> </footer>
 
