@@ -1,5 +1,7 @@
 body { overflow-x: hidden; }
-body#landing { }
+body#landing {  
+
+}
 
 /* USING MODERNIZR FOR OLDER BROWSERS ---
  * 
@@ -11,8 +13,23 @@ html.multiplebgs #nice {
     url(background-two.png) bottom left repeat-x;
 }
 =============================== */
-
-header { width: 100%; height: 160px; }
+@font-face { 
+  font-family: headings;
+  src: url(../fonts/Sofia-Regular.otf);
+}
+@font-face {
+  font-family: body;
+  src: url(../fonts/EBGaramond.otf); 
+}
+@font-face {
+  font-family: nav;
+  src: url(../fonts/PT_Sans-Web-Bold.ttf);
+}
+header { 
+  width: 900px; height: 160px;  
+  background: url(../images/header_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+}
 header #logo { 
   background: url('../images/logo_230.png') no-repeat;
   background-size: contain;
@@ -21,12 +38,18 @@ header #logo {
 }
 div#header_text { 
   position: relative; 
-  left: 160px; top: 0px; 
+  left: 160px; top: 0px; width: 600px;
   width: auto; 
   height: auto;
 }
-div#header_text h1 { font-size: 32px; padding: 5px;  }
-div#header_text h2 { font-size: 24px; }
+div#header_text h1 { 
+  font-family: headings, "URW Chancery L", arial, "sans serif"; 
+  font-size: 42px; padding: 5px;  
+}
+div#header_text h2 { 
+  font-family: headings, "URW Chancery L", arial, "sans serif"; 
+  font-size: 34px; 
+}
 div#donate { 
   position: fixed;
   border: 1px solid gray; 
@@ -35,12 +58,19 @@ div#donate {
 }
 
 div#container { width: 100%; height: 100%; }
-#container nav { width: 150px; height: auto; float: left; }
+#container nav { 
+  width: 150px; height: auto; 
+  float: left; 
+  font-family: nav, verdana, arial, "sans serif";
+  font-weight: bold;
+    
+}
 nav .subnav ul { list-style: none;  }
-div#content { height: 700px; border: 1px solid black;
-              margin-left: 155px; float: left; 
-	      background: url(../images/island_3.png) bottom right no-repeat;
-	      background-size: 75%;
+div#content { 
+  height: 700px; width: 1000px; 
+  border: 5px solid #1961FB;
+  margin-left: 155px; float: left; 
+  font-family: body, "times new roman", georgia, "serif";
  }
 div#demo_vid { 
   position: absolute; 
@@ -55,7 +85,8 @@ div#switch {
   width: 400px; height: 200px;
   word-wrap: break-word;
   top: 530px; left: 170px;
-  background: #ccc;
+  background: #ccc url(../images/deckchair.jpg) no-repeat;
+  background-size: contain;
 }
 
 footer { position: fixed; bottom: 0px; background: #dc0001; }

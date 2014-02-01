@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created using Karbon, part of Calligra: http://www.calligra.org/karbon -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="595.277pt" height="841.891pt">
+<defs>
+  <linearGradient id="gradient0" gradientTransform="" gradientUnits="objectBoundingBox" x1="0.02298850575" y1="0.01508321139" x2="1.02298850575" y2="1.01508321139" spreadMethod="pad">
+   <stop stop-color="#000099" offset="0.15000000000" stop-opacity="1.00000000000"/>
+   <stop stop-color="#2457ff" offset="0.99000000000" stop-opacity="1.00000000000"/>
+  </linearGradient>
+  <linearGradient id="gradient1" gradientTransform="" gradientUnits="objectBoundingBox" x1="0.01724137931" y1="-0.01075004121" x2="1.02298850575" y2="0.99774597600" spreadMethod="pad">
+   <stop stop-color="#000099" offset="0.15000000000" stop-opacity="1.00000000000"/>
+   <stop stop-color="#2457ff" offset="0.99000000000" stop-opacity="1.00000000000"/>
+  </linearGradient>
+ </defs>
+<g id="layer0">
+  <g id="group0" transform="translate(21.6462, 227.928)" fill="none">
+   <path id="Shape" transform="translate(1.02005, 50.5433)" fill="url(#gradient0)" fill-rule="evenodd" stroke="url(#gradient1)" stroke-width="1.25000000000" stroke-linecap="square" stroke-linejoin="bevel" d="M0 19.5995C120.209 25.5209 220.925 29.3316 302.147 31.0318C402.46 23.3248 565.493 -2.83943 623.788 0.252639C650.299 2.59772 668.493 11.3918 678.37 26.6348C677.85 42.9331 659.656 53.4859 623.788 58.2933C593.249 58.5278 569.207 54.7171 551.663 46.8611C534.379 46.4507 514.236 46.7438 491.233 47.7405C514.958 42.8158 534.163 39.5913 548.848 38.067C591.734 38.0314 577.069 45.1023 617.94 45.9817C632.365 44.1642 643.412 39.1809 651.079 31.0318C652.379 20.2444 639.383 14.968 612.092 15.2025C481.357 30.2696 378.692 39.3568 304.097 42.4641C232.881 43.1676 131.515 35.5461 0 19.5995Z"/>
+   <ellipse id="shape0" transform="translate(593.582, 73.6605)" rx="14.24738615385pt" ry="6.33171247353pt" cx="14.24738615385pt" cy="6.33171247353pt" fill="#ff0000" fill-rule="evenodd" stroke="#ff0000" stroke-width="1.41732529000" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="1.98425540600"/>
+  </g>
+ </g>
+</svg>
