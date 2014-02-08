@@ -1,0 +1,141 @@
+/*******************************************************************
+ * 
+ * Paradise Office Cygnet API
+ * Copyright (c) 2013 Hazel Windle
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *  Email me at: lead-dev@linux-paradise.co.uk if you have any problems or questions.
+ *
+************************************************************************/
+
+/* For the file styles... 
+@import url('../../../sandbox/sandbox/ui/containers/file_port/doc/text_port.css');
+*/
+/* The basic structure for the HTML skeleton, with spaces for each of the common components */
+.title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel,  .help_box-skel, .status_bar, .settings_menu 
+{ position: relative; color: #000000; }
+.tool_pane-skel { 
+  position: absolute; right: 0px;
+  margin-left: 30px;
+  margin-right: 10px;
+}
+body { overflow: hidden; }
+.help_box-skel { 
+  border: 1px black solid; 
+  margin: 0 auto;
+}
+.status_bar { 
+  position: absolute; 
+  width: 100%;
+}
+.settings_menu { position: absolute; }
+.menu_bar-skel { z-index: 7000; }
+ /* end of basic structure --------------------------------------------------*/
+ 
+ /* title bar displaying the program name */
+ .title_bar-skel { width: 100%; }
+ .title_bar-skel h1 {  padding-right: 30px; }
+ /* end of title bar */
+ 
+ /* the file port and tabs for each file open */
+.file_port { position: absolute; border: 1px solid black; overflow-x: none;
+ overflow-y: scroll;    }
+.file_port#tabrow {  height: auto; }
+.file_port .tabs-top { position: relative; }
+.file_port .tabs-top .file_port .ui-tabs-panel {  height: auto; overflow: auto;  }
+.file_port .tabs-top .file_port .ui-tabs-nav {
+    position: absolute !important;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    padding: 0 0 0 0;
+  }
+.file_port .tabs-top .file_port .ui-tabs-nav li {  }
+.file_port .ui-tabs-selected {  }   
+.wrapper-file { height: 100%; width: 100%; }
+.file_port textarea { 
+  overflow: none;
+  border: none;
+  resize: none;
+  color: #000000;
+}
+/* end of file port ------------------------------------------------------------------ */
+
+/* start of menu bar drop down menus */
+nav { 
+  position: relative; top: 0px; left: 0px;  
+}
+ nav ul.submenu {  padding: 0; }
+nav ul li { 
+    display: block; 
+    float: left; 
+    margin: 0;
+    padding: 0; 
+}
+nav ul.submenu { 
+    position: relative; 
+    height: 0px; overflow: hidden; 
+}
+nav ul.submenu li { float: none;  }
+nav a { display: block;  }
+/* bit that actually makes things visible */
+nav ul li { transition: .5s all linear; } 
+nav ul li:hover ul.submenu { height: auto; } 
+
+/* end of menu bar css */
+
+/* common bar for large icons, below menu bar */
+.common_bar-skel .large_icon { 
+    position: absolute; top: 0px; 
+}
+.common_bar-skel .img { float: left; }
+.common_bar-skel span.name { display: block; margin-left: 42px; }
+.common_bar-skel .img { position: relative; left: 0px; top: 0px;  }
+.common_bar-skel .ctl-btn { position: relative; top: 5px; left: -3px; }
+form { position: relative; top: 2px; left: 2px; }
+/* end of common bar settings */
+
+/* status bar rules */
+.status_bar { }
+/* end of status bar */
+
+/* settings menu rules */
+.settings_menu nav { position: absolute;  }
+.settings_menu  nav li { position: relative; }
+.settings_menu nav ul { margin: 0; }
+.settings_menu nav ul.submenu { border-radius: 5px; padding: 0; }
+.settings_menu nav ul li { 
+    display: block; 
+    float: left; 
+    margin: 0;
+    padding: 0; 
+}
+.settings_menu nav a { display: block;  }
+.settings_menu nav ul.submenu {    
+    position: relative;     
+    height: 0px; overflow: hidden; 
+}
+.settings_menu nav ul.submenu li { float: none; }
+
+/* end of settings menu rules */
+
+/* tool box rules, or help box rules/tool pane */
+
+/* end of tool pane stuff */
+
+/* for hiding all dialogs until needed */
+.dialog { display: none; }
+.advanced_dialog { display: none; }

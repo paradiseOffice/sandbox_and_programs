@@ -1,0 +1,8 @@
+Left over things to-do
+
+App creator PHP
+App creator form - HTML and CSS
+Add custom fonts
+button pics
+Link bar at bottom (red first - violet last (text)white to black greyscale arrow shapes SVG)
+Copyright footer

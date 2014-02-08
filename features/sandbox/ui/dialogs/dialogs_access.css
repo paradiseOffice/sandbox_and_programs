@@ -1,0 +1,17 @@
+body#jotter { 
+    background: #6193CF url('../../appearence/themes/default_pro_theme/icons/programs/jotter_256x256.png')  no-repeat left; 
+}
+
+header .program { }
+header div.dialog_heading { }
+header .dialog_name { }
+header .program_name { }
+
+div#container { }
+div.dialog_area { position: relative; left: 300px; top: 200px; }
+div#ads { }
+
+div.previews { }
+
+footer#ctl_box { }
+div#ok_cancel { }

@@ -1,0 +1,110 @@
+body { 
+  font-family: arial, "sans serif"; 
+  font-size: 120%; 
+  color: #1c1c1c; 
+  border:0; margin: 0; padding: 0;
+  width: 100%; height: 100%;
+}
+body#app_creator-home { background-color: white; }
+body#app_creator-appearance { background-color: #A8AAFF ; }
+body#app_creator-files { background-color: #A3E2FF; }
+body#app_creator-menus { background-color: #A2FFC6; }
+body#app_creator-common-bar { background-color: #ADFF9E; }
+body#app_creator-tool-box { background-color: #F9FF9B; }
+body#app_creator-add-features { background-color: #FFDE91; }
+body#app_creator-quick-menus { background-color: #FAAAFF; }
+body#app_creator-dialogs { background-color: #FFC490; }
+body#app_creator-links { background-color: #FF8686; }
+body#app_creator-help-text { background-color: #F386FF; }
+body#app_creator-hosting-options { background-color: #BE8CFF; }
+
+header { 
+  position: relative;
+  width: 100%; height: 180px; top: 0px; left: 0px;
+  background: #477EFF url(images/header_bg.png) no-repeat; 
+  background-size: 100%;
+}
+
+textarea, button { background: white; color: black; }
+
+/* custom radio and checkbox buttons */
+:root input[type="radio"] + label {
+  content: "";
+  display: inline-block;
+  width: 16px; height: 16px;
+  margin-left: 0.5em;  margin-right: 0;
+  margin-top: 0; margin-bottom: 0;
+  padding-left: 1em;
+  background: url('images/radio_sprite.png') no-repeat 0 0;
+  
+  vertical-align: bottom;
+  position: relative;
+  bottom: 2px;
+  
+}
+:root input[type="radio"] {
+  position: absolute;
+  left: -1000em;
+}
+:root input[type="radio"]:checked  + label {
+  background-position: 0 -16px;
+}
+
+:root label input[type="radio"]:disabled  + label {
+  background-position: 0 -32px;
+}
+
+:root label input[type="radio"]:checked:disabled  + label {
+  background-position: 0 -48px;
+}
+:root input[type="checkbox"] {
+  /* original check boxes are pushed outside the viewport */
+  position: absolute;
+  left: -1000em;
+}
+:root input[type="checkbox"] + label {
+  content: "";
+  display: inline-block;
+  width: 16px; height: 16px;
+  margin-left: 0.5em;  margin-right: 0;
+  margin-top: 0; margin-bottom: 0;
+  padding-left: 1em;
+  background: url('images/checkbox_sprite.png') no-repeat 0 0;
+  
+  vertical-align: bottom;
+  position: relative;
+  bottom: 2px;
+}
+input[type="checkbox"]:focus + label, input[type="radio"]:focus + label {
+  outline: 2px dashed #bbbbbb;
+}
+:root input[type="checkbox"]:checked  + label {
+  background-position: 0 -16px;
+}
+
+:root label input[type="checkbox"]:disabled  + label {
+  background-position: 0 -32px;
+}
+
+:root label input[type="checkbox"]:checked:disabled  + label {
+  background-position: 0 -48px;
+}
+/* end of custom radio/checkbox buttons */
+
+/* start of CSS table layout for fieldsets with class of table */
+fieldset.table div { display: block; position: relative; margin:0; padding: 0; }
+.table { width: 900px; height: auto; }
+.table div.row { }
+.table div.cell { width: 280px; height: 60px; padding: 5px; }
+.table div.row div.cell:nth-child(2) { float: left; margin-left: 295px; top: -73px; }
+.table div.row div.cell:nth-child(3) { float: right; top: -73px; }
+/* end of general CSS table for fieldsets stuff */
+label { 
+  font-size: 130%; font-weight: bold; 
+  color: #444; 
+  
+}
+fieldset { border: 5px solid gray; border-radius: 27px; }
+form tr.images { height: 300px; }
+form tr, td { padding: 5px; }
+form td { width: 280px; }

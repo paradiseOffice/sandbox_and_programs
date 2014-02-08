@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="711.46875"
+   height="704.3125"
+   id="svg3780"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="fetch_all_mail.svg">
+  <defs
+     id="defs3782">
+    <linearGradient
+       id="linearGradient3756">
+      <stop
+         style="stop-color:#e3f700;stop-opacity:1;"
+         offset="0"
+         id="stop3758" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop3760" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3756"
+       id="linearGradient3762"
+       x1="15.89549"
+       y1="494.76343"
+       x2="715.35461"
+       y2="494.76343"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-588.76104"
+     inkscape:cy="313.51282"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="824"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="75"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="75" />
+  <metadata
+     id="metadata3785">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-9.90625,-141.5625)">
+    <path
+       style="fill:url(#linearGradient3762);fill-opacity:1;stroke:#110b02;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 16.89549,748.28083 2.942883,20.60006 691.573347,0 2.94289,-541.48724 L 370.03934,453.99429 20.878841,220.64598 z"
+       id="path4062"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="fill:none;stroke:#110b02;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 19.838373,218.56505 694.694717,7.10471 z"
+       id="path4064"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <g
+       transform="matrix(5.1655647,0,0,5.1655647,-1534.252,-4185.9684)"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#110b02;fill-opacity:1;stroke:#110b02;stroke-width:0.38717934;stroke-miterlimit:4;stroke-opacity:1;font-family:Sans;-inkscape-font-specification:Sans"
+       id="flowRoot4066">
+      <path
+         d="m 346.35156,922.77622 -11.75781,0 -1.85547,5.3125 -7.55859,0 10.80078,-29.16016 8.96484,0 10.80078,29.16016 -7.55859,0 -1.83594,-5.3125 m -9.88281,-5.41016 7.98828,0 -3.98437,-11.60156 -4.00391,11.60156"
+         style="font-size:40px;font-weight:bold;text-align:center;text-anchor:middle;fill:#110b02;stroke:#110b02;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         id="path3765" />
+      <path
+         d="m 359.59375,898.92856 7.51953,0 0,23.47656 13.20313,0 0,5.6836 -20.72266,0 0,-29.16016"
+         style="font-size:40px;font-weight:bold;text-align:center;text-anchor:middle;fill:#110b02;stroke:#110b02;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         id="path3767" />
+      <path
+         d="m 385.0625,898.92856 7.51953,0 0,23.47656 13.20313,0 0,5.6836 -20.72266,0 0,-29.16016"
+         style="font-size:40px;font-weight:bold;text-align:center;text-anchor:middle;fill:#110b02;stroke:#110b02;font-family:Sans;-inkscape-font-specification:Sans Bold"
+         id="path3769" />
+    </g>
+  </g>
+</svg>

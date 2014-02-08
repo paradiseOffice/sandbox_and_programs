@@ -1,0 +1,130 @@
+/*******************************************************************
+ * 
+ * Paradise Office Cygnet API
+ * Copyright (c) 2013 Hazel Windle
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *  Email me at: lead-dev@linux-paradise.co.uk if you have any problems or questions.
+ *
+************************************************************************/
+
+/* skeleton html sizes for main scaffolding 
+ * simple_screen 860w x 600h pixels base, 
+ * resizing makes the file_port larger or smaller.
+ */
+.title_bar-skel, .menu_bar-skel, .common_bar-skel, .status_bar 
+{ width: 700px; /* computed */  }
+.title_bar-skel { height: 15px; top: 0px;  }
+.title_bar-skel h1 { font-size: 10pt;  }
+
+.menu_bar-skel { height: 34px; 
+                 top: 0px; 
+                 left: 0px; }
+                 
+                 
+.common_bar-skel { height: 36px; 
+                   top: 0px; 
+                   left: 0px;  }
+/* .window height, width computed in resize-screen script */
+.file_port { width: 310px; /* computed 700 - tool pane width */ 
+             height: 374px; /* computed 600 - (25 + 36 + 40 + 25)*/ 
+             left: 0px; 
+             top: 0px; 
+             padding: 2px; }
+.file { width: 100%; height: 99%; }
+.file_port textarea { 
+  margin-left: -8px; margin-top: -3px;
+  padding: 4px; 
+  height: 400px; width: 700px; /* compute these two */
+  max-height: 1000px; max-width: 900px;
+}
+
+                 
+.status_bar { height: 15px; left: 0px; 
+              padding-left: 130px;  } /* top, width computed */
+.settings_menu { width: 100px; left: 0px; top: 0px;  }
+/* end of skeleton sizes */
+
+/* menu bar sizes */
+nav { height: 34px; } /* space for borders separating each menu tab */
+nav li { height: 30px; }
+nav ul li { width: 80px; } 
+nav ul.submenu { width: 100px; }
+nav ul.submenu li { width: 100px; }
+.top_link { 
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid #bbaaff;
+    border-radius: 3px 3px 0 0;
+    font-size: 1.2em; 
+}
+nav ul.submenu li { 
+    font-size: 1.0em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid rgba(0,0,0,0.3); 
+}
+nav ul.submenu { margin-top: -8px; border-radius: 0 0 3px 3px;  }
+nav a { padding: 8px; }
+
+/* end of menu bar sizes */
+
+/* common bar rules --------------------------------------------------------------- */
+.large_icon { 
+    /* padding-left: 2px; padding-right: 2px; */
+    width: 100px; height: 36px;  
+}
+span.name { padding-top: 8px; padding-bottom: 4px; width: 60px; font-size: 110%; }
+.img { width: 30px; height: 30px; margin: 2px; }
+input.text_field {  width: 56px; height: 25px; }
+.ctl-btn { height: 25px; width: 25px;  }
+#large_icon1 { left: 0px; }
+#large_icon2 { left: 100px; }
+#large_icon3 { left: 200px; }
+#large_icon4 { left: 300px; }
+#large_icon5 { left: 400px; }
+#large_icon6 { display: none; }
+#large_icon7 { display: none; }
+#large_icon8 { display: none; }
+#large_icon9 { display: none; }
+#large_icon10 { display: none; }
+/* common bar rules */
+
+/* status bar rules ------------------------------------------------------------ */
+
+/* end of status bar */
+/* settings menu rules ------------------------------------------------------------- */
+.settings_menu nav { height: 34px; } /* space for borders separating each menu tab */
+.settings_menu nav li { height: 30px; }
+.settings_menu nav ul li { width: 100px; } 
+.settings_menu nav ul.submenu { width: 100px; }
+.settings_menu nav ul.submenu li { 
+    width: 100px;
+    font-size: 0.7em;
+    border-top: 1px solid rgba(0,0,0,0.3); 
+}
+.settings_menu .submenu li {  }
+.settings_menu nav a { padding: 8px; }
+.settings_menu nav ul.submenu {
+    top: -180px; 
+    border-radius: 3px 3px 0 0;
+}
+/* end of settings menu rules */
+
+/* help rules */
+div#messages { padding: 2px; height: 98%; border: 1px solid #ccc; }
+/* end of help rules */
+

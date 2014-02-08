@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg3247"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="cash_flow.svg">
+  <defs
+     id="defs3249" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-125"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="845"
+     inkscape:window-x="-2"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3252">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#110b02;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 8.9183879,560.19589 687.8775121,0 z"
+       id="path3824"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#110b02;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3826"
+       width="104.1912"
+       height="238.47804"
+       x="47.260788"
+       y="568.39233" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#110b02;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3828"
+       width="84.956985"
+       height="227.46548"
+       x="189.79443"
+       y="324.50879" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#110b02;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3830"
+       width="79.507019"
+       height="194.61003"
+       x="318.5849"
+       y="568.40204" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#110b02;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3832"
+       width="84.993675"
+       height="164.46957"
+       x="436.42572"
+       y="565.65863" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#110b02;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3834"
+       width="76.735344"
+       height="241.16823"
+       x="565.24969"
+       y="313.54657" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3836"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#110b02;stroke-width:0.52127218;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans"
+       transform="matrix(5.8302141,0,0,6.7060191,-3047.9362,-176.44916)"><flowRegion
+         id="flowRegion3838"><rect
+           id="rect3840"
+           width="120"
+           height="44.285713"
+           x="553.57141"
+           y="39.505039"
+           style="fill:none;stroke:#110b02;stroke-width:0.52127218;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" /></flowRegion><flowPara
+         id="flowPara3842"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#110b02;stroke-width:0.52127218;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold">2013</flowPara></flowRoot>  </g>
+</svg>
