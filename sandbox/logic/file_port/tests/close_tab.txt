@@ -1,4 +1,0 @@
-1. Run manage.py test to create a file in the file_port
-2. Check that the red close tab icon pops up on the tab bar.
-3. Attempt to close the tab.
-4. Record any bugs.

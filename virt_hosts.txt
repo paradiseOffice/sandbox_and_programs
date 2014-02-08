@@ -1,7 +1,0 @@
-Virtual Hosts
-
-Sales site - goes into root
-Notes - Stuff in root of smaller office that isn't a dir or git.
-Programs - SSL (actual v.host, contains sandbox, programs dirs and uploading files/user stuff).
-sandbox - exactly same
-blog - Comments forum (buddyPress or whatever) and program usage blog.

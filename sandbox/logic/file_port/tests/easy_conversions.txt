@@ -1,3 +1,0 @@
-1. Get binary files with little pages/formatting. Run them through document convertor, taking pics of each page in print view.
-2. Take pics of odf files.
-3. Compare the two side by side.

@@ -26,6 +26,7 @@
     src: 
         url('fonts/body/Ubuntu-C.ttf') format('truetype');
 }
+body { color: #1c1c1c; }
 .title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel, .help_box-skel, .status_bar, .settings_menu {
   font-family:  arial, sans-serif;
 }
