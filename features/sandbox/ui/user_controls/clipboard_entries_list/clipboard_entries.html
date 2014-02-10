@@ -25,35 +25,7 @@
      <!-- jquery UI -->
      <link rel="stylesheet" type="text/css" href="../../../js_lib/jqueryui-default-pro/css/default-pro/jquery-ui-1.10.3.custom.css" />
      <style type="text/css">
-      #clippings_list { width: 200px; height: auto; }
       
-      :root input[type="radio"] { position: absolute; left: -1400px; }
-      :root input[type="radio"] + label {
-        background: url('../../sandbox/appearance/default_pro_theme/styles/images/radio_sprite.png') no-repeat 0 0;
-        vertical-align: bottom;
-        position: relative;
-        bottom: 2px;
-        padding-left: 5px;
-      }
-      
-      label.copied_text { 
-        display: block; 
-        height: 36px; width: 180px; 
-        margin-left: 20px; 
-        overflow: hidden;
-        font-size: 100%;
-        font-family: serif;
-        text-overflow: ellipsis;
-      }
-      #clippings_list ul li { 
-        list-style-type: none; 
-        margin-left: 5px; margin-right: 5px; 
-        display: block;
-        height: 40px;
-        width: 100%;
-        border: 1px solid #ccc;
-      }
-      label.copied_text #text1 { font-style: italic; }
       
      </style>
 </head>
@@ -62,12 +34,12 @@
 <form method="post" action="" >
 <div id="clippings_list">
   <ul>
-    <li><input type="radio" name="clipping" id="text1" class="clipping" value="" checked="checked"/><label id="text1" class="copied_text">tuieisldfjiks some copied text 1</label></li>
-    <li><input type="radio" name="clipping" id="text2" class="clipping" value="" checked="checked"/><label id="text2" class="copied_text">tuieisldfjiks some copied text 1</label></li>
-    <li><input type="radio" name="clipping" id="text3" class="clipping" value="" checked="checked"/><label id="text3" class="copied_text">tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1</label></li>
-    <li><input type="radio" name="clipping" id="text4" class="clipping" value="" checked="checked"/><label id="text4" class="copied_text">tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1</label></li>
-    <li><input type="radio" name="clipping" id="text5" class="clipping" value="" checked="checked"/><label id="text5" class="copied_text">one</label></li>
-    <li><input type="radio" name="clipping" id="text6" class="clipping" value="" checked="checked"/><label id="text6" class="copied_text">tuieisldfjiks some copied text 1</label></li>
+    <li><input type="radio" name="clipping" id="text1" class="clipping" value="" checked="checked"/><label for="text1"></label><span id="text1" class="copied_text">tuieisldfjiks some copied text 1</span></li>
+    <li><input type="radio" name="clipping" id="text2" class="clipping" value="" checked="checked"/><label for="text2"></label><span id="text2" class="copied_text">tuieisldfjiks some copied text 1</span></li>
+    <li><input type="radio" name="clipping" id="text3" class="clipping" value="" checked="checked"/><label for="text3"></label><span id="text3" class="copied_text">tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1</span></li>
+    <li><input type="radio" name="clipping" id="text4" class="clipping" value="" checked="checked"/><label for="text4"></label><span id="text4" class="copied_text">tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1tuieisldfjiks some copied text 1</span></li>
+    <li><input type="radio" name="clipping" id="text5" class="clipping" value="" checked="checked"/><label for="text5"></label><span id="text5" class="copied_text">one</span></li>
+    <li><input type="radio" name="clipping" id="text6" class="clipping" value="" checked="checked"/><label for="text6"></label><span id="text6" class="copied_text">tuieisldfjiks some copied text 1</span></li>
   </ul>
 </div>
 </form>
