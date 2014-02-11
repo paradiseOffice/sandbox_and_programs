@@ -19,10 +19,15 @@ src="/home/hazel/bin/jquery_dl/jquery-2.0.3.js">
   <h2>Menus</h2>
 </header>
 
+<div id="menus_created"><!-- Actual menu bar here with submenus permanently visible --></div>
+
 <form id="menu" method="post" action="">
   <h3>Create a New Menu</h3>
   <input type="text" name="menu-title" maxlength="20" placeholder="Title" />
   <span class="help">Examples include File, Edit, Tools</span><br /> 
+  
+</form>
+<form id="add_item" method="post" action="">
   <fieldset id="menu-items">
     <input type="text" name="menu-item1" maxlength="20" placeholder="item1" />
     <label for="item1-acc">Alt Key</label><input type="text" name="item1-acc" id="item1-acc" maxlength="1" placeholder="1" /><br />

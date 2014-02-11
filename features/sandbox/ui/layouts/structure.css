@@ -52,8 +52,8 @@ body { overflow: hidden; }
  
  /* the file port and tabs for each file open */
 .file_port { position: absolute; border: 1px solid black; overflow-x: none;
- overflow-y: scroll;    }
-.file_port#tabrow {  height: auto; }
+ overflow-y: none;    }
+.file_port#tabrow {  height: auto; overflow-x: auto; overflow-y: none; }
 .file_port .tabs-top { position: relative; }
 .file_port .tabs-top .file_port .ui-tabs-panel {  height: auto; overflow: auto;  }
 .file_port .tabs-top .file_port .ui-tabs-nav {
@@ -65,13 +65,16 @@ body { overflow: hidden; }
   }
 .file_port .tabs-top .file_port .ui-tabs-nav li {  }
 .file_port .ui-tabs-selected {  }   
-.wrapper-file { height: 100%; width: 100%; }
-.file_port textarea { 
+.wrapper-file { height: 100%; width: 100%; overflow-x: none; overflow-y: scroll; }
+.file_port .file { 
   overflow: none;
   border: none;
   resize: none;
   color: #000000;
+  background: white;
 }
+.ui-tabs-nav.open { visibility: visible; }
+.ui-tabs-nav.closed { visibility: hidden; }
 /* end of file port ------------------------------------------------------------------ */
 
 /* start of menu bar drop down menus */
