@@ -1,0 +1,70 @@
+table#gantt {
+  width: 700px; /* computed in resize screen.js */
+  height: 600px;
+}
+table#gantt tr {  height: 3%; padding: 1%; }
+table#gantt td { /* debug border: 1px solid black; */ }
+table#gantt td.taskMark { 
+  background-color: #ccc;
+ /*  background: url('some kind of pencil grad (vertical)') repeat-y 0 0; */
+  width: 5%;
+  color: #146BD5; 
+  font-family: arial, "sans serif";
+}
+table#gantt td.timeMark {
+  width: 9%;
+  background: #eee; url('speckly paper texture white-grey') ;
+}
+table#gantt td.timeMark p.week {
+  padding: 0.2em;
+  font-family: arial, "sans serif"; 
+  font-size: 120%;
+  text-align: center;
+}
+table#gantt td.timeMark p.date {
+  padding: 0.2em;
+  font-family: arial, "sans serif";
+  font-size: 120%;
+  text-align: center;
+}
+table#gantt td#backInPast, table#gantt td#future {
+  width: 5%;
+  border: 1px solid black;
+}
+table#gantt td#backInPast a, table#gantt td#future a {
+  text-decoration: none;
+  color: black;
+}
+table#gantt td#backInPast img, table#gantt td#future img {
+  width: 100%; height: 100%;
+}
+table#gantt td#chartArea { background: #fff; }
+table#gantt td#chartArea div.task { 
+  position: relative;
+  width: 9%; /* changed by user or program */
+  height: 5%;
+  top: 0; left: 9%;
+  color: black;
+  background: #111;
+  font-size: 100%;
+  font-weight: bold;
+  font-family: arial, "sans serif";
+}
+table#gantt td#chartArea div:first-child { top: 0; left: 0; }
+table#gantt div.task[class="critical"] { background-color: #ee0000; color: white; !important }
+table#gantt div.marketing { background-color: #F0B2B0; /* light pink */ }
+table#gantt div.production { background-color: #FFCD00; /* cadium yellow */ }
+table#gantt div.code { background-color: #000080;  color: white; }
+table#gantt div.design { background-color: #B3925D; /* light tan */ }
+table#gantt div.writing { background-color: #CBFFB9; /* mint green */ }
+table#gantt div.editing { background-color: #FFBF80; /* light peach */ }
+table#gantt div.testing { background-color: #6A0056; color: white; /* indigo */ }
+table#gantt div.beta { background-color: #343434; color: white; /* dark grey */ }
+table#gantt div.alpha { background-color: #CDCDCD; /* light grey */ }
+table#gantt div.debugging { background-color: #EB7331; color: white; /* dark orange */ }
+table#gantt div.sales { background-color: #CC009A; color: white;  /* dark pink */ }
+table#gantt div.training { background-color: #530080; color: white; /* violet */ }
+table#gantt div.userRequirements { background-color: #FFEA5B; /* light lemon yellow */ }
+table#gantt div.planning { background-color: #ADB724; /* pea green */ }
+table#gantt div.dependency { background-color: #4292CF; /* light blue */ }
+
