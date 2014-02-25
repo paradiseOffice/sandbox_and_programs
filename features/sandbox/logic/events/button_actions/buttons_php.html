@@ -14,7 +14,7 @@ src="/home/hazel/bin/jquery_dl/jquery-2.0.3.js">
 $(function() {
   $( '#button_funct' ).click(function (event)
   {
-    var $caller = "button_funct";
+    var $caller = "button_funct"; // change this to the id text ... look up online (js get id value)
     var $params = "text='Spam, spam spam and eggs'";
     try
     {
@@ -44,7 +44,7 @@ function btn_link(caller, params)
       {
         if ( this.responseText != null )
         {
-          document.getElementById('replace').innerHTML = this.responseText
+          document.getElementById('replace').innerHTML = this.responseText;
         }
       else console.log("Ajax error: no data received. ");
       }
@@ -78,7 +78,7 @@ a { color: black; padding: 0.2em; text-decoration: none; }
 </head>
 <body>
 
-<div id="button_box"><a href="button_funct" id="button">Click</a></div>
+<div id="button_box"><a href="#" id="button_funct">Click</a></div>
 <div id="replace">Some text that changes. </div>
 
 </body>

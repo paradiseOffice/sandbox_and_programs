@@ -22,7 +22,7 @@ css or c:
 
 /*******************************************************************
  * 
- * Paradise Office Cygnet API
+ * Paradise Office 
  * Copyright (c) 2013 Hazel Windle
  *
  *  This program is free software; you can redistribute it and/or modify
