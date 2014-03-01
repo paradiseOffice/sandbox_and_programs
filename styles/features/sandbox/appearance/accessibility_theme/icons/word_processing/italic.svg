@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="688.71613"
+   height="689.15613"
+   id="svg3511"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="italic.svg">
+  <defs
+     id="defs3513">
+    <linearGradient
+       id="linearGradient3754">
+      <stop
+         style="stop-color:#110b02;stop-opacity:1;"
+         offset="0"
+         id="stop3756" />
+      <stop
+         style="stop-color:#dddddd;stop-opacity:1;"
+         offset="1"
+         id="stop3758" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3754"
+       id="linearGradient3760"
+       x1="318.7023"
+       y1="656.98602"
+       x2="356.5827"
+       y2="656.98602"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3754"
+       id="linearGradient3765"
+       gradientUnits="userSpaceOnUse"
+       x1="324.63062"
+       y1="655.7157"
+       x2="356.5827"
+       y2="656.98602" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3754"
+       id="linearGradient3767"
+       gradientUnits="userSpaceOnUse"
+       x1="318.7023"
+       y1="656.98602"
+       x2="356.5827"
+       y2="656.98602" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-584.22018"
+     inkscape:cy="324.56709"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="824"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="5"
+     fit-margin-left="215"
+     fit-margin-right="215"
+     fit-margin-bottom="5" />
+  <metadata
+     id="metadata3516">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(26.494104,-167.77316)">
+    <g
+       transform="matrix(6.7472821,0,0,6.7472821,-1960.2926,-3920.5077)"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:url(#linearGradient3767);fill-opacity:1;stroke:#110b02;stroke-width:0.7410391;stroke-miterlimit:4;stroke-opacity:1;font-family:Sans;-inkscape-font-specification:Sans"
+       id="flowRoot3833">
+      <path
+         d="m 349.6665,685.354 -2.016,2.88 c -3.744,5.61599 -7.056,8.64 -9.216,8.64 -1.152,0 -2.16,-1.008 -2.16,-2.16 0,-0.864 0.864,-5.76 1.296,-7.488 l 13.104,-48.096 c -7.77599,1.728 -17.85601,3.168 -29.088,4.032 l 0,3.888 c 6.19199,0 8.496,1.152 8.496,4.176 0,1.152 -0.432,3.312 -1.008,5.76 l -8.352,30.96 c -1.152,4.03199 -1.872,8.064 -1.872,9.936 0,5.32799 4.03201,9.072 9.936,9.072 8.63999,0 13.96801,-4.46402 24.048,-19.584 l -3.168,-2.016 m -3.168,-78.336 c -5.03999,0 -9.504,4.464 -9.504,9.504 0,5.61599 4.17601,9.936 9.504,9.936 5.47199,0 9.936,-4.32001 9.936,-9.648 0,-5.328 -4.60801,-9.792 -9.936,-9.792"
+         style="font-size:144px;font-style:italic;font-weight:bold;fill:url(#linearGradient3765);stroke:#110b02;font-family:Nimbus Roman No9 L;-inkscape-font-specification:Nimbus Roman No9 L Bold Italic"
+         id="path3763"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

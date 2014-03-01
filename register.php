@@ -1,7 +1,32 @@
 <?php
-  require_once ('../../web_includes/db_connect.php');
-  require_once ('../../web_includes/functions.php');
-  require_once ('../../web_includes/encrypt_string.php');
+  /*******************************************************************
+ * 
+ * Paradise Office 
+ * Copyright (c) 2013 Hazel Windle
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *  Email me at: lead-dev@linux-paradise.co.uk if you have any problems or questions.
+ *
+************************************************************************/
+
+  require_once '/home/web_includes/db_connect.php';
+  require_once '/home/web_includes/functions.php';
+  include_once '/home/web_includes/login.php';
+  require_once '/home/web_includes/encrypt_string.php';
+  require_once '/home/web_includes/recaptchalib.php';
 
   // Plonk these files two dirs out of web root somewhere - in a folder called web_includes.
 
@@ -18,7 +43,7 @@ if (isset($_POST['register']))
     $fName = "";
   } // First name check
   
-  if (( preg_match('/[a-zA-Z\- +/', trim($_POST['lName']))) && (strlen(trim($_POST['lName'])) <= 25 ))
+  if (( preg_match('/[a-zA-Z\- ]+/', trim($_POST['lName']))) && (strlen(trim($_POST['lName'])) <= 25 ))
   {
     $lName = trim($_POST['lName']);
   }
@@ -28,7 +53,7 @@ if (isset($_POST['register']))
     $lName = "";
   }  // last name check
   
-  if (( preg_match('/[a-zA-Z0-9\- +/', trim($_POST['company']))) && ( strlen(trim($_POST['company'])) <= 50 ))
+  if (( preg_match('/[a-zA-Z0-9\- ]*/', trim($_POST['company']))) && ( strlen(trim($_POST['company'])) <= 50 ))
   {
     $company = trim($_POST['company']);
   }
@@ -39,7 +64,7 @@ if (isset($_POST['register']))
   } // company checking
   $email = strtolower(trim($_POST['email'])); // For people who put capitals in emails.
   
-  if ((preg_match('/[^a-z0-9\-_]+@[a-z0-9\-_]+.[a-z.]*/', $email )) && (strlen($email) <= 100 ) )
+  if ((preg_match('/^[a-z0-9\-_]+@[a-z0-9\-_]+.[A-Za-z.]+/', $email )) && (strlen($email) <= 100 ) )
   {
     /* spotted a bug in the above reg expression - . should have been optional for the top level domain co.uk/com part.  */
     $email_correct = $email;
@@ -61,7 +86,7 @@ if (isset($_POST['register']))
   } // username check
   if (trim($_POST['password1']) == trim($_POST['password2']))
   {
-    if (preg_match('/[a-zA-Z0-9\-_*^!$]......+', trim($_POST['password1'])))
+    if (preg_match('/[a-zA-Z0-9\-_*^!$]......+/', trim($_POST['password1'])))
     {
       $password = trim($_POST['password1']);
       $cipher_pass = encrypt_string($password);
@@ -89,15 +114,22 @@ if (isset($_POST['register']))
     }
     else
     {
-      if ( humanOrNot())
+      // captcha stuff ... from Google?!
+      $privatekey = "6LfUYu8SAAAAAEvTHX82XEqTB-6cPwTMWN9f5a78";
+      $resp = recaptcha_check_answer ($privatekey,
+                                $_SERVER["REMOTE_ADDR"],
+                                $_POST["recaptcha_challenge_field"],
+                                $_POST["recaptcha_response_field"]);
+      if (!$resp->is_valid) 
       {
-        // humanOrNot asks a simple text based math question and is like a captcha
+        // What happens when the CAPTCHA was entered incorrectly
+        die ("Please don't take this the wrong way, but are you a 'spam bot'? <br />Please try signing up again." .      "(reCAPTCHA said: " . $resp->error . ")");
+      } 
+      else 
+      {
+        // Your code here to handle a successful verification
         insertUser($fName, $lName, $email, $company, $uName, $password);
         header("Location: login.php");
-      }
-      else
-      {
-        $errors .= "<p>Please don't take this the wrong way, but are you a 'spam bot'? <br />Please try signing up again. </p>";
       }
     }
     $errors .= "Oops, one or more of the required boxes are empty. ";
@@ -117,7 +149,7 @@ if (isset($_POST['register']))
 </head>
 <body>
 
-<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+<form method="POST" action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>">
 <label for="fName">First Name</label>
 <input type="text" name="fName" id="fName" placeholder="First name" /><br />
 <label for="lName">Last Name</label>
@@ -133,7 +165,14 @@ if (isset($_POST['register']))
 <!-- this gets encrypted in Javascript, sha512 before getting sent to the server's PHP file -->
 <label for="password2">Same Password Again</label>
 <input type="password" name="password2" id="password2" /><br />
-<input type="submit" value="Register" id="register" name="register" />
+<!-- Captcha -->
+<?php
+  $publickey = "6LfUYu8SAAAAABixp_frVxvlzKXmaMLWWAVgTRX3"; 
+  echo recaptcha_get_html($publickey);
+?>
+<!-- end of Captcha -->
+<input type="submit" value="Register" id="register" name="register" onclick="return register_form(this.form, this.form.fName, this.form.lName, this.form.company, this.form.email, this.form.uName, this.form.password1, this.form.password2);" />
+<?php echo $errors; ?>
 </form>
 
 </body>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+     <title>appName - Paradise Office</title>
+  
+<script type="text/JavaScript" src="../../../js_lib/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../../../js_lib/modernizr.custom.min.js"></script>
+<noscript>
+<h2>Javascript not present</h2><p>Please turn on javascript by altering your web browser settings. <a target="blank" href="http://www.btny.purdue.edu/enablejavascript.html">Additional help for turning this setting on</a>.</p>
+</noscript>
+<script type="text/JavaScript" src="../../../js_lib/jqueryui-access/js/jquery-ui-1.10.3.custom.js" ></script>
+<script type="text/JavaScript" src="../../../js_lib/resize-screen.js"></script>
+<script type="text/JavaScript" src="../../sandbox/logic/file_port/file_port_tabs.js"></script>
+
+     <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/reset.css" />
+     <!-- choosing the screen size/type -->
+     <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/screen_large.css" />
+     <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/structure.css" />
+     <link rel="stylesheet" type="text/css" href="../../sandbox/ui/dialogs/dialogs_access.css" />
+     <link rel="stylesheet" type="text/css" href="../../sandbox/appearance/accessibility_theme/styles/ui_themes.css" />
+     <!-- jquery UI -->
+     <link rel="stylesheet" type="text/css" href="../../../js_lib/jqueryui-access/css/access/jquery-ui-1.10.3.custom.css" />
+</head>
+<body> 
+
+ <div class="title_bar-skel">
+    <h1>Document Title - Glorified Typewriter</h1>
+  </div>
+  <header>
+  <div class="menu_bar-skel">
+    <nav role="navigation" aria-label="Main menu">
+    <ul role="menubar">
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">F</span>ile</a>
+            <ul class="submenu" role="menu" aria-hidden="true">
+                <li role="menuitem" tabindex="-1"><a id="link1" href="#"><span class="acckey">N</span>ew</a></li>
+                <li role="menuitem" tabindex="-1"><a href="dialog-open.php"><span class="acckey">O</span>pen</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#"><span class="acckey">S</span>ave</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Save <span class="acckey">A</span>s</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#" title="Ctrl + W"><span class="acckey">C</span>lose File</a></li>
+            </ul>
+        </li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Services</a>
+            <ul class="submenu" role="menu" aria-hidden="true">
+                <li role="menuitem" tabindex="-1"><a href="#">Abrasion</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Peel</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Wax</a></li>
+            </ul>
+        </li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Contact</a>
+            <ul class="submenu" role="menu" aria-hidden="true">
+                <li role="menuitem" tabindex="-1"><a href="#">Telephone</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Letter</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Email </a></li>
+            </ul>
+        </li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Menu 5</a></li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Menu 6</a></li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Menu 7</a></li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Menu 8</a></li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Menu 9</a></li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Menu 10</a></li>
+    </ul>
+  </nav>
+
+  </div>
+  <div class="common_bar-skel">
+  
+     <a href="#">
+    <div id="large_icon1" class="large_icon">
+      <div id="img_large1" class="img"></div>
+      <span class="name">New</span>      
+    </div>
+    </a>
+    <a href="#">
+    <div id="large_icon2" class="large_icon" onclick="saveTextAsFile()"> 
+      <div id="img_large2" class="img"></div>
+      <span class="name">Save</span>
+    </div>
+    </a>
+    <a href="#">
+    <div id="large_icon3" class="large_icon">
+      <form method="get" action="#"> <!-- spellcheck.php -->
+      <input type="text" id="spellcheck" class="text_field" name="spellcheck" placeholder="word look up" /> 
+      <button class="ctl-btn" type="submit" id="search" title="Spellcheck" /></form>
+    </div>
+    </a>
+    <a href="#">
+    <div id="large_icon4" class="large_icon">
+      <div id="img_large4" class="img"></div>
+      <span class="name">Wikipedia</span>
+    </div>
+    </a>
+    <a href="#">
+    <div id="large_icon5" class="large_icon">
+      <form method="get" action="#"> <!-- spellcheck.php -->
+      <input type="text" id="spellcheck" class="text_field" name="spellcheck" placeholder="word look up" /> 
+      <button class="ctl-btn" type="submit" id="search" title="Spellcheck" /></form>
+    </div>
+    </a>
+    <a href="#">
+    <div id="large_icon6" class="large_icon">
+      <form method="get" action="#"> <!-- spellcheck.php -->
+      <input type="text" id="spellcheck" class="text_field" name="spellcheck" placeholder="word look up" /> 
+      <button class="ctl-btn" type="submit" id="search" title="Spellcheck" /></form>
+    </div>
+    </a>
+    <a href="#">
+    <div id="large_icon7" class="large_icon">
+      <form method="get" action="#"> <!-- spellcheck.php -->
+      <input type="text" id="spellcheck" class="text_field" name="spellcheck" placeholder="word look up" /> 
+      <button class="ctl-btn" type="submit" id="search" title="Spellcheck" /></form>
+    </div>
+    </a>
+    <a href="#">
+    <div id="large_icon8" class="large_icon">
+      <form method="get" action="#"> <!-- spellcheck.php -->
+      <input type="text" id="spellcheck" class="text_field" name="spellcheck" placeholder="word look up" /> 
+      <button class="ctl-btn" type="submit" id="search" title="Spellcheck" /></form>
+    </div>
+    </a>
+    <a href="#">
+    <div id="large_icon9" class="large_icon">
+      <form method="get" action="#"> <!-- spellcheck.php -->
+      <input type="text" id="spellcheck" class="text_field" name="spellcheck" placeholder="word look up" /> 
+      <button class="ctl-btn" type="submit" id="search" title="Spellcheck" /></form>
+    </div>
+    </a>
+    <a href="#">
+    <div id="large_icon10" class="large_icon">
+      <form method="get" action="#"> <!-- spellcheck.php -->
+      <input type="text" id="spellcheck" class="text_field" name="spellcheck" placeholder="word look up" /> 
+      <button class="ctl-btn" type="submit" id="search" title="Spellcheck" /></form>
+    </div>
+    </a>
+  
+  </div><!-- common bar -->
+  </header>
+<section class="window">
+  <div class="file_port" >
+    
+      <div id="tabrow" class="tabs-top">
+        <ul>
+          <li><a href="#file1-wrapper">File 1</a></li>
+          <li><a href="#file2-wrapper">File 2</a></li>
+          <li><a href="#file3-wrapper">File 3</a></li>
+        </ul>
+     
+     
+      <div id="file1-wrapper" >
+        <textarea id="file1" ></textarea>
+      </div>
+      <div id="file2-wrapper" >
+        <textarea id="file1" >&nbsp; </textarea>
+      </div>
+      <div id="file3-wrapper" >
+        <textarea id="file3" >Something &nbsp; </textarea>
+      </div>
+      
+    </div><!-- tabrow -->
+  </div><!-- file_port -->
+        
+<div class="tool_pane-skel">
+    <table id="Words" class="tool_box">
+    <tr>
+      <td class="odd"><a href="./" id="font_choose" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/insert_spec_char.svg" /></a></td>
+      <td class="even"><a href="./" id="underline" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/italic.svg" /></a></td>
+      <td class="odd"><a href="./" id="bold" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/just_centre.svg" /></a></td>
+      <td class="even"><a href="./" id="italic" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/just_justify.svg" /></a></td>
+    </tr>
+    <tr>
+      <td class="even"><a href="./" id="strikethrough" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/just_left.svg" /></a></td>
+      <td class="odd"><a href="./" id="border" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/just_right.svg" /></a></td>
+      <td class="even"><a href="./" id="translate" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/merge_cells.svg" /></a></td>
+      <td class="odd"><a href="./" id="page break" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/pic_list.svg" /></a></td>
+    </tr>
+  </table>
+  <table id="Para" class="tool_box">
+    <tr>
+      <td class="odd"><a href="./" id="indent more" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/subscript.svg" /></a></td>
+      <td class="even"><a href="./" id="dict" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/superscript.svg" /></a></td>
+      <td class="odd"><a href="./" id="configure" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/split_cells.svg" /></a></td>
+      <td class="even"><a href="./" id="zoom original" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/strikethrough.svg" /></a></td>
+    </tr>
+    <tr>
+      <td class="even"><a href="./" id="justify" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/table_format.svg" /></a></td>
+      <td class="odd"><a href="./" id="left" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/translate.svg" /></a></td>
+      <td class="even"><a href="./" id="center" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/underline.svg" /></a></td>
+      <td class="odd"><a href="./" id="right" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/.svg" /></a></td>
+    </tr>
+  </table>
+
+  
+     <div class="help_box-skel">
+        <div id="messages">
+            <p class="warn">Warning</p>
+            <p class="error">Error</p>
+            <p class="info">Information</p>
+            <p class="help">Help</p>
+        </div>
+     </div><!-- help box -->
+     
+  </div><!-- tool pane -->
+</section><!-- window -->
+ <div class="status_bar">
+<div class="settings_menu">
+  <nav role="navigation" aria-label="Main menu">
+    <ul role="menubar">
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Settings</a>
+            <ul class="submenu" role="menu" aria-hidden="true">
+                <li role="menuitem" tabindex="-1"><a href="#">Set Language</a></li>
+                <hr />
+                <li class="label" tabindex="-1">Themes</li>
+                <li role="menuitem" tabindex="-1"><a href="#">Contrast</a></li>
+                <li role="menuitem" tabindex="-1"><a href="#">Default Pro</a></li>
+                
+            </ul>
+        </li>
+    </ul>
+  </nav>
+</div>
+
+
+
+</body>
+</html>

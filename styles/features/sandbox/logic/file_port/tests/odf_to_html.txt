@@ -1,0 +1,4 @@
+1. keep screen grabs of odf files.
+2. Convert using my utility, compare raw html results to Libreoffice odf-html conversions.
+3. See if the documents look the same when viewed in a browser, and in LO.
+4. Note any differences as bugs.

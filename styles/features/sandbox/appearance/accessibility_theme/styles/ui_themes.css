@@ -1,0 +1,167 @@
+/*******************************************************************
+ * 
+ * Paradise Office Cygnet API
+ * Copyright (c) 2013 Hazel Windle
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License along
+ *  with this program; if not, write to the Free Software Foundation, Inc.,
+ *  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ *
+ *  Email me at: lead-dev@linux-paradise.co.uk if you have any problems or questions.
+ *
+************************************************************************/
+/* all things: font settings */
+@font-face {
+    font-family: buttons;
+    src: 
+        url('fonts/body/Ubuntu-C.ttf') format('truetype');
+}
+.title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel, .help_box-skel, .status_bar, .settings_menu {
+  font-family:  arial, sans-serif;
+}
+/* end of all things: font settings */
+/* title bar */
+.title_bar-skel { background: #6193CF; }
+.title_bar-skel h1 {  
+     text-align: right; 
+     font-weight: bold;
+}
+
+/* skeleton */
+.window { background: #6193cf; }
+header { background: #6193cf url('images/top_bg.png') repeat-x; 
+    background-size: contain ;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+}
+/* end of skeleton */
+
+/* Common bar: large icons */
+.common_bar-skel .large_icon {
+      background-image: url('images/large-icon-bg.svg'); 
+      -webkit-background-size: cover;
+      background-size: cover;
+      -moz-background-size: cover;
+      color: #dbe1e4;
+      font-family: buttons, tahoma, sans-serif; 
+      font-weight: bold;
+}
+
+.common_bar-skel .img { 
+    background-size: contain; 
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+}
+.common_bar-skel a, .large_icon, span.name, .img { 
+    text-decoration: none; color: #dbe1e4; 
+}
+.common_bar-skel input.text_field { border: 1px solid #dbe1e4; }
+.common_bar-skel .ctl-btn {   
+    border: 1px solid #dbe1e4; 
+    background-color: #6193cf;  
+    background-size: 100% 100%;
+}
+.common_bar-skel span.acckey { text-decoration: underline; }
+
+/* these should go in a program specific CSS file to deal with icons, pics */
+#img_large1 { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/general/128/new_file_128x128.png'); }
+#img_large2 { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/general/128/save_file_128x128.png'); }
+button#search { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/word_processing/64/dictionary_64x64.png'); }
+#img_large4 { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/general/wikipedia.png'); }
+
+/* end of common bar and large icons */
+
+/* start of menu bar */
+nav li { background: #dbe1e4; }
+.top_link { 
+    color: #222;
+    font-family: arial, tahoma, sans-serif;
+     font-weight: bold;
+     border-color: #110b02;
+}
+nav ul { margin: 0; }
+nav ul.submenu, .submenu li { 
+  background: #6193cf; 
+  color: #110b02; 
+  padding: 0; 
+}
+nav ul.submenu { padding: 0; }
+nav ul li { text-align: center; }
+nav li:hover { background: rgba(219,225,228,0.8); }
+nav a { color: #222; text-decoration: none; }
+nav ul.submenu li { 
+    text-align: left; 
+    font-family: arial, tahoma, sans-serif;
+    font-weight: normal;
+}
+ /* other formatting - accessibility */
+span.acckey { text-decoration: underline; }
+ 
+  /* end of menu parts */
+/* end of menu bar stuff */
+
+/* status bar rules --------------------------------------------------------*/
+.status_bar { background: #146ad5; }
+/* end of status bar */
+/* settings menu rules */
+.settings_menu { 
+  background: url(../../programs_menu.png); 
+  background-size: cover cover;
+}
+.settings_menu  nav li { background: #6193cf; }
+.settings_menu .top_link { font-weight: bold; font-style: italic; }
+.settings_menu  .submenu li { padding: 0; }
+.settings_menu nav ul.submenu {  padding: 0; }
+.settings_menu nav ul li { text-align: left; }
+.settings_menu nav ul.submenu li:hover { background: rgba(219,225,228,0.7); }
+.settings_menu nav a { color: #222; text-decoration: none;  }
+.settings_menu nav ul.submenu {  }
+.settings_menu nav ul.submenu li { text-align: left; background: rgba(97,147,207,1.0); }
+/* end of settings menu rules */
+
+
+/* For the tool pane and Help box ------------------------------------------------*/
+div#messages p {  border-radius: 5px; }
+div#messages p.info { border-color: #ccc; border-radius: 5px; }
+div#messages p.warn { border-color: #FF9900; }
+div#messages p.error { border-color: #FF0000; }
+div#messages p.help { border-color: #6699FF; }
+div#messages p { font-family: arial, sans-serif; font-size: 100%; color: #1c1c1c; }
+/* end of help box (lower down on tool pane) */
+
+/* tool_box rules, 
+ * the icon pics get linked into the html file, cell bg changes on hover  
+ */
+.tool_pane-skel td a img { background: #ffffff; }
+.tool_pane-skel td.odd { background: #110b02; border-color:  #110b02; }
+.tool_pane-skel td.even { background: #000080; border-color: #000080; }
+.tool_pane-skel td a:hover img { 
+  background: rgba(180,180,180,0.9); 
+  border-color: #ffffff;
+}
+/* end of tool_box rules */
+
+/* file_port */
+.file_port textarea { background: #ffffff; }
+.file_port textarea:focus { 
+  border: 3px solid #000080; 
+  outline: 0;
+}
+.file_port textarea::selection
+{
+  background: #aaaaaa;
+}
+.file_port textarea::-moz-selection
+{
+  background: #aaaaaa;
+}

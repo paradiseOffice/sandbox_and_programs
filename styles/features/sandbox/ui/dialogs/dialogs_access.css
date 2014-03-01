@@ -1,0 +1,95 @@
+body#jotter { 
+    background: #6193CF url('../../appearence/themes/default_pro_theme/icons/programs/jotter_256x256.png')  no-repeat left; 
+}
+
+header .program { }
+header div.dialog_heading { }
+header .dialog_name { }
+header .program_name { }
+
+div#container { }
+div.dialog_area { position: relative; left: 300px; top: 200px; }
+div#ads { }
+
+div.previews { }
+
+footer#ctl_box { }
+div#ok_cancel { }
+
+/* ui controls =========================================================== */
+:root input[type="radio"] { position: absolute; left: -1400px; }
+:root input[type="radio"] + label {
+  background: url('../../appearance/accessibility_theme/styles/images/radio_sprite.png') no-repeat 0 0;
+  vertical-align: bottom;
+  position: relative;
+  bottom: 2px;
+  padding-left: 5px;
+  content: "";
+  display: inline-block;
+  width: 32px; height: 32px;
+  margin-left: 0.5em;  margin-right: 0;
+  margin-top: 0; margin-bottom: 0;
+}
+:root input[type="radio"]:checked  + label {
+  background-position: 0 -32px;
+}
+:root  input[type="radio"]:disabled  + label {
+  background-position: 0 -64px;
+}
+:root input[type="radio"]:checked:disabled  + label {
+  background-position: 0 -96px;
+}
+:root input[type="checkbox"] { position: absolute; left: -1400px; }
+:root input[type="checkbox"] + label {
+  background: url('../../appearance/accessibility_theme/styles/images/checkbox_sprite.png') no-repeat 0 0;
+  vertical-align: bottom;
+  position: relative;
+  bottom: 2px;
+  padding-left: 5px;
+  content: "";
+  display: inline-block;
+  width: 32px; height: 32px;
+  margin-left: 0.5em;  margin-right: 0;
+  margin-top: 0; margin-bottom: 0;
+}
+:root input[type="checkbox"]:checked  + label {
+  background-position: 0 -32px;
+}
+:root  input[type="checkbox"]:disabled  + label {
+  background-position: 0 -64px;
+}
+:root input[type="checkbox"]:checked:disabled  + label {
+  background-position: 0 -96px;
+}
+/* end of custom purple radio btns and checkboxes */
+
+/* for the clipboard entries list */
+#clippings_list { width: 200px; height: auto; }     
+span.copied_text { 
+  display: block; 
+  height: 36px; width: 180px; 
+  margin-left: 40px; 
+  position: relative;
+  top: -32px;
+  overflow: hidden;
+  font-size: 130%;
+  text-overflow: ellipsis;
+}
+#clippings_list ul li { 
+  list-style-type: none; 
+  margin-left: 5px; margin-right: 5px; 
+  display: block;
+  height: 50px;
+  width: 100%;
+  border: 1px solid #999;
+}
+label.copied_text #text1 { font-style: italic; }
+/* Types of labels, text styling */
+span.btn_text { 
+  display: inline; 
+  padding: 4px 10px 4px 10px; 
+  font-size: 130%;
+}
+input[type="checkbox"]:focus + label, input[type="radio"]:focus + label {
+  outline: 2px dashed #aaaaaa;
+}

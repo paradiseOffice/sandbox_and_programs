@@ -1,5 +1,7 @@
 <?php
-  include_once 'includes/functions.php';
+  require_once ('/home/web_includes/db_connect.php');
+  require_once ('/home/web_includes/functions.php');
+  require_once ('/home/web_includes/login.php');
   
   sec_session_start();
   
@@ -15,6 +17,6 @@
     $params["httponly"]);
     
   session_destroy();
-  header('Location: ../index.html');
-  // Put home page there
+  header('Location: index.php');
+  
 ?>

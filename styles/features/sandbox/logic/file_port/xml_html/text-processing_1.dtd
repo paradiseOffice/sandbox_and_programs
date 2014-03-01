@@ -1,0 +1,236 @@
+<!DOCTYPE file [
+<!ELEMENT file (documentInfo, document)>
+
+<!ENTITY copyright "&#xA9;">
+<!ENTITY trademark "&#x153;">
+<!ENTITY reg-trademark "&#x174;">
+
+
+  <!ELEMENT documentInfo (docLayout, author, company, modified, created)>
+    <!ELEMENT docLayout (pagespread, media, columns)>
+      <!ELEMENT pagespread EMPTY (#PCDATA)>
+	<!ATTLIST pagespread type (1page|twopage|threepage|book) #REQUIRED "1page">
+      <!ELEMENT media EMPTY (#PCDATA)>
+	<!ATTLIST media type (web | print | mobile|book) #REQUIRED "web">
+      <!ELEMENT columns EMPTY (#PCDATA)>
+	<!ATTLIST columns number (1|2|3|4) #REQUIRED "1">
+ 
+    <!ELEMENT author (firstname, lastname, title, email)>
+      <!ELEMENT firstname (#PCDATA)>
+      <!ELEMENT lastname (#PCDATA)>
+      <!ELEMENT title (#PCDATA)>
+      <!ELEMENT email (#PCDATA)>
+    
+    <!ELEMENT company (name, department)>
+      <!ELEMENT name (#PCDATA)>
+      <!ELEMENT department (#PCDATA)>
+  
+    <!ELEMENT modified EMPTY >
+        <!ATTLIST modified date (#PCDATA) #REQUIRED "2014-01-01">
+    <!ELEMENT created EMPTY >
+        <!ATTLIST created date (#PCDATA) #REQUIRED "2014-01-01">
+  <!ELEMENT document (header,frontmatter,mainmatter,backmatter,footer)>
+  <!NOTATION PNG SYSTEM "image/png">
+  <!NOTATION JPG SYSTEM "image/jpeg">
+  <!NOTATION GIF SYSTEM "image/gif">
+    <!ELEMENT header (heading1,heading2,heading3,image)*>
+      <!ELEMENT logo EMPTY (#PCDATA|image+)>
+      <!ELEMENT title (#PCDATA)>
+      <!ATTLIST header hidden (yes | no) #REQUIRED "no">
+    
+    <!ELEMENT frontmatter (cover,titlePage,toc,copyrights,preamble)*>
+      <!ELEMENT cover (#PCDATA|image+)>
+      <!ELEMENT titlePage (#PCDATA|heading1|heading2|heading3|heading4|image)*>
+      <!ELEMENT toc (#PCDATA|link|list|outline|heading1|heading2|heading3|heading4|heading5|heading6)*>
+      <!ELEMENT copyrights (#PCDATA)>
+      
+      <!ELEMENT preamble (#PCDATA)>
+      
+    <!ELEMENT mainmatter (#PCDATA|heading1|heading2|heading3|heading4|heading5|heading6|part|chapter|list|image|caption|preformatted|textbox|table|aside|blockquote|quote|cite|acronym|autofield|address|link|URI|outline|para|break|legend|chart)*>
+      <!ELEMENT heading1 (#PCDATA)>
+	<!ATTLIST heading1 id ID #REQUIRED>
+	<!ATTLIST heading1 class CDATA #IMPLIED>
+      <!ELEMENT heading2 (#PCDATA)>
+	<!ATTLIST heading2 id ID #REQUIRED>
+	<!ATTLIST heading2 class CDATA #IMPLIED>
+      <!ELEMENT heading3 (#PCDATA)>
+	<!ATTLIST heading3 id ID #REQUIRED>
+	<!ATTLIST heading3 class CDATA #IMPLIED>
+      <!ELEMENT heading4 (#PCDATA)>
+	<!ATTLIST heading4 id ID #REQUIRED>
+	<!ATTLIST heading4 class CDATA #IMPLIED>
+      <!ELEMENT heading5 (#PCDATA)>
+	<!ATTLIST heading5 id ID #REQUIRED>
+	<!ATTLIST heading5 class CDATA #IMPLIED>
+      <!ELEMENT heading6 (#PCDATA)>
+	<!ATTLIST heading6 id ID #REQUIRED>
+	<!ATTLIST heading6 class CDATA #IMPLIED>
+      <!ELEMENT part (#PCDATA|chapter)*>
+	<!ATTLIST part sectionid ID #REQUIRED>
+      <!ELEMENT chapter (#PCDATA|heading1|heading2|heading3|heading4|heading5|heading6|list|image|caption|preformatted|textbox|table|aside|blockquote|quote|cite|acronym|autofield|address|URI|outline|para|break|legend|chart)*>
+	<!ATTLIST chapter chapterid ID #REQUIRED>
+      <!ELEMENT list (#PCDATA)>
+	<!ATTLIST list id ID #REQUIRED>
+	<!ATTLIST list class CDATA #IMPLIED>
+      <!ELEMENT image EMPTY>
+	<!ATTLIST image id ID #REQUIRED>
+	<!ATTLIST image class CDATA #IMPLIED>
+	<!ATTLIST image src ENTITY #REQUIRED>
+	<!ATTLIST width CDATA #IMPLIED>
+	<!ATTLIST height CDATA #IMPLIED>
+      <!ELEMENT caption (#PCDATA)>
+	<!ATTLIST caption id ID #REQUIRED>
+	<!ATTLIST caption class CDATA #IMPLIED>
+      <!ELEMENT preformatted (#PCDATA)>
+	<!ATTLIST preformatted xml:space CDATA "preserve">
+	<!ATTLIST preformatted id ID #REQUIRED>
+	<!ATTLIST preformatted class CDATA #IMPLIED>
+     <!ELEMENT link (#PCDATA)>
+        <!ATTLIST link ref CDATA #REQUIRED>
+        <!ATTLIST link class CDATA #IMPLIED>
+      <!ELEMENT textbox (#PCDATA)>
+	<!ATTLIST textbox id ID #REQUIRED>
+	<!ATTLIST textbox class CDATA #IMPLIED>
+      <!ELEMENT table (#PCDATA|heading|columns|rows|cell|mathcell|tablefoot)*>
+	  <!ATTLIST table id ID #REQUIRED>
+	  <!ATTLIST table class CDATA #IMPLIED>
+	<!ELEMENT heading (#PCDATA)>
+	  <!ATTLIST heading id CDATA #REQUIRED>
+	  <!ATTLIST heading class CDATA #IMPLIED>
+	<!ELEMENT columns EMPTY (#PCDATA)>
+	  <!ATTLIST columns num CDATA #REQUIRED>
+	<!ELEMENT rows EMPTY (#PCDATA)>
+	  <!ATTLIST rows num CDATA #REQUIRED>
+	<!ELEMENT cell (#PCDATA)>
+	  <!ATTLIST cell ref ID #REQUIRED>
+	  <!ATTLIST cell class CDATA #IMPLIED>
+	<!ELEMENT mathcell (#PCDATA)>
+	  <!ATTLIST mathcell ref ID #REQUIRED>
+	  <!ATTLIST mathcell datarange CDATA #REQUIRED>
+	  <!ATTLIST mathcell class CDATA #IMPLIED>
+	<!ELEMENT tablefoot (#PCDATA)>
+	  <!ATTLIST tablefoot id ID #REQUIRED>
+	  <!ATTLIST tablefoot class CDATA #IMPLIED>
+      
+      <!ELEMENT aside (#PCDATA)>
+	<!ATTLIST aside id ID #REQUIRED>
+	<!ATTLIST aside class CDATA #IMPLIED>
+      <!ELEMENT blockquote (#PCDATA)>
+	<!ATTLIST blockquote id ID #REQUIRED>
+	<!ATTLIST blockquote class CDATA #IMPLIED>
+      <!ELEMENT quote (#PCDATA)>
+	<!ATTLIST quote id ID #IMPLIED>
+	<!ATTLIST quote class CDATA #IMPLIED>
+      <!ELEMENT cite (#PCDATA|blockquote?|quote?)>
+	<!ATTLIST cite url ID #REQUIRED>
+      <!ELEMENT acronym (#PCDATA)>
+	<!ATTLIST acronym id ID #REQUIRED>
+	<!ATTLIST acronym class CDATA #IMPLIED>
+	<!ATTLIST acronym meaning CDATA #REQUIRED>
+      <!ELEMENT autofield EMPTY (#PCDATA)>
+	<!ATTLIST autofield id ID #REQUIRED>
+	<!ATTLIST autofield type (date|time|datestamp|author|company|common-text|today) #REQUIRED "today">
+	<!ATTLIST autofield class CDATA #IMPLIED>
+      <!ELEMENT address (#PCDATA)>
+	<!ATTLIST address id CDATA #REQUIRED>
+	<!ATTLIST address class CDATA #IMPLIED>
+      <!ELEMENT URI (#PCDATA)>
+	<!ATTLIST URI url CDATA #REQUIRED>
+	<!ATTLIST URI class CDATA #IMPLIED>
+      <!ELEMENT outline (#PCDATA|level1|level2|level3|level4|level5|level6|level7|level8|level9|level10)*>
+	<!ELEMENT level1 (#PCDATA)>
+	<!ATTLIST level1 id ID #REQUIRED >
+	<!ATTLIST level1 class CDATA #IMPLIED>
+	<!ELEMENT level2 (#PCDATA)>
+	<!ATTLIST level2 id ID #REQUIRED>
+	<!ATTLIST level2 class CDATA #IMPLIED>
+	<!ELEMENT level3 (#PCDATA)>
+	<!ATTLIST level3 id ID #REQUIRED>
+	<!ATTLIST level3 class CDATA #IMPLIED>
+	<!ELEMENT level4 (#PCDATA)>
+	<!ATTLIST level4 id ID #REQUIRED>
+	<!ATTLIST level4 class CDATA #IMPLIED>
+	<!ELEMENT level5 (#PCDATA)>
+	<!ATTLIST level5 id ID #REQUIRED>
+	<!ATTLIST level5 class CDATA #IMPLIED>
+	<!ELEMENT level6 (#PCDATA)>
+	<!ATTLIST level6 id ID #REQUIRED>
+	<!ATTLIST level6 class CDATA #IMPLIED>
+	<!ELEMENT level7 (#PCDATA)>
+	<!ATTLIST level7 id ID #REQUIRED>
+	<!ATTLIST level7 class CDATA #IMPLIED>
+	<!ELEMENT level8 (#PCDATA)>
+	<!ATTLIST level8 id ID #REQUIRED>
+	<!ATTLIST level8 class CDATA #IMPLIED>
+	<!ELEMENT level9 (#PCDATA)>
+	<!ATTLIST level9 id ID #REQUIRED>
+	<!ATTLIST level9 class CDATA #IMPLIED>
+	<!ELEMENT level10 (#PCDATA)>
+	<!ATTLIST level10 id ID #REQUIRED>
+	<!ATTLIST level10 class CDATA #IMPLIED>
+      
+      <!ELEMENT para (#PCDATA)>
+	<!ATTLIST para id ID #REQUIRED>
+	<!ATTLIST para class CDATA #IMPLIED>
+      <!ELEMENT break EMPTY (#PCDATA)>
+	<!ATTLIST break type (line|page|whitespace) #REQUIRED "page">
+	<!ATTLIST break page CDATA #REQUIRED>
+	<!ATTLIST break id ID #REQUIRED>
+	<!ATTLIST break class CDATA #REQUIRED>
+      <!ELEMENT legend (#PCDATA|item|descr)*>
+	<!ATTLIST legend id ID #REQUIRED>
+	<!ATTLIST legend class CDATA #IMPLIED>
+	<!ELEMENT item (#PCDATA)>
+	<!ATTLIST item id ID #REQUIRED>
+	<!ATTLIST item class CDATA #IMPLIED>
+	<!ELEMENT descr (#PCDATA)>
+	<!ATTLIST descr id ID #REQUIRED>
+	<!ATTLIST descr class CDATA #IMPLIED>
+            
+      <!ELEMENT chart (#PCDATA)>
+	<!ATTLIST chart url ID #REQUIRED>
+	<!ATTLIST chart class CDATA #IMPLIED>
+        
+    <!ELEMENT backmatter (#PCDATA|glossary|biblo|index|colophon)*>
+      <!ELEMENT glossary (#PCDATA|definition)*>
+	<!ELEMENT definition (#PCDATA|term|def)*>
+	<!ATTLIST definition id ID #REQUIRED>
+	<!ATTLIST definition class CDATA #IMPLIED>
+	  <!ELEMENT term (#PCDATA)>
+	<!ATTLIST term id ID #REQUIRED>
+	<!ATTLIST term class CDATA #IMPLIED>
+	  <!ELEMENT def (#PCDATA)>
+	<!ATTLIST def id ID #REQUIRED>
+	<!ATTLIST def class CDATA #IMPLIED>
+	
+      <!ELEMENT biblo (#PCDATA|ref|link|text)*>
+	<!ELEMENT ref (#PCDATA)>
+	<!ATTLIST ref id ID #REQUIRED>
+	<!ATTLIST ref class CDATA #IMPLIED>
+	<!ELEMENT text (#PCDATA)>
+	<!ATTLIST text id ID #REQUIRED>
+	<!ATTLIST text class CDATA #IMPLIED>
+      
+      <!ELEMENT index (#PCDATA|letter|term)*>
+	<!ELEMENT letter EMPTY (#PCDATA)>
+	<!ATTLIST letter id ID #REQUIRED>
+	<!ATTLIST letter class CDATA #IMPLIED>
+	<!ELEMENT term (#PCDATA)>
+	<!ATTLIST term id ID #REQUIRED>
+	<!ATTLIST term class CDATA #IMPLIED>
+      
+      <!ELEMENT colophon (#PCDATA|details)*>
+	<!ELEMENT details (#PCDATA)>
+	<!ATTLIST details id ID #REQUIRED>
+	<!ATTLIST details class CDATA #IMPLIED>
+      
+    <!ELEMENT footer (#PCDATA|pagenumbers|doctitle)*>
+	<!ATTLIST footer hidden (yes|no) #REQUIRED "no">
+      <!ELEMENT pagenumbers EMPTY (#PCDATA)>
+	<!ATTLIST pagenumbers id CDATA #REQUIRED>
+	<!ATTLIST pagenumbers type (x_of_y|x) #REQUIRED "x">
+      <!ELEMENT doctitle EMPTY (#PCDATA)>
+	<!ATTLIST doctitle id ID #REQUIRED>
+	<!ATTLIST doctitle type (URL|fileName|docName) #IMPLIED> 
+	
+      ]>

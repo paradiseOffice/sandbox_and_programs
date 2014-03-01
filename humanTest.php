@@ -21,10 +21,9 @@
  *  Email me at: lead-dev@linux-paradise.co.uk if you have any problems or questions.
  *
 ************************************************************************/
-  // humanTest.php - Tests whether the user is human or a bot. Doesn't use Captcha's.
+  // humanTest.php - Tests whether the user is human or a bot. Broken at the moment ... fix it up into a separate form or use Captcha's.
 
-function humanOrNot()
-{
+
   $pics[0] = "humanTest/unicorn.jpg";
   $pics[1] = "humanTest/dolphin.jpg";
   $pics[2] = "humanTest/cow.jpg";
@@ -47,24 +46,37 @@ function humanOrNot()
   $numbers[9] = "nine";
   $numbers[10] = "ten";
 
-  $randAnimal = array_rand($pics); // Let's collect a random creature.
-  $firstNum = array_rand($numbers); // And two random numbers.
-  $secondNum = array_rand($numbers);
   
+  
+  if (isset($_POST['register']))
+  {
+    $randAnimal = array_rand($pics); // Let's collect a random creature.
+    $firstNum = array_rand($numbers); // And two random numbers.
+    $secondNum = array_rand($numbers);
+    
+    $animal = trim(strtolower($_POST['animal']));
+    $creatureShown = $pics[$randAnimal];
+    $correctAnimal = strstr($creatureShown, $animal);
+    print("creatureShown: $creatureShown, $animal correct: $correctAnimal ");
+    $userMaths = hash('md5', hash('sha512', $_POST['userMaths']));
+    if (($correctAnimal > 0) && ($userMaths === $_POST['mathsAnswer']))
+    {
+      $human = true;
+      print("human: $human");
+    }
+    else
+    {
+      $human = false;
+      print("human: $human");
+    }
+  }
+print("<fieldset id='human'>");
+print("<div class='creature'><h4>What creature is this? </h4><img width='250' height='150' src='$pics[$randAnimal]' /></div>");
+print("<input type='text' name='animal' id='animal' maxlength='15' placeholder='animal' />");
+print("<p class='math'>What is $numbers[$firstNum] plus $numbers[$secondNum]?</p>");
+print("<input type='number' name='userMaths' id='userMaths' placeholder='0' />");
+print("<input type='hidden' name='mathsAnswer' id='mathsAnswer' value='hash(\'md5\', hash(\'sha512\', ($firstNum + $secondNum)))' />");
+print("</fieldset>"); 
 
-  print("<div id='human'>");
-  print("<div class='creature'><h4>What creature is this? </h4>\n<img width='250' height='150' src='$randAnimal' />\n</div>\n");
-  print("<input type='text' name='animal' id='animal' maxlength='15' placeholder='animal' />\n");
-  print("<p class='math'>What is $firstNum plus $secondNum ?</p>\n <input type='number' name='userMaths' id='userMaths' placeholder='0' />\n");
-  print("<input type='hidden' name='mathsAnswer' id='mathsAnswer' value='md5(sha512($firstNum + $secondNum))' />");
-  
-  if ( (strstr($randAnimal, trim(strtolower($_POST['animal']))) ) && (md5(sha512(trim($_POST['userMaths']))) == md5(sha512($firstNum + $secondNum))) )
-  {
-    return true;
-  }
-  else
-  {
-    return false;
-  }
-} // end of function humanOrNot(); 
+?>
   

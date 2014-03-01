@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg3194"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="outbox.svg">
+  <defs
+     id="defs3196" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-117.85714"
+     inkscape:cy="520"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="851"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3199">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       inkscape:connector-curvature="0"
+       id="path3773-5"
+       style="fill:none;stroke:#110b02;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 213.20862,342.55018 407.82355,-1.4565 z m 2.31276,-125.097 -0.24999,123.6927 z M 15.718812,524.36639 217.68473,342.39541 z m 8.23926,-2.05984 c 0,0 193.273238,-24.60208 290.434638,-24.71786 91.63045,-0.1093 273.95611,22.65807 273.95611,22.65807 0,0 -182.88764,-43.27563 -276.0159,-43.25626 -97.30455,0.0204 -288.374848,45.31605 -288.374848,45.31605 z M 584.22919,658.25471 713.99788,433.73432 711.93801,219.51298 713.99788,429.61465 z M 18.126521,389.17784 213.1954,213.68143 l 502.51436,0 -131.45945,186.46499 2.12036,257.76034 -568.244149,-2.74209 z" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3809"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#110b02;stroke-width:0.4904081;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Sans;-inkscape-font-specification:Sans"
+       transform="matrix(4.0782361,0,0,4.0782361,-1063.5549,-75.208458)"><flowRegion
+         id="flowRegion3811"><rect
+           id="rect3813"
+           width="120.20815"
+           height="32.324879"
+           x="288.39856"
+           y="145.24519"
+           style="fill:none;stroke:#110b02;stroke-width:0.4904081;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" /></flowRegion><flowPara
+         id="flowPara3815"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:none;stroke:#110b02;stroke-width:0.4904081;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Abyssinica SIL;-inkscape-font-specification:Abyssinica SIL">Outbox</flowPara></flowRoot>  </g>
+</svg>
