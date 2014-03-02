@@ -22,17 +22,18 @@
  *
 ************************************************************************/
 
-  require_once '/home/web_includes/db_connect.php';
-  require_once '/home/web_includes/functions.php';
-  include_once '/home/web_includes/login.php';
-  require_once '/home/web_includes/encrypt_string.php';
-  require_once '/home/web_includes/recaptchalib.php';
+  require_once('/home/web_includes/db_connect.php');
+  require_once('/home/web_includes/functions.php');
+  include_once('/home/web_includes/login.php');
+  require_once ('/home/web_includes/encrypt_string.php');
+  require_once ('/home/web_includes/recaptchalib.php');
 
   // Plonk these files two dirs out of web root somewhere - in a folder called web_includes.
 
   // register.php - for creating a new user.
 if (isset($_POST['register']))
 {
+  $errors = "";
   if (( preg_match('/[a-zA-Z]+/', trim($_POST['fName']))) && ( strlen(trim($_POST['fName'])) <= 20 ))
   {
     $fName = trim($_POST['fName']);

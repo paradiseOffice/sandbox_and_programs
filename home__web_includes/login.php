@@ -22,6 +22,7 @@
  *
 ************************************************************************/
   require_once 'config.php';
+  require_once '/home/web_includes/db_connect.php';
   
 function sec_session_start() 
 {

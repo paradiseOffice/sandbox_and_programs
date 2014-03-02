@@ -21,12 +21,14 @@
  *  Email me at: lead-dev@linux-paradise.co.uk if you have any problems or questions.
  *
 ************************************************************************/
+  require_once '/home/web_includes/db_connect.php';
   // insertUser function for registering a user.
 function insertUser($fName, $lName, $email, $company, $uName, $password)
 {
+  require_once '/home/web_includes/db_connect.php';
   // password already hashed.
   $query = "INSERT INTO users (fName, lName, company, email, uName, password) VALUES ('{$fName}', '{$lName}', '{$company}', '{$email}', '{$uName}', '{$password}' )" ;
-  $result = $mysqil->query($query);
+  $result = $mysqli->query($query);
   $resultNum = $mysqli->affected_rows;
   if ( $resultNum > 0 )
   {
@@ -46,7 +48,7 @@ function esc_url($url)
   {
     return $url;
   }
-  $url = preg_replace('|[^a-z0-9-~+_.?#=!&;,/:%@$\|*\'()\\x80-\\xff]|:', "", $url);
+  $url = preg_replace('|[^a-z0-9-~+_.?#=!&;,/:%@$\|*\'()\\x80-\\xff]|', "", $url);
   $strip = array('%0d', '%0a', '%0D', '%0A');
   $url = (string) $url;
   $count = 1;
