@@ -22,7 +22,7 @@
  *
 ************************************************************************/
 
-  require_once('/home/web_includes/db_connect.php');
+  include_once('/home/web_includes/db_connect.php');
   require_once('/home/web_includes/functions.php');
   include_once('/home/web_includes/login.php');
   require_once ('/home/web_includes/encrypt_string.php');
@@ -104,8 +104,8 @@ if (isset($_POST['register']))
     $errors .= "<p>These passwords must match. </p>";
   } // password check and encrypt.
   $dupUser = "SELECT uName, email FROM users WHERE uName = '{$uName}' OR email = '{$email}' ";
-  $testResults = $mysqli->query($dupUser);
-  $dupValue = $mysqli->affected_rows;
+  $testResults = mysqli_query($mysqli, $dupUser);
+  $dupValue = mysqli_num_rows($testResults);
   if (($uName != "") && ($password != "") && ($fName != "") && ($lName != "") && ($email != ""))
   {
 
@@ -129,7 +129,7 @@ if (isset($_POST['register']))
       else 
       {
         // Your code here to handle a successful verification
-        insertUser($fName, $lName, $email, $company, $uName, $password);
+        insertUser($fName, $lName, $email, $company, $uName, $cipher_pass, $mysqli);
         header("Location: login.php");
       }
     }

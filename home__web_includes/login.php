@@ -21,8 +21,8 @@
  *  Email me at: lead-dev@linux-paradise.co.uk if you have any problems or questions.
  *
 ************************************************************************/
-  require_once 'config.php';
-  require_once '/home/web_includes/db_connect.php';
+
+include_once '/home/web_includes/db_connect.php';
   
 function sec_session_start() 
 {
@@ -30,12 +30,13 @@ function sec_session_start()
   $secure = SECURE; // only if using SSL
   // This stops Javascript being able to access the session ID
   $httponly = true;
-  /* Forces sessions to use only cookies.
+  // Forces sessions to use only cookies.
+  /*
   if (ini_set('session_use_only_cookies', 1) === FALSE)
   {
     header("Location: ../error.php"); // Remember to create an error page.
     exit();
-  } */ // BUG
+  }  */ // BUG?
   // Gets current cookie settings. Mmm... cookies.
   $cookieParams = session_get_cookie_params();
   session_set_cookie_params( // chocolate chip...
@@ -52,19 +53,19 @@ function sec_session_start()
 
 function login($uName, $email, $password, $mysqli)
 {
+
   // Using prepared statements like below stops MySQL injection attacks.
-  if ($stmt = $mysqli->prepare("SELECT custID, uName, email, password FROM users WHERE email = ? OR uName = ? LIMIT 1"))
+  if ($stmt = mysqli_prepare($mysqli, "SELECT custID, uName, email, password FROM users WHERE email = ? OR uName = ? LIMIT 1"))
   {
-    $stmt->bind_param('s', $email); // bind $email to parameter.
-    $stmt->bind_param('s', $uName); // might be a bug
-    $stmt->execute();
-    $stmt->store_result();
+    mysqli_stmt_bind_param($stmt, 'ss', $email, $uName); // bind $email to parameter.
+    mysqli_stmt_execute($stmt);
     // get variables from stored result.
-    $stmt->bind_result($user_id, $uName, $db_pass);
-    $stmt->fetch();
+    mysqli_stmt_bind_result($stmt, $user_id, $uName, $db_pass);
+    mysqli_stmt_fetch($stmt);
+    // the entered password from the user - sha512 hashed
     $password = encrypt_string($password);
     
-    if ($stmt->num_rows == 1)
+    if (mysqli_num_rows($stmt) == 1)
     {
       // checking whether the user exists
       // Have they tried to login too many times?
@@ -98,7 +99,7 @@ function login($uName, $email, $password, $mysqli)
         {
           // Password is wrong! Record attempt.
           $now = time();
-          $mysqli->query("INSERT INTO login_attempts(userid, time) VALUES ('{$user_id}', '{$now}')");
+          mysqli_query("INSERT INTO login_attempts(userid, time) VALUES ('$user_id', '$now')");
           return false;
         }
       } // if - check brute force
@@ -113,18 +114,21 @@ function login($uName, $email, $password, $mysqli)
 
 function checkbrute($user_id, $mysqli)
 {
+  require_once '/home/web_includes/db_connect.php';
   // Get timestamp of current time
   $now = time();
   // Count all login attempts from past two hours.
   $valid_attempts = $now - (2 * 60 * 60);
-  if ($stmt = $mysqli->prepare("SELECT time FROM login_attempts WHERE userid = ? AND time > '$valid_attempts'"))
+  if ($stmt = mysqli_prepare($mysqli, "SELECT time FROM login_attempts WHERE userid = ? AND time > '$valid_attempts'"))
   {
-    $stmt->bind_param('i', $user_id);
+    mysqli_stmt_bind_param($stmt, 'i', $user_id);
     // Execute prepared query
-    $stmt->execute();
-    $stmt->store_result();
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_bind_result($stmt, $user_id);
+    mysqli_stmt_fetch($stmt);
+    
     // There's been more than 5 failed login attempts!
-    if ($stmt->num_rows > 5)
+    if (mysqli_num_rows($stmt) > 5)
     {
       return true;
     }
@@ -144,18 +148,21 @@ function login_check($mysqli)
     $uName = $_SESSION['username'];
     // Get the user agent of the user.
     $user_browser = $_SERVER['HTTP_USER_AGENT'];
-    if ($stmt = $mysqli->prepare("SELECT password FROM users WHERE id = ? LIMIT 1"))
+    if ($stmt = mysqli_prepare($mysqli, "SELECT password FROM users WHERE id = ? LIMIT 1"))
     {
       // bind 'user_id'
-      $stmt->bind_param('i', $user_id);
-      $stmt->execute();
-      $stmt->store_result();
-      
-      if ($stmt->num_rows == 1)
+      mysqli_stmt_bind_param($stmt, 'i', $user_id);
+      // Execute prepared query
+      mysqli_stmt_execute($stmt);
+      mysqli_stmt_bind_result($stmt, $user_id);
+      mysqli_stmt_fetch($stmt);
+     
+      if (mysqli_num_rows($stmt) == 1)
       {
         // if the user exists get password variable
-        $stmt->bind_result($password);
-        $stmt->fetch();
+        mysqli_stmt_bind_result($stmt, $password);
+        mysqli_stmt_fetch($stmt);
+        
         $login_check = hash('sha512', $password . $user_browser);
         
         if ($login_check == $login_string)

@@ -90,3 +90,63 @@ function register_form(form, fName, lName, company, email, uName, password1, pas
     return true;
   }
 }
+
+function reset_pass_form(form, pin, password1, password2)
+{
+  // Check for blank values
+  if ( pin.value == "" || password1.value == "" || password2.value == "" )
+  {
+    var help_msg = document.createElement("p");
+    help_msg.value = "The fields marked in red with an asterisk are required. ";
+    $( "div.errors" ).append(help_msg);
+    
+    return false;
+  }
+  var pin_regex = /[^;=//]*{3,200}/;
+  if (!pin_regex.test(form.pin.value))
+  {
+    help_msg.value = "The pin is wrong, please copy it straight in from the email. ";
+    form.pin.focus();
+    return false;
+  }
+  if (password1.value != password2.value)
+  {
+    help_msg.value = "Those passwords don't match, please try typing again. ";
+    form.password2.focus();
+    return false;
+  }
+  // Must be 7-50 chars long, one or more digits 0-9, 1+ a-z, and A-Z and 1+ 
+  // special characters. Can be in any order.
+  pass_regex = /[a-zA-Z0-9$!"£%^*-_+?#~]+{7,50}/;
+  if (!pass_regex.test(form.password1.value))
+  {
+    help_msg.value = "The password should contain <strong>7</strong> characters or more. <br />1 capital letter A-Z. <br />Some lowercase letters a-z. <br />A number 0-9. <br /> 1 or more special characters: <strong>$ £ % ^ - ! and no spaces. </strong>";
+    form.password1.focus();
+    return false;
+  }
+  else
+  {
+    // hashy password
+    var passCipher = document.createElement("input");
+    console.log("Created hidden input");
+    form.appendChild(passCipher);
+    passCipher.name = "passCipher";
+    passCipher.type = "hidden";
+    passCipher.value = hex_sha512(password1.value);
+    // make sure plain text passwords don't get sent...
+    password1.value = "";
+    password2.value = "";
+    // hashy pin...
+    var pinCipher = document.createElement("input");
+    console.log("Created pin hidden input");
+    form.appendChild(pinCipher);
+    pinCipher.name = "pinCipher";
+    pinCipher.type = "hidden";
+    pinCipher.value = hex_sha512(pin.value);
+    pin.value = "";
+    // submit the form... sends it to server and PHP
+    form.submit();
+    return true;
+  }
+}
+

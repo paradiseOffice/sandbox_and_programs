@@ -23,8 +23,8 @@
  *
 ************************************************************************/
 
-  require_once '/home/web_includes/db_connect.php';
-  require_once '/home/web_includes/functions.php';
+  include_once '/home/web_includes/db_connect.php';
+  include_once '/home/web_includes/functions.php';
   include_once '/home/web_includes/login.php';
   
   sec_session_start(); // starting secure session.
@@ -33,7 +33,7 @@
   {
     $enteredUser = trim($_POST['user']);
     $enteredPass = trim($_POST['passCipher']); // created via js
-    
+    echo $enteredPass; 
     if (login($enteredUser, $enteredPass, $mysqli) == true)
     {
       // Login success
@@ -45,11 +45,7 @@
       header('Location: error.php');
     }
   }
-  else
-  {
-    // The correct POST variables weren't sent
-    echo 'Invalid POST variables in the request';
-  }
+
 
 ?>
 <!DOCTYPE html>
