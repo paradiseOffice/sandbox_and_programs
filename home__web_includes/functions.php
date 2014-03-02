@@ -21,14 +21,15 @@
  *  Email me at: lead-dev@linux-paradise.co.uk if you have any problems or questions.
  *
 ************************************************************************/
-  require_once '/home/web_includes/db_connect.php';
+
   // insertUser function for registering a user.
 function insertUser($fName, $lName, $email, $company, $uName, $password)
 {
   require_once '/home/web_includes/db_connect.php';
   // password already hashed.
-  $query = "INSERT INTO users (fName, lName, company, email, uName, password) VALUES ('{$fName}', '{$lName}', '{$company}', '{$email}', '{$uName}', '{$password}' )" ;
+  $query = "INSERT INTO users (fName, lName, company, email, uName, password) VALUES ('$fName', '$lName', '$company', '$email', '$uName', '$password' )" ;
   $result = $mysqli->query($query);
+  echo $result; // DEBUG
   $resultNum = $mysqli->affected_rows;
   if ( $resultNum > 0 )
   {
@@ -38,8 +39,8 @@ function insertUser($fName, $lName, $email, $company, $uName, $password)
   else
   {
     $errors .= "<p>Registration failed! </p>";
+    return $errors;
   }
-
 }  // end of insertUser function.
 
 function esc_url($url)
@@ -69,3 +70,4 @@ function esc_url($url)
     return $url;
   }
 }
+?>
