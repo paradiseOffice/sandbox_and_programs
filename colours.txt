@@ -1,0 +1,10 @@
+Colours
+
+Dev/Sales Site
+Dark blue: #043496;
+Lighter blue: #1961FB;
+Lighter red: #DE304B;
+Darker red: #80003B;
+
+Unhovered link - grey: #9E9E9E;
+lighter grey: #e9dfe9;
