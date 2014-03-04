@@ -55,7 +55,7 @@
     <title>Login</title>
     <meta name="" content="" />
     <link rel="stylesheet" type="text/css" href="lib-jqueryui/css/pink/jquery-ui-1.10.3.custom.css" />
-
+  <script type="text/JavaScript" src="scripts/sha512.js" ></script>
   <script type="text/JavaScript" src="scripts/login_js.js" ></script>
 <style type="text/css">
 form, label, input { display: block; }

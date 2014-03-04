@@ -146,6 +146,7 @@ if (isset($_POST['register']))
     <title>Register - Paradise Office</title>
     <meta name="" content="" />
     <link rel="stylesheet" type="text/css" href="lib-jqueryui/css/pink/jquery-ui-1.10.3.custom.css" />
+  <script type="text/JavaScript" src="scripts/sha512.js" ></script>
   <script type="text/JavaScript" src="scripts/login_js.js" > </script>
 </head>
 <body>

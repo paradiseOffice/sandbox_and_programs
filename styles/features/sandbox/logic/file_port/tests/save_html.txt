@@ -1,2 +1,0 @@
-1. Run Save.saveHtml('largeHtml.html')
-2. Check the output is the same as

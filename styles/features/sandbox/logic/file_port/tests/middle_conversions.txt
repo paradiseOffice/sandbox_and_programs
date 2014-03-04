@@ -1,4 +1,0 @@
-1. Create doc, docx, xls,xlsx, ppt, pptx documents of 4-20 pages in an office suite + templates. (Different ones would be good)
-2. Convert them to the relevant odf file format.
-3. Take screengrabs of each page in print view.
-4. Look at them side by side noting any differences, even in things like fonts.

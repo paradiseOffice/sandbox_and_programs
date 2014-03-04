@@ -83,7 +83,7 @@ if (isset($_POST['change']))
   $diffTime = $changeTime - $firstTime;
   echo $diffTime; // DEBUG
   // check pin in reset table
-  $userPin = strtolower(trim($_POST['pin']));
+  $userPin = strtolower(trim($_POST['pinCipher']));
   if ( ($db_pin == $userPin) && ( $diffTime < (24*60*60)) )
   {
     // get new passwords, check they match
@@ -91,7 +91,7 @@ if (isset($_POST['change']))
     {
       if (preg_match('/[a-zA-Z0-9\-_*^!$]......+/', trim($_POST['password1'])))
       {
-        $password = trim($_POST['password1']);
+        $password = trim($_POST['passCipher']);
         // encrypt new password
         $cipher_pass = encrypt_string($password);
         
@@ -139,6 +139,7 @@ if (isset($_POST['change']))
     <title>Password Reset - Paradise Office</title>
     <meta name="" content="" />
     <link rel="stylesheet" type="text/css" href="lib-jqueryui/css/pink/jquery-ui-1.10.3.custom.css" />
+  <script type="text/JavaScript" src="scripts/sha512.js" ></script>  
   <script type="text/JavaScript" src="scripts/login_js.js" > </script>
 </head>
 <body>

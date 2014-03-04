@@ -1,3 +1,0 @@
-1. Run Save.saveWeirdFile('largeFile.odt', 'doc') (and docx, dot)
-2. Check they look the same by doing screenshots of each page.
-3. Note any rendering problems
