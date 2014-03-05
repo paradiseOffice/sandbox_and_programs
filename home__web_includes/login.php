@@ -23,6 +23,7 @@
 ************************************************************************/
 
 include_once '/home/web_includes/db_connect.php';
+require_once '/home/web_includes/encrypt_string.php';
   
 function sec_session_start() 
 {
@@ -51,19 +52,22 @@ function sec_session_start()
   session_regenerate_id(); // Deletes old ID and creates new shiny one.
 }
 
-function login($uName, $email, $password, $mysqli)
+function login($uName, $password, $mysqli)
 {
 
   // Using prepared statements like below stops MySQL injection attacks.
-  if ($stmt = mysqli_prepare($mysqli, "SELECT custID, uName, email, password FROM users WHERE email = ? OR uName = ? LIMIT 1"))
+  if ($stmt = mysqli_query($mysqli, "SELECT custID, uName, email, password FROM users WHERE email = '$uName' OR uName = '$uName' LIMIT 1"))
   {
-    mysqli_stmt_bind_param($stmt, 'ss', $email, $uName); // bind $email to parameter.
-    mysqli_stmt_execute($stmt);
-    // get variables from stored result.
-    mysqli_stmt_bind_result($stmt, $user_id, $uName, $db_pass);
-    mysqli_stmt_fetch($stmt);
+    $row = mysqli_fetch_array($stmt, MYSQLI_ASSOC);
+    $user_id = $row["custID"];
+    $uName = $row["uName"];
+    $email = $row["email"];
+    $db_pass = $row["password"];
     // the entered password from the user - sha512 hashed
-    $password = encrypt_string($password);
+    $cipher_pass = encrypt_string($password);
+    echo "Entered into function pass: $password\n"; // DEBUG
+    echo "Encrypt_string pass: $cipher_pass\n"; 
+    echo "DB pass: $db_pass\n"; // DEBUG
     
     if (mysqli_num_rows($stmt) == 1)
     {
@@ -75,7 +79,7 @@ function login($uName, $email, $password, $mysqli)
         $to = $email;
         $subject = "Too many failed login attempts";
         $message = "Your account has been locked due to more than 5 failed attempts at logging in.";
-        $headers = "bcc: lead-dev@linux-paradise.co.uk\r\n"; // change to support email
+        $headers = "From: lead-dev@linux-paradise.co.uk\r\n"; // change to support email
         $send = mail($to, $subject, $message, $headers);
         // Put reset link in message, for the forgotten password page.
         return false;
@@ -83,7 +87,7 @@ function login($uName, $email, $password, $mysqli)
       else
       {
         // check the passwords match
-        if ($password == $db_pass)
+        if ($cipher_pass == $db_pass)
         {
           // Get the user agent string
           $user_browser = $_SERVER['HTTP_USER_AGENT'];
@@ -92,14 +96,14 @@ function login($uName, $email, $password, $mysqli)
           $_SESSION['user_id'] = $user_id;
           $uName = preg_replace("/[^a-zA-Z0-9\-_]+/", "", $uName);
           $_SESSION['username'] = $uName;
-          $_SESSION['login_string'] = hash('sha512', $password . $user_browser);
+          $_SESSION['login_string'] = hash('sha512', $cipher_pass . $user_browser);
           return true;
         }
         else
         {
           // Password is wrong! Record attempt.
           $now = time();
-          mysqli_query("INSERT INTO login_attempts(userid, time) VALUES ('$user_id', '$now')");
+          mysqli_query($mysqli, "INSERT INTO login_attempts(userid, time) VALUES ('$user_id', '$now')");
           return false;
         }
       } // if - check brute force
@@ -114,7 +118,7 @@ function login($uName, $email, $password, $mysqli)
 
 function checkbrute($user_id, $mysqli)
 {
-  require_once '/home/web_includes/db_connect.php';
+
   // Get timestamp of current time
   $now = time();
   // Count all login attempts from past two hours.
@@ -128,7 +132,7 @@ function checkbrute($user_id, $mysqli)
     mysqli_stmt_fetch($stmt);
     
     // There's been more than 5 failed login attempts!
-    if (mysqli_num_rows($stmt) > 5)
+    if (mysqli_stmt_num_rows($stmt) > 5)
     {
       return true;
     }

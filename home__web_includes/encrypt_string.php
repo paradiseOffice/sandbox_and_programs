@@ -34,7 +34,8 @@ function encrypt_string($string)
   $string = $salt . $string . $pepper;
   $ciphertext = hash('sha512', hash('whirlpool', $string));  
   // debug
-  // $length = strlen($ciphertext);
+  $length = strlen($ciphertext);
+  echo "Cipher length: $length\n";
   // debug
   return $ciphertext;
 } // end of function encrypt_string($string)

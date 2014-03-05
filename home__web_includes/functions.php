@@ -29,7 +29,6 @@ function insertUser($fName, $lName, $email, $company, $uName, $password, $mysqli
   // password already hashed.
   $query = "INSERT INTO users (fName, lName, company, email, uName, password) VALUES ('$fName', '$lName', '$company', '$email', '$uName', '$password' )" ;
   $result = mysqli_query($mysqli, $query);
-  echo $result; // DEBUG
   $resultNum = mysqli_num_rows($result);
   if ( $resultNum > 0 )
   {

@@ -1,10 +1,10 @@
 function hash_password_client(form, password)
 {
-  var passCipher = document.createElement("input");
-  form.appendChild(passCipher);
-  passCipher.name = "passCipher";
-  passCipher.type = "hidden";
-  passCipher.value = hex_sha512(password.value);
+  var passCipher = document.getElementById("passCipher");
+  // form.appendChild(passCipher);
+  // passCipher.name = "passCipher";
+  // passCipher.type = "hidden";
+  passCipher.value = password.value; DEBUG
   // Make sure the plain password isn't sent
   password.value = "";
   form.submit();
@@ -76,12 +76,9 @@ function register_form(form, fName, lName, company, email, uName, password1, pas
   else
   {
     // hashy password
-    var passCipher = document.createElement("input");
-    console.log("Created hidden input");
-    form.appendChild(passCipher);
-    passCipher.name = "passCipher";
-    passCipher.type = "hidden";
-    passCipher.value = hex_sha512(password1.value);
+    var passCipher = document.getElementById("passCipher");
+    // passCipher.value = hex_sha512(password1.value);
+    passCipher.value = password.value; DEBUG
     // make sure plain text passwords don't get sent...
     password1.value = "";
     password2.value = "";
@@ -102,7 +99,7 @@ function reset_pass_form(form, pin, password1, password2)
     
     return false;
   }
-  var pin_regex = /[^;=//]*{3,200}/;
+  var pin_regex = /[^;=//]*{3,400}/;
   if (!pin_regex.test(form.pin.value))
   {
     help_msg.value = "The pin is wrong, please copy it straight in from the email. ";
@@ -127,23 +124,12 @@ function reset_pass_form(form, pin, password1, password2)
   else
   {
     // hashy password
-    var passCipher = document.createElement("input");
-    console.log("Created hidden input");
-    form.appendChild(passCipher);
-    passCipher.name = "passCipher";
-    passCipher.type = "hidden";
-    passCipher.value = hex_sha512(password1.value);
+    var passCipher = document.getElementById("passCipher");
+    // passCipher.value = hex_sha512(password1.value);
+    passCipher.value = password.value; DEBUG
     // make sure plain text passwords don't get sent...
     password1.value = "";
     password2.value = "";
-    // hashy pin...
-    var pinCipher = document.createElement("input");
-    console.log("Created pin hidden input");
-    form.appendChild(pinCipher);
-    pinCipher.name = "pinCipher";
-    pinCipher.type = "hidden";
-    pinCipher.value = hex_sha512(pin.value);
-    pin.value = "";
     // submit the form... sends it to server and PHP
     form.submit();
     return true;

@@ -89,8 +89,9 @@ if (isset($_POST['register']))
   {
     if (preg_match('/[a-zA-Z0-9\-_*^!$]......+/', trim($_POST['password1'])))
     {
-      $password = trim($_POST['password1']);
+      $password = trim($_POST['passCipher']);
       $cipher_pass = encrypt_string($password);
+      echo "DB pass: $cipher_pass\n";
       /* encrypt_string uses two different hash algorithms, so the password can't be decrypted into plaintext. The hash algorithms used aren't md5 or sha1 as those can be cracked */
     }
     else
@@ -103,10 +104,10 @@ if (isset($_POST['register']))
   {
     $errors .= "<p>These passwords must match. </p>";
   } // password check and encrypt.
-  $dupUser = "SELECT uName, email FROM users WHERE uName = '{$uName}' OR email = '{$email}' ";
+  $dupUser = "SELECT uName, email FROM users WHERE uName = '$uName' OR email = '$email' ";
   $testResults = mysqli_query($mysqli, $dupUser);
   $dupValue = mysqli_num_rows($testResults);
-  if (($uName != "") && ($password != "") && ($fName != "") && ($lName != "") && ($email != ""))
+  if (($uName != "") && ($cipher_pass != "") && ($fName != "") && ($lName != "") && ($email != ""))
   {
 
     if ($dupValue > 0)
@@ -145,37 +146,45 @@ if (isset($_POST['register']))
   <meta charset="utf-8">
     <title>Register - Paradise Office</title>
     <meta name="" content="" />
-    <link rel="stylesheet" type="text/css" href="lib-jqueryui/css/pink/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" type="text/css" href="styles/forms.css" />
   <script type="text/JavaScript" src="scripts/sha512.js" ></script>
   <script type="text/JavaScript" src="scripts/login_js.js" > </script>
 </head>
 <body>
 
-<form method="POST" action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>">
-<label for="fName">First Name</label>
-<input type="text" name="fName" id="fName" placeholder="First name" /><br />
-<label for="lName">Last Name</label>
-<input type="text" name="lName" id="lName" placeholder="Last name" /><br />
-<label for="company">Company</label>
-<input type="text" name="company" id="company" placeholder="company" /><br />
-<label for="email">Email</label>
-<input type="email" name="email" id="email" placeholder="name@webaddress.com" /><br />
-<label for="user">User Name</label>
-<input type="text" name="user" id="user" placeholder="username" /><br />
-<label for="password1">Enter Password</label>
-<input type="password" name="password1" id="password1" /><br />
-<!-- this gets encrypted in Javascript, sha512 before getting sent to the server's PHP file -->
-<label for="password2">Same Password Again</label>
-<input type="password" name="password2" id="password2" /><br />
-<!-- Captcha -->
-<?php
-  $publickey = "6LfUYu8SAAAAABixp_frVxvlzKXmaMLWWAVgTRX3"; 
-  echo recaptcha_get_html($publickey);
-?>
-<!-- end of Captcha -->
-<input type="submit" value="Register" id="register" name="register" onclick="return register_form(this.form, this.form.fName, this.form.lName, this.form.company, this.form.email, this.form.uName, this.form.password1, this.form.password2);" />
+<h3>Register</h3>
+<div id="register_container">
+  <form method="POST" action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>">
+    <fieldset>
+    <input type="text" name="fName" id="fName" placeholder="First name" /><br />
+    <input type="text" name="lName" id="lName" placeholder="Last name" /><br />
+    <input type="text" name="company" id="company" placeholder="company" /><br />
+    <input type="email" name="email" id="email" placeholder="name@webaddress.com" /><br />
+    <input type="text" name="user" id="user" placeholder="User Name" /><br />
+    <label for="password1">Enter Password</label>
+    <input type="password" name="password1" id="password1" /><br />
+    <!-- this gets encrypted in Javascript, sha512 before getting sent to the server's PHP file -->
+    <label for="password2">Same Password Again</label>
+    <input type="password" name="password2" id="password2" /><br />
+    <input type="hidden" name="passCipher" id="passCipher" value="" />
+    </fieldset>
+    <fieldset class="captcha">
+    <!-- Captcha -->
+    <?php
+      $publickey = "6LfUYu8SAAAAABixp_frVxvlzKXmaMLWWAVgTRX3"; 
+      echo recaptcha_get_html($publickey);
+    ?>
+    </fieldset>
+    <fieldset>
+    <!-- end of Captcha -->
+    <input type="submit" value="Register" id="register" name="register" onclick="return register_form(this.form, this.form.fName, this.form.lName, this.form.company, this.form.email, this.form.uName, this.form.password1, this.form.password2);" />
+    </fieldset>
+  </form>
+</div>
+
+<div class="errors_area">
 <?php echo $errors; ?>
-</form>
+</div>
 
 </body>
 </html>

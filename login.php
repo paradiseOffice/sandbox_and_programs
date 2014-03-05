@@ -33,7 +33,6 @@
   {
     $enteredUser = trim($_POST['user']);
     $enteredPass = trim($_POST['passCipher']); // created via js
-    echo $enteredPass; 
     if (login($enteredUser, $enteredPass, $mysqli) == true)
     {
       // Login success
@@ -42,7 +41,8 @@
     else
     {
       // Login failed
-      header('Location: error.php');
+      //header('Location: error.php');
+      echo "Login failed\n";
     }
   }
 
@@ -54,26 +54,28 @@
   <meta charset="utf-8">
     <title>Login</title>
     <meta name="" content="" />
-    <link rel="stylesheet" type="text/css" href="lib-jqueryui/css/pink/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" type="text/css" href="styles/forms.css" />
   <script type="text/JavaScript" src="scripts/sha512.js" ></script>
   <script type="text/JavaScript" src="scripts/login_js.js" ></script>
-<style type="text/css">
-form, label, input { display: block; }
-input[type="submit"] { border: 2px solid blue; border-radius: 7px; }
-form a, label { font-size: 200%; color: #1c1c1c; }
-</style>
 </head>
 <body>
+  
+<div id="login_container">
+  <form id="login" method="POST" action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>">
+    <fieldset>
+    <input type="text" name="user" id="user" placeholder="User Name" />
+    <input type="password" name="password" id="password" placeholder="Password" />
+    <input type="hidden" name="passCipher" id="passCipher" value="" />
+    <input type="submit" value="Log In" id="login" name="login" onclick="return hash_password_client(this.form, this.form.password);" />
+    </fieldset>
+  </form>
+  <a href="register.php" title="Create an account by signing up">Register</a>
+<div class="errors_area">
+  <?php echo $errors; ?>
+</div>
 
-<form method="POST" action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>">
-<label for="user">User</label>
-<input type="text" name="user" id="user" placeholder="username" />
-<label for="password">Password</label>
-<input type="password" name="password" id="password" />
-<input type="submit" value="Log In" id="login" name="login" onclick="return hash_password_client(this.form, this.form.password);" />
-<a href="register.html" title="Create an account">Register</a>
-<?php echo $errors; ?>
-</form>
+
+</div>
 
 </body>
 </html>

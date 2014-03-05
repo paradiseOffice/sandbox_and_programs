@@ -33,34 +33,40 @@ if (isset($_POST['send']))
 {
   // fetch their entered email... clean up
   $email = trim(strtolower($_POST['email']));
-  $query = "SELECT custID FROM users WHERE email = '$email' LIMIT 1";
+  $query = "SELECT custID, email FROM users WHERE email = '$email' LIMIT 1";
   // see if email is in users table and get user_id.
   $resultEmail = mysqli_query($mysqli, $query);
   $row = mysqli_fetch_row($resultEmail);
   $user_id = (int) $row[0];
-  
-  if ( mysqli_num_rows($resultEmail) == 1)
+  // echo $user_id; // DEBUG
+  global $user_id;
+  $rows = mysqli_num_rows($resultEmail);
+  echo "Rows: $rows";
+  if ( (mysqli_num_rows($resultEmail)) > 0)
   {
     // create random pin, expiration (now time)
     $pin = hash('whirlpool', rand(20,34503));
-    echo $pin; // DEBUG
+    echo "Pin: $pin\n"; // DEBUG
     $now = time();
-    echo $now; // DEBUG
+    echo "Now: $now\n"; // DEBUG
     // put both variables and user_id in reset table
     $query = "INSERT INTO reset (user_id,pin,now) VALUES ($user_id, '$pin', '$now')";
     $resultInsert = mysqli_query($mysqli, $query);
     // send random pin to registered email
     $subject = "Paradise Office - Forgotten Password Reset";
-    $message = "Please use the password reset form to update your password. You will need the following pin, please copy the whole pin by selecting the text, and pressing Ctrl + C, then paste this into the form. <br /><br />" . $pin;
-    $headers = "bcc: lead-dev@linux-paradise.co.uk\r\n"; // change to support email
-    $send = mail($email, $subject, $message, $headers);
-    if (!$send)
+    $message = "Please use the password reset form to update your password.\r\n You will need the following pin. \r\nPlease copy the whole pin by selecting the text, and pressing Ctrl + C, then paste this into the form. \r\n\r\n" ;
+    $message .= $pin;
+    $headers = 'From: lead-dev@linux-paradise.co.uk' . "\r\n" .
+    'Reply-To: lead-dev@linux-paradise.co.uk' . "\r\n"; // change to support email
+    // install ssmtp for simple emailing 
+    if (mail($email, $subject, $message, $headers))
     {
-      $errors .= "<p>The email didn't get sent.</p>";
+      $errors .= "<p>Please check your inbox... </p>";
+      echo "in Sent if";
     }
     else
     {
-      $errors .= "<p>Please check your inbox... </p>";
+      $errors .= "<p>The email didn't get sent.</p>";
     }
   }
   else
@@ -81,9 +87,10 @@ if (isset($_POST['change']))
   $db_pin = $row[1];
   $firstTime = $row[2];
   $diffTime = $changeTime - $firstTime;
-  echo $diffTime; // DEBUG
+  echo "difftime:  $diffTime"; // DEBUG
   // check pin in reset table
-  $userPin = strtolower(trim($_POST['pinCipher']));
+  $userPin = trim($_POST['pin']);
+  // Do more data sweeping on the above
   if ( ($db_pin == $userPin) && ( $diffTime < (24*60*60)) )
   {
     // get new passwords, check they match
@@ -138,18 +145,20 @@ if (isset($_POST['change']))
   <meta charset="utf-8">
     <title>Password Reset - Paradise Office</title>
     <meta name="" content="" />
-    <link rel="stylesheet" type="text/css" href="lib-jqueryui/css/pink/jquery-ui-1.10.3.custom.css" />
+    <link rel="stylesheet" type="text/css" href="styles/forms.css" />
   <script type="text/JavaScript" src="scripts/sha512.js" ></script>  
   <script type="text/JavaScript" src="scripts/login_js.js" > </script>
 </head>
 <body>
 
 <form method="POST" action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>">
-  <label for="email">Email</label>
+  <fieldset>
   <input type="email" name="email" id="email" placeholder="name@webaddress.com" />
   <input type="submit" id="send" name="send" value="Send" />
+  </fieldset>
 </form>
 <form method="POST" action="<?php echo esc_url($_SERVER['PHP_SELF']); ?>">
+  <fieldset>
   <label for="pin">Pin from the email just sent:</label>
   <input type="text" name="pin" id="pin" placeholder="Paste here" /><br />
   <label for="password1">New Password</label>
@@ -157,15 +166,23 @@ if (isset($_POST['change']))
   <!-- this gets encrypted in Javascript, sha512 before getting sent to the server's PHP file -->
   <label for="password2">Confirm New Password</label>
   <input type="password" name="password2" id="password2" /><br />
+  <input type="hidden" name="passCipher" id="passCipher" value="" />
+  </fieldset>
+  <fieldset class="captcha">
   <!-- Captcha -->
   <?php
     $publickey = "6LfUYu8SAAAAABixp_frVxvlzKXmaMLWWAVgTRX3"; 
     echo recaptcha_get_html($publickey);
   ?>
   <!-- end of Captcha -->
+  </fieldset>
+  <fieldset>
   <input type="submit" value="Change" id="change" name="change" onclick="return reset_pass_form(this.form, this.form.pin, this.form.password1, this.form.password2);" />
-<?php echo $errors; ?>
+  </fieldset>
 </form>
+<div class="errors_area">
+  <?php echo $errors; ?>
+</div>
 
 </body>
 </html>

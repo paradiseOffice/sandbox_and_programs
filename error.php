@@ -15,6 +15,7 @@
 
 <h1>Sorry, there's been an error. </h1>
 <p>Please try registering or logging in again.</p>
+<a href="password_reset" title="Forgotten password">Forgotten Password</a>
 
 </body>
 </html>
