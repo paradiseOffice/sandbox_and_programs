@@ -28,11 +28,12 @@
   include_once '/home/web_includes/login.php';
   
   sec_session_start(); // starting secure session.
-  // $_POST['user'], $_POST['password']
+  
   if (isset($_POST['login']))
   {
     $enteredUser = trim($_POST['user']);
-    $enteredPass = trim($_POST['passCipher']); // created via js
+    $enteredPass = $_POST['passCipher']; // altered via js
+    echo $enteredPass;
     if (login($enteredUser, $enteredPass, $mysqli) == true)
     {
       // Login success
@@ -45,8 +46,6 @@
       echo "Login failed\n";
     }
   }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

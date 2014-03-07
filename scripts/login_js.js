@@ -1,13 +1,11 @@
 function hash_password_client(form, password)
 {
   var passCipher = document.getElementById("passCipher");
-  // form.appendChild(passCipher);
-  // passCipher.name = "passCipher";
-  // passCipher.type = "hidden";
-  passCipher.value = password.value; DEBUG
-  // Make sure the plain password isn't sent
+  passCipher.value = hex_sha512(password.value);
+  // Make sure the plain password isn't sent...
   password.value = "";
   form.submit();
+  return true;
 }
 
 function register_form(form, fName, lName, company, email, uName, password1, password2)
@@ -77,8 +75,7 @@ function register_form(form, fName, lName, company, email, uName, password1, pas
   {
     // hashy password
     var passCipher = document.getElementById("passCipher");
-    // passCipher.value = hex_sha512(password1.value);
-    passCipher.value = password.value; DEBUG
+    passCipher.value = hex_sha512(password1.value);
     // make sure plain text passwords don't get sent...
     password1.value = "";
     password2.value = "";
@@ -125,8 +122,7 @@ function reset_pass_form(form, pin, password1, password2)
   {
     // hashy password
     var passCipher = document.getElementById("passCipher");
-    // passCipher.value = hex_sha512(password1.value);
-    passCipher.value = password.value; DEBUG
+    passCipher.value = hex_sha512(password1.value);
     // make sure plain text passwords don't get sent...
     password1.value = "";
     password2.value = "";

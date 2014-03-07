@@ -32,10 +32,11 @@ function encrypt_string($string)
   $pepper = "4690e4fu£S";
   $string = trim($string);
   $string = $salt . $string . $pepper;
-  $ciphertext = hash('sha512', hash('whirlpool', $string));  
+  // $step1 = hash('whirlpool', $string);
+  $ciphertext = hash('whirlpool', $string);  
   // debug
-  $length = strlen($ciphertext);
-  echo "Cipher length: $length\n";
+  // $length = strlen($ciphertext);
+  // echo "Cipher length: $length\n";
   // debug
   return $ciphertext;
 } // end of function encrypt_string($string)

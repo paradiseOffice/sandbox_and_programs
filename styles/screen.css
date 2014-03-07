@@ -1,3 +1,5 @@
+* { outline: 0; border: 0; margin: 0; padding: 0; }
+
 body { overflow-x: hidden; }
 body#landing {  
 
@@ -57,27 +59,106 @@ div#donate {
   top: 0px; right: 0px;
 }
 
-div#container { width: 100%; height: 100%; }
+div#container { 
+  width: 100%; height: 100%; 
+  float: left;
+}
 #container nav { 
   width: 150px; height: auto; 
-  float: left;  margin: 0;
+  float: left;  margin-left: 0;
   font-family: nav, verdana, arial, "sans serif";
   font-weight: normal; 
+  /* background */
+  background-color: #FFF3CD; 
+  background-image: -webkit-gradient(linear, 0% 100%, 100% 100%, from(#FFF3CD) to(#CEC494));
+  background-image: -webkit-linear-gradient(left, #FFF3CD, #CEC494);
+  background-image: -moz-linear-gradient(left, #FFF3CD, #CEC494);
+  background-image: -ms-linear-gradient(left, #FFF3CD, #CEC494);
+  background-image: linear-gradient(left, #FFF3CD, #CEC494);
+  background-image: -o-linear-gradient(left, #FFF3CD, #CEC494);
 }
-nav#rainbow-menu ul { list-style-type: none; margin-left: -30px; }
+/* login button */
+nav#rainbow-menu #login { 
+  display: block;
+  width: 160px; height: 60px;
+  margin: 20px 0px;
+  border: 0;
+  /* background stuff */
+  background-color: #ff0000;
+  background-image: url(../images/login_sprite.png);
+  background-position: 0 0;
+}
+nav#rainbow-menu #login:focus {
+  background-color: #ff0000;
+  background-image: url(../images/login_sprite.png);
+  background-position: 0 0;
+  outline: 1px solid #ff0034;
+}
+nav#rainbow-menu #login:hover {
+  background-color: #880000;
+  background-image: url(../images/login_sprite.png);
+  background-position: 160px 0px;
+}
+nav#rainbow-menu #login:active {
+  background-color: #990000;
+  background-image: url(../images/login_sprite.png);
+  background-position: 320px 0px;
+}
+/* register button */
+nav#rainbow-menu #register { 
+  display: block;
+  width: 150px; height: 40px;
+  margin: 5px 0px;
+  border: 0;
+  /* background stuff */
+  background-color: #008800;
+  background-image: url(../images/register_sprite.png);
+  background-position: 0 0;
+}
+nav#rainbow-menu #register:focus {
+  display: block;
+  width: 150px; height: 40px;
+  margin: 5px 0px;
+  border: 0;
+  outline: 1px solid #008800;
+  /* background stuff */
+  background-color: #008800;
+  background-image: url(../images/register_sprite.png);
+  background-position: 0 0;
+}
+nav#rainbow-menu #register:hover {
+  display: block;
+  width: 150px; height: 40px;
+  margin: 5px 0px;
+  border: 0;
+  /* background stuff */
+  background-color: #00AA00;
+  background-image: url(../images/register_sprite.png);
+  background-position: 150px 0;
+}
+nav#rainbow-menu #register:active {
+  display: block;
+  width: 150px; height: 40px;
+  margin: 5px 0px;
+  border: 0;
+  /* background stuff */
+  background-color: #00AA00;
+  background-image: url(../images/register_sprite.png);
+  background-position: 300px 0;
+}
+/* normal links */
+nav#rainbow-menu ul { list-style-type: none; }
+nav#rainbow-menu ul li { margin-left: 0px; }
 nav#rainbow-menu ul li a { 
   font-size: 140%; 
   color: #dedede; 
   text-decoration: none; 
+  background-color: #436fff;
   display: block;
-  height: 1.6em;
-  border-left: 2px solid white; border-right: 2px solid white;
+  height: 40px; width: 150px; 
+  border: 0; 
 }
-nav#rainbow-menu ul li a:hover { background: rgba(230,230,230, 0.7);
-  color: black;
-}
-/* login to be violet to purple #34176E to 6A0056 (indigo) first item in nav */
-nav#rainbow-menu ul > li:nth-child(1) { 
+nav#rainbow-menu #benefits a:hover img { 
   background-color: #6A0023; 
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6A0023) to(#E20800));
   background-image: -webkit-linear-gradient(top, #6A0023, #E20800);
@@ -85,9 +166,8 @@ nav#rainbow-menu ul > li:nth-child(1) {
   background-image: -ms-linear-gradient(top, #6A0023, #E20800);
   background-image: linear-gradient(top, #6A0023, #E20800);
   background-image: -o-linear-gradient(top, #6A0023, #E20800);
-  border-top: 2px solid #6A0023; border-bottom: 2px solid #E20800;
 }
-nav#rainbow-menu ul > li:nth-child(2) {
+nav#rainbow-menu #features a:hover {
   background-color: #E20800; 
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E20800) to(#CF430C));
   background-image: -webkit-linear-gradient(top, #E20800, #CF430C);
@@ -95,45 +175,8 @@ nav#rainbow-menu ul > li:nth-child(2) {
   background-image: -ms-linear-gradient(top, #E20800, #CF430C);
   background-image: linear-gradient(top, #E20800, #CF430C);
   background-image: -o-linear-gradient(top, #E20800, #CF430C);
-  border-top: 2px solid #E20800; border-bottom: 2px solid #CF430C;
 }
-nav#rainbow-menu ul > li:nth-child(4) { 
-  background-color: #FFD500; 
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFD500) to(#FFFF00));
-  background-image: -webkit-linear-gradient(top, #FFD500, #FFFF00);
-  background-image: -moz-linear-gradient(top, #FFD500, #FFFF00);
-  background-image: -ms-linear-gradient(top, #FFD500, #FFFF00);
-  background-image: linear-gradient(top, #FFD500, #FFFF00);
-  background-image: -o-linear-gradient(top, #FFD500, #FFFF00);
-  border-top: 2px solid #FFD500; border-bottom: 2px solid #FFFF00;
-}
-nav#rainbow-menu ul > li:nth-child(6) { 
-  background-color: #0066FF; 
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0066FF) to(#0000CC));
-  background-image: -webkit-linear-gradient(top, #0066FF, #0000CC);
-  background-image: -moz-linear-gradient(top, #0066FF, #0000CC);
-  background-image: -ms-linear-gradient(top, #0066FF, #0000CC);
-  background-image: linear-gradient(top, #0066FF, #0000CC);
-  background-image: -o-linear-gradient(top, #0066FF, #0000CC);
-  border-top: 2px solid #0066FF; border-bottom: 2px solid #0000CC;
-}
-nav#rainbow-menu ul > li:nth-child(7) { 
-  background-color: #0000CC; 
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0000CC) to(#330099));
-  background-image: -webkit-linear-gradient(top, #0000CC, #330099);
-  background-image: -moz-linear-gradient(top, #0000CC, #330099);
-  background-image: -ms-linear-gradient(top, #0000CC, #330099);
-  background-image: linear-gradient(top, #0000CC, #330099);
-  background-image: -o-linear-gradient(top, #0000CC, #330099);
-  border-top: 2px solid #0000CC; border-bottom: 2px solid #330099;
-}
-nav .subnav { 
-  display: block; 
-  width: inherit; height: auto; 
-  margin-left: 0px;
-}
-div.subnav ol { list-style-type: none; padding: 0; }
-div.subnav#downloads ol {   
+nav#rainbow-menu #download a:hover {
   background-color: #CF430C; 
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CF430C) to(#FFD500));
   background-image: -webkit-linear-gradient(top, #CF430C, #FFD500);
@@ -141,8 +184,17 @@ div.subnav#downloads ol {
   background-image: -ms-linear-gradient(top, #CF430C, #FFD500);
   background-image: linear-gradient(top, #CF430C, #FFD500);
   background-image: -o-linear-gradient(top, #CF430C, #FFD500);
-} /* orange - yellow gradient */
-div.subnav#support ol { 
+}
+nav#rainbow-menu #installation a:hover {
+  background-color: #FFD500; 
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFD500) to(#FFFF00));
+  background-image: -webkit-linear-gradient(top, #FFD500, #FFFF00);
+  background-image: -moz-linear-gradient(top, #FFD500, #FFFF00);
+  background-image: -ms-linear-gradient(top, #FFD500, #FFFF00);
+  background-image: linear-gradient(top, #FFD500, #FFFF00);
+  background-image: -o-linear-gradient(top, #FFD500, #FFFF00);
+}
+nav#rainbow-menu #support a:hover {
   background-color: #FFFF00; color: #000000;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFF00), color-stop(0.5, #00BF00), to(#0066FF));
   background-image: -webkit-linear-gradient(top, #FFFF00, #00BF00 50%, #0066FF);
@@ -150,13 +202,32 @@ div.subnav#support ol {
   background-image: -ms-linear-gradient(top, #FFFF00, #00BF00 50%, #0066FF);
   background-image: linear-gradient(top, #FFFF00, #00BF00 50%, #0066FF);
   background-image: -o-linear-gradient(top, #FFFF00, #00BF00 50%, #0066FF);
-} /* yellow, green, light blue */
-div.subnav ol li a { font-size: 120%; display: block; padding-left: -20px;  }
+}
+nav#rainbow-menu  #forum a:hover {
+  background-color: #0066FF; 
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0066FF) to(#0000CC));
+  background-image: -webkit-linear-gradient(top, #0066FF, #0000CC);
+  background-image: -moz-linear-gradient(top, #0066FF, #0000CC);
+  background-image: -ms-linear-gradient(top, #0066FF, #0000CC);
+  background-image: linear-gradient(top, #0066FF, #0000CC);
+  background-image: -o-linear-gradient(top, #0066FF, #0000CC);
+}
+nav#rainbow-menu #development a:hover {
+  background-color: #0000CC; 
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0000CC) to(#800080));
+  background-image: -webkit-linear-gradient(top, #0000CC, #800080);
+  background-image: -moz-linear-gradient(top, #0000CC, #800080);
+  background-image: -ms-linear-gradient(top, #0000CC, #800080);
+  background-image: linear-gradient(top, #0000CC, #800080);
+  background-image: -o-linear-gradient(top, #0000CC, #800080);
+}
+
 /* end of nav */
 div#content { 
-  height: 700px; width: 1000px; 
-  border: 5px solid #1961FB;
-  margin-left: 105px; float: left; 
+  height: auto; width: 100%; 
+  border: 5px solid #fff;
+  outline: 5px solid #FFF3CD;
+  margin-left: 160px;  
   font-family: body, "times new roman", georgia, "serif";
  }
 div#demo_vid { 
@@ -166,14 +237,23 @@ div#demo_vid {
   top: 200px; left: 250px;
   background: #330013; border: 1px solid black;
 }
-div#switch { 
+aside#switch { 
   position: absolute; 
   z-index: 7000;
-  width: 400px; height: 200px;
+  width: 380px; height: 200px;
   word-wrap: break-word;
   top: 530px; left: 170px;
-  background: #ccc url(../images/deckchair.jpg) no-repeat;
-  background-size: contain;
+  padding: 10px;
+  background-color: #ccc;
+  background-image: url(../images/aside_blue_gradient.png), url(../images/aside_speckles.png);
+  background-repeat:  no-repeat,  no-repeat;
+  background-size: cover, cover;
+  color: #fff;
+  font-size: 140%;
+}
+div.demo_vid {
+  width: 640px;
+  height: 480px;
 }
 
 footer { position: fixed; bottom: 0px; background: #dc0001; }
