@@ -74,7 +74,7 @@ body { overflow: hidden; }
   background: white;
 }
 .ui-tabs-nav.open { visibility: visible; }
-.ui-tabs-nav.closed { visibility: hidden; }
+.ui-tabs-nav.closed { display:none; }
 /* end of file port ------------------------------------------------------------------ */
 
 /* start of menu bar drop down menus */
