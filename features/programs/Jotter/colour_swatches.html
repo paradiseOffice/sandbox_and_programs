@@ -1,0 +1,67 @@
+<!DOCTYPE html class="no-js">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta keyword="author" value="Hazel Windle" />
+  <meta keyword="creation-date" value="20140120" />
+     <title>Jotter - Paradise Office</title>
+  
+<script type="text/JavaScript" src="../../../js_lib/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../../../js_lib/modernizr.custom.min.js"></script>
+<script type="text/javascript" src="../../../js_lib/colour_picker/spectrum.js"></script>
+<noscript>
+<h2>Javascript not present</h2><p>Please turn on javascript by altering your web browser settings. <a target="blank" href="http://www.btny.purdue.edu/enablejavascript.html">Additional help for turning this setting on</a>.</p>
+</noscript>
+<script type="text/JavaScript" src="../../../js_lib/jqueryui-default-pro/js/jquery-ui-1.10.3.custom.js" ></script>
+<script type="text/JavaScript" src="../../../js_lib/resize-screen.js"></script>
+<script type="text/JavaScript" src="../../sandbox/logic/file_port/file_port_tabs.js"></script>
+<script type="text/JavaScript" src="../../sandbox/logic/file_port/open/new.js"></script>
+
+     <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/reset.css" />
+     <!-- choosing the screen size/type -->
+     <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/screen_860x600.css" />
+     <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/structure.css" />
+     <link rel="stylesheet" type="text/css" href="../../../js_lib/colour_picker/spectrum.css" />
+     <link rel="stylesheet" type="text/css" href="../../sandbox/ui/dialogs/dialogs.css" />
+     <link rel="stylesheet" type="text/css" href="../../sandbox/appearance/default_pro_theme/styles/ui_themes.css" />
+     <!-- jquery UI -->
+     <link rel="stylesheet" type="text/css" href="../../../js_lib/jqueryui-default-pro/css/default-pro/jquery-ui-1.10.3.custom.css" />
+     <script type="text/javascript">
+     $(function() {
+         // get value of select box on change
+       
+         var default_cols = [['black', 'rgb(128,128,128)', 'white', 'red', 'blue'], ['rgb(200,122,95)', 'rgb(139,69,19)', 'rgb(255,140,0)', 'rgb(255,165,0)', 'goldenrod'], ['gold', 'yellow', 'yellowgreen', 'rgb(127,255,0)', 'green'], ['darkgreen', 'lightskyblue', 'dodgerblue', 'darkblue', 'darkslateblue'], ['blueviolet', 'violet', 'indigo', 'magenta', 'mediumorchid']];
+         $( ".icon_swatches" ).spectrum({
+             showPaletteOnly: true,
+             showPalette:true,
+             color: 'rgb(144, 129, 200)',
+             palette:  default_cols  
+         });
+         $( ".palette" ).spectrum({
+             flat: true,
+             showPaletteOnly: true,
+             showPalette:true,
+             color: 'green',
+             palette:  default_cols  
+             
+         });
+     });
+     </script>
+</head>
+<body onload="checkWidth();">
+
+<!-- small icon -->
+<input type="color" id="palette_icon1" class="icon_swatches" value="magenta" /><br />
+<!-- palette selection -->
+<div class="palette" id="palette1">
+    <select name="colour_theme" id="colour_theme">
+        <option value="warm">Warm colours</option>
+        <option value="cool">Cool colours</option>
+    </select>
+    <button type="button" name="Update_colours" id="Update_colours">Update</button>
+    <input type="text" id="colour2" class="colour_swatches" value="magenta" />
+</div>
+
+
+</body>
+</html>

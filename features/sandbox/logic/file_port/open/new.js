@@ -12,9 +12,9 @@ $(function() {
 
 
 /* #new_file - adds the default classes to tab_n */
-function newFile () {
+function newFile() {
   $(document).ready(function() {
-    $( "#new_file" ).click(function() {
+    $( "#newFile" ).click(function() {
       var numOpenTabs = $( "#tabrow ul li .open" ).length();
       var nextTabNum = parseInt(numOpenTabs) + 1;
       $( "#tabrow #tab_" + nextTabNum )
@@ -24,18 +24,18 @@ function newFile () {
       $( "#file" + nextTabNum + "_wrapper" ).html("");
     }); // end of click function 
   });  //end of inner function
-};
+}
 
 /* close a file */
-function closeFile () {
+function closeFile() {
   $(function() {
-    $( "#close_file").click(function() {
+    $( "#closeFile").click(function() {
       var currentTab = findCurrentTab();
       $(currentTab).removeClass(".open")
         .addClass(".closed");
     });
   });
-};
+}
 
 /* to go into doc_utilities along with other functions from here */
 function findCurrentTab() {
@@ -44,22 +44,22 @@ function findCurrentTab() {
     .find( ".ui-tab-selected" );
     tab.css({ color: #f00; }); // DEBUG
     return tab;
-};
+}
 
-function getTabFName () {
+function getTabFName() {
     var selectedTab = findCurrentTab();
     var fileName = $(selectedTab + "[data-filename]" ).attr("data-filename");
     console.log(fileName); // DEBUG
     return fileName;
-};
+}
 
-function setTabFName (filename) {
+function setTabFName(filename) {
     // filename sent via ajax
     var selectedTab = findCurrentTab();
     $(selectedTab).attr("data-filename", "filename"); // check
     console.log(filename); // DEBUG, testing AJAX
     return true;
-};
+}
 
 /* should go somewhere else */
 function fillTab (file) {
