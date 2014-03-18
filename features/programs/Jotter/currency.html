@@ -25,7 +25,7 @@
      <!-- jquery UI -->
      <link rel="stylesheet" type="text/css" href="../../../js_lib/jqueryui-default-pro/css/default-pro/jquery-ui-1.10.3.custom.css" />
          <script type="text/javascript">
-    function currencyValid () {
+
         // pass in a locale at some stage for setting the currency sign
         var regexCurrency = /^[0-9]+([\.|,][0-9]+)?/;
         var inputCurrency = $( ".currencyField" ).val();
@@ -39,7 +39,6 @@
         {
             return true;
         }
-    };
     </script>
 </head>
 <body onload="checkWidth();">
@@ -47,6 +46,7 @@
 
 <label for="currency1">£</label>
 <input class="currencyField" name="currency1" id="currency1" type="number" min="0" step="0.01" placeholder="0.00" />
+<div id="messages"></div>
 
 </body>
 </html>
