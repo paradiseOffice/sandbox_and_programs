@@ -4,57 +4,7 @@
   <meta charset="utf-8">
     <title>Buttons Template</title>
     <meta name="" content="" />
-    <link rel="stylesheet" type="text/css" href="lib-jqueryui/css/pink/jquery-ui-1.10.3.custom.css" />
-<script type="text/JavaScript"
-src="/home/hazel/bin/jquery_dl/jquery-2.0.3.js">
-</script>
-<script type="text/JavaScript" src="/home/hazel/bin/jqueryUI_dl/jquery-ui-1.10.3/ui/jquery-ui.js" ></script>
-<!-- place at bottom of html in body tags -->
-<script type="text/JavaScript">
-$(function() {
-  $( '#button_funct' ).click(function (event)
-  {
-    var $caller = "button_funct"; // change this to the id text ... look up online (js get id value)
-    var $params = "text='Spam, spam spam and eggs'";
-    try
-    {
-      btn_link($caller, $params);
-    }
-    catch(e)
-    {
-      console.log("Function " + btn_link + "with parameter " + $caller + "failed. ";
-    }
-  }
-});
-
-function btn_link(caller, params)
-{
-  var $caller = $caller + ".php";
-  btnAction = new ajaxRequest();
-  btnAction.open("POST", $caller, true);  // async.
-  btnAction.setRequestHeader("Content-type", "application/x-www-form-encoded");
-  btnAction.setRequestHeader("Content-length", params.length);
-  btnAction.setRequestHeader("Connection", "close");
-  
-  btnAction.onreadystatechange = function()
-  {
-    if ( this.readyState == 4 )
-    {
-      if ( this.status == 200 )
-      {
-        if ( this.responseText != null )
-        {
-          document.getElementById('replace').innerHTML = this.responseText;
-        }
-      else console.log("Ajax error: no data received. ");
-      }
-    else console.log("Ajax error: " + this.statusText);
-    }
-  }
-  btnAction.send(params);
-}
-
-</script>
+<script type="text/JavaScript" src="jquery-2.0.3.js"></script>
 <style type="text/css">
   #button_box { 
   width: 150px; height: 40px;
@@ -80,6 +30,54 @@ a { color: black; padding: 0.2em; text-decoration: none; }
 
 <div id="button_box"><a href="#" id="button_funct">Click</a></div>
 <div id="replace">Some text that changes. </div>
+
+<!-- place at bottom of html in body tags -->
+<script type="text/JavaScript">
+$(function() {
+  $( '#button_funct' ).click(function (event)
+  {
+    // put PreventDefault() here...
+    var caller = "button_funct.php"; // change this to the id text ... look up online (js get id value)
+    var params = "text='Spam, spam spam and eggs'";
+    try
+    {
+      btn_link(caller, params);
+    }
+    catch(e)
+    {
+      console.log("Function " + btn_link + "with parameter " + caller + "failed. ");
+    }
+  });
+});
+
+function btn_link(caller, params)
+{
+  
+  btnAction = new ajaxRequest();
+  btnAction.open("POST", caller, true);  // async.
+  btnAction.setRequestHeader("Content-type", "application/x-www-form-encoded");
+  btnAction.setRequestHeader("Content-length", params.length);
+  btnAction.setRequestHeader("Connection", "close");
+  
+  btnAction.onreadystatechange = function()
+  {
+    if ( this.readyState == 4 )
+    {
+      if ( this.status == 200 )
+      {
+        if ( this.responseText != null )
+        {
+          document.getElementById('replace').innerHTML = this.responseText;
+        }
+      else console.log("Ajax error: no data received. ");
+      }
+    else console.log("Ajax error: " + this.statusText);
+    }
+  }
+  btnAction.send(params);
+}
+
+</script>
 
 </body>
 </html>
