@@ -28,32 +28,28 @@
      <link rel="stylesheet" type="text/css" href="../../sandbox/appearance/default_pro_theme/styles/ui_themes.css" />
      <!-- jquery UI -->
      <link rel="stylesheet" type="text/css" href="../../../js_lib/jqueryui-default-pro/css/default-pro/jquery-ui-1.10.3.custom.css" />
-     <style type="text/css">
-        input.sciNum {
-            width: 160px;
-        }
-     </style>
      <script type="text/javascript">
-        $(function() {
-            var regexSciNum = /^[0-9]+[\.|,][0-9]+[e|E][0-9]+$/;
-            var inputSciNum = $( ".sciNum" ).val();
-            var resultSciNum = regexCurrency.test(inputSciNum);
-            if (!resultSciNum) 
-            {
-                $( "#messages" ).append("<p class='warn'>Please enter a scientific number value like 1.6e6 (1,600,000). </p>");
-                return false;
-            }
-            else
-            {
-                return true;
-            }    
-            
-        });
+     $(function() {
+        var timeRegex = /^(([0-9])|([0-1][0-9])|([2][0-3])):?([0-5][0-9])([:]?[0-5][0-9])*$/;
+        var inputTime = $( ".timeField" ).val();
+        var resultRegex = timeRegex.test(inputTime);
+        if (!resultRegex) {
+            $( "#messages" ).append("<p class='warn'>Time field isn't in HH:MM or HH:MM:SS format. </p>");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+     });
      </script>
+     <style type="text/css">
+        input.timeField { width: 60px; }
+     </style>
 </head>
 <body onload="checkWidth();">
 
-    <input type="number" id="sciNum1" class="sciNum" step="0.01" placeholder="0.01e2" validation="validation" />
-    
+<input type="text" name="timeField1" id="timeField1" class="timeField" validate="validate" />
+
 </body>
 </html>

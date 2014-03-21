@@ -29,31 +29,21 @@
      <!-- jquery UI -->
      <link rel="stylesheet" type="text/css" href="../../../js_lib/jqueryui-default-pro/css/default-pro/jquery-ui-1.10.3.custom.css" />
      <style type="text/css">
-        input.sciNum {
-            width: 160px;
+        .longText { 
+            width: 100%; height: 5em;
+            border: 1px solid #e9dfe9;
+            border-radius: 6px;
+            padding: 0.2em;
+            -webkit-box-shadow: inset 2px 2px 3px 0px #BBAAFF;
+            -moz-box-shadow: inset 2px 2px 3px 0px #BBAAFF;
+            box-shadow: inset 2px 2px 3px 0px #BBAAFF;
         }
      </style>
-     <script type="text/javascript">
-        $(function() {
-            var regexSciNum = /^[0-9]+[\.|,][0-9]+[e|E][0-9]+$/;
-            var inputSciNum = $( ".sciNum" ).val();
-            var resultSciNum = regexCurrency.test(inputSciNum);
-            if (!resultSciNum) 
-            {
-                $( "#messages" ).append("<p class='warn'>Please enter a scientific number value like 1.6e6 (1,600,000). </p>");
-                return false;
-            }
-            else
-            {
-                return true;
-            }    
-            
-        });
-     </script>
 </head>
 <body onload="checkWidth();">
 
-    <input type="number" id="sciNum1" class="sciNum" step="0.01" placeholder="0.01e2" validation="validation" />
-    
+<textarea id="longText1" class="longText" name="longText1" placeholder="Type here" ></textarea>
+
+
 </body>
 </html>

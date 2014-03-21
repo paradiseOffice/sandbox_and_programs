@@ -104,3 +104,6 @@ button#cancel_btn {
     cursor: pointer;
 }
 /* end of OK, Cancel buttons */
+
+/* more general stuff */
+label.helpLabel { float: left; }

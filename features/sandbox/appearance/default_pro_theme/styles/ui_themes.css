@@ -75,10 +75,7 @@ header { background: #e9dfe9 url('images/top_bg.png') repeat-x;
 .common_bar-skel span.acckey { text-decoration: underline; }
 
 /* these should go in a program specific CSS file to deal with icons, pics */
-#img_large1 { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/general/128/new_file_128x128.png'); }
-#img_large2 { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/general/128/save_file_128x128.png'); }
-button#search { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/word_processing/64/dictionary_64x64.png'); }
-#img_large4 { background-image: url('/home/hazel/Documents/new_linux_paradise/sandbox/sandbox/appearence/themes/default_pro_theme/icons/general/wikipedia.png'); }
+#img_large1 { background-image: url(''); }
 
 /* end of common bar and large icons */
 

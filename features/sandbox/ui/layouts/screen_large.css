@@ -52,20 +52,26 @@
   max-height: 1000px; max-width: 900px; 
 }
 
-
-
+/* ================ .tool_pane-skel rules, including tool_box and help area */
 .tool_pane-skel { width: 250px; 
                   height: 478px; /* computed +4 */ 
                   left: 533px; /* computed + 23 */  
                   top: 0px; 
-                   }
-
-                   
+           }
+/* tool box/pane rules */
+.tool_box { margin: 2px; }
+.icon, .spinner { width: 61px; height: 61px; }
+img { width: 56px; /* -6 px for margins/padding */ height: 56px; margin: 2px; }
+div#messages { padding: 2px; height: 98%; border: 1px solid #ccc; }
+table.tool_box { border: 1px solid #1c1c1c; margin-bottom: 5px; }
+/* end of tool pane rules */
 .help_box-skel { width: 280px; 
                  height: 200px; 
                  left: 0px; 
-                 top: 20px; /* always 20px under any tool boxes */ }  
-                 
+                 top: 20px; /* always 20px under any tool boxes */ 
+}         
+/* ========================== end of tool_pane-skel ==================== */            
+                
 .status_bar { height: 30px; left: 0px; 
               padding-left: 160px;  } /* top, width computed */
 .settings_menu { width: 150px; left: 0px; top: 0px;  }

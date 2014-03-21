@@ -28,32 +28,24 @@
      <link rel="stylesheet" type="text/css" href="../../sandbox/appearance/default_pro_theme/styles/ui_themes.css" />
      <!-- jquery UI -->
      <link rel="stylesheet" type="text/css" href="../../../js_lib/jqueryui-default-pro/css/default-pro/jquery-ui-1.10.3.custom.css" />
-     <style type="text/css">
-        input.sciNum {
-            width: 160px;
-        }
-     </style>
      <script type="text/javascript">
-        $(function() {
-            var regexSciNum = /^[0-9]+[\.|,][0-9]+[e|E][0-9]+$/;
-            var inputSciNum = $( ".sciNum" ).val();
-            var resultSciNum = regexCurrency.test(inputSciNum);
-            if (!resultSciNum) 
-            {
-                $( "#messages" ).append("<p class='warn'>Please enter a scientific number value like 1.6e6 (1,600,000). </p>");
-                return false;
-            }
-            else
-            {
-                return true;
-            }    
-            
+      $(function() {
+        $( "#progressbar" ).progressbar({
+            value: 0,
+            max: 100
         });
+        for (var i = 0; i < 101; i++)
+        {
+            setTimeout(function() {},10000);
+            $( "#progressbar" ).progressbar({ value: i });
+        }
+      });
      </script>
 </head>
 <body onload="checkWidth();">
 
-    <input type="number" id="sciNum1" class="sciNum" step="0.01" placeholder="0.01e2" validation="validation" />
-    
+<p id="progressbar"></p>
+
+
 </body>
 </html>
