@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta keyword="author" value="Hazel Windle" />
   <meta keyword="creation-date" value="20140120" />
-     <title>Jotter - Paradise Office</title> 
+     <title>Jotter - Paradise Office</title>
 <script type="text/JavaScript" src="../../../js_lib/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="../../../js_lib/modernizr.custom.min.js"></script>
 <script type="text/javascript" src="../../../js_lib/colour_picker/spectrum.js"></script>
@@ -18,8 +18,8 @@
 <script type="text/JavaScript" src="../../sandbox/logic/file_port/open/new.js"></script>
      <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/reset.css" />
      <!-- choosing the screen size/type -->
-     <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/screen_large.css" />
-    <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/structure.css" />
+     <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/screen_mobile.css" />
+     <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/structure.css" />
      <link rel="stylesheet" type="text/css" href="../../../js_lib/colour_picker/spectrum.css" />
      <link rel="stylesheet" type="text/css" href="../../sandbox/ui/dialogs/dialogs.css" />
      <link rel="stylesheet" type="text/css" href="../../sandbox/appearance/default_pro_theme/styles/widgets.css" />
@@ -35,11 +35,92 @@
   </div>
   <header>
   <div class="menu_bar-skel">
-
+  <!-- max 4 menus or swipe for next 4 menus -->
+           <nav role="navigation" aria-label="Main menu">
+    <ul role="menubar">
+    <!-- menus then menu_items go here -->
+       <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">F</span>ile</a>
+    <!-- menu_items go in here -->
+            <ul class="submenu" role="menu" aria-hidden="true">
+            <li role="menuitem" tabindex="-1"><a id="newFile" href="#"><span class="acckey">N</span>ew</a></li>
+            <li role="menuitem" tabindex="-1"><a id="openFile" href="#"><span class="acckey">O</span>pen</a></li>
+            <li role="menuitem" tabindex="-1"><a id="saveFile" href="#"><span class="acckey">S</span>ave</a></li>
+            <li role="menuitem" tabindex="-1"><a id="saveAs" href="#">Save <span class="acckey">A</span>s</a></li>
+            <li role="menuitem" tabindex="-1"><a id="saveAll" href="#" title="Ctrl + L">Save All</li>
+            <li role="menuitem" tabindex="-1"><a id="printView" href="#">Print <span class="acckey">V</span>iew</a></li>
+            <li role="menuitem" tabindex="-1"><a id="print" href="#"><span class="acckey">P</span>rint</a></li>
+            <li role="menuitem" tabindex="-1"><a id="closeFile" href="#" title="Ctrl + W">Close File</a></li>
+            </ul>
+        </li> 
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">E</span>dit</a>
+        <!-- menu_items go in here -->
+            <ul class="submenu" role="menu" aria-hidden="true">
+            <li role="menuitem" tabindex="-1"><a id="undo" href="#" title="Ctrl + Z"><span class="acckey">U</span>ndo</a></li>
+            <li role="menuitem" tabindex="-1"><a id="redo" href="#" title="Ctrl + Y">Re<span class="acckey">d</span>o</a></li>
+            <li role="menuitem" tabindex="-1"><a id="undoHistory" href="#">Undo <span class="acckey">H</span>istory</a></li>
+            <li role="hidden" class="separator"></li>
+            <li role="menuitem" tabindex="-1"><a id="cut" href="#" title="Ctrl + X">Cu<span class="acckey">t</span></a></li>
+            <li role="menuitem" tabindex="-1"><a id="copy" href="#" title="Ctrl + C"><span class="acckey">C</span>opy</a></li>
+            <li role="menuitem" tabindex="-1"><a id="paste" href="#" title="Ctrl + V"><span class="acckey">P</span>aste</a></li>
+            <li role="menuitem" tabindex="-1"><a id="clipboard" href="#">Clip<span class="acckey">b</span>oard</a></li>
+            <li role="hidden" class="separator"></li>
+            <li role="menuitem" tabindex="-1"><a id="findReplace" href="#" title="Ctrl + F"><span class="acckey">F</span>ind &amp; Replace</a></li>
+            </ul>
+        </li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">I</span>nsert</a>
+        <!-- menu_items go in here -->
+            <ul class="submenu" role="menu" aria-hidden="true">
+            <li role="menuitem" tabindex="-1"><a id="specialChar" href="#"><span class="acckey">S</span>pecial Character</a></li>
+            <li role="menuitem" tabindex="-1"><a id="dateTime" href="#"><span class="acckey">D</span>ate/Time</a></li>
+            <li role="hidden" class="separator"></li>
+            <li role="menuitem" tabindex="-1"><a id="spellcheck" href="#" title="F7">Spell<span class="acckey">c</span>heck</a></li>
+            <li role="menuitem" tabindex="-1"><a id="sortCSV" href="#">S<span class="acckey">o</span>rt</a></li>
+            <li role="menuitem" tabindex="-1"><a id="manageCSVFields" href="#"><span class="acckey">M</span>anage Fields</a></li>
+            </ul>
+        </li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">O</span>ptions</a>
+        <!-- menu_items go in here -->
+            <ul class="submenu" role="menu" aria-hidden="true">
+            <li role="menuitem" tabindex="-1"><a id="changeFont" href="#"><span class="acckey">C</span>hange Font</a></li>
+            <li role="menuitem" tabindex="-1"><a id="setTabWidth" href="#"><span class="acckey">S</span>et Tab Width</a></li>
+            <li role="menuitem" tabindex="-1"><a id="lineNumbers" href="#">Line <span class="acckey">N</span>umbers</a></li>
+            <li role="hidden" class="separator"></li>
+            <li role="menuitem" tabindex="-1"><a id="upperCase" href="#" title="Ctrl + U"><span class="acckey">U</span>PPERCASE</a></li>
+            <li role="menuitem" tabindex="-1"><a id="lowerCase" href="#" title="Ctrl + Shift + U"><span class="acckey">l</span>owercase</a></li>
+            <li role="menuitem" tabindex="-1"><a id="titleCase" href="#" title="Ctrl + Alt + U"><span class="acckey">T</span>itleCase</a></li>
+            <li role="hidden" class="separator"></li>
+            <li role="menuitem" tabindex="-1"><a id="highlightText" href="#"><span class="acckey">H</span>ighlighting</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
   </div>
   <div class="common_bar-skel">
-  
-
+  <!-- only 4 large_icons or 7 icons -->  
+        <a href="#" id="spellcheck">
+    <div id="large_icon1" class="large_icon">
+      <div id="img_large1" class="img"></div>
+      <span class="name">Spellcheck</span>      
+    </div>
+    </a>
+    <a href="#" id="sortCSV">
+    <div id="large_icon2" class="large_icon"> 
+      <div id="img_large2" class="img"></div>
+      <span class="name">Sort</span>
+    </div>
+    </a>
+    <a href="#" id="findReplace">
+    <div id="large_icon3" class="large_icon"> 
+      <div id="img_large3" class="img"></div>
+      <span class="name">Find</span>
+    </div>
+    </a>
+    <a href="#" id="saveAll">
+    <div id="large_icon4" class="large_icon">
+      <div id="img_large4" class="img"></div>
+      <span class="name">Save All</span>
+    </div>
+    </a>
   
   </div><!-- common bar -->
   </header>
@@ -133,43 +214,19 @@
 
 
 </div><!-- file_port -->
-		
-<div class="tool_pane-skel">
-  <table id="1" class="tool_box">
-    
-  </table>
-  <table id="2" class="tool_box">
-    <tr>
-      <td class="odd"><a href="./" id="indent more" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/256/indent_more_256x256.png" /></a></td>
-      <td class="even"><a href="./" id="dict" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/256/dictionary_256x256.png" /></a></td>
-      <td class="odd"><a href="./" id="configure" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/general/256/settings_256x256.png" /></a></td>
-      <td class="even"><a href="./" id="zoom original" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/general/256/zoom_orig_256x256.png" /></a></td>
-    </tr>
-    <tr>
-      <td class="even"><a href="./" id="justify" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/256/just_justify_256x256.png" /></a></td>
-      <td class="odd"><a href="./" id="left" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/256/just_left_256x256.png" /></a></td>
-      <td class="even"><a href="./" id="center" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/256/just_centre_256x256.png" /></a></td>
-      <td class="odd"><a href="./" id="right" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/256/just_right_256x256.png" /></a></td>
-    </tr>
-  </table>
-  
-     <div class="help_box-skel">
-        <div id="messages">
-            <p class="warn">Warning</p>
-            <p class="error">Error</p>
-            <p class="info">Information</p>
-            <p class="help">Help</p>
-        </div>
-     </div><!-- help box -->     
-  </div><!-- tool pane -->
-</section><!-- window -->
 
+<button id="tool_pane_toggle" type="button"></button>
+<div class="tool_pane-skel">
+
+</div>
+
+</section><!-- window -->
 <div class="status_bar">
 
 </div><!-- status_bar -->
+
 <!-- for dynamically created dialogs -->
 <div id="quickMenu"></div>
-
 
 </body>
 </html>

@@ -35,10 +35,90 @@
   </div>
   <header>
   <div class="menu_bar-skel">
-
+           <nav role="navigation" aria-label="Main menu">
+    <ul role="menubar">
+    <!-- menus then menu_items go here -->
+       <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">F</span>ile</a>
+    <!-- menu_items go in here -->
+            <ul class="submenu" role="menu" aria-hidden="true">
+            <li role="menuitem" tabindex="-1"><a id="newFile" href="#"><span class="acckey">N</span>ew</a></li>
+            <li role="menuitem" tabindex="-1"><a id="openFile" href="#"><span class="acckey">O</span>pen</a></li>
+            <li role="menuitem" tabindex="-1"><a id="saveFile" href="#"><span class="acckey">S</span>ave</a></li>
+            <li role="menuitem" tabindex="-1"><a id="saveAs" href="#">Save <span class="acckey">A</span>s</a></li>
+            <li role="menuitem" tabindex="-1"><a id="saveAll" href="#" title="Ctrl + L">Save All</li>
+            <li role="menuitem" tabindex="-1"><a id="printView" href="#">Print <span class="acckey">V</span>iew</a></li>
+            <li role="menuitem" tabindex="-1"><a id="print" href="#"><span class="acckey">P</span>rint</a></li>
+            <li role="menuitem" tabindex="-1"><a id="closeFile" href="#" title="Ctrl + W">Close File</a></li>
+            </ul>
+        </li> 
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">E</span>dit</a>
+        <!-- menu_items go in here -->
+            <ul class="submenu" role="menu" aria-hidden="true">
+            <li role="menuitem" tabindex="-1"><a id="undo" href="#" title="Ctrl + Z"><span class="acckey">U</span>ndo</a></li>
+            <li role="menuitem" tabindex="-1"><a id="redo" href="#" title="Ctrl + Y">Re<span class="acckey">d</span>o</a></li>
+            <li role="menuitem" tabindex="-1"><a id="undoHistory" href="#">Undo <span class="acckey">H</span>istory</a></li>
+            <li role="hidden" class="separator"></li>
+            <li role="menuitem" tabindex="-1"><a id="cut" href="#" title="Ctrl + X">Cu<span class="acckey">t</span></a></li>
+            <li role="menuitem" tabindex="-1"><a id="copy" href="#" title="Ctrl + C"><span class="acckey">C</span>opy</a></li>
+            <li role="menuitem" tabindex="-1"><a id="paste" href="#" title="Ctrl + V"><span class="acckey">P</span>aste</a></li>
+            <li role="menuitem" tabindex="-1"><a id="clipboard" href="#">Clip<span class="acckey">b</span>oard</a></li>
+            <li role="hidden" class="separator"></li>
+            <li role="menuitem" tabindex="-1"><a id="findReplace" href="#" title="Ctrl + F"><span class="acckey">F</span>ind &amp; Replace</a></li>
+            </ul>
+        </li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">I</span>nsert</a>
+        <!-- menu_items go in here -->
+            <ul class="submenu" role="menu" aria-hidden="true">
+            <li role="menuitem" tabindex="-1"><a id="specialChar" href="#"><span class="acckey">S</span>pecial Character</a></li>
+            <li role="menuitem" tabindex="-1"><a id="dateTime" href="#"><span class="acckey">D</span>ate/Time</a></li>
+            <li role="hidden" class="separator"></li>
+            <li role="menuitem" tabindex="-1"><a id="spellcheck" href="#" title="F7">Spell<span class="acckey">c</span>heck</a></li>
+            <li role="menuitem" tabindex="-1"><a id="sortCSV" href="#">S<span class="acckey">o</span>rt</a></li>
+            <li role="menuitem" tabindex="-1"><a id="manageCSVFields" href="#"><span class="acckey">M</span>anage Fields</a></li>
+            </ul>
+        </li>
+        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">O</span>ptions</a>
+        <!-- menu_items go in here -->
+            <ul class="submenu" role="menu" aria-hidden="true">
+            <li role="menuitem" tabindex="-1"><a id="changeFont" href="#"><span class="acckey">C</span>hange Font</a></li>
+            <li role="menuitem" tabindex="-1"><a id="setTabWidth" href="#"><span class="acckey">S</span>et Tab Width</a></li>
+            <li role="menuitem" tabindex="-1"><a id="lineNumbers" href="#">Line <span class="acckey">N</span>umbers</a></li>
+            <li role="hidden" class="separator"></li>
+            <li role="menuitem" tabindex="-1"><a id="upperCase" href="#" title="Ctrl + U"><span class="acckey">U</span>PPERCASE</a></li>
+            <li role="menuitem" tabindex="-1"><a id="lowerCase" href="#" title="Ctrl + Shift + U"><span class="acckey">l</span>owercase</a></li>
+            <li role="menuitem" tabindex="-1"><a id="titleCase" href="#" title="Ctrl + Alt + U"><span class="acckey">T</span>itleCase</a></li>
+            <li role="hidden" class="separator"></li>
+            <li role="menuitem" tabindex="-1"><a id="highlightText" href="#"><span class="acckey">H</span>ighlighting</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
   </div>
   <div class="common_bar-skel">
-  
+        <a href="#" id="spellcheck">
+    <div id="large_icon1" class="large_icon">
+      <div id="img_large1" class="img"></div>
+      <span class="name">Spellcheck</span>      
+    </div>
+    </a>
+    <a href="#" id="sortCSV">
+    <div id="large_icon2" class="large_icon"> 
+      <div id="img_large2" class="img"></div>
+      <span class="name">Sort</span>
+    </div>
+    </a>
+    <a href="#" id="findReplace">
+    <div id="large_icon3" class="large_icon"> 
+      <div id="img_large3" class="img"></div>
+      <span class="name">Find</span>
+    </div>
+    </a>
+    <a href="#" id="saveAll">
+    <div id="large_icon4" class="large_icon">
+      <div id="img_large4" class="img"></div>
+      <span class="name">Save All</span>
+    </div>
+    </a>
 
   
   </div><!-- common bar -->

@@ -142,3 +142,12 @@ form { position: relative; top: 2px; left: 2px; }
 /* for hiding all dialogs until needed */
 .dialog { display: none; }
 .advanced_dialog { display: none; }
+
+.tool_pane-skel.mobile { display: none; }
+button#tool_pane_toggle { 
+    position: fixed; 
+    width: 36px; height: 36px;
+    background: ;
+    top: 0px; right: 0px;
+}
+li.separator { border-bottom: 1px solid black; }

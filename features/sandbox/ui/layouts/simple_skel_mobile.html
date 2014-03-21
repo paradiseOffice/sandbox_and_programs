@@ -1,140 +1,152 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
+<!DOCTYPE html class="no-js">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-     <title>appName - Paradise Office</title>
-  
+  <meta charset="utf-8" />
+  <meta keyword="author" value="Hazel Windle" />
+  <meta keyword="creation-date" value="20140120" />
+     <title>Jotter - Paradise Office</title>
 <script type="text/JavaScript" src="../../../js_lib/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="../../../js_lib/modernizr.custom.min.js"></script>
+<script type="text/javascript" src="../../../js_lib/colour_picker/spectrum.js"></script>
 <noscript>
 <h2>Javascript not present</h2><p>Please turn on javascript by altering your web browser settings. <a target="blank" href="http://www.btny.purdue.edu/enablejavascript.html">Additional help for turning this setting on</a>.</p>
 </noscript>
 <script type="text/JavaScript" src="../../../js_lib/jqueryui-default-pro/js/jquery-ui-1.10.3.custom.js" ></script>
 <script type="text/JavaScript" src="../../../js_lib/resize-screen.js"></script>
 <script type="text/JavaScript" src="../../sandbox/logic/file_port/file_port_tabs.js"></script>
+<script type="text/javascript" src="../../sandbox/appearance/default_pro_theme/scripts/widgets.js"></script>
 <script type="text/JavaScript" src="../../sandbox/logic/file_port/open/new.js"></script>
-
      <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/reset.css" />
      <!-- choosing the screen size/type -->
      <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/screen_mobile.css" />
      <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/structure.css" />
+     <link rel="stylesheet" type="text/css" href="../../../js_lib/colour_picker/spectrum.css" />
      <link rel="stylesheet" type="text/css" href="../../sandbox/ui/dialogs/dialogs.css" />
+     <link rel="stylesheet" type="text/css" href="../../sandbox/appearance/default_pro_theme/styles/widgets.css" />
      <link rel="stylesheet" type="text/css" href="../../sandbox/appearance/default_pro_theme/styles/ui_themes.css" />
      <!-- jquery UI -->
      <link rel="stylesheet" type="text/css" href="../../../js_lib/jqueryui-default-pro/css/default-pro/jquery-ui-1.10.3.custom.css" />
 </head>
-<body>
+<body onload="checkWidth();">
 
 
   <div class="title_bar-skel">
-    <h1>Document Title - Glorified Typewriter</h1>
+    <h1>Document - Jotter</h1>
   </div>
   <header>
   <div class="menu_bar-skel">
-    <nav role="navigation" aria-label="Main menu">
-    <ul role="menubar">
-        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">F</span>ile</a>
-            <ul class="submenu" role="menu" aria-hidden="true">
-                <li role="menuitem" tabindex="-1"><a id="link1" href="#"><span class="acckey">N</span>ew</a></li>
-                <li role="menuitem" tabindex="-1"><a href="dialog-open.php"><span class="acckey">O</span>pen</a></li>
-                <li role="menuitem" tabindex="-1"><a href="#"><span class="acckey">S</span>ave</a></li>
-                <li role="menuitem" tabindex="-1"><a href="#">Save <span class="acckey">A</span>s</a></li>
-                <li role="menuitem" tabindex="-1"><a href="#" title="Ctrl + W"><span class="acckey">C</span>lose File</a></li>
-            </ul>
-        </li>
-        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Services</a>
-            <ul class="submenu" role="menu" aria-hidden="true">
-                <li role="menuitem" tabindex="-1"><a href="#">Abrasion</a></li>
-                <li role="menuitem" tabindex="-1"><a href="#">Peel</a></li>
-                <li role="menuitem" tabindex="-1"><a href="#">Wax</a></li>
-            </ul>
-        </li>
-        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Contact</a>
-            <ul class="submenu" role="menu" aria-hidden="true">
-                <li role="menuitem" tabindex="-1"><a href="#">Telephone</a></li>
-                <li role="menuitem" tabindex="-1"><a href="#">Letter</a></li>
-                <li role="menuitem" tabindex="-1"><a href="#">Email </a></li>
-            </ul>
-        </li>
-    </ul>
-  </nav>
+  <!-- max 4 menus or swipe for next 4 menus -->
 
   </div>
   <div class="common_bar-skel">
-  
-     <a href="#">
-    <div id="large_icon1" class="large_icon">
-      <div id="img_large1" class="img"></div>
-      <span class="name">New</span>      
-    </div>
-    </a>
-    <a href="#">
-    <div id="large_icon2" class="large_icon" onclick="saveTextAsFile()"> 
-      <div id="img_large2" class="img"></div>
-      <span class="name">Save</span>
-    </div>
-    </a>
-    <a href="#">
-    <div id="large_icon3" class="large_icon">
-      <form method="get" action="#"> <!-- spellcheck.php -->
-      <input type="text" id="spellcheck" class="text_field" name="spellcheck" placeholder="word look up" /> 
-      <button class="ctl-btn" type="submit" id="search" title="Spellcheck" /></form>
-    </div>
-    </a>
-    <a href="#">
-    <div id="large_icon4" class="large_icon">
-      <div id="img_large4" class="img"></div>
-      <span class="name">Wikipedia</span>
-    </div>
-    </a>
+  <!-- only 4 large_icons or 7 icons -->  
+
   
   </div><!-- common bar -->
   </header>
 <section class="window">
-  <div class="file_port" >
-    
-      <div id="tabrow" class="tabs-top">
-        <ul>
-          <li><a href="#file1-wrapper">File 1</a></li>
-          <li><a href="#file2-wrapper">File 2</a></li>
-          <li><a href="#file3-wrapper">File 3</a></li>
-        </ul>
-     
-     
-      <div id="file1-wrapper" >
-        <textarea id="file1" ></textarea>
-      </div>
-      <div id="file2-wrapper" >
-        <textarea id="file1" >&nbsp; </textarea>
-      </div>
-      <div id="file3-wrapper" >
-        <textarea id="file3" >Something &nbsp; </textarea>
-      </div>
-      
-    </div><!-- tabrow -->
-  </div><!-- file_port -->
-		
+<!-- file_port goes here -->
+<div class="file_port" >
+<div id="tabrow" class="tabs-top">
+    <ul>
+        <li  class="ui-tabs-nav open"><a id="tab_1" href="#file1-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_2" href="#file2-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_3" href="#file3-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_4" href="#file4-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_5" href="#file5-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_6" href="#file6-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_7" href="#file7-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_8" href="#file8-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_9" href="#file9-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_10" href="#file10-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_11" href="#file11-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_12"  href="#file12-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_13" href="#file13-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_14" href="#file14-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_15" href="#file15-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_16" href="#file16-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_17" href="#file17-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_18" href="#file18-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_19" href="#file19-wrapper"></a></li>
+        <li class="ui-tabs-nav closed" aria-role="hidden"><a id="tab_20" href="#file20-wrapper"></a></li>
+    </ul> 
+    <!-- the text, words, or other file port specific to the program goes in here -->
+    <div id="file1-wrapper" >
+<textarea id="file1" class="file" ></textarea>
+</div>
+<div id="file2-wrapper" >
+<textarea id="file2" class="file" ></textarea>
+</div>
+<div id="file3-wrapper" >
+<textarea id="file3" class="file" ></textarea>
+</div>
+<div id="file4-wrapper" >
+<textarea id="file4" class="file" ></textarea>
+</div>
+<div id="file5-wrapper" >
+<textarea id="file5" class="file" ></textarea>
+</div>
+<div id="file6-wrapper" >
+<textarea id="file6" class="file" ></textarea>
+</div>
+<div id="file7-wrapper" >
+<textarea id="file7" class="file" ></textarea>
+</div>
+<div id="file8-wrapper" >
+<textarea id="file8" class="file" ></textarea>
+</div>
+<div id="file9-wrapper" >
+<textarea id="file9" class="file" ></textarea>
+</div>
+<div id="file10-wrapper" >
+<textarea id="file10" class="file" ></textarea>
+</div>
+<div id="file11-wrapper" >
+<textarea id="file11" class="file" ></textarea>
+</div>
+<div id="file12-wrapper" >
+<textarea id="file12" class="file" ></textarea>
+</div>
+<div id="file13-wrapper" >
+<textarea id="file13" class="file" ></textarea>
+</div>
+<div id="file14-wrapper" >
+<textarea id="file14" class="file" ></textarea>
+</div>
+<div id="file15-wrapper" >
+<textarea id="file15" class="file" ></textarea>
+</div>
+<div id="file16-wrapper" >
+<textarea id="file16" class="file" ></textarea>
+</div>
+<div id="file17-wrapper" >
+<textarea id="file17" class="file" ></textarea>
+</div>
+<div id="file18-wrapper" >
+<textarea id="file18" class="file" ></textarea>
+</div>   
+<div id="file19-wrapper" >
+<textarea id="file19" class="file" ></textarea>
+</div>
+<div id="file20-wrapper" >
+<textarea id="file20" class="file" ></textarea>
+</div>   
+
+
+</div><!-- file_port -->
+
+<button id="tool_pane_toggle" type="button"></button>
+<div class="tool_pane-skel">
+
+</div>
 
 </section><!-- window -->
 <div class="status_bar">
-<div class="settings_menu">
-  <nav role="navigation" aria-label="Main menu">
-    <ul role="menubar">
-        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#">Settings</a>
-            <ul class="submenu" role="menu" aria-hidden="true">
-                <li role="menuitem" tabindex="-1"><a href="#">Set Language</a></li>
-                <hr />
-                <li class="label" tabindex="-1">Themes</li>
-                <li role="menuitem" tabindex="-1"><a href="#">Contrast</a></li>
-                <li role="menuitem" tabindex="-1"><a href="#">Default Pro</a></li>
-                
-            </ul>
-        </li>
-    </ul>
-  </nav>
-</div>
 
+</div><!-- status_bar -->
 
+<!-- for dynamically created dialogs -->
+<div id="quickMenu"></div>
 
 </body>
 </html>
