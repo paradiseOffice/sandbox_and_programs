@@ -16,35 +16,39 @@
 	    // parameters for AJAX caller
 	    var phpURL = $( "#testBtn2 a" ).attr("href");
 	    console.log("PHP file: " + phpURL );
-	    var selection = $( ".selected" ).value;
+	    var selection = $( ".selected" ).html();
 	    var currentTab = "#file_1";
 	    var cursor_pos = 45;
-	    ajax_caller(phpURL, selection, currentTab, quickValues cursor_pos);
+	    var quickValues = { };
+	    ajax_caller(phpURL, selection, currentTab, quickValues, cursor_pos);
 	});
 
 	// below quickValues is another json thing to contain input data from quick menus
 	function ajax_caller(phpURL, selection, currentTab, quickValues, cursor_pos) {
+	    console.log( typeof selection);
+	    // selection = selection
 	    var dataToPHP = $.ajax({
 	    	url : phpURL,
 		type : "POST",
 		data : {
 			selection : selection,
 			currentTab : currentTab,
-			quickValues : { }, 
+			quickValues : quickValues, 
 			cursor_pos : cursor_pos
 		},
 		dataType : "html" // this could be json, possible BUG
 	    });
 	    dataToPHP.done (function( msg ) {
-	        console.log( msg );
+	        $( "#php" ).html( msg );
 	    });
 	    dataToPHP.fail (function(jqXHR, textStatus) {
-	    	$( "#messages" ).innerhtml("<p class='error'>Sending your data selection failed. Error code 1 </p>");
+	    	$( "#messages" ).html("<p class='error'>Sending your data selection failed. Error code 1 </p>");
 	    });
 	};
 
 	function quickMenuCreate(dialogHtml) {
-	    $( "#quickMenu" ).innerhtml(dialogHtml).show("600");
+	    $( "#quickMenu" ).html( dialogHtml );
+	    $( "#quickMenu" ).show("600");
 	};
 
 	function testFunction() {
