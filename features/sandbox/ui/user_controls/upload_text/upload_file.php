@@ -1,50 +1,43 @@
 <?php
 
-$demo_mode = false;
-$upload_dir = 'uploads/';
-$allowed_ext = array('jpg','jpeg','png','gif');
+$upload_dir = '/home/uploads';
+$allowed_ext = array('txt','odt','doc','docx', 'pdf','xml','html', 'htm', 'ods');
 
 if(strtolower($_SERVER['REQUEST_METHOD']) != 'post'){
     exit_status('Error! Wrong HTTP method!');
 }
 
-if(array_key_exists('pic',$_FILES) && $_FILES['pic']['error'] == 0 ){
-
-    $pic = $_FILES['pic'];
-
-    if(!in_array(get_extension($pic['name']),$allowed_ext)){
-        exit_status('Only '.implode(',',$allowed_ext).' files are allowed!');
+if(array_key_exists('file-upload',$_FILES) && $_FILES['file-upload']['error'] == 0 )
+{
+    $file = $_FILES['file-upload'];
+    if(!in_array(get_extension($file['name']),$allowed_ext))
+    {
+        exit_status('Only common picture files are allowed, (e.g. jpg, svg, png).');
     }   
-
-    if($demo_mode){
-
+    /*
+    if($demo_mode)
+    {
         // File uploads are ignored. We only log them.
-
         $line = implode('       ', array( date('r'), $_SERVER['REMOTE_ADDR'], $pic['size'], $pic['name']));
         file_put_contents('log.txt', $line.PHP_EOL, FILE_APPEND);
-
         exit_status('Uploads are ignored in demo mode.');
     }
-
+    */
     // Move the uploaded file from the temporary
     // directory to the uploads folder:
-
-    if(move_uploaded_file($pic['tmp_name'], $upload_dir.$pic['name'])){
-        exit_status('File was uploaded successfuly!');
+    if(move_uploaded_file($file['tmp_name'], $upload_dir.$file['name'])){
+        $filename = $upload_dir . $file['name'];
+        return $filename;
     }
-
+}
+else
+{
+    $errors = '<p class="error">The upload went wrong somehow. </p>';
+    return $errors;
 }
 
-exit_status('Something went wrong with your upload!');
-
-// Helper functions
-
-function exit_status($str){
-    echo json_encode(array('status'=>$str));
-    exit;
-}
-
-function get_extension($file_name){
+function get_extension($file_name)
+{
     $ext = explode('.', $file_name);
     $ext = array_pop($ext);
     return strtolower($ext);
@@ -90,11 +83,10 @@ function get_extension($file_name){
 </head>
 <body onload="checkWidth();">
 
-
-<form method='post' action='upload2.php' enctype='multipart/form-data'>
-Select a JPG, GIF, PNG or TIF File:
-<input type='file' name='filename' size='10' />
-<input type='submit' value='Upload' /></form>
+<form method='post' action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype='multipart/form-data'>
+<input type='file' name='file-upload' id='file-upload' class="url" placeholder="A file" />
+<input type='submit' id="upload" class="upload" value='Open' />
+</form>
 
 </body>
 </html>
