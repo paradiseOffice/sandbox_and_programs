@@ -26,19 +26,7 @@
      <link rel="stylesheet" type="text/css" href="../../../js_lib/jqueryui-default-pro/css/default-pro/jquery-ui-1.10.3.custom.css" />
          <script type="text/javascript">
 
-        // pass in a locale at some stage for setting the currency sign
-        var regexCurrency = /^[0-9]+([\.|,][0-9]+)?/;
-        var inputCurrency = $( ".currencyField" ).val();
-        var resultRegex = regexCurrency.test(inputCurrency);
-        if(!resultRegex) {
-            // error - not a valid currency value... figure out error msg implementation.
-            $( "#messages" ).append("<p class='warn'>Please enter a currency value that is 0 or more. </p>");
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+        
     </script>
 </head>
 <body onload="checkWidth();">

@@ -107,3 +107,27 @@ button#cancel_btn {
 
 /* more general stuff */
 label.helpLabel { float: left; }
+label { }
+input, textarea, div[contenteditable="contenteditable"] {
+    background: white; color: black;
+    border: 1px solid #e9dfe9;
+    border-radius: 6px;
+    padding: 0.2em;
+    -webkit-box-shadow: inset 2px 2px 3px 0px #BBAAFF;
+    -moz-box-shadow: inset 2px 2px 3px 0px #BBAAFF;
+    box-shadow: inset 2px 2px 3px 0px #BBAAFF;
+}
+.longText { width: 100%; height: 5em; }
+#progressbar { width: 60%; height: auto; }
+input.sciNum { width: 160px; }
+.slider { width: 50%; margin: 0.4em auto; }
+.spinner { }
+input.textField { width: 200px; float: left; }
+input.timeField { width: 60px; }
+select.combobox {
+    width: 140px;
+    height: auto;
+    padding: 0.5em;
+    font-size: 100%;
+}
+input[type="email"] { width: 200px; }
