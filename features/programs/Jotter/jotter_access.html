@@ -29,14 +29,14 @@
      <!-- jquery UI accessibility css -->
      <link rel="stylesheet" type="text/css" href="../../../js_lib/jqueryui-access/css/access/jquery-ui-1.10.3.custom.css" />
 </head>
-<body onload="checkWidth();"> 
+<body id="jotter"  onload="checkWidth();"> 
 
   <div class="title_bar-skel">
     <h1>Document - Jotter</h1>
   </div>
   <header>
   <div class="menu_bar-skel">
-           <nav role="navigation" aria-label="Main menu">
+       <nav role="navigation" aria-label="Main menu">
     <ul role="menubar">
     <!-- menus then menu_items go here -->
        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">F</span>ile</a>
@@ -70,10 +70,10 @@
         <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">I</span>nsert</a>
         <!-- menu_items go in here -->
             <ul class="submenu" role="menu" aria-hidden="true">
-            <li role="menuitem" tabindex="-1"><a id="specialChar" href="#"><span class="acckey">S</span>pecial Character</a></li>
+            <li role="menuitem" tabindex="-1"><a id="specialChar" href="#"><span class="acckey">C</span>haracter</a></li>
             <li role="menuitem" tabindex="-1"><a id="dateTime" href="#"><span class="acckey">D</span>ate/Time</a></li>
             <li role="hidden" class="separator"></li>
-            <li role="menuitem" tabindex="-1"><a id="spellcheck" href="#" title="F7">Spell<span class="acckey">c</span>heck</a></li>
+            <li role="menuitem" tabindex="-1"><a id="spellcheck" href="#" title="F7"><span class="acckey">S</span>pellcheck</a></li>
             <li role="menuitem" tabindex="-1"><a id="sortCSV" href="#">S<span class="acckey">o</span>rt</a></li>
             <li role="menuitem" tabindex="-1"><a id="manageCSVFields" href="#"><span class="acckey">M</span>anage Fields</a></li>
             </ul>
@@ -96,7 +96,7 @@
 </nav>
   </div>
   <div class="common_bar-skel">
-        <a href="#" id="spellcheck">
+    <a href="#" id="spellcheck">
     <div id="large_icon1" class="large_icon">
       <div id="img_large1" class="img"></div>
       <span class="name">Spellcheck</span>      
@@ -214,13 +214,44 @@
 </div><!-- file_port -->
         
 <div class="tool_pane-skel">
-  <table id="1" class="tool_box"><!-- 4 columns wide -->
-    
+    <table id="view" class="tool_box">
+    <tr>
+      <td class="odd" colspan="3"><select id="font-chooser">
+        <option id="font1" value="sans">Sans </option>
+        <option id="font2" value="serif">Serif </option>
+        </select>
+      </td>
+      
+      <td class="even"><input type="number" id="spinner1"  class="spinner" step="1" /></td>
+    </tr>
+    <tr>
+      <td class="even"><a href="#" id="zoom_in" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/general/zoom_in.svg" /></a></td>
+      <td class="odd"><a href="#" id="zoom_out" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/general/zoom_out.svg" /></a></td>
+      <td class="even" colspan="2"><p id="slider1" class="slider zoom"></p></td>
+    </tr>
   </table>
-  <table id="2" class="tool_box">
-   
+  <table id="editing" class="tool_box">
+    <tr>
+      <td class="odd"><a href="#" id="undo" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/general/undo.svg" /></a></td>
+      <td class="even"><a href="#" id="redo" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/general/redo.svg" /></a></td>
+      <td class="odd" colspan="2"></td>
+    </tr>
+    <tr>
+      <td class="even"><a href="#" id="insert_specialChar" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/word_processing/insert_spec_char.svg" /></a></td>
+      <td class="odd"><a href="#" id="upperIcon" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/text_editor/uppercase.svg" /></a></td>
+      <td class="even"><a href="#" id="lowerIcon" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/text_editor/lowercase.svg" /></a></td>
+      <td class="odd"><a href="#" id="tabWidthIcon" class="icon"><img src="../../sandbox/appearance/accessibility_theme/icons/text_editor/tab_width.svg" /></a></td>
+    </tr>
+    <tr>
+        <td colspan="4" class="even">
+            <select class="combobox" id="syntaxMenu" size="1">
+                <option value="c">C</option>
+                <option value="javascript">Javascript</option>
+                <option value="en_GB">British English</option>
+            </select>
+        </td>
+    </tr>
   </table>
-
   
   <div class="help_box-skel">
      <div id="messages">

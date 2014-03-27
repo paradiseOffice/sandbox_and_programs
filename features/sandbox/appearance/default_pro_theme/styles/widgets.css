@@ -131,3 +131,7 @@ select.combobox {
     font-size: 100%;
 }
 input[type="email"] { width: 200px; }
+
+#font1 option { font-family: "sans serif"; }
+#font2 option { font-family: serif; }
+#spinner1 { width: auto; height: auto; }

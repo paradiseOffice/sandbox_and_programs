@@ -18,8 +18,8 @@ var checkWidth = function() {
   
   var toolPane = jQuery('.tool_pane-skel').outerWidth(true);
   var toolbarHeight = parseInt(titlebar + menubar + commonbar + statusbar); 
-  console.log(toolbarHeight);
-  console.log(toolPane);
+  console.log("height of all toolbars: " + toolbarHeight);
+  console.log("Width of tool panes: " + toolPane);
   
   // toolbarHeight = parseInt(toolbarHeight);
   toolPane = parseInt(toolPane) + 30; // For borders and 15px left border
@@ -27,11 +27,17 @@ var checkWidth = function() {
   viewportHeight = parseInt(viewportHeight);  
   fileportWidth = viewportWidth - toolPane ;
   viewportWidth = parseInt(viewportWidth);
+  var fileWidth = parseInt(fileportWidth - 6);
+  console.log("File Width: " + fileWidth);
+  var statusBtm = ((viewportHeight + toolbarHeight) - (parseInt(statusbar) + 6));
+  var fileHeight = viewportHeight - parseInt(statusbar) - 6;
+  console.log("status is " + statusBtm + " from the top");
   jQuery('.file_port').css("width", fileportWidth);
-  jQuery('.file_port').css("height", viewportHeight - parseInt(statusbar) );
-  jQuery('.file').css("height", viewportHeight - parseInt(statusbar));
+  jQuery('.file_port').css("height", fileHeight + 6);
+  jQuery('div.ui-widget-content').css("height", fileHeight );
+  jQuery('.file').css("width", fileWidth );
   jQuery('.tool_pane-skel').css("left", fileportWidth  );
-  jQuery('.status_bar').css("top", viewportHeight + toolbarHeight - (parseInt(statusbar) + 6)); // for borders
+  jQuery('.status_bar').css("top", statusBtm ); // for borders
   jQuery('.window').css("height", viewportHeight);
   jQuery('.window').css("width", viewportWidth);
 };

@@ -20,7 +20,7 @@ if (isset($_POST['upload']))
         // Move the uploaded file from the temporary
         // directory to the uploads folder:
         if(move_uploaded_file($picture['tmp_name'], $upload_dir.$picture['name'])){
-            $filename = $upload_dir;
+            $filename = "/uploads";
             $filename .= $picture['name'];
             $errors .= "<p class='info'>Filename: $filename </p>";
         }

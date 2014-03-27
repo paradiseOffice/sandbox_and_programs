@@ -1,5 +1,5 @@
 body#jotter { 
-    background: #6193CF url('../../appearence/themes/default_pro_theme/icons/programs/jotter_256x256.png')  no-repeat left; 
+    background: #6193CF url('../../appearance/themes/default_pro_theme/icons/programs/jotter_256x256.png')  no-repeat left; 
 }
 
 header .program { }
@@ -16,4 +16,20 @@ div.previews { }
 footer#ctl_box { }
 div#ok_cancel { }
 
-
+/* stuff specific to jotter */
+/* spellcheck */
+body#jotter #large_icon1 .img { 
+    background-image: url('../../appearance/default_pro_theme/icons/word_processing/128/spell_check_128x128.png'); 
+}
+/* Sort */
+body#jotter #large_icon2 .img {
+    background-image: url('../../appearance/default_pro_theme/icons/general/sort_ascend_gloss.png');
+}
+/* find */
+body#jotter #large_icon3 .img { 
+    background-image: url('../../appearance/default_pro_theme/icons/general/128/find_128x128.png');
+}
+/* Save All */
+body#jotter #large_icon4 .img { 
+    background-image: url('../../appearance/default_pro_theme/icons/text_editor/128/save_all_128x128.png');
+}

@@ -23,8 +23,7 @@
 /* all things: font settings */
 @font-face {
     font-family: buttons;
-    src: 
-        url('fonts/body/Ubuntu-C.ttf') format('truetype');
+    src: url('../fonts/body/Ubuntu-C.ttf');
 }
 body { color: #1c1c1c; }
 .title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel, .help_box-skel, .status_bar, .settings_menu {
@@ -66,16 +65,7 @@ header { background: #e9dfe9 url('images/top_bg.png') repeat-x;
 .common_bar-skel a, .large_icon, span.name, .img { 
     text-decoration: none; color: #444444; 
 }
-.common_bar-skel input.text_field { border: 1px solid #333333; }
-.common_bar-skel .ctl-btn {   
-    border: 1px solid #e9dfe9; 
-    background-color: #e9dfe9;  
-    background-size: 100% 100%;
-}
 .common_bar-skel span.acckey { text-decoration: underline; }
-
-/* these should go in a program specific CSS file to deal with icons, pics */
-#img_large1 { background-image: url(''); }
 
 /* end of common bar and large icons */
 
@@ -86,6 +76,7 @@ nav li { background: #bbaaff; }
     font-family: arial, tahoma, sans-serif;
      font-weight: bold;
 }
+li.separator { border-bottom: 1px solid black; display: block; height: 10px; }
 nav ul { margin: 0; }
 nav ul.submenu, .submenu li { background: #bbaaff; padding: 0; }
 nav ul.submenu { padding: 0; }

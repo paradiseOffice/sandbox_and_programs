@@ -27,7 +27,7 @@
      <!-- jquery UI -->
      <link rel="stylesheet" type="text/css" href="../../../js_lib/jqueryui-default-pro/css/default-pro/jquery-ui-1.10.3.custom.css" />
 </head>
-<body onload="checkWidth();">
+<body id="jotter" onload="checkWidth();">
 
 
   <div class="title_bar-skel">
@@ -36,7 +36,7 @@
   <header>
   <div class="menu_bar-skel">
   <!-- max 4 menus or swipe for next 4 menus -->
-           <nav role="navigation" aria-label="Main menu">
+       <nav role="navigation" aria-label="Main menu">
     <ul role="menubar">
     <!-- menus then menu_items go here -->
        <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">F</span>ile</a>
@@ -70,10 +70,10 @@
         <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">I</span>nsert</a>
         <!-- menu_items go in here -->
             <ul class="submenu" role="menu" aria-hidden="true">
-            <li role="menuitem" tabindex="-1"><a id="specialChar" href="#"><span class="acckey">S</span>pecial Character</a></li>
+            <li role="menuitem" tabindex="-1"><a id="specialChar" href="#"><span class="acckey">C</span>haracter</a></li>
             <li role="menuitem" tabindex="-1"><a id="dateTime" href="#"><span class="acckey">D</span>ate/Time</a></li>
             <li role="hidden" class="separator"></li>
-            <li role="menuitem" tabindex="-1"><a id="spellcheck" href="#" title="F7">Spell<span class="acckey">c</span>heck</a></li>
+            <li role="menuitem" tabindex="-1"><a id="spellcheck" href="#" title="F7"><span class="acckey">S</span>pellcheck</a></li>
             <li role="menuitem" tabindex="-1"><a id="sortCSV" href="#">S<span class="acckey">o</span>rt</a></li>
             <li role="menuitem" tabindex="-1"><a id="manageCSVFields" href="#"><span class="acckey">M</span>anage Fields</a></li>
             </ul>
@@ -97,7 +97,7 @@
   </div>
   <div class="common_bar-skel">
   <!-- only 4 large_icons or 7 icons -->  
-        <a href="#" id="spellcheck">
+    <a href="#" id="spellcheck">
     <div id="large_icon1" class="large_icon">
       <div id="img_large1" class="img"></div>
       <span class="name">Spellcheck</span>      
@@ -217,7 +217,45 @@
 
 <button id="tool_pane_toggle" type="button"></button>
 <div class="tool_pane-skel">
-
+    <table id="view" class="tool_box">
+    <tr>
+      <td class="odd" colspan="3"><select id="font-chooser">
+        <option id="font1" value="sans">Sans </option>
+        <option id="font2" value="serif">Serif </option>
+        </select>
+      </td>
+      
+      <td class="even"><input type="number" id="spinner1"  class="spinner" step="1" /></td>
+    </tr>
+    <tr>
+      <td class="even"><a href="#" id="zoom_in" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/general/128/zoom_in_128x128.png" /></a></td>
+      <td class="odd"><a href="#" id="zoom_out" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/general/128/zoom_out_128x128.png" /></a></td>
+      <td class="even" colspan="2"><p id="slider1" class="slider zoom"></p></td>
+    </tr>
+  </table>
+  <table id="editing" class="tool_box">
+    <tr>
+      <td class="odd"><a href="#" id="undo" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/general/128/undo_128x128.png" /></a></td>
+      <td class="even"><a href="#" id="redo" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/general/128/redo_128x128.png" /></a></td>
+      <td class="odd" colspan="2"></td>
+    </tr>
+    <tr>
+      <td class="even"><a href="#" id="insert_specialChar" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/insert_spec_char_128x128.png" /></a></td>
+      <td class="odd"><a href="#" id="upperIcon" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/text_editor/128/uppercase_128x128.png" /></a></td>
+      <td class="even"><a href="#" id="lowerIcon" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/text_editor/128/lowercase_128x128.png" /></a></td>
+      <td class="odd"><a href="#" id="tabWidthIcon" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/text_editor/128/tab_width_128x128.png" /></a></td>
+    </tr>
+    <tr>
+        <td colspan="4" class="even">
+            <select class="combobox" id="syntaxMenu" size="1">
+                <option value="c">C</option>
+                <option value="javascript">Javascript</option>
+                <option value="en_GB">British English</option>
+            </select>
+        </td>
+    </tr>
+  </table>
+  
 </div>
 
 </section><!-- window -->

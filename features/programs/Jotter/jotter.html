@@ -8,24 +8,28 @@
   
 <script type="text/JavaScript" src="../../../js_lib/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="../../../js_lib/modernizr.custom.min.js"></script>
+<script type="text/javascript" src="../../../js_lib/colour_picker/spectrum.js"></script>
 <noscript>
 <h2>Javascript not present</h2><p>Please turn on javascript by altering your web browser settings. <a target="blank" href="http://www.btny.purdue.edu/enablejavascript.html">Additional help for turning this setting on</a>.</p>
 </noscript>
 <script type="text/JavaScript" src="../../../js_lib/jqueryui-default-pro/js/jquery-ui-1.10.3.custom.js" ></script>
 <script type="text/JavaScript" src="../../../js_lib/resize-screen.js"></script>
 <script type="text/JavaScript" src="../../sandbox/logic/file_port/file_port_tabs.js"></script>
+<script type="text/javascript" src="../../sandbox/appearance/default_pro_theme/scripts/widgets.js"></script>
 <script type="text/JavaScript" src="../../sandbox/logic/file_port/open/new.js"></script>
 
      <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/reset.css" />
      <!-- choosing the screen size/type -->
      <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/screen_860x600.css" />
      <link rel="stylesheet" type="text/css" href="../../sandbox/ui/layouts/structure.css" />
+     <link rel="stylesheet" type="text/css" href="../../../js_lib/colour_picker/spectrum.css" />
      <link rel="stylesheet" type="text/css" href="../../sandbox/ui/dialogs/dialogs.css" />
+     <link rel="stylesheet" type="text/css" href="../../sandbox/appearance/default_pro_theme/styles/widgets.css" />
      <link rel="stylesheet" type="text/css" href="../../sandbox/appearance/default_pro_theme/styles/ui_themes.css" />
      <!-- jquery UI -->
      <link rel="stylesheet" type="text/css" href="../../../js_lib/jqueryui-default-pro/css/default-pro/jquery-ui-1.10.3.custom.css" />
 </head>
-<body onload="checkWidth();">
+<body id="jotter" onload="checkWidth();">
 
 
   <div class="title_bar-skel">
@@ -67,10 +71,10 @@
         <li class="top_link" role="menuitem" aria-haspopup="true" tabindex="0"><a href="#"><span class="acckey">I</span>nsert</a>
         <!-- menu_items go in here -->
             <ul class="submenu" role="menu" aria-hidden="true">
-            <li role="menuitem" tabindex="-1"><a id="specialChar" href="#"><span class="acckey">S</span>pecial Character</a></li>
+            <li role="menuitem" tabindex="-1"><a id="specialChar" href="#"><span class="acckey">C</span>haracter</a></li>
             <li role="menuitem" tabindex="-1"><a id="dateTime" href="#"><span class="acckey">D</span>ate/Time</a></li>
             <li role="hidden" class="separator"></li>
-            <li role="menuitem" tabindex="-1"><a id="spellcheck" href="#" title="F7">Spell<span class="acckey">c</span>heck</a></li>
+            <li role="menuitem" tabindex="-1"><a id="spellcheck" href="#" title="F7"><span class="acckey">S</span>pellcheck</a></li>
             <li role="menuitem" tabindex="-1"><a id="sortCSV" href="#">S<span class="acckey">o</span>rt</a></li>
             <li role="menuitem" tabindex="-1"><a id="manageCSVFields" href="#"><span class="acckey">M</span>anage Fields</a></li>
             </ul>
@@ -214,30 +218,40 @@
 <div class="tool_pane-skel">
     <table id="view" class="tool_box">
     <tr>
-      <td class="odd" colspan="3"><a href="#" id="font" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/font_picker_128x128.png" /></a></td>
-      <td class="even"><a href="#" id="underline" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/underline_128x128.png" /></a></td>
-      <td class="odd"><a href="#" id="bold" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/bold_128x128.png" /></a></td>
-      <td class="even"><a href="#" id="italic" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/italic_128x128.png" /></a></td>
+      <td class="odd" colspan="3"><select id="font-chooser">
+        <option id="font1" value="sans">Sans </option>
+        <option id="font2" value="serif">Serif </option>
+        </select>
+      </td>
+      
+      <td class="even"><input type="number" id="spinner1"  class="spinner" step="1" /></td>
     </tr>
     <tr>
-      <td class="even"><a href="#" id="strikethrough" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/strikethrough_128x128.png" /></a></td>
-      <td class="odd"><a href="#" id="border" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/border_round_all_128x128.png" /></a></td>
-      <td class="even"><a href="#" id="translate" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/translate_128x128.png" /></a></td>
-      <td class="odd"><a href="#" id="page break" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/insert_page_break_128x128.png" /></a></td>
+      <td class="even"><a href="#" id="zoom_in" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/general/128/zoom_in_128x128.png" /></a></td>
+      <td class="odd"><a href="#" id="zoom_out" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/general/128/zoom_out_128x128.png" /></a></td>
+      <td class="even" colspan="2"><p id="slider1" class="slider zoom"></p></td>
     </tr>
   </table>
-  <table id="Para" class="tool_box">
+  <table id="editing" class="tool_box">
     <tr>
-      <td class="odd"><a href="#" id="indent more" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/indent_more_128x128.png" /></a></td>
-      <td class="even"><a href="#" id="dict" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/dictionary_128x128.png" /></a></td>
-      <td class="odd"><a href="#" id="configure" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/general/128/settings_128x128.png" /></a></td>
-      <td class="even"><a href="#" id="zoom original" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/general/128/zoom_orig_128x128.png" /></a></td>
+      <td class="odd"><a href="#" id="undo" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/general/128/undo_128x128.png" /></a></td>
+      <td class="even"><a href="#" id="redo" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/general/128/redo_128x128.png" /></a></td>
+      <td class="odd" colspan="2"></td>
     </tr>
     <tr>
-      <td class="even"><a href="#" id="justify" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/just_justify_128x128.png" /></a></td>
-      <td class="odd"><a href="#" id="left" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/just_left_128x128.png" /></a></td>
-      <td class="even"><a href="#" id="center" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/just_centre_128x128.png" /></a></td>
-      <td class="odd"><a href="#" id="right" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/just_right_128x128.png" /></a></td>
+      <td class="even"><a href="#" id="insert_specialChar" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/word_processing/128/insert_spec_char_128x128.png" /></a></td>
+      <td class="odd"><a href="#" id="upperIcon" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/text_editor/128/uppercase_128x128.png" /></a></td>
+      <td class="even"><a href="#" id="lowerIcon" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/text_editor/128/lowercase_128x128.png" /></a></td>
+      <td class="odd"><a href="#" id="tabWidthIcon" class="icon"><img src="../../sandbox/appearance/default_pro_theme/icons/text_editor/128/tab_width_128x128.png" /></a></td>
+    </tr>
+    <tr>
+        <td colspan="4" class="even">
+            <select class="combobox" id="syntaxMenu" size="1">
+                <option value="c">C</option>
+                <option value="javascript">Javascript</option>
+                <option value="en_GB">British English</option>
+            </select>
+        </td>
     </tr>
   </table>
 

@@ -21,7 +21,7 @@ if (isset($_POST['upload']))
         // directory to the uploads folder:
         if(move_uploaded_file($file['tmp_name'], $upload_dir.$file['name']))
         {
-            $filename = $upload_dir . $file['name'];
+            $filename = "/uploads" . $file['name'];
         }
     }
     else
