@@ -1,40 +1,36 @@
 <?php
 
-$upload_dir = '/home/uploads';
+$upload_dir = '/home/uploads/';
 $allowed_ext = array('jpg','jpeg','png','gif', 'JPG','JPEG','PNG', 'svg');
-
-if(strtolower($_SERVER['REQUEST_METHOD']) != 'post'){
-    exit_status('Error! Wrong HTTP method!');
-}
-
-if(array_key_exists('picture',$_FILES) && $_FILES['picture']['error'] == 0 )
+if (isset($_POST['upload']))
 {
-    $picture = $_FILES['picture'];
-    if(!in_array(get_extension($picture['name']),$allowed_ext))
+    if(strtolower($_SERVER['REQUEST_METHOD']) != 'post')
     {
-        exit_status('Only common picture files are allowed, (e.g. jpg, svg, png).');
-    }   
-    /*
-    if($demo_mode)
+        $errors = 'Error! Wrong HTTP method!';
+        exit();
+    }
+    if(array_key_exists('picture',$_FILES) && $_FILES['picture']['error'] == 0 )
     {
-        // File uploads are ignored. We only log them.
-        $line = implode('       ', array( date('r'), $_SERVER['REMOTE_ADDR'], $pic['size'], $pic['name']));
-        file_put_contents('log.txt', $line.PHP_EOL, FILE_APPEND);
-        exit_status('Uploads are ignored in demo mode.');
+        $picture = $_FILES['picture'];
+        if(!in_array(get_extension($picture['name']),$allowed_ext))
+        {
+            $errors .= 'Only common picture files are allowed, (e.g. jpg, svg, png).';
+            exit();
+        }   
+        // Move the uploaded file from the temporary
+        // directory to the uploads folder:
+        if(move_uploaded_file($picture['tmp_name'], $upload_dir.$picture['name'])){
+            $filename = $upload_dir;
+            $filename .= $picture['name'];
+            $errors .= "<p class='info'>Filename: $filename </p>";
+        }
     }
-    */
-    // Move the uploaded file from the temporary
-    // directory to the uploads folder:
-    if(move_uploaded_file($picture['tmp_name'], $upload_dir.$picture['name'])){
-        $filename = $upload_dir . $picture['name'];
-        return $filename;
+    else
+    {
+        $errors = '<p class="error">The upload went wrong somehow. </p>';
+        exit();
     }
-}
-else
-{
-    $errors = '<p class="error">The upload went wrong somehow. </p>';
-    return $errors;
-}
+} // end of upload bit
 
 function get_extension($file_name)
 {
@@ -91,10 +87,11 @@ function get_extension($file_name)
 <div class="upload_pic">
 <form method='post' action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype='multipart/form-data'>
     <input type='file' name='picture' id='picture' placeholder="Picture" />
-    <input type='submit' id="upload" class="upload" value='Add Image' />
+    <input type='submit' name="upload" id="upload" class="upload" value='Add Image' />
 </form>
 <img width="200" height="100" class="pic_upload_preview" src="<?php echo $filename; ?>" />
 </div>
+<div><?php echo $errors; ?></div>
 
 </body>
 </html>

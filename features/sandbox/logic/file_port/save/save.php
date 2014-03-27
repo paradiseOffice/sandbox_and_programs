@@ -1,42 +1,33 @@
 <?php
 
-$upload_dir = '/home/uploads/';
-$allowed_ext = array('txt','odt','doc','docx', 'pdf','xml','html', 'htm', 'ods');
-if (isset($_POST['upload']))
+function save_file($filename) 
 {
-    if(strtolower($_SERVER['REQUEST_METHOD']) != 'post')
+    $dir = "/home/uploads/";
+    $filename = "testfile.txt"; // DEBUG
+    $filepath = $dir . $filename;
+    
+    if(!$filename)
     {
-        $errors = 'Error! Wrong HTTP method!';
-        exit();
-    }
-    if(array_key_exists('file-upload',$_FILES) && $_FILES['file-upload']['error'] == 0 )
-    {
-        $file = $_FILES['file-upload'];
-        if(!in_array(get_extension($file['name']),$allowed_ext))
-        {
-            $errors .= 'Only common files are allowed, (e.g. txt, doc, odt).';
-            exit();
-        }   
-        // Move the uploaded file from the temporary
-        // directory to the uploads folder:
-        if(move_uploaded_file($file['tmp_name'], $upload_dir.$file['name']))
-        {
-            $filename = $upload_dir . $file['name'];
-        }
+	// File doesn't exist, output error
+	die("File $filename not uploaded.");
     }
     else
     {
-        $errors .= '<p class="error">The upload went wrong somehow. </p>';
-        exit();
+	header('Content-Description: File Transfer');
+	header('Content-Disposition: attachment; filename="$filepath"');
+	/*
+	header('Content-Type: application/octet-stream');
+	header('Content-Transfer-Encoding: binary');
+	header('Expires: 0');
+	header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+	header('Pragma: public');
+	*/
+	readfile("$filepath");  // creates the file .. BUG called $filepath
+	exit;
     }
-} // end of upload if
+} // end of save function
 
-function get_extension($file_name)
-{
-    $ext = explode('.', $file_name);
-    $ext = array_pop($ext);
-    return strtolower($ext);
-}
+save_file("");
 
 ?>
 <!DOCTYPE html class="no-js">
@@ -70,19 +61,11 @@ function get_extension($file_name)
      <!-- jquery UI -->
      <link rel="stylesheet" type="text/css" href="../../../js_lib/jqueryui-default-pro/css/default-pro/jquery-ui-1.10.3.custom.css" />
      <script type="text/javascript">
-     
+        
      </script>
-     <style type="text/css">
-     
-     </style>
 </head>
 <body onload="checkWidth();">
 
-<form method='post' action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype='multipart/form-data'>
-<input type='file' name='file-upload' id='file-upload' class="url" placeholder="A file" />
-<input type='submit' id="upload" name="upload" class="upload" value='Open' />
-</form>
-<div><?php echo $errors; ?></div>
 
 </body>
 </html>
