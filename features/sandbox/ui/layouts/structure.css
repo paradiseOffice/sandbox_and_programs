@@ -25,30 +25,47 @@
 @import url('../../../sandbox/sandbox/ui/containers/file_port/doc/text_port.css');
 */
 /* The basic structure for the HTML skeleton, with spaces for each of the common components */
-.title_bar-skel, .menu_bar-skel, .common_bar-skel, .window, .file_port, .tool_pane-skel,  .help_box-skel, .status_bar, .settings_menu 
-{ position: relative; color: #000000; }
-.tool_pane-skel { 
-  position: absolute; right: 0px;
-  margin-left: 30px;
-  margin-right: 10px;
-}
-body { overflow: hidden; }
-.help_box-skel { 
-  border: 1px black solid; 
-  margin: 0 auto;
-}
-.status_bar { 
-  position: absolute; 
-  width: 100%;
-}
-.settings_menu { position: absolute; }
+body { position: relative; color: #000000; }
+/* body { overflow: hidden; } */
+/* header =================================== */
+.title_bar-skel, .menu_bar-skel, .common_bar-skel { }
+.title_bar-skel { width: 100%; }
+.title_bar-skel h1 {  padding-right: 30px; }
 .menu_bar-skel { z-index: 7000; }
- /* end of basic structure --------------------------------------------------*/
- 
- /* title bar displaying the program name */
- .title_bar-skel { width: 100%; }
- .title_bar-skel h1 {  padding-right: 30px; }
- /* end of title bar */
+/* start of menu bar drop down menus */
+nav { 
+  position: relative; top: 0px; left: 0px;  
+}
+ nav ul.submenu {  padding: 0; }
+nav ul li { 
+    display: block; 
+    float: left; 
+    margin: 0;
+    padding: 0; 
+}
+nav ul.submenu { 
+    position: relative; 
+    height: 0px; overflow: hidden; 
+}
+nav ul.submenu li { float: none;  }
+nav a { display: block;  }
+/* bit that actually makes things visible */
+nav ul li { transition: .5s all linear; } 
+nav ul li:hover ul.submenu { height: auto; } 
+
+/* end of menu bar css */
+/* common bar for large icons, below menu bar */
+.common_bar-skel .large_icon { 
+    position: absolute; top: 0px; 
+}
+.common_bar-skel .img { float: left; }
+.common_bar-skel span.name { display: block; margin-left: 42px; }
+.common_bar-skel .img { position: relative; left: 0px; top: 0px;  }
+
+
+
+/* middle section ======================================== */
+.window, .file_port, .tool_pane-skel, .help_box-skel { }
  
  /* the file port and tabs for each file open */
 .file_port { position: absolute; border: 1px solid black; overflow-x: none;
@@ -77,44 +94,25 @@ body { overflow: hidden; }
 .ui-tabs-nav.closed { display:none; }
 /* end of file port ------------------------------------------------------------------ */
 
-/* start of menu bar drop down menus */
-nav { 
-  position: relative; top: 0px; left: 0px;  
+.tool_pane-skel { 
+  position: absolute; right: 0px;
+  margin-left: 30px;
+  margin-right: 10px;
 }
- nav ul.submenu {  padding: 0; }
-nav ul li { 
-    display: block; 
-    float: left; 
-    margin: 0;
-    padding: 0; 
+.help_box-skel { 
+  border: 1px black solid; 
+  margin: 0 auto;
 }
-nav ul.submenu { 
-    position: relative; 
-    height: 0px; overflow: hidden; 
+
+
+
+/* footer ========================================== */
+.status_bar, .settings_menu { }
+.status_bar { 
+  position: absolute; 
+  width: 100%;
 }
-nav ul.submenu li { float: none;  }
-nav a { display: block;  }
-/* bit that actually makes things visible */
-nav ul li { transition: .5s all linear; } 
-nav ul li:hover ul.submenu { height: auto; } 
-
-/* end of menu bar css */
-
-/* common bar for large icons, below menu bar */
-.common_bar-skel .large_icon { 
-    position: absolute; top: 0px; 
-}
-.common_bar-skel .img { float: left; }
-.common_bar-skel span.name { display: block; margin-left: 42px; }
-.common_bar-skel .img { position: relative; left: 0px; top: 0px;  }
-form { position: relative; top: 2px; left: 2px; }
-/* end of common bar settings */
-
-/* status bar rules */
-.status_bar { }
-/* end of status bar */
-
-/* settings menu rules */
+.settings_menu { position: absolute; }
 .settings_menu nav { position: absolute;  }
 .settings_menu  nav li { position: relative; }
 .settings_menu nav ul { margin: 0; }
@@ -132,13 +130,9 @@ form { position: relative; top: 2px; left: 2px; }
 }
 .settings_menu nav ul.submenu li { float: none; }
 
-/* end of settings menu rules */
 
-/* tool box rules, or help box rules/tool pane */
 
-/* end of tool pane stuff */
-
-/* for hiding all dialogs until needed */
+/* dialogs area ===================================== */
 .dialog { display: none; }
 .advanced_dialog { display: none; }
 

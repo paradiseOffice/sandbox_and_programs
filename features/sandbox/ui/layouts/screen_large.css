@@ -25,58 +25,15 @@
  * large screen 1400w x 1000h pixels base at least, 
  * resizing makes the file_port larger or smaller.
  */
-.title_bar-skel, .menu_bar-skel, .common_bar-skel, .status_bar 
-{  /* computed width*/  }
+.title_bar-skel, .menu_bar-skel, .common_bar-skel, .status_bar {   }
+/* header ======================================= */
 .title_bar-skel { height: 30px; top: 0px;  }
 .title_bar-skel h1 { font-size: 14pt;  }
-
-.menu_bar-skel { height: 50px; 
-                 top: 0px; 
-                 left: 15px; }
-                 
-                 
-.common_bar-skel { height: 50px; 
-                   top: 0px; 
-                   left: 15px;  }
-/* .window height, width computed in resize-screen script */
-.file_port { width: 710px; /* computed 700 - tool pane width */ 
-             height: 674px; /* computed 600 - (25 + 36 + 40 + 25)*/ 
-             left: 15px; 
-             top: 0px; 
-             padding: 5px; }
-.file { width: 100%; height: 99%; }
-.file_port textarea { 
-  margin-left: -8px; margin-top: -5px;
-  padding: 4px;
-  height: 400px; width: 700px; /* compute these two */
-  max-height: 1000px; max-width: 900px; 
-}
-
-/* ================ .tool_pane-skel rules, including tool_box and help area */
-.tool_pane-skel { width: 250px; 
-                  height: 478px; /* computed +4 */ 
-                  left: 533px; /* computed + 23 */  
-                  top: 0px; 
-           }
-/* tool box/pane rules */
-.tool_box { margin: 2px; }
-.icon, .spinner { width: 61px; height: 61px; }
-img { width: 56px; /* -6 px for margins/padding */ height: 56px; margin: 2px; }
-div#messages { padding: 2px; height: 98%; border: 1px solid #ccc; }
-table.tool_box { border: 1px solid #1c1c1c; margin-bottom: 5px; }
-/* end of tool pane rules */
-.help_box-skel { width: 280px; 
-                 height: 200px; 
-                 left: 0px; 
-                 top: 20px; /* always 20px under any tool boxes */ 
-}         
-/* ========================== end of tool_pane-skel ==================== */            
-                
-.status_bar { height: 30px; left: 0px; 
-              padding-left: 160px;  } /* top, width computed */
-.settings_menu { width: 150px; left: 0px; top: 0px;  }
-/* end of skeleton sizes */
-
+.menu_bar-skel { 
+    height: 50px; 
+    top: 0px; 
+    left: 15px; 
+}          
 /* menu bar sizes */
 nav { height: 46px; } /* space for borders separating each menu tab */
 nav li { height: 40px; }
@@ -100,17 +57,17 @@ nav ul.submenu li {
 nav ul.submenu { margin-top: -13px; border-radius: 0 0 3px 3px;  }
 nav a { padding: 15px; }
 /* end of menu bar sizes */
-
-/* common bar rules --------------------------------------------------------------- */
+.common_bar-skel { 
+    height: 50px; 
+    top: 0px; 
+    left: 15px;  
+}
 .large_icon { 
     /* padding-left: 2px; padding-right: 2px; */
     width: 130px; height: 45px;  
 }
 span.name { padding-top: 10px; padding-bottom: 4px; width: 70px; font-size: 140%; }
 .img { width: 40px; height: 40px; margin: 2px; }
-/* comment out the two lines below */
-input.text_field {  width: 86px; height: 40px; }
-.ctl-btn { height: 35px; width: 35px; }
 #large_icon1 { left: 0px; }
 #large_icon2 { left: 130px; }
 #large_icon3 { left: 260px; }
@@ -123,13 +80,65 @@ input.text_field {  width: 86px; height: 40px; }
 #large_icon10 { left: 1170px; }
 /* common bar rules */
 
-/* status bar rules ------------------------------------------------------------ */
 
-/* end of status bar */
-/* settings menu rules ------------------------------------------------------------- */
-.settings_menu nav { height: 35px; } /* space for borders separating each menu tab */
+
+/* middle section ====================================== */
+.file_port { 
+    width: 710px; 
+    height: 674px; 
+    left: 15px; 
+    top: 0px; 
+    padding: 5px; 
+}
+.file { width: 100%; height: 99%; }
+/* .file_port textarea { 
+  margin-left: -8px; margin-top: -5px;
+  padding: 4px;
+  height: 400px; width: 700px; 
+  max-height: 1000px; max-width: 900px; 
+} */
+
+.tool_pane-skel { 
+    width: 250px; 
+    height: 478px; 
+    left: 533px; 
+    top: 0px; 
+}
+/* tool box/pane rules */
+.tool_box { margin: 5px; }
+.tool_box .icon, .tool_box .spinner { width: 61px; height: 61px; }
+.tool_box img { width: 56px; height: 56px; margin: 2px; }
+div#messages { 
+    padding: 5px; height: 98%; border: 1px solid #ccc; 
+}
+table.tool_box { border: 2px solid #1c1c1c; margin-bottom: 10px; }
+
+/* tool box/pane rules */
+.tool_box img { 
+  border: 1px solid; 
+  border-radius: 4px; 
+}
+/* end of tool pane rules */
+.help_box-skel { 
+    width: 280px; 
+    height: 200px; 
+    left: 0px; 
+    top: 20px; /* always 20px under any tool boxes */ 
+}         
+
+
+
+/* footer ========================================== */
+.status_bar { 
+    height: 30px; left: 0px; 
+    padding-left: 160px;  
+} 
+.settings_menu { width: 150px; left: 0px; top: 0px;  }
+.settings_menu nav { height: 35px; } 
 .settings_menu nav li { height: 35px; }
-.settings_menu nav ul li, .settings_menu nav ul.submenu { width: 140px; } 
+.settings_menu nav ul li, .settings_menu nav ul.submenu { 
+    width: 140px; 
+} 
 .settings_menu nav ul.submenu li { 
     width: 140px;
     font-size: 1em;
@@ -143,17 +152,3 @@ input.text_field {  width: 86px; height: 40px; }
     border-radius: 0 0 3px 3px;
 }
 /* end of settings menu rules */
-
-/* tool box/pane rules */
-.tool_box { margin: 5px; }
-.icon, .icon img { width: 50px; height: 50px; }
-img { 
-  width: 46px; height: 46px; 
-  /* -6 px for margins/padding */ 
-  border: 1px solid; 
-  border-radius: 4px; 
-}
-div#messages { padding: 5px; height: 98%;  }
-table.tool_box { border: 2px solid #1c1c1c; margin-bottom: 10px; }
-/* end of tool pane rules */
-
