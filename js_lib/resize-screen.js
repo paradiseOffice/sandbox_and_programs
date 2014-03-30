@@ -2,6 +2,7 @@
  * This script puts the status bar on the bottom, after the file port and makes the
  * file port fill the windows space dynamically, and on page refresh. 
  */
+/*
 var checkWidth = function() {
   // Get the window dimensions, save to variables.
   var viewportWidth = window.innerWidth;
@@ -43,7 +44,7 @@ var checkWidth = function() {
   $('.status_bar').css("top", statusBtm ); 
   $('.window').css("height", viewportHeight);
   $('.window').css("width", viewportWidth);
-};
+}; */
 
 $(document).ready(function() {
   checkWidth();

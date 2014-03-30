@@ -25,18 +25,22 @@
 @import url('../../../sandbox/sandbox/ui/containers/file_port/doc/text_port.css');
 */
 /* The basic structure for the HTML skeleton, with spaces for each of the common components */
-body { position: relative; color: #000000; }
+/*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} */
+body { color: #000000; }
 /* body { overflow: hidden; } */
 /* header =================================== */
-.title_bar-skel, .menu_bar-skel, .common_bar-skel { }
+.title_bar-skel, .menu_bar-skel, .common_bar-skel { 
+    position: relative;  
+}
 .title_bar-skel { width: 100%; }
 .title_bar-skel h1 {  padding-right: 30px; }
 .menu_bar-skel { z-index: 7000; }
 /* start of menu bar drop down menus */
-nav { 
-  position: relative; top: 0px; left: 0px;  
-}
- nav ul.submenu {  padding: 0; }
+nav { top: 0px; left: 0px;  }
+nav ul.submenu {  padding: 0; }
 nav ul li { 
     display: block; 
     float: left; 
@@ -52,28 +56,31 @@ nav a { display: block;  }
 /* bit that actually makes things visible */
 nav ul li { transition: .5s all linear; } 
 nav ul li:hover ul.submenu { height: auto; } 
-
 /* end of menu bar css */
 /* common bar for large icons, below menu bar */
 .common_bar-skel .large_icon { 
-    position: absolute; top: 0px; 
+    top: 0px; float: left;
 }
-.common_bar-skel .img { float: left; }
+.common_bar-skel .img { 
+    float: left; 
+    position: relative; left: 0px; top: 0px;
+}
 .common_bar-skel span.name { display: block; margin-left: 42px; }
-.common_bar-skel .img { position: relative; left: 0px; top: 0px;  }
 
 
 
 /* middle section ======================================== */
 .window, .file_port, .tool_pane-skel, .help_box-skel { }
- 
+.window { position: relative; }
  /* the file port and tabs for each file open */
-.file_port { position: absolute; border: 1px solid black; overflow-x: none;
- overflow-y: none;    }
-.file_port#tabrow {  height: auto; overflow-x: auto; overflow-y: none; }
-.file_port .tabs-top { position: relative; }
-.file_port .tabs-top .file_port .ui-tabs-panel {  height: auto; overflow: auto;  }
-.file_port .tabs-top .file_port .ui-tabs-nav {
+.file_port { 
+    border: 1px solid black; overflow-x: none;
+    overflow-y: none;    
+}
+.file_port#tabrow {  height: auto; overflow-x: auto; overflow-y: none; border: 1px solid blue; }
+.file_port .tabs-top { position: relative; height: auto; overflow: auto; }
+.file_port .ui-tabs-panel {  height: auto; overflow: auto;  }
+.file_port .ui-tabs-nav {
     position: absolute !important;
     left: 0px;
     bottom: 0px;
@@ -96,11 +103,11 @@ nav ul li:hover ul.submenu { height: auto; }
 
 .tool_pane-skel { 
   position: absolute; right: 0px;
-  margin-left: 30px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 5px; 
 }
 .help_box-skel { 
-  border: 1px black solid; 
+  border: 1px red solid; 
   margin: 0 auto;
 }
 
@@ -109,11 +116,12 @@ nav ul li:hover ul.submenu { height: auto; }
 /* footer ========================================== */
 .status_bar, .settings_menu { }
 .status_bar { 
-  position: absolute; 
+  position: fixed; 
   width: 100%;
+  bottom: 0px; left: 0px;
 }
-.settings_menu { position: absolute; }
-.settings_menu nav { position: absolute;  }
+.settings_menu { position: relative; }
+.settings_menu nav { /* position: absolute; */ }
 .settings_menu  nav li { position: relative; }
 .settings_menu nav ul { margin: 0; }
 .settings_menu nav ul.submenu { border-radius: 5px; padding: 0; }
