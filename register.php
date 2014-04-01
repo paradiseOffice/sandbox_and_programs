@@ -90,10 +90,9 @@ if (isset($_POST['register']))
     if (preg_match('/[a-zA-Z0-9\-_*^!$]......+/', trim($_POST['password1'])))
     {
       $password = trim($_POST['passCipher']);
-      echo "pass before 2nd, 3rd encryption: $password\n";
       $cipher_pass = encrypt_string($password);
-      echo "DB pass: $cipher_pass\n";
-      /* encrypt_string uses two different hash algorithms, so the password can't be decrypted into plaintext. The hash algorithms used aren't md5 or sha1 as those can be cracked */
+      $rand = get_rand_string(20);
+      $salt = encrypt_string($rand); 
     }
     else
     {
@@ -131,7 +130,7 @@ if (isset($_POST['register']))
       else 
       {
         // Your code here to handle a successful verification
-        insertUser($fName, $lName, $email, $company, $uName, $cipher_pass, $mysqli);
+        insertUser($fName, $lName, $email, $company, $uName, $cipher_pass, $salt, $mysqli);
         header("Location: login.php");
       }
     }

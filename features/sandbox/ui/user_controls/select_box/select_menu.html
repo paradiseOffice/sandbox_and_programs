@@ -5,14 +5,14 @@
   <meta keyword="author" value="Hazel Windle" />
   <meta keyword="creation-date" value="20140120" />
      <title>Jotter - Paradise Office</title>
+  
+<script type="text/JavaScript" src="../../../js_lib/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../../../js_lib/modernizr.custom.min.js"></script>
+<script type="text/javascript" src="../../../js_lib/colour_picker/spectrum.js"></script>
 <noscript>
 <h2>Javascript not present</h2><p>Please turn on javascript by altering your web browser settings. <a target="blank" href="http://www.btny.purdue.edu/enablejavascript.html">Additional help for turning this setting on</a>.</p>
 </noscript>
-<script type="text/JavaScript" src="../../../js_lib/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="../../../js_lib/modernizr.custom.min.js"></script>
 <script type="text/JavaScript" src="../../../js_lib/jqueryui-default-pro/js/jquery-ui-1.10.3.custom.js" ></script>
-
-<script type="text/javascript" src="../../../js_lib/colour_picker/spectrum.js"></script>
 <script type="text/JavaScript" src="../../../js_lib/resize-screen.js"></script>
 <script type="text/JavaScript" src="../../sandbox/logic/file_port/file_port_tabs.js"></script>
 <script type="text/javascript" src="../../sandbox/appearance/default_pro_theme/scripts/widgets.js"></script>
@@ -28,51 +28,26 @@
      <link rel="stylesheet" type="text/css" href="../../sandbox/appearance/default_pro_theme/styles/ui_themes.css" />
      <!-- jquery UI -->
      <link rel="stylesheet" type="text/css" href="../../../js_lib/jqueryui-default-pro/css/default-pro/jquery-ui-1.10.3.custom.css" />
+     <style type="text/css">
+        .select { }
+        #select_progName { }
+        .select-option { }
+        #select_arrow { }
+     </style>
+     
 </head>
 <body onload="checkWidth();">
 
-
-  <div class="title_bar-skel">
-    <h1>Document - Jotter</h1>
-  </div>
-  <header>
-  <div class="menu_bar-skel">
-
-  </div>
-  <div class="common_bar-skel">
-    
-  </div><!-- common bar -->
-  </header>
-<section class="window">
-<!-- file_port goes here -->
-
-		
-<div class="tool_pane-skel">
-  <table id="1" class="tool_box"><!-- 4 columns wide -->
-    
-  </table>
-  <table id="2" class="tool_box">
-   
-  </table>
-
-  
-  <div class="help_box-skel">
-     <div id="messages">
-        <p class="warn">Warning</p>
-        <p class="error">Error</p>
-        <p class="info">Information</p>
-        <p class="help">Help</p>
-     </div>
-  </div><!-- help box -->
-     
-</div><!-- tool pane -->
-</section><!-- window -->
-<div class="status_bar">
-
-</div><!-- status_bar -->
-<!-- for dynamically created dialogs -->
-<div id="quickMenu"></div>
-
+<a href="#" id="select_progName" class="select">
+<p id="option1" class="select-option">Serif</p>
+<div id="select_arrow"></div>
+</a>
+<div class="select-menu select" >
+    <p id="option2" class="select-option">Impact</p>
+    <p id="option3" class="select-option">Arial</p>
+    <p id="option4" class="select-option">Monospace</p>
+    <p id="option5" class="select-option">Canterell</p>
+</div>
 
 </body>
 </html>

@@ -23,11 +23,9 @@
 ************************************************************************/
   include_once '/home/web_includes/db_connect.php';
   // insertUser function for registering a user.
-function insertUser($fName, $lName, $email, $company, $uName, $password, $mysqli)
+function insertUser($fName, $lName, $email, $company, $uName, $password, $salt, $mysqli)
 {
-
-  // password already hashed.
-  $query = "INSERT INTO users (fName, lName, company, email, uName, password) VALUES ('$fName', '$lName', '$company', '$email', '$uName', '$password' )" ;
+  $query = "INSERT INTO users (fName, lName, company, email, uName, password, salt) VALUES ('$fName', '$lName', '$company', '$email', '$uName', '$password', '$salt')" ;
   $result = mysqli_query($mysqli, $query);
   $resultNum = mysqli_num_rows($result);
   if ( $resultNum > 0 )

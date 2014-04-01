@@ -88,15 +88,10 @@ span.name {
 
 /* middle section ================================== */
 .file_port { 
-    /* margin-right: 190px; */
+
 }
 .file { width: 300px; height: 500px; /* compute? */ }
-/* .file_port textarea { 
-  margin-left: -8px; margin-top: -3px;
-  padding: 4px; 
-  height: 400px; width: 700px; 
-  max-height: 1000px; max-width: 900px;
-} */
+
 .tool_pane-skel { 
     width: 250px; 
     height: 478px; 

@@ -74,20 +74,22 @@ nav ul li:hover ul.submenu { height: auto; }
 .window { position: relative; }
  /* the file port and tabs for each file open */
 .file_port { 
-    border: 1px solid black; overflow-x: none;
+    overflow-x: none;
     overflow-y: none;    
 }
-.file_port#tabrow {  height: auto; overflow-x: auto; overflow-y: none; border: 1px solid blue; }
-.file_port .tabs-top { position: relative; height: auto; overflow: auto; }
-.file_port .ui-tabs-panel {  height: auto; overflow: auto;  }
+.file_port#tabrow {  height: auto; overflow-x: auto; overflow-y: none;  }
+.file_port .tabs-top { position: relative; height: auto; overflow: auto;  }
+.file_port .ui-tabs-panel {  
+    height: auto; overflow: auto;  
+}
 .file_port .ui-tabs-nav {
     position: absolute !important;
-    left: 0px;
+    left: 0px; 
     bottom: 0px;
     right: 0px;
     padding: 0 0 0 0;
   }
-.file_port .tabs-top .file_port .ui-tabs-nav li {  }
+.file_port .tabs-top .file_port .ui-tabs-nav li { }
 .file_port .ui-tabs-selected {  }   
 .wrapper-file { height: 100%; width: 100%; overflow-x: none; overflow-y: scroll; }
 .file_port .file { 

@@ -28,15 +28,26 @@
 
 function encrypt_string($string)
 {
-  $salt = "40_gvcTUcow*_$";
-  $pepper = "4690e4fu£S";
-  $string = trim($string);
-  $string = $salt . $string . $pepper;
-  // $step1 = hash('whirlpool', $string);
+   /* Salting method (OpenSSL, bcrypt).
+        Encodes the given data with base64.
+    * This encoding is designed to make binary data survive transport * through transport layers that are not 8-bit clean, such as mail * bodies.
+    * Base64-encoded data takes about 33% more space than the  original data. 
+   *To generate the salt, first generate enough random bytes. Because
+   * base64 returns one character for each 6 bits, the we should generate
+   * at least 22*6/8=16.5 bytes, so we generate 17. Then we get the first
+   * 22 base64 characters
+   */
+  // password already hashed in js .
   $ciphertext = hash('whirlpool', $string);  
   // debug
-  // $length = strlen($ciphertext);
-  // echo "Cipher length: $length\n";
+  $length = strlen($ciphertext);
+  echo "Cipher length: $length\n";
   // debug
   return $ciphertext;
 } // end of function encrypt_string($string)
+       
+function get_rand_string($length)
+{
+      $string = substr(base64_encode(openssl_random_pseudo_bytes(17)),0,$length);
+      return $string;
+}
