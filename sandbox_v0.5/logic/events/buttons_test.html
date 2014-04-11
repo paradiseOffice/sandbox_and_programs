@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" lang="en" />
+    <title>AJAX Test</title>
+    <script type="text/javascript" src="jquery-2.0.3.js" ></script>
+    <script type="text/javascript">
+    $(function() {
+	$( "#testBtn1" ).click(function() {
+	    testFunction();
+	});
+	// quick menu call
+	$( "#testBtn2" ).click(function() {
+	    var dialog = "<input type='text' name='something' placeholder='some text' />\n <button id='confirm' type='button'>Accept</button>\n";
+	    quickMenuCreate(dialog);
+
+	    // parameters for AJAX caller
+	    var phpURL = $( "#testBtn2 a" ).attr("href");
+	    console.log("PHP file: " + phpURL );
+	    var selection = $( ".selected" ).html();
+	    var currentTab = "#file_1";
+	    var cursor_pos = 45;
+	    var quickValues = { };
+	    ajax_caller(phpURL, selection, currentTab, quickValues, cursor_pos);
+	});
+
+	// below quickValues is another json thing to contain input data from quick menus
+	function ajax_caller(phpURL, selection, currentTab, quickValues, cursor_pos) {
+	    console.log( typeof selection);
+	    // selection = selection
+	    var dataToPHP = $.ajax({
+	    	url : phpURL,
+		type : "POST",
+		data : {
+			selection : selection,
+			currentTab : currentTab,
+			quickValues : quickValues, 
+			cursor_pos : cursor_pos
+		},
+		dataType : "html" // this could be json, possible BUG
+	    });
+	    dataToPHP.done (function( msg ) {
+	        $( "#php" ).html( msg );
+	    });
+	    dataToPHP.fail (function(jqXHR, textStatus) {
+	    	$( "#messages" ).html("<p class='error'>Sending your data selection failed. Error code 1 </p>");
+	    });
+	};
+
+	function quickMenuCreate(dialogHtml) {
+	    $( "#quickMenu" ).html( dialogHtml );
+	    $( "#quickMenu" ).show("600");
+	};
+
+	function testFunction() {
+	    $( "#result" ).append("<p>Print some data from toggle Test 1</p>");
+	    return true;
+	};
+    });
+    </script>
+    <style type="text/css">
+	div#quickMenu { display: none; }
+
+    </style>
+</head>
+<body>
+
+<button id="testBtn1" type="button">Test 1 - a toggle</button>
+<button id="testBtn2" type="button"><a href="buttons_tester.php">Test 2 - Quick Menu AJAXy</a></button>
+
+<div id="quickMenu"><h1>A Quick Menu</h1></div>
+<div class="selected">Selected text...</div>
+<div id="messages"></div>
+<div id="result"></div>
+<div id="php"></div>
+
+
+</body>
+</html>

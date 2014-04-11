@@ -1,2 +1,0 @@
-1. After running the save test, run Save.saveAs('largeFile.odt', 'whiteHouse.odt')
-2. Check it's the same file and the correct file name. 

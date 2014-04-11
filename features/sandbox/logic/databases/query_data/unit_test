@@ -1,8 +1,0 @@
-Use a table from before (100 rows)
-
-Choose 5 queries, one simple, one where, one where and|or, two complex ones.
-
-Test the queries, save the output (simple tables)
-
-Run the same commands at the cli.
-Compare the output and note any differences.
