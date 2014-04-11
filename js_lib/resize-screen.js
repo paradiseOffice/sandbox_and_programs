@@ -25,7 +25,9 @@ var checkWidth = function() {
   // margins are to make the file smaller inside of the file_port
   var margins = 16;
   var fileWidth = fileportWidth - margins;
-  var fileHeight = fileportHeight - margins;
+  var tabrow = $( '#tabrow' ).outerHeight(true);
+  var fileHeight = fileportHeight - (margins + tabrow);
+  
   // console.log("File Width: " + fileWidth); // DEBUG
   $('.file_port').css("width", fileportWidth);
   $('.file_port').css("height", fileportHeight);

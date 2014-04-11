@@ -3,7 +3,7 @@
   coconut: (admin)  / INSERT UPDATE SELECT
   
   CREATE USER 'coconut'@'localhost' IDENTIFIED BY '[see local-dev-server]';
-  GRANT SELECT, INSERT, UPDATE ON 'paradiseOffice'.* TO 'coconut'@'localhost';
+  GRANT SELECT, INSERT, UPDATE ON paradiseOffice.* TO 'coconut'@'localhost';
   
 */
 CREATE DATABASE paradiseOffice;
@@ -38,8 +38,8 @@ CREATE TABLE custPrograms (
        FOREIGN KEY (custID) REFERENCES users(custID),
        FOREIGN KEY (progID) REFERENCES programs(progID)
 );
-/* this bit hasn't been done */
-CREATE TABLE 'login_attempts' (
+
+CREATE TABLE login_attempts (
   userid INT(11) NOT NULL,
   time VARCHAR(30) NOT NULL
 );

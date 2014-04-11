@@ -77,23 +77,24 @@ nav ul li:hover ul.submenu { height: auto; }
     overflow-x: none;
     overflow-y: none;    
 }
-.file_port#tabrow {  height: auto; overflow-x: auto; overflow-y: none;  }
+.file_port#tabrow {  height: auto; overflow: hidden;  }
 .file_port .tabs-top { position: relative; height: auto; overflow: auto;  }
 .file_port .ui-tabs-panel {  
-    height: auto; overflow: auto;  
+    height: auto; overflow: none;  
 }
 .file_port .ui-tabs-nav {
     position: absolute !important;
     left: 0px; 
-    bottom: 0px;
+    top: 0px;
     right: 0px;
     padding: 0 0 0 0;
   }
 .file_port .tabs-top .file_port .ui-tabs-nav li { }
 .file_port .ui-tabs-selected {  }   
-.wrapper-file { height: 100%; width: 100%; overflow-x: none; overflow-y: scroll; }
+.wrapper-file { height: 100%; width: 100%; overflow: hidden; }
 .file_port .file { 
   overflow: none;
+  overflow-y: scroll;
   border: none;
   resize: none;
   color: #000000;
@@ -104,7 +105,8 @@ nav ul li:hover ul.submenu { height: auto; }
 /* end of file port ------------------------------------------------------------------ */
 
 .tool_pane-skel { 
-  position: absolute; right: 0px;
+  position: absolute; 
+  top: 0px; right: 0px;
   margin-left: 20px;
   margin-right: 5px; 
 }

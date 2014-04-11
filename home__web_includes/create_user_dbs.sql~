@@ -1,8 +1,8 @@
 /*
   root: $Efd8ksdjfeh458934
-  coconut: (admin) 385yh;fkasksfbl / INSERT UPDATE SELECT
+  coconut: (admin)  / INSERT UPDATE SELECT
   
-  CREATE USER 'coconut'@'localhost' IDENTIFIED BY '385yh;fkasksfbl';
+  CREATE USER 'coconut'@'localhost' IDENTIFIED BY '[see local-dev-server]';
   GRANT SELECT, INSERT, UPDATE ON 'paradiseOffice'.* TO 'coconut'@'localhost';
   
 */
@@ -16,7 +16,8 @@ CREATE TABLE users (
        company VARCHAR(40),
        email VARCHAR(100) NOT NULL,
        uName VARCHAR(25) NOT NULL,
-       password VARCHAR(300) NOT NULL
+       password VARCHAR(300) NOT NULL,
+       salt VARCHAR(300) NOT NULL
 );
 CREATE TABLE programs (
        progID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -37,9 +38,9 @@ CREATE TABLE custPrograms (
        FOREIGN KEY (custID) REFERENCES users(custID),
        FOREIGN KEY (progID) REFERENCES programs(progID)
 );
-/* this bit hasn't been done */
-CREATE TABLE 'login_attempts' (
+
+CREATE TABLE login_attempts (
   userid INT(11) NOT NULL,
   time VARCHAR(30) NOT NULL
-) ENGINE=InnoDB
+);
 

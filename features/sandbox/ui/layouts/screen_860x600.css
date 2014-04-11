@@ -95,7 +95,7 @@ span.name {
 .file { 
     width: 100%; height: 99%; 
     position: relative; 
-    left:-20px; top: -5px; 
+    left:-20px; margin-top: 32px; 
 }
 .file_port .ui-tabs-nav  { height: 40px; }
 .file_port .ui-tabs-nav  li { width: 80px; }

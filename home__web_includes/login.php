@@ -50,6 +50,7 @@ function sec_session_start()
   session_name($session_name);
   session_start(); // start the PHP session
   session_regenerate_id(); // Deletes old ID and creates new shiny one.
+  echo "A secure session\n"; // DEBUG
 }
 
 function login($uName, $password, $mysqli)
@@ -94,10 +95,11 @@ function login($uName, $password, $mysqli)
           // Get the user agent string
           $user_browser = $_SERVER['HTTP_USER_AGENT'];
           // Protecting against bad guys using XSS attacks
-          $user_id = preg_replace("/[^0-9]+/", "", $user_id);
+          echo $user_browser; // DEBUG
           $_SESSION['user_id'] = $user_id;
+          $user_id = preg_replace("/[^0-9]+/", "", $user_id);
+          $_SESSION['username'] = $uName; 
           $uName = preg_replace("/[^a-zA-Z0-9\-_]+/", "", $uName);
-          $_SESSION['username'] = $uName;
           $_SESSION['login_string'] = hash('sha512', $salt . $cipher_pass . $user_browser);
           return true;
         }
@@ -178,19 +180,23 @@ function login_check($mysqli)
         }
         else
         {
+          echo "\nLogin strings don't match, check salts and things.";
           return false;
         }
       }
       else
       {
+        echo "\nNo user found by that name\n";
         return false;
       }
     }
     else
     {
+      echo "\nCouldn't get the password and salt from users, problem with select query. \n";
       return false;
     }
   }
+  echo "User id: " . $_SESSION['user_id'] . "\nusername: " . $_SESSION['username'] . "\n Login string: \n" .  $_SESSION['login_string'];
 } // end of function login_check
 
 

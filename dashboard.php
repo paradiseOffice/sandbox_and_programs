@@ -1,8 +1,7 @@
 <?php
-
+  include_once '/home/web_includes/db_connect.php';
   include_once ('/home/web_includes/functions.php');
   include_once ('/home/web_includes/login.php');
-
   
   sec_session_start();
 ?>

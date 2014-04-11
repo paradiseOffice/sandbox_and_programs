@@ -33,7 +33,6 @@
   {
     $enteredUser = trim($_POST['user']);
     $enteredPass = $_POST['passCipher']; // altered via js
-    echo $enteredPass;
     if (login($enteredUser, $enteredPass, $mysqli) == true)
     {
       // Login success

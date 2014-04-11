@@ -87,13 +87,18 @@ span.name {
 
 /* middle section ====================================== */
 .file_port { 
-    margin-right: 320px;
+    margin-right: 360px;
 }
-.file { width: 900px; height: 800px; }
-
+.file { 
+    width: 100%; height: 99%; 
+    position: relative; 
+    left:-16px; margin-top: 46px; 
+}
+.file_port .ui-tabs-nav  { height: 50px; }
+.file_port .ui-tabs-nav  li { width: 100px; }
 .tool_pane-skel { 
     width: 250px; 
-    height: 478px; 
+    height: 778px; 
 }
 /* tool box/pane rules */
 .tool_box { margin: 5px; }
