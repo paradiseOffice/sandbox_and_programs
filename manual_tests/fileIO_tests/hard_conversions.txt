@@ -1,0 +1,8 @@
+Hard Ms Office conversions.
+
+1. Open up the specified document in MS Office 2007+, take screenshots of document output.
+2. Convert to the relevant odf file, take screenshots of each page in print preview.
+3. View each image side by side, to check the document conversion process.
+4. Note each change.
+5. Familiarise self with doc conversion Libreoffice source code and mailing list.
+6. Do doc, docx, xls, xlsx, ppt, pptx at first and some templates too.
