@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Software Requirements Specification - Sandbox</title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8">
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Hazel Windle" />
+  <meta name="description" content="Series of small programs designed to ease the creation of web apps. Office applications based on this system to come soon." />
+  <meta name="keywords" content="open source, web, free software, office suite, toolkit" />
+  <link rel="stylesheet" href="../styles/global_screen.css" media="screen" />
+  <link rel="stylesheet" href="../styles/spec.css" media="screen" />
+</head>
+
+<body>
+
+<div class="masthead">
+<a href="../index.html">
+ <h1>Paradise Office</h1>
+ <h2>Created with privacy and openess in mind </h2>
+</a>
+</div>
+
+<div class="toplinks">
+  <div id="features_link"><a href="../feature_tracker.html" title="features">Features</a></div>
+  <div id="dev_link"><a href="../development.html" title="Development Plans">Development</a></div>
+  <div id="doc_link"><a href="../doc_index.html" title="Documentation">Documentation</a></div>
+  <div id="contact_link"><a href="../contact.html" title="contact and bug reports">Contact</a></div>
+  <a target="blank"  href="https://twitter.com/LinuxParadise" id="twit" title="twitter"><img src="../ui/twitter.png" width="40" height="30" alt="Twitter" /></a>
+<a  target="blank" href="http://linuxparadise.wordpress.com" id="blog" title="Blog"><img src="../ui/wordpress.png" width="40" height="30" alt="Programmer's blog" /></a>
+  <a  target="blank" href="https://github.com/paradiseOffice/sandbox_and_programs.git" id="git" title="github"><img src="../ui/github.png" width="40" height="30" alt="Github" /></a>
+
+</div>
+
+<div class="content">
+
+  <div class="main-content">
+
+<div class="subsystem_details">
+<h1>Events</h1>
+  <h2>Listener</h2>
+  <p>A process that listens for user input from a variety of keys, passed in as an array of keyboard shortcuts or function keys. When it catches a key event that matches one of the shortcuts, it pops up the associated dialog, for that menu item or action. </p>
+  <h2>Keyboard Shortcuts</h2>
+  <p>Input: One keyboard shortcut and the dialog, quick menu or plugin to open.
+    <br />Output: An associative array mapping shortcut (keycode lists) to program calls. </p>
+  <hr />
+  <h2>System</h2>
+  <p>This detects whether the browser tab has closed, and warns the user whether to save their documents or not. If a database connection is open, this closes the connection. </p><p>If connection loss occurs, the last changes are written to the file and placed in a recovery file, and encrypted. Encrypted files won't be deleted. The session is then closed. </p><p>On the sales site login, the user will be notified of any crashes, and the offer of recovering the data will be made. </p>
+
+    </div>
+  </div>
+</div><!-- content -->
+<div class="footer">
+  <p>All content made by Hazel Windle &copy;, 2014.</p>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Paradise Office - </title>
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Hazel Windle" />
+  <meta name="description" content="Web development applications for Linux like Dreamweaver, and other office applications." />
+  <meta name="keywords" content="open source, web design, free software, office suite, Qt" />
+  <link rel="stylesheet" href="../styles/screen.css" />
+</head>
+<body>
+
+<header>
+    <h1>Paradise Office</h1>
+    <h2>Build Your Own Office</h2>
+  <div id="donate"></div>
+</header>
+
+<div class="content">
+  <nav id="rainbow-menu">
+    <div id="home_link"><a href="../index.html" title="home">Home</a></div>
+    <div id="dev_link"><a href="../development.html" title="Development">Development</a></div>
+    <div id="doc_link"><a href="../doc_index.html" title="Help Resources">Help</a></div>
+    <div id="contact_link"><a href="../issues.html" title="Support and bug reports">Support</a></div>
+    <div id="download"><a href="../download.html" title="Download programs">Download</a></div>
+    <div id="forum"><a href="../forum.html" title="Chat with other users">Forum</a></div>
+    <div id="blog"><a  target="blank" href="http://linuxparadise.wordpress.com" id="blog" title="Follow the coding process">Blog</a></div>
+    <a target="blank"  href="https://twitter.com/LinuxParadise" id="twit" title="twitter"><img src="../ui/twitter.png" width="40" height="30" alt="Twitter" /></a>
+    
+    <a  target="blank" href="https://github.com/paradiseOffice/sandbox_and_programs.git" id="git" title="github"><img src="../ui/github.png" width="40" height="30" alt="Github" /></a>
+  </nav>
+  
+  <div class="main_content">
+
+<div class="subsystem_details">
+<h1>App Creator</h1>
+<p>The user has to login to their account and click create an app or similiar.</p>
+  <h2>Appearance</h2>
+    <p>The first screen asks for the application name, description and author. The user selects the theme and the icon set to use. The application is by default for mobiles, screens and larger monitors. </p>
+    <p>The date and time of submission should be used as the creation date, and modification date for the app. The output would be checked against already created application names, so there are no duplicate names. A preview for each of the themes and connected icon sets would be necessary. Somewhere on this screen, it should mention that the application will run on mobiles (with a minimum screen size) and larger screens. It should mention the maximum number of features to include on mobile applications however, due to limited menus. </p>
+  <h2>Files</h2>
+    <p>Input: a type of file port. This can be a text editor file port which would open only text files or source code, or word processing for Word and odt files. Supplies the correct boxes for handling emails, or double entry accounts depending on what you pick.
+      Outputs: the name of the file port selected, which would get added into the (started) skeleton HTML, which is copied over from the sandbox.
+    </p>
+  <h2>Menus</h2>
+    <p>Firstly, the user will be asked on what kind of device the application will be mostly used. If it's a phone, 3 menus will be there (2 taken off and hidden), for a tablet it's 6 menus, and for a desktop 9 menus.</p>
+    <p>The menu items that are added by default are slightly greyed out and unchangeable. A grid of input boxes will facilitate adding each menu item, with only 9 items being addable on a mobile, as opposed to 11 items. A keyboard shortcuts link will show another div on the page allowing the user to pick out a menu item on a menu bar in order to pick a letter for underlining, and to set up a keyboard shortcut. It will be added to the events, and if the same key sequence is used an error will occur, or if F5 is used, or F11. </p>
+
+  <h2>Common Bar</h2>
+    <p>For each of the 4 (mobile), 6 (tablet) or 9 large icons, there is an icon chooser which looks through a database of icon paths by name and category. An existing icon can be selected here. The input for the name is 12 characters or less, and alpha numeric.
+On clicking next these large icons get added into the partially built app, with the icon paths being added too. If either an icon or the name isn't set it reports an error to the user. </p>
+  <h2>Tool Box</h2>
+    <p>Has a collection of icons and controls on the left for the user to drag and drop into the empty toolboxes on the right. The controls snap to the grid in the empty tool box. As many as three tool boxes can be created. Each tool box has a name for easy identification. </p>
+  <h2>Add Features</h2>  
+    <p>This allows the user to first choose which plugins they want in their app, for example they could choose a loan calculator. Once they've choosen all the plugins they want, they link each plugin to one or more controls which can be menu items or buttons as well. If they want a quick menu or dialog to result from clicking something, then the links page takes care of that. The features that are selected here are also available to link onto any created dialogs or quick menus later on. </p>
+  <h2>Quick Menus</h2>
+    <p>The inputs here include the name (with no spaces) of the menu/dialog, the type of quick menu from a list including a custom input field and whether it stays the same size, or is allowed to be resized. More than one quick menu can be created.
+</p>
+    <p>Some quick menus like the font chooser will also have a hardcoded plugin option. These will be displayed last at the bottom. A normal quick menu can have a plugin attached to it to make it do something. One example will be a colour picker which could have either a font colour changer or background colour changer plugin assigned to it. </p>
+
+  <h2>Dialogs</h2>
+    <p>A small qt-creator like window for the user to drag and drop controls onto a grid like dialog. The user inputs each controls (variable) name by right clicking. Quick menu things like colour and font choosers can also be added. The widgets line up, and the default buttons like OK and Cancel are already there. Each control is listed below along with the drop down menu for plugins available. The controls with hard coded plugins go below. An add another button is used to save the current dialog and create another one. </p>
+    <p>The amount of total plugins used affects the pricing of the application if hosted.</p>
+  
+  <h2>Links</h2>
+    <p>On the left are hide away sections for menus, the common bar etc and dialog select boxes on the right. Only the dialogs and quick menus created will be available. In the toolbox, icons can also be assigned to plugins if this hasn't been done earlier. Again some controls e.g. font choose have a hard coded plugin and these are displayed last and aren't changeable. There is also a test app button here. </p>
+  <h2>Add Help Text</h2>
+    <p>For adding custom help strings to any plugins. These display below the tool boxes. A short how-to guide can also be written here. This is always linked into the Help menu, as 'guide book' or displayed when F1 is pressed. </p>
+
+  <h2>Hosting Options</h2>
+    <p>This includes a 'host on the cloud option' for x amount of money (or free and with open source related ads in the dialogs). Only apps with less than 10 plugins will be free and some resource intensive plugins will always incur a charge of say, £0.25. The charges are based on programming resources and RAM. Only 5 custom apps are allowed for free users due to hard drive space. </p><p>The app should have a download link along with a how to host your own app guide (geeky to scare people into hosting on my servers but more user friendly later on). </p>
+
+    </div>
+</div><!-- main_content --> 
+  </div><!-- content, a containing box -->
+  <footer>&copy; Hazel Windle 2014. <a href="#" id="twitter">Tweet</a></footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script></script>
+</body>
+</html>

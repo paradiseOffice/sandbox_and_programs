@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Software Requirements Specification - Sandbox</title>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8">
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Hazel Windle" />
+  <meta name="description" content="Series of small programs designed to ease the creation of web apps. Office applications based on this system to come soon." />
+  <meta name="keywords" content="open source, web, free software, office suite, toolkit" />
+  <link rel="stylesheet" href="../styles/global_screen.css" media="screen" />
+  <link rel="stylesheet" href="../styles/spec.css" media="screen" />
+</head>
+
+<body>
+
+<div class="masthead">
+<a href="../index.html">
+ <h1>Paradise Office</h1>
+ <h2>Created with privacy and openess in mind </h2>
+</a>
+</div>
+
+<div class="toplinks">
+  <div id="features_link"><a href="../feature_tracker.html" title="features">Features</a></div>
+  <div id="dev_link"><a href="../development.html" title="Development Plans">Development</a></div>
+  <div id="doc_link"><a href="../doc_index.html" title="Documentation">Documentation</a></div>
+  <div id="contact_link"><a href="../contact.html" title="contact and bug reports">Contact</a></div>
+  <a target="blank"  href="https://twitter.com/LinuxParadise" id="twit" title="twitter"><img src="../ui/twitter.png" width="40" height="30" alt="Twitter" /></a>
+<a  target="blank" href="http://linuxparadise.wordpress.com" id="blog" title="Blog"><img src="../ui/wordpress.png" width="40" height="30" alt="Programmer's blog" /></a>
+  <a  target="blank" href="https://github.com/paradiseOffice/sandbox_and_programs.git" id="git" title="github"><img src="../ui/github.png" width="40" height="30" alt="Github" /></a>
+
+</div>
+
+<div class="content">
+
+  <div class="main-content">
+
+<div class="subsystem_details">
+<h1>UI - User Controls</h1>
+  <p>These user controls get copied into the quick menus and dialogs as well as the main app itself. </p>
+  <h2>Button</h2>
+  <p>A button which can be a submit button or a button that toggles the display for half of a form, dialog, quick menu.</p>
+  <h2>Checkbox_wLabel</h2>
+  <p>A checkbox with the associated label on the left. Can be placed in a fieldset group to separate out blocks of controls. </p>
+  <h2>Clipboard Entries List</h2>
+  <p>An 'entries that have been copied' list with small text only previews on the right and radio buttons on the left or just a combo box with scroll. At the bottom are two buttons, paste and clear. A quick menu. </p>
+  <h2>Colour Picker</h2>
+  <p>A full colour wheel that picks one colour and displays the technical details for that colour. A quick menu. </p>
+  <h2>Colour Swatches</h2>
+  <p>A set of colours in groups. A combo box on top selects the colours displayed. The user can add their own palettes. A quick menu. </p>
+  <h2>Combo Box</h2>
+  <p>Like a select list but with no drop down element. Can have a custom height. The width can also be changed. Can also contain pictures instead of text for each option in the list. </p>
+  <h2>Currency Field</h2>
+  <p>A currency field is a text input that only accepts currency style decimal numbers. The currency sign depends on the locale setting and doesn't get stored. </p>
+  <h2>Date Field</h2>
+  <p>This stores the date in a format determined by the locale which is either European (1-1-14), UK (01/01/2014) or US (mm-01-2014). A little calendar date picker is also used for a selection alternative. </p>
+  <h2>Email Field</h2>
+  <p>This checks for a valid email, with valid domain name ending. </p>
+  <h2>Float Field</h2>
+  <p>This allows 4 number precision, and converts whole numbers entered into floats. </p>
+  <h2>Icon</h2>
+  <p>A small clickable image to represent one single action or function of a program. </p>
+  <h2>Large Icons</h2>
+  <p>A icon with text to the right, for commonly used features that should be easier to prod and find. Text up to 10 characters long. </p>
+  <h2>Long Text Field</h2>
+  <p>A text area field with no rich edit capabilities except in email or project management type programs. Contains a spellchecker. </p>
+  <h2>Progress Bar</h2>
+  <p>A small bar to describe how long something is taking. Horizontal with a percentage at the end. </p>
+  <h2>Radio Btns wLabel</h2>
+  <p>A radio button with a label on the right. Belong in a group. The name of this control will apply to all buttons, with each buttons value being that of the label. </p>
+  <h2>Sci_num_field</h2>
+  <p>This an exoponent number field for high precision numbers. Save the exponent part separate as well as the mantissa and decimal parts. Example: 201.23416789(e-10)
+    save exp: int exp = -10;
+    Saving mantissa: int mantissa = 201;
+    Saving decimal: int (long) dec = 23416789;
+    <br />Save the whole number as an array e.g. number[mantissa,dec,exp]. </p>
+  <h2>Spin Box</h2>
+  <p>A small box with either a whole or float number that can go up or down. The user specfies by what step, and the lower and higher thresholds. </p>
+  <h2>Text Field</h2>
+  <p>A small, fixed width text input. </p>
+  <h2>Time Field</h2>
+  <p>A field just for the time. A small clock to pick the time could also be used. Displays in a locale specific format and also saves the users configured time zone. </p>
+  <h2>Tool Tip</h2>
+  <p>An extended yet 80px high tool tip for offering information and help. About a sentence of text. The keyboard shortcut of something should always come first in this sentence. </p>
+  <h2>Update_Status_Msg</h2>
+  <p>This creates a variable for the status bar with a label. When this control is updated, that underlying variable also changes. Set to update every minute by default.</p>
+  <h2>Upload Pic</h2>
+  <p>This offers a text label area and an upload button with a picture icon. The text label area displays 'no picture uploaded' when there is no picture. If the picture is not the correct format, it results in an error. This returns the picture URI, any file name has spaces replaced with underscores. A quick menu. </p>
+  <h2>Upload Text</h2>
+  <p>This uploads a text file in which to insert after the current cursor position in the current file. If a program is uploaded, the executable permissions are stripped, then the special characters are translated into character entities. Similiar visually to upload pic. </p>
+  <h2>URL Field</h2>
+  <p>This lets the user input a web address. It adds the http:// automatically and checks the domain format. </p>
+  <h2>Whole Num Field</h2>
+  <p>This lets the user input only a whole number. If a float is inputted, the output is truncated and the user is warned. The user is warned if they try and enter anything else. </p>
+  <h2>Custom Field</h2>
+  <p>This lets a user select a regex for, say phone numbers or initials. The pattern and character limit as well as the label make up the variables for that new field, which goes in their application somewhere. </p>
+
+   </div>
+  </div>
+</div><!-- content -->
+<div class="footer">
+  <p>All content made by Hazel Windle &copy;, 2014.</p>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script></script>
+</body>
+</html>

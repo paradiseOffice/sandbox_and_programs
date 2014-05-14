@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Paradise Office - </title>
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Hazel Windle" />
+  <meta name="description" content="Web development applications for Linux like Dreamweaver, and other office applications." />
+  <meta name="keywords" content="open source, web design, free software, office suite, Qt" />
+  <link rel="stylesheet" href="../styles/screen.css" />
+</head>
+<body>
+
+<header>
+    <h1>Paradise Office</h1>
+    <h2>Build Your Own Office</h2>
+  <div id="donate"></div>
+</header>
+
+<div class="content">
+  <nav id="rainbow-menu">
+    <div id="home_link"><a href="../index.html" title="home">Home</a></div>
+    <div id="dev_link"><a href="../development.html" title="Development">Development</a></div>
+    <div id="doc_link"><a href="../doc_index.html" title="Help Resources">Help</a></div>
+    <div id="contact_link"><a href="../issues.html" title="Support and bug reports">Support</a></div>
+    <div id="download"><a href="../download.html" title="Download programs">Download</a></div>
+    <div id="forum"><a href="../forum.html" title="Chat with other users">Forum</a></div>
+    <div id="blog"><a  target="blank" href="http://linuxparadise.wordpress.com" id="blog" title="Follow the coding process">Blog</a></div>
+    <a target="blank"  href="https://twitter.com/LinuxParadise" id="twit" title="twitter"><img src="../ui/twitter.png" width="40" height="30" alt="Twitter" /></a>
+    
+    <a  target="blank" href="https://github.com/paradiseOffice/sandbox_and_programs.git" id="git" title="github"><img src="../ui/github.png" width="40" height="30" alt="Github" /></a>
+  </nav>
+  
+  <div class="main_content">
+
+<div class="detailed_design">
+<h2>Detailed System Design</h2>
+<h3>Cygnet Sandbox - App Creator</h3>
+<dt>Definition:</dt><dd>Reads user choices in a multi-page form and outputs
+  HTML, CSS, PHP, Javascript and Python files. Only works with current modules
+  and parts available.</dd>
+<h4>Responsibilities</h4>
+<ul>
+  <li>To put the HTML and other code snippets in the right order.</li>
+  <li>To write standards compliant code that works across many browsers.</li>
+  <li>To encode SQL queries that work in any of the common databases, and that doesn't expose security risks.</li>
+  <li>To take in any options and validate them.</li>
+  <li>To keep the appearance and structural CSS apart at all times.</li>
+  <li>To provide consistent methods of linking programs to options.</li>
+  <li>To provide specific methods of data validation for office and web applications, for example to prevent 'divide by zero' in maths.</li>
+  <li>To provide default JQuery animations for the modern web.</li>
+</ul>
+<h4>Constraints</h4>
+<p>There will only be a few modules available initially, growing in number as
+  time goes on.</p>
+<h4>Composition</h4>
+
+<h4>sandbox/ui/user_controls</h4>
+<ul>
+  <li>colour_picker</li>
+  <li>checkbox_wLabel</li>
+  <li>radio_btns_wLabel</li>
+  <li>button</li>
+  <li>icon</li>
+  <li>large_icon</li>
+  <li>slider</li>
+  <li>combo_box</li>
+  <li>spinbox</li>
+  <li>progress_bar</li>
+  <li>tool_tip</li>
+  <li>text_field</li>
+  <li>long_text_field</li>
+  <li>date_field</li>
+  <li>time_field</li>
+  <li>url_field</li>
+  <li>email_field</li>
+  <li>whole_num_field</li>
+  <li>currency_field</li>
+  <li>float_field</li>
+  <li>sci_num_field</li>
+  <li>colour_swatches</li>
+ <li>upload_pic</li>
+  <li>upload_text</li>
+  <li>clipboard_entries_list</li>
+  <li>update_status_msgs</li>
+</ul>
+
+<h4>appearance/</h4>
+<ul>
+  <li>default_pro_theme</li>
+  <li>accessibility theme (larger clickable areas, more contrast)</li>
+  <li>sunshine_theme</li>
+</ul>
+
+
+
+<h4>sandbox/logic/threads/events</h4>
+<h5>mouse</h5>
+<ul>
+  <li>ok</li>
+  <li>cancel</li>
+  <li>left_click</li>
+  <li>wheel_down</li>
+  <li>wheel_up</li>
+  <li>wheel_left</li>
+  <li>wheel_right</li>
+  <li>wheel_mid_click</li>
+  <li>right_click</li>
+  <li>double_click</li>
+  <li>triple_click</li>
+  <li>left_drag</li>
+  <li>left_drop</li>
+  <li>right_drag</li>
+  <li>right_drop</li>
+</ul>
+<h5>keypad</h5>
+<ul>
+  <li>kpad_left</li>
+  <li>kpad_right</li>
+  <li>kpad_up</li>
+  <li>kpad_down</li>
+</ul>
+<h5>main_keys</h5>
+<ul>
+  <li>cursor_up</li>
+  <li>cursor_down</li>
+  <li>cursor_left</li>
+  <li>cursor_right</li>
+  <li>enter</li>
+  <li>escape</li>
+  <li>page_down</li>
+ <li>page_up</li>
+  <li>end</li>
+  <li>insert</li>
+  <li>home </li>
+  <li>print_scr</li>
+  <li>delete</li>
+  <li>backspace</li>
+  <li>spaceb_repeat</li>
+  <li>F1</li>
+  <li>F4</li>
+  <li>F6</li>
+  <li>F7</li>
+  <li>F8</li>
+  <li>F9</li>
+  <li>F10</li>
+  <li>F12</li>
+  <li>windows</li>
+  <li>alt_gr</li>
+  <li>right_btn_key</li>
+</ul>
+
+
+</div>
+
+  </div>
+
+
+</div><!-- main_content --> 
+  </div><!-- content, a containing box -->
+  <footer>&copy; Hazel Windle 2014. <a href="#" id="twitter">Tweet</a></footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script></script>
+</body>
+</html>

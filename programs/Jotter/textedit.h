@@ -99,7 +99,8 @@
  private:
      void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
      void fontChanged(const QFont &f);
-     // void colorChanged(const QColor &c);
+     // void setTabWidth(); // Changed for setTabWidth function
+     // void tabEvent(); // Changes tab into spaces
      void alignmentChanged(Qt::Alignment a);
 
      QAction *actionSave,

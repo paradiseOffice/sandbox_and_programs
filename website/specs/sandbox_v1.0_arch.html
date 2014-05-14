@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Paradise Office - </title>
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Hazel Windle" />
+  <meta name="description" content="Web development applications for Linux like Dreamweaver, and other office applications." />
+  <meta name="keywords" content="open source, web design, free software, office suite, Qt" />
+  <link rel="stylesheet" href="../styles/screen.css" />
+</head>
+<body>
+
+<header>
+    <h1>Paradise Office</h1>
+    <h2>Build Your Own Office</h2>
+  <div id="donate"></div>
+</header>
+
+<div class="content">
+  <nav id="rainbow-menu">
+    <div id="home_link"><a href="../index.html" title="home">Home</a></div>
+    <div id="dev_link"><a href="../development.html" title="Development">Development</a></div>
+    <div id="doc_link"><a href="../doc_index.html" title="Help Resources">Help</a></div>
+    <div id="contact_link"><a href="../issues.html" title="Support and bug reports">Support</a></div>
+    <div id="download"><a href="../download.html" title="Download programs">Download</a></div>
+    <div id="forum"><a href="../forum.html" title="Chat with other users">Forum</a></div>
+    <div id="blog"><a  target="blank" href="http://linuxparadise.wordpress.com" id="blog" title="Follow the coding process">Blog</a></div>
+    <a target="blank"  href="https://twitter.com/LinuxParadise" id="twit" title="twitter"><img src="../ui/twitter.png" width="40" height="30" alt="Twitter" /></a>
+    
+    <a  target="blank" href="https://github.com/paradiseOffice/sandbox_and_programs.git" id="git" title="github"><img src="../ui/github.png" width="40" height="30" alt="Github" /></a>
+  </nav>
+  
+  <div class="main_content">
+
+<h3>General Constraints</h3>
+<ol>
+  <li><h4>Hardware</h4></li>
+    <ul>
+      <li>Able to run on the client side in 1024MB of memory.</li>
+      <li>No screen redraws or events going to the server.</li>
+      <li>The screen size could be very large as large monitor sizes become available.</li>
+      <li>Touch operated controls, all buttons need to be finger sized.</li>
+      <li>Only runs through a SSL connection.</li>
+    </ul>
+  <li><h4>Software</h4></li>
+    <ul>
+      <li>Abililty to save either a cookie, session information or both.</li>
+      <li>Javascript could be disabled or an older browser could be used.</li>
+      <li>No right click on a tablet</li>
+      <li>SVG and PNG can't be used properly in Internet Explorers earlier than version 9.</li>
+      <li>Database data has to be kept on the client side for all files (other database servers can be connected to).</li>
+    </ul>
+  <li><h4>End Users</h4></li>
+    <ul>
+      <li>They may be used to Microsoft Office.</li>
+      <li>May be reluctant to change.</li>
+      <li>Make it clear where the files are being downloaded to.</li>
+      <li>They may speak a different language.</li>
+      <li>They may be disabled in some way.</li>
+      <li>They may be suspicious of internet privacy because of Google and the NSA.</li>
+    </ul>
+  <li><h4>Resources</h4></li>
+    <p>To start with, they'll only be one application server that isn't ready for production due to slow speeds and lack of support. At least two or three servers with the same domain name should be used, with the server being fixed within 2 hours minimum.</p>
+  <li><h4>Standards</h4></li>
+    <ul>
+      <li>Adhere to HTML 5 and XHTML 1.0 in web pages.</li>
+      <li>Accessibility guidelines must be followed (WCAG).</li>
+      <li>CSS 2.1 and 3 to be used.</li>
+      <li>XML and PDF standards used for some file formats.</li>
+      <li>All text to be in UTF-8 encoding.</li>
+    </ul>
+  <li><h4>Interoperability</h4></li>
+    <p>The open document XML file formats used in Libreoffice are to be used and will be the default format to save in. Other supplementary XML file formats will be created and included, where the applications aren't typical office applications.</p>
+  <li><h4>Protocols</h4></li>
+    <p>Will be used over port 443 for secure http traffic.</p>
+  <li><h4>Data</h4></li>
+    <p>The program source will be kept on github. All data will be the responsibility of the user. When in beta testing, warnings will be given to the user if any data could get mangled.</p>
+  <li><h4>Security</h4></li>
+    <p>A user must login over https, and the passwords will have a salt and pepper added to them, and be encrypted. The encryption method will be via a SSL certificate and any other default encryption methods for Linux passwords.</p>
+  <li><h4>Memory</h4></li>
+    <p>Program in a way to preserve memory, using smaller data types. PHP closures could also be used. I could also use Nginx for the web server as it's lighter than Apache.</p>
+  <li><h4>Performance / Network</h4></li>
+    <p>A VPS will be a slow one to test things at first, then I'll upgrade to a gigabit ethernet one. Multiple servers in different countries could be used to speed up the connections.</p>
+  <li><h4>Testing</h4></li>
+    <p>I'll do tablet testing and mobile testing, on a range of tablets and phones, and maybe use a 'phone emulator. I will also try using Internet Explorer 9 and 10.</p>
+  <li><h4>Quality Goals</h4></li>
+    <p>It should be good enough to have no discernable speed lapses or crashes compared to Libreoffice 4.0.</p>
+</ol>
+</div>
+
+<div class="goals">
+<h2>Goals and Guidelines</h2>
+<h3>Priorities</h3>
+<ul>
+  <li>Easy for developers to understand</li>
+  <li>Cross platform</li>
+  <li>Easy to add new features</li>
+  <li>Easy to add PHP/Python scripts to events</li>
+</ul>
+<h3>Principles</h3>
+<ul>
+  <li>The kiss principle (&quot;keep it simple stupid!&quot;)</li>
+  <li>Unix small elegant tools chained together philosophy</li>
+</ul>
+<h3>Guidelines</h3>
+<p>Push open standards like HTML and XML wherever possible.</p>
+</div>
+
+<div class="dev_methods">
+<h2>Development Methods</h2>
+<p>Software development lifecycle with the design and requirements frozen, then the coding. I will perform manual tests on each part or module, then on the whole system. The requirements may be reviewed if a different design is needed, but the feature list won't be changed.</p><p>I will find other volunteers to look at any bugs for me, and hopefully send me fixes.</p>
+</div>
+
+<div class="strategies">
+<h2>Architectural Strategies</h2>
+<h3>Use of Products</h3>
+  <ul>
+    <li><h4>PHP</h4></li>
+    <p>This will be used mainly for cookie and session management, and for accessing databases. It will also be used for the full page dialogs.</p>
+    <li><h4>Python, lxml</h4></li>
+    <p>This will be the main language for doing document conversions, or processor heavy tasks that would benefit from being coded in Python as opposed to PHP.</p>
+    <li><h4>Postgresql 9.1</h4></li>
+    <p>This will be used to get at and filter data. No data tables are kept on the server permanently however.</p>
+    <li><h4>JQuery 1.10, JQueryUI</h4></li>
+    <p>This will be used for client side events, and effects. JQuery UI will be used for creating tabs, and smaller pop-up dialogs (quick menus), to keep things consistent instead of reinventing the wheel by writing my own tabs etc. More animations will be used for modern browsers.</p>
+    <li><h4>Javascript</h4></li>
+    <p>Used for event handler threads (to capture clicks etc), and anything that needs a lot of CSS manipulation.</p>
+    <li><h4>XHTML 1.0, CSS 2.1</h4></li>
+    <p>These are used so as to not confuse old browsers, with CSS 3 techniques being used as well.</p>
+  </ul>
+<h3>Data Storage</h3>
+  <p>Other database servers will be able to be hooked up, via the PDO PHP feature. SQLite can also be used.</p>
+<h3>Communication Mechanisms</h3>
+  <p>User application preferences will be stored as a session, or as a cookie. JSON could be used as a standardised array mechanism for sending data between the web page, PHP and Python.</p>
+<h3>Errors</h3>
+  <p>These will be written into each module as needed.</p>
+<h3>Concurrency</h3>
+  <p>AJAX will be used, to lessen the need for page refreshes.</p>
+<h3>Management of Resources</h3>
+  <p>Algorithms will be kept as simple as possible, with no triple nested loops or anything bad like that. The smallest variable value possible will be used.</p>
+<h3>UI Design</h3>
+  <p>I liked the look of the KDE office suite Calligra, so I modelled that for desktop PC's. Mobiles will have more options on the common bar and menus, with a scrolling ability. I also want something that is easy to create custom themes for, complete with company logo and colours. I also want the user to be able to change the size stylesheet via a menu. This would help visually impaired people. I also want colourful icons that aren't too bland. Maybe you could tap or click an icon several times to select a different option.</p>
+<h3>The Future</h3>
+  <p>A lot of documentation should exist to attract developers and provide an easy route to extension. </p>
+</div>
+
+<div class="sys_arch">
+<h2>System Architecture</h2>
+<p>A broad server - client architecture will be needed, as this program uses the internet or LANs.</p>
+</div>
+
+<div class="subsystems">
+<h2>Subsystem Architecture</h2>
+<p>For the first version these categories of functions will exist:</p>
+  <h3>appearance/</h3>
+  <ul>
+    <li>accessibility_theme</li>
+    <li>default_pro_theme</li>
+    <li>sunshine_theme</li>
+  </ul>
+  <h3>logic/</li>
+  <ul>
+    <li>databases</li>
+    <li>events</li>
+    <li>file_port (contains file input output too)</li>
+    <li>selections</li>
+  </ul>
+  <h3>ui/</h3>
+  <ul>
+    <li>containers</li>
+    <li>dialogs</li>
+    <li>quick_menus</li>
+    <li>messages</li>
+    <li>layouts</li>
+    <li>user_controls</li>
+  </ul>
+</div>
+
+
+</div><!-- main_content --> 
+  </div><!-- content, a containing box -->
+  <footer>&copy; Hazel Windle 2014. <a href="#" id="twitter">Tweet</a></footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script></script>
+</body>
+</html>

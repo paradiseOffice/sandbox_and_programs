@@ -34,8 +34,13 @@
  ** ensure the GNU General Public License version 3.0 requirements will be
  ** met: http://www.gnu.org/copyleft/gpl.html.
  **
- **
+ ** ***************************************************************************
+ ** 
  ** $QT_END_LICENSE$
+ **
+ ** Although the original was an example I've changed a lot of code to extend
+ ** this   program. 
+ ** (c) Hazel Windle, for useful bits beyond the original QTextEdit application.
  **
  ****************************************************************************/
 
@@ -66,7 +71,7 @@
  #include <QMessageBox>
  #include <QPrintPreviewDialog>
 
- #ifdef Q_WS_MAC
+ #ifdef Q_WS_MAC // change these to the two separate theme dirs.
  const QString rsrcPath = ":/images/mac";
  #else
  const QString rsrcPath = ":/images/win";
@@ -152,7 +157,7 @@
  void TextEdit::setupFileActions()
  {
      QToolBar *tb = new QToolBar(this);
-     tb->setWindowTitle(tr("File Actions"));
+     tb->setWindowTitle(tr("File"));
      addToolBar(tb);
 
      QMenu *menu = new QMenu(tr("&File"), this);
@@ -168,8 +173,8 @@
      tb->addAction(a);
      menu->addAction(a);
 
-     a = new QAction(QIcon::fromTheme("document-open", QIcon(rsrcPath + "/fileopen.png")),
-                     tr("&Open..."), this);
+     a = new QAction(QIcon(rsrcPath + "/fileopen.png"),
+                     tr("&Open"), this);
      a->setShortcut(QKeySequence::Open);
      connect(a, SIGNAL(triggered()), this, SLOT(fileOpen()));
      tb->addAction(a);
@@ -225,7 +230,7 @@
  void TextEdit::setupEditActions()
  {
      QToolBar *tb = new QToolBar(this);
-     tb->setWindowTitle(tr("Edit Actions"));
+     tb->setWindowTitle(tr("Edit"));
      addToolBar(tb);
      QMenu *menu = new QMenu(tr("&Edit"), this);
      menuBar()->addMenu(menu);
@@ -270,10 +275,10 @@
  void TextEdit::setupTextActions()
  {
      QToolBar *tb = new QToolBar(this);
-     tb->setWindowTitle(tr("Format Actions"));
+     tb->setWindowTitle(tr("Text"));
      addToolBar(tb);
 
-     QMenu *menu = new QMenu(tr("F&ormat"), this);
+     QMenu *menu = new QMenu(tr("&View"), this);
      menuBar()->addMenu(menu);
 
      actionTextBold = new QAction(QIcon::fromTheme("format-text-bold", QIcon(rsrcPath + "/textbold.png")),

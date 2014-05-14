@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Paradise Office - </title>
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Hazel Windle" />
+  <meta name="description" content="Web development applications for Linux like Dreamweaver, and other office applications." />
+  <meta name="keywords" content="open source, web design, free software, office suite, Qt" />
+  <link rel="stylesheet" href="../../styles/screen.css" />
+</head>
+<body>
+
+<header>
+    <h1>Paradise Office</h1>
+    <h2>Build Your Own Office</h2>
+  <div id="donate"></div>
+</header>
+
+<div class="content">
+  <nav id="rainbow-menu">
+    <div id="home_link"><a href="../../index.html" title="home">Home</a></div>
+    <div id="dev_link"><a href="../../development.html" title="Development">Development</a></div>
+    <div id="doc_link"><a href="../../doc_index.html" title="Help Resources">Help</a></div>
+    <div id="contact_link"><a href="../../issues.html" title="Support and bug reports">Support</a></div>
+    <div id="download"><a href="../../download.html" title="Download programs">Download</a></div>
+    <div id="forum"><a href="../../forum.html" title="Chat with other users">Forum</a></div>
+    <div id="blog"><a  target="blank" href="http://linuxparadise.wordpress.com" id="blog" title="Follow the coding process">Blog</a></div>
+    <a target="blank"  href="https://twitter.com/LinuxParadise" id="twit" title="twitter"><img src="../../ui/twitter.png" width="40" height="30" alt="Twitter" /></a>
+    
+    <a  target="blank" href="https://github.com/paradiseOffice/sandbox_and_programs.git" id="git" title="github"><img src="../../ui/github.png" width="40" height="30" alt="Github" /></a>
+  </nav>
+  
+  <div class="main_content">
+
+<div class="subsystem_details">
+<h1>Ledger</h1>
+<h2>File Menu</h2>
+<ul>
+	<li>New</li>
+	<li>Accounts List</li>
+	<li>Open File</li>
+	<li>Save</li>
+	<li>Save As</li>
+	<li>Print View</li>
+	<li>Print</li>
+	<li>Close File</li>
+</ul>
+<h2>Edit Menu</h2>
+<ul>
+	<li>Undo</li>
+	<li>Redo</li>
+	<li>Cut</li>
+	<li>Copy</li>
+	<li>Paste</li>
+	<li>Paste Special</li>
+	<li>Go To</li>
+	<li>Accounts</li>
+	<li>Find and Replace</li>
+</ul>
+<h2>View Menu</h2>
+<ul>
+	<li>Zoom </li>
+	<li>Filter</li>
+</ul>
+<h2>Ledgers Menu</h2>
+<ul>
+	<li>Purchase Ledger</li>
+	<li>Invoice Ledger</li>
+	<li>Sales Ledger</li>
+	<li>Income</li>
+	<li>Expenditure</li>
+    <li>Tax returns</li>
+	<li>VAT</li>
+	<li>Payroll</li>
+	<li>Borrowing</li>
+	<!-- Credit card and loan calculation  -->
+	<li>Cash Flow</li>
+	<li>Forecasts</li>
+</ul>
+<h2>Insert Menu</h2>
+<ul>
+	<li>Formula </li>
+	<li>Conversion Field</li>
+	<li>Chart</li>
+	<li>Goalseek</li>
+	<li>What If Analysis</li>
+	<li>Headings</li>
+	<li>Report</li>
+	<li>File</li>
+	<!-- Business cash flow sheets, Currency conversion fields,
+       Financial forecasts, Graphs/Charts,  Reports
+       Goalseek sheets, Sensitivity Analysis (general) -->
+</ul>
+<h2>Format Menu</h2>
+<ul>
+	<li>Tables</li>
+	<li>Heading</li>
+	<li>Numbers</li>
+	<li>Chart</li>
+	<li>Report</li>
+	<li>By Account</li>
+	<li>Page</li>
+</ul>
+<h2>Data Menu</h2>
+<ul>
+	<li>Sort Column</li>
+	<li>Create Formula</li>
+  <li>Currency</li>
+  <li>Validation</li>
+</ul>
+<h2>Options</h2>
+<ul>
+  <li>Company Details</li>
+  <li>Change Language</li>
+</ul>
+<h2>Help</h2>
+<ul>
+  <li>Search</li>
+  <li>Guide Book</li>
+  <li>About</li>
+</ul>
+<p>Data format - accounts list. CSV. Use Sqlite3 zipped up. </p>
+
+<h2>File Menu</h2>
+<h3>New - toggle</h3>
+  <p><strong>Input: </strong>Replaces accounts already open.  <br />
+  <strong>Output: </strong>If there are accounts open, these get saved and replaced with a new set of accounts. </p>
+<h3>Accounts List - Quick Menu</h3>
+  <p><strong>Input: </strong>User selects a CSV list of accounts or can create a new list.  <br />
+  <strong>Output: </strong>A list of accounts to do double entry transactions with. </p>
+<h3>Open File - Quick Menu</h3>
+  <p><strong>Input: </strong>The user selects a CSV file.  <br />
+  <strong>Output: </strong>The CSV file gets imported into the current account. </p>
+<h3>Save - Quick Menu</h3>
+  <p><strong>Input: </strong>The user enters a file name, and the only file format available is sql.  <br />
+  <strong>Output: </strong>A zipped sql file. </p>
+<h3>Save As - Quick Menu</h3>
+  <p><strong>Input: </strong>Same as save but with a differing filename.  <br />
+  <strong>Output: </strong>A zip file with a different filename. </p>
+<h3>Print View - Quick Menu</h3>
+  <p><strong>Input: </strong>A ledger or report/chart that is currently selected.  <br />
+  <strong>Output: </strong>The print view for the item currently selected. </p>
+<h3>Print - Quick Menu</h3>
+  <p><strong>Input: </strong>The current ledger or report.  <br />
+  <strong>Output: </strong>A print view, and print out. </p>
+<h3>Close - toggle</h3>
+  <p><strong>Input: </strong>The currently selected ledger or report.  <br />
+  <strong>Output: </strong>Closes the report, or ledgers tab. </p>
+
+<h2>Edit Menu</h2>
+<h3>Undo - toggle</h3>
+  <p><strong>Input: </strong>A click  <br />
+  <strong>Output: </strong>Undos the last entered character or formatting command. </p>
+<h3>Redo - toggle</h3>
+  <p><strong>Input: </strong>A click  <br />
+  <strong>Output: </strong>Redos the last entered character or formatting command. </p>
+<h3>Cut - toggle</h3>
+  <p><strong>Input: </strong>A selection  <br />
+  <strong>Output: </strong>Saves the selection to clipboard, and removes the selection. </p>
+<h3>Copy - toggle</h3>
+  <p><strong>Input: </strong>A selection  <br />
+  <strong>Output: </strong>Saves the selection to clipboard. </p>
+<h3>Paste - toggle</h3>
+  <p><strong>Input: </strong>A cut or copied selection.  <br />
+  <strong>Output: </strong>Pastes the numbers or text back in. </p>
+<h3>Paste Special - Quick Menu</h3>
+  <p><strong>Input: </strong>A HTML or text selection  <br />
+  <strong>Output: </strong>Either keep the HTML formatting or strip the tags. </p>
+<h3>Go To - Quick Menu</h3>
+  <p><strong>Input: </strong>A transaction number and ledger.  <br />
+  <strong>Output: </strong>Go to that transaction number in a ledger. </p>
+<h3>Accounts - Dialog</h3>
+  <p><strong>Input: </strong>The user can enter different accounts.  <br />
+  <strong>Output: </strong>Each account also has categories and other details like addresses. </p>
+<h3>Find &#amp; Replace - Quick Menu</h3>
+  <p><strong>Input: </strong>User enters text or numbers to find, and a possible replacement.  <br />
+  <strong>Output: </strong>By default the user has to OK each replacement, and finds are highlighted, and any row numbers highlighted. </p>
+
+<h2>View Menu</h2>
+<h3>Zoom - Quick Menu</h3>
+  <p><strong>Input: </strong>Can zoom in or out, or use a slider. <br />
+  <strong>Output: </strong>The tables are zoomed in or out. </p>
+<h3>Filter - Quick Menu</h3>
+  <p><strong>Input: </strong>The user selects an account to filter by.  <br />
+  <strong>Output: </strong>Only transactions to a certain account are shown in the table. </p>
+
+<h2>Ledgers Menu</h2>
+<h3>Purchase Ledger - Tab</h3>
+  <p><strong>Input: </strong>Transactions for large fixed price purchases that aren't day to day expenses.  <br />
+  <strong>Output: </strong>A separate database table for these fixed transactions, with a date and hire purchase details. </p>
+<h3>Invoice Ledger - Tab</h3>
+  <p><strong>Input: </strong>Invoice based transactions.  <br />
+  <strong>Output: </strong>A database of invoice based transactions with an invoice 'report' HTML,PDF file. </p>
+<h3>Sales Ledger - Tab</h3>
+  <p><strong>Input: </strong>Every sale made for products. <br />
+  <strong>Output: </strong>A transaction table specifically for product based sales including a product code and payment method. </p>
+<h3>Income - Tab</h3>
+  <p><strong>Input: </strong>An aggregate of all sales, and any service transactions that generate income.  <br />
+  <strong>Output: </strong>A table specifically for service based income, and product sales. </p>
+<h3>Expenditure - Tab</h3>
+  <p><strong>Input: </strong>Operational expenses that happen on a day to day basis, can be wages, stationery or electric bill kind of things.  <br />
+  <strong>Output: </strong>A table of all expenditure transactions with a frequency column. </p>
+<h3>Tax returns - Dialog</h3>
+  <p><strong>Input: </strong>The profit/loss and other things needed to work out tax. The user enters their country (only UK for now).  <br />
+  <strong>Output: </strong>A tax return calculator that can also update HMRC or something like that.  </p>
+<h3>VAT</h3>
+  <p><strong>Input: </strong>Optional if the company is big enough to need VAT.  <br />
+  <strong>Output: </strong>Works out the VAT owed or whatever. </p>
+<h3>Payroll - Tab</h3>
+  <p><strong>Input: </strong>The employees, their salaries and time working in a week.  <br />
+  <strong>Output: </strong>Option to generate time sheets. Also manages NI payments and employee benefits such as child care. A separate set of tables. </p>
+<h3>Borrowing - Dialog</h3>
+  <p><strong>Input: </strong>Credit cards, loans or credit agreements.  <br />
+  <strong>Output: </strong>Details of any repayments, along with an interest calculator and warnings for late payments, or underpayments of debts. </p>
+<!-- Credit card and loan calculation  -->
+<h3>Cash Flow - Tab</h3>
+  <p><strong>Input: </strong>The income, sales, and expenses, purchase ledgers over the course of a month.  <br />
+  <strong>Output: </strong>A graph showing the income flows with optional detail.  </p>
+<h3>Forecasts - Dialog</h3>
+  <p><strong>Input: </strong>Number estimates for income and expenditure.  <br />
+  <strong>Output: </strong>A forecast for a month up to 3 years for a business - like a large cash flow statement. </p>
+
+<h2>Insert Menu</h2>
+<h3>Formula - Quick Menu</h3>
+  <p><strong>Input: </strong>Select a formula group, and then a formula with an edit bar.  <br />
+  <strong>Output: </strong>The formula calculates on selected table columns, doing the calculation for each row. </p>
+<h3>Conversion Field - Quick Menu</h3>
+  <p><strong>Input: </strong>A starting currency and a currency to convert to.<br />
+  <strong>Output: </strong>By default converts from GBP to dollars. Uses conversion information updated by the day.  </p>
+<h3>Chart - Dialog</h3>
+  <p><strong>Input: </strong>A range of transaction rows from a selected ledger.  <br />
+  <strong>Output: </strong>A chart in whichever style the user chooses. </p>
+<h3>Goalseek - Quick Menu</h3>
+  <p><strong>Input: </strong>A desired value of sales or whatever to achieve.  <br />
+  <strong>Output: </strong>A report of various ways of seeking that goal and how long it will take, under different circumstances. </p>
+<h3>What If Analysis - Dialog</h3>
+  <p><strong>Input: </strong>Different variables to measure such as staffing levels or investment in plant, machinery etc.  <br />
+  <strong>Output: </strong>Different charts and data of how that would affect the business (generates reports). </p>
+<h3>Headings - Quick Menu</h3>
+  <p><strong>Input: </strong>Change the default headings for a currently used ledger.  <br />
+  <strong>Output: </strong>Renamed table columns, or table column aliases. </p>
+<h3>Report - Dialog</h3>
+  <p><strong>Input: </strong>The user selects a group of transactions in any ledger, with the option of printing different ledger transactions in a split view and any optional charts.  <br />
+  <strong>Output: </strong>The user can also select a lot of formatting options or some available presets. </p>
+<h3>File - Quick Menu</h3>
+  <p><strong>Input: </strong>Import a CSV file, into the currently selected ledger.  <br />
+  <strong>Output: </strong>Has the option of specifying which fields go into which table columns. </p>
+<!-- Business cash flow sheets, Currency conversion fields,
+       Financial forecasts, Graphs/Charts,  Reports
+       Goalseek sheets, Sensitivity Analysis (general) -->
+
+<h2>Format Menu</h2>
+<h3>Ledgers - Quick Menu</h3>
+  <p><strong>Input: </strong>An open set of accounts.  <br />
+  <strong>Output: </strong>Changes the formatting presets for the table views for each ledger. Complete with accessible presets. </p>
+<h3>Heading - Quick Menu</h3>
+  <p><strong>Input: </strong>A currently selected ledger or report.  <br />
+  <strong>Output: </strong>Change the look of the heading for that ledger only. Overrides the preset themes. </p>
+<h3>Numbers - Quick Menu</h3>
+  <p><strong>Input: </strong>Changes inputted numbers into specified formats.  <br />
+  <strong>Output: </strong>This is across all the ledgers. Reports can have different number formatting.</p>
+<h3>Chart - Dialog</h3>
+  <p><strong>Input: </strong>A currently open chart.  <br />
+  <strong>Output: </strong>Format each part of a chart or change the chart type and alter the legend. </p>
+<h3>Report - Dialog</h3>
+  <p><strong>Input: </strong>A currently open report.  <br />
+  <strong>Output: </strong>Formats various parts of the report, but not any charts in them. </p>
+<h3>Account - Quick Menu</h3>
+  <p><strong>Input: </strong>Change preset theme for a selected account.  <br />
+  <strong>Output: </strong>Choose between the ones available. The heading still has the same formatting as set earlier. </p>
+<h3>Page - Quick Menu</h3>
+  <p><strong>Input: </strong>Enter print settings.  <br />
+  <strong>Output: </strong>Pages print on landscape by default. </p>
+
+<h2>Data Menu</h2>
+<h3>Sort Column - Quick Menu</h3>
+  <p><strong>Input: </strong>User selects a column  <br />
+  <strong>Output: </strong>Can sort A-Z or Z-A, ascending or descending </p>
+<h3>Create Formula - Dialog</h3>
+  <p><strong>Input: </strong>A mathematical formula and some column references.  <br />
+  <strong>Output: </strong>A calculated column. </p>
+<h3>Currency - Quick Menu</h3>
+  <p><strong>Input: </strong>Select a currency to use by default.  <br />
+  <strong>Output: </strong>Includes formatting options. </p>
+<h3>Validation - Dialog</h3>
+  <p><strong>Input: </strong>Users can build their own input patterns to be used inside that ledger.  <br />
+  <strong>Output: </strong>A validated set of data. </p>
+
+<h2>Options</h2>
+<h3>Company Details - Quick Menu</h3>
+  <p><strong>Input: </strong>Company name, organisational structure  <br />
+  <strong>Output: </strong>Also the legal framework, e.g. PLC, Ltd, sole trader which affects the accounts. </p>
+<h3>Change Language - Quick Menu</h3>
+  <p><strong>Input: </strong>A language  <br />
+  <strong>Output: </strong>The accounts change into that language, the currency being separate. </p>
+
+<h2>Help</h2>
+<h3>Search - Quick Menu</h3>
+  <p><strong>Input: </strong>Same as with other programs.  <br />
+  <strong>Output: </strong> </p>
+<h3>Guide Book - HTML page</h3>
+  <p><strong>Input: </strong>Same as with other programs.  <br />
+  <strong>Output: </strong> </p>
+<h3>About - Quick Menu</h3>
+  <p><strong>Input: </strong>  <br />
+  <strong>Output: </strong>Describes the main functions of the program, its version number and the program author. </p>
+
+
+    </div>
+</div><!-- main_content --> 
+  </div><!-- content, a containing box -->
+  <footer>&copy; Hazel Windle 2014. <a href="#" id="twitter">Tweet</a></footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script></script>
+</body>
+</html>

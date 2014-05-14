@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Paradise Office - </title>
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Hazel Windle" />
+  <meta name="description" content="Web development applications for Linux like Dreamweaver, and other office applications." />
+  <meta name="keywords" content="open source, web design, free software, office suite, Qt" />
+  <link rel="stylesheet" href="../styles/screen.css" />
+</head>
+<body>
+
+<header>
+    <h1>Paradise Office</h1>
+    <h2>Build Your Own Office</h2>
+  <div id="donate"></div>
+</header>
+
+<div class="content">
+  <nav id="rainbow-menu">
+    <div id="home_link"><a href="../index.html" title="home">Home</a></div>
+    <div id="dev_link"><a href="../development.html" title="Development">Development</a></div>
+    <div id="doc_link"><a href="../doc_index.html" title="Help Resources">Help</a></div>
+    <div id="contact_link"><a href="../issues.html" title="Support and bug reports">Support</a></div>
+    <div id="download"><a href="../download.html" title="Download programs">Download</a></div>
+    <div id="forum"><a href="../forum.html" title="Chat with other users">Forum</a></div>
+    <div id="blog"><a  target="blank" href="http://linuxparadise.wordpress.com" id="blog" title="Follow the coding process">Blog</a></div>
+    <a target="blank"  href="https://twitter.com/LinuxParadise" id="twit" title="twitter"><img src="../ui/twitter.png" width="40" height="30" alt="Twitter" /></a>
+    
+    <a  target="blank" href="https://github.com/paradiseOffice/sandbox_and_programs.git" id="git" title="github"><img src="../ui/github.png" width="40" height="30" alt="Github" /></a>
+  </nav>
+  
+  <div class="main_content">
+
+<div class="subsystem_details">
+<h1>File IO</h1>
+  <h2>New File</h2>
+  <p>This adds a new file tab into the file port which gets populated via the inner PHP require_once. </p>
+  <h2>Open File</h2>
+  <p>This dialog opens a file by uploading the file to the server. </p>
+  <ol>
+    <li>The file is checked for viruses and Windows nasties.</li>
+    <li>The file gets moved to the secure upload folder and spaces replaced with underscores in the name. </li>
+    <li>The Python conversion is ran on it if it's not odf.</li>
+    <li>Otherwise, an XSLT transform is ran on it, turning it to HTML. The CSS styles are appended to the &lt;style&gt; block in the main app. </li>
+    <li>The HTML is amended into the file port (app specific).</li>
+  </ol>
+  <h2>Save, Save As, Save All</h2>
+  <ol>
+    <li>The CSS for file x selectors only is written into a simple HTML file header.</li>
+    <li>The HTML in the file port gets added to the body of the above file. </li>
+    <li>The XHTML gets converted back into odf. </li>
+    <li>This is either downloaded to the user as an attachment. </li>
+    <li>Or it gets converted into a binary file format. </li>
+    <li>That document gets downloaded.</li>
+  </ol>
+  <h2>Print</h2>
+  <p>This opens up the OS print dialog, and sends the document with print.css applied. If the user selects print, enters the number of copies etc, the document gets printed. </p>
+
+    </div>
+</div><!-- main_content --> 
+  </div><!-- content, a containing box -->
+  <footer>&copy; Hazel Windle 2014. <a href="#" id="twitter">Tweet</a></footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script></script>
+</body>
+</html>

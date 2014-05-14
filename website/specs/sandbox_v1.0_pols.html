@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Paradise Office - </title>
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Hazel Windle" />
+  <meta name="description" content="Web development applications for Linux like Dreamweaver, and other office applications." />
+  <meta name="keywords" content="open source, web design, free software, office suite, Qt" />
+  <link rel="stylesheet" href="../styles/screen.css" />
+</head>
+<body>
+
+<header>
+    <h1>Paradise Office</h1>
+    <h2>Build Your Own Office</h2>
+  <div id="donate"></div>
+</header>
+
+<div class="content">
+  <nav id="rainbow-menu">
+    <div id="home_link"><a href="../index.html" title="home">Home</a></div>
+    <div id="dev_link"><a href="../development.html" title="Development">Development</a></div>
+    <div id="doc_link"><a href="../doc_index.html" title="Help Resources">Help</a></div>
+    <div id="contact_link"><a href="../issues.html" title="Support and bug reports">Support</a></div>
+    <div id="download"><a href="../download.html" title="Download programs">Download</a></div>
+    <div id="forum"><a href="../forum.html" title="Chat with other users">Forum</a></div>
+    <div id="blog"><a  target="blank" href="http://linuxparadise.wordpress.com" id="blog" title="Follow the coding process">Blog</a></div>
+    <a target="blank"  href="https://twitter.com/LinuxParadise" id="twit" title="twitter"><img src="../ui/twitter.png" width="40" height="30" alt="Twitter" /></a>
+    
+    <a  target="blank" href="https://github.com/paradiseOffice/sandbox_and_programs.git" id="git" title="github"><img src="../ui/github.png" width="40" height="30" alt="Github" /></a>
+  </nav>
+  
+  <div class="main_content">
+
+<div class="policies">
+<h2>Policies and Tactics</h2>
+<h3>Specific Products to Use</h3>
+  <ul>
+    <li>PHP 5.5.3 or higher</li>
+    <li>Postgresql 9.1</li>
+    <li>Apache 2.2 or Nginx.</li>
+    <li>OpenSSL (latest patched version)</li>
+    <li>Python 3.3</li>
+    <li>JQuery 1.10.2</li>
+    <li>JQuery UI latest stable version</li>
+    <li>A PHP/Javascript graphing library</li>
+    <li>Python lxml xml library and xsltproc</li>
+    <li>Firefox 22 to test everything in, with the Firebug debuggers.</li>
+    <li>Opera 11.60, Firefox 11, Internet Explorer 9, and common 'phones and tablets to test with.</li></ul>
+<h3>Engineering Trade Offs</h3>
+<p>I will only convert the binary formats below for now. </p>
+<ul><li>Doc format (all these are MS 07, 2000, XP, 2003 formats)</li><li>XLS format</li><li>PPT format</li></ul><p>Other binary formats will be converted from in later releases.</p>
+<h3>Coding Conventions Guidelines</h3>
+<p>Camel case variables, e.g. someVariable. CSS to have liberal comments
+  breaking up sections, and one style per line. Blank lines to separate
+  functions, and more comments in the PHP code. The XHTML style of coding to be
+  used, instead of the laxer syntax of HTML4/5. 
+</p>
+<p>Where an OOP approach comes naturally to a program, it will be used. This
+  means if the problem models real world objects and abstractions closely. Two
+  spaces for the indentation in all code and markup. Curly braces to go on
+  separate lines, except in an opening CSS rule block.</p>
+
+<h3>Protocols That Aren't HTTPS://</h3>
+<p>LDAP may be used to store calendar information and contacts. The POP, IMAP and SMTP servers may be connected to, to collect email. Plain HTTP will be used for the developer site, www.linux-paradise.co.uk. HTTPS will be used for www.paradise-office.co.uk.</p>
+<h3>Algorithms or Design Patterns</h3>
+<h3>Planning for Requirements Tracebility</h3>
+<p>Each requirement for a program shall be read, and then manual test scripts
+  shall be written e.g. to test a spellchecker throughly. As the script is
+  being followed, any problems shall be written in a report with screengrabs
+  or short videos also being used.</p>
+<h3>Testing the Software</h3>
+<p>This will be mostly manual (human) test plans, as each PHP module chunk
+  shouldn't affect other parts of the system apart from underlying
+  databases. The databases will also be checked where appropriate. Security
+  testing will also be carried out, including trying to fake heavy traffic or
+  DOS attacks.</p>
+
+<h3>Software Maintainence</h3>
+<p>New modules will be introduced for a particular problem, e.g. databases
+  every month or so. Bug fixing will be the priority, with lots of testing
+  being done on my own LAMP stack before it's uploaded to the live 'site.</p>
+<h3>Interfaces for End Users</h3>
+<h3>Compiling the Code</h3>
+<h4>Git Conventions</h4>
+<p>Create a new branch for each new feature, and for when tidying up any
+  rendering issues with browsers (CSS). Upload to the repository once or twice a day.</p>
+</div>
+
+</div><!-- main_content --> 
+  </div><!-- content, a containing box -->
+  <footer>&copy; Hazel Windle 2014. <a href="#" id="twitter">Tweet</a></footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script></script>
+</body>
+</html>

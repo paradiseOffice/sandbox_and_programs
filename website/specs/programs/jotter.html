@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Paradise Office - </title>
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="Hazel Windle" />
+  <meta name="description" content="Web development applications for Linux like Dreamweaver, and other office applications." />
+  <meta name="keywords" content="open source, web design, free software, office suite, Qt" />
+  <link rel="stylesheet" href="../../styles/screen.css" />
+</head>
+<body>
+
+<header>
+    <h1>Paradise Office</h1>
+    <h2>Build Your Own Office</h2>
+  <div id="donate"></div>
+</header>
+
+<div class="content">
+  <nav id="rainbow-menu">
+    <div id="home_link"><a href="../../index.html" title="home">Home</a></div>
+    <div id="dev_link"><a href="../../development.html" title="Development">Development</a></div>
+    <div id="doc_link"><a href="../../doc_index.html" title="Help Resources">Help</a></div>
+    <div id="contact_link"><a href="../../issues.html" title="Support and bug reports">Support</a></div>
+    <div id="download"><a href="../../download.html" title="Download programs">Download</a></div>
+    <div id="forum"><a href="../../forum.html" title="Chat with other users">Forum</a></div>
+    <div id="blog"><a  target="blank" href="http://linuxparadise.wordpress.com" id="blog" title="Follow the coding process">Blog</a></div>
+    <a target="blank"  href="https://twitter.com/LinuxParadise" id="twit" title="twitter"><img src="../../ui/twitter.png" width="40" height="30" alt="Twitter" /></a>
+    
+    <a  target="blank" href="https://github.com/paradiseOffice/sandbox_and_programs.git" id="git" title="github"><img src="../../ui/github.png" width="40" height="30" alt="Github" /></a>
+  </nav>
+  
+  <div class="main_content">
+
+<div class="subsystem_details">
+<h1>Jotter</h1>
+<h2>File menu</h2>
+<ul>
+  <li>New (new text tab)</li>
+  <li>Open (Opens dos text same as unix)</li>
+  <li>Save (can save to c, etc or in a different encoding)</li>
+  <li>Save As (change name, encoding or both)</li>
+  <li>Save All (saves all open tabs)</li>
+  <li>Print Preview</li>
+  <li>Print (Quicker version of the above)</li>
+  <li>Close File</li>
+</ul>
+<h2>Edit Menu</h2>
+<ul>
+  <li>Undo </li>
+  <li>Redo</li>
+  <li>Undo History (last 20 changes by default (words))</li>
+  <li>seperator</li>
+  <li>Cut</li>
+  <li>Copy </li>
+  <li>Paste</li>
+  <li>Clipboard</li>
+  <li>separator</li>
+  <li>Find & Replace</li>
+</ul>
+<h2>Insert Menu</h2>
+<ul>
+  <li>Special Character</li>
+  <li>Date/Time</li>
+  <li>separator</li>
+  <li>Spellcheck</li>
+  <li>Sort</li>
+  <li>Manage Fields</li>
+<h2>Options Menu</h2>
+<ul>
+  <li>Change Font</li>
+  <li>Set Tab Width</li>
+  <li>Line Numbers</li>
+  <li>separator</li>
+  <li>UPPER CASE</li>
+  <li>lower case</li>
+  <li>Title Case</li>
+  <li>separator</li>
+  <li>Highlighting</li>
+</ul>
+<h2>Large Icons</h2>
+<ul>
+  <li>Spellcheck</li>
+  <li>Sort</li>
+  <li>Find</li>
+  <li>Save All</li>
+</ul>
+<h2>Tool boxes</h2>
+<h3>View</h3>
+<p>Text font, size<br />
+Zoom in, out,Zoom slider</p>
+<h3>Editing</h3>
+<p>Undo, redo<br />
+ins. char, upper, lower, title case<br />
+syntax highlighting combo list.</p>
+
+<p>
+Word count, line no. in status bar (line number first)
+</p>
+<br /><hr />
+<h2>Save function</h2><p>
+  <strong>Input:</strong> file type, encoding, same name as uploaded file.<br />
+ <strong> Output:</strong> A saved, then downloaded file.<br />
+Advanced setting with different file ending options for programming languages, and different encoding options like utf-8 or ASCII.
+Normal view displays the default file ending, txt.
+Quick menu with close button.</p>
+
+<h2>Save As function</h2>
+ <p> <strong>Input:</strong> New file name, file type, file encoding.<br />
+<strong>  Output: </strong>A saved, then downloaded file.<br />
+Normal view changes name, shows default file ending. Advanced button adds encoding and file ending options the same layout as with save.
+</p>
+<h2>Save All function</h2>
+<p>Calls save on each open tab from left to right (the tabs are in an array).
+</p>
+<h2>Print View function</h2>
+<p><strong>  Input:</strong> Current file tab selected. <br />
+  <strong>Output:</strong> Print view dialog with file. <br />
+View the file in a (new browser tab) as it will be printed. Zoom in, zoom out, zoom orig and zoom slider. Print button.
+</p>
+<h2>Quick Print</h2>
+<p><strong>  Input:</strong> Button press. <br />
+ <strong> Output:</strong> Print dialog of client OS with current file tab as printed file.<br />
+Prints out the file from a print view tab which prints, asks for confirmation (depends on os), then closes the print view browser tab.
+</p>
+<h2>Close File</h2>
+<p><strong>  Input: </strong>Currently active tab<br />
+<strong>  Output: </strong>Closes that tab (removes filex from div's in file_port)<br />
+Closes the currently active tab, if it's the only tab also creates a new tab so there is somewhere to type.
+</p>
+<h2>Undo function</h2>
+<p><strong>  Input:</strong> Current file tab<br />
+<strong>  Output:</strong> Undos most recent document (word) change. <br />
+Takes away the last word typed. A word is a string of characters surrounded by whitespace.</p>
+
+<h2>Redo function</h2>
+<p><strong>  Input:</strong> Current file tab<br />
+<strong>  Output: </strong>Repeats the last document (word) change. <br />
+Retypes the last word or puts something back if undo has been used. 
+</p>
+<h2>Undo History function</h2>
+<p><strong>  Input:</strong> Document changes data structure<br />
+<strong>  Output:</strong> List of last 20 document (word) changes, with options to show earlier changes.<br />
+Shows all changes made to the document in 20 word chunks. 
+</p>
+<h2>Cut function</h2>
+<p>Not needed - does this via contenteditable. Make sure it's IE 9 compatible.
+</p>
+<h2>Copy function</h2>
+<p>See cut</p>
+
+<h2>Paste function</h2>
+<p><strong>  Input: </strong>Any text or html from the other tabs or other open websites/text sources from programs. <br />
+  <strong>Output: </strong>Text only, all HTML stripped. &gt; and &lt; changed to correct entities.<br />
+</p>
+
+<h2>Clipboard function</h2>
+<p><strong>  Input:</strong> All file tabs document changes, truncated to 20 cuts or copies.<br />
+<strong>  Output:</strong> List of text, with document name and first few words. Pop-up tooltip for whole text. Radio button to paste things back into document.<br />
+Shows the copied items through the undo/redo document changes python function. Displays chunks of text with an ellipis (first 5 words). Up to 20 items to choose from in a checkbox quick menu list with show/hide button. 
+</p>
+<h2>Find & Replace function</h2>
+<p><strong>  Input:</strong> Find string, replace string. Case sensitive option (default true).<br />
+<strong>  Output:</strong> Searches through whole of the current tab, or searches and replaces. Adds CSS spans to the results. Returns number of replacements made if replace all is pressed.<br />
+A small quick menu (show/hide button). Find is on the left, which looks through the current tab for the word entered. Replace is on the right with a similar box and a replace all button. The replace button replaces one (bright green background) found word at a time and changes the highlight to lemon yellow. A case sensitive checkbox is provided.</p>
+
+<h2>Special Character function</h2>
+<p><strong>  Input:</strong> A character selection, from the grid of glyphs.<br />
+<strong>  Output:</strong> Appends the character after the cursor, using update_doc file_port function.<br />
+Opens a (new browser tab) dialog with the current fonts glyphs displayed in framed groups for currency, foreign languages and geometry markings. Includes a search box for things like 'a umlauts', 'reversed a', 'euro', 'yen' which selects the correct glyph (encoded in unicode \&504). The selected glyph is displayed in a larger box, and the current word is also displayed on the left of that, with larger text.
+The glyph is shown large with the text like that to determine different letter markings.</p>
+
+<h2>Date/Time function</h2>
+<p><strong>  Input: </strong>The date/time and client's timezone. <br />
+<strong>  Output:</strong> The date or time. <br />
+Inserts the current date. A separate menu entry inserts just the time in 24 hour format without timezone. </p>
+
+<h2>Spellcheck function</h2>
+<p><strong>  Input:</strong> All of the current file tab <br />
+<strong>  Output:</strong> Underlines wrong words that aren't in the dictionary. Adds similiar words to help box. <br />
+Checks the current tab for spelling errors using the dictionary and language specified in the overall Paradise Office settings. When it spots a non captialised word it doesn't recognise, it red underlines the word and adds a help message with 3 other suggested words.  </p>
+
+<h2>Sort (goes in options menu) function</h2>
+<p><strong>  Input:</strong> Text selection or current file.<br />
+<strong>  Output:</strong> Ascending or descending lines, or on the first column<br />
+Works on either a text selection, where it sorts on the lines, or on the whole current document. Opens a quick menu with a selection or whole document option (or columns if working on a csv file). Sorts either ascending or descending 0-10 a-z. Case insensitive. Show/hide button.</p>
+
+<h2>Manage csv fields function</h2>
+<p><strong>  Input: </strong>CSV file, or sql file (current file).<br />
+<strong>  Output:</strong> Cut out or rearrage columns<br />
+Can either cut a field, or rearrange columns. Selects the character to split columns on, say '::'. Also works for .sql file endings, and on just selections. The whole current document is the default input. New tab dialog with file preview. Pressing OK closes the tab.</p>
+
+<h2>Change Font function</h2>
+<p><strong>  Input:</strong> file port css. A font size and face. <br />
+<strong>  Output: </strong>Changes all open files font. <br />
+Changes the font in all of the open tabs. Only several easy to read fonts are included - up to 10. Grouped by monospace and sans-serif. Quick menu, includes a preview of text and the font size and an accessible font button.
+</p>
+<h2>Set Tab Width</h2>
+<p><strong>  Input:</strong> Number of spaces. <br />
+<strong>  Output:</strong> All new tabs are that number of spaces wide. <br />
+Default is 4 spaces. Quick menu with show/hide button. No tabs option. Adds 4 non-breaking spaces character entities.</p>
+
+<h2>Line Numbers</h2>
+<p><strong>  Input:</strong> Current file. <br />
+<strong>  Output:</strong> Line numbers to the left, like 1. (grey text).<br />
+Turns line numbers on in the current file. </p>
+
+<h2>Upper Case function</h2>
+<p><strong>  Input:</strong> selected string. <br />
+<strong>  Output:</strong> Upper case string. <br />
+Sets the selected string to upper case. </p>
+
+<h2>lower case function</h2>
+<p><strong>  Input:</strong> selected string. <br />
+<strong>  Output:</strong> Lower case string. <br />
+Sets the selected string to lower case.
+</p>
+<h2>Title Case function</h2>
+<p>  Input-output: Similiar to the above.
+Sets the selected string's First Letter of each word to a capital letter. Splits the words on whitespace. </p>
+
+<h2>Highlighting</h2>
+<p><strong>  Input:</strong> Current file tab.<br />
+<strong>  Output:</strong> Different colours for different words according to the syntax. Depending on the option chosen. <br />
+Opens a new tab dialog which closes on pressing 'OK' or Cancel. Displays the first 2 lines as a file preview at the bottom. Has groups of syntax highlighting on the left such as 'Human languages', 'Web Design', 'Traditional Programming', 'New Programming', 'Graphics', 'Maths'. 
+In human languages is grammar highlighting, for viewing preprositions, adjectives and so forth in different colours or jargon highlighting for singling out words like HTML or abbreviations, acronyms etc.
+Web design: HTML, XML, RSS, CSS, Javascript, Django, PHP, ASP, Perl.
+Trad programming: C , C++, Lisp, BASH, Java, Powershell, DOS, Assembler, c#, etc.
+New Programming: Python, Go, Javascript, Markdown, Actionscript
+Graphics: SVG
+Maths: MathML
+</p>
+
+
+   </div>
+</div><!-- main_content --> 
+  </div><!-- content, a containing box -->
+  <footer>&copy; Hazel Windle 2014. <a href="#" id="twitter">Tweet</a></footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script></script>
+</body>
+</html>
