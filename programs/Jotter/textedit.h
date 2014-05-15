@@ -47,8 +47,8 @@
  #include <QPointer>
 
  QT_FORWARD_DECLARE_CLASS(QAction)
- QT_FORWARD_DECLARE_CLASS(QComboBox)
- QT_FORWARD_DECLARE_CLASS(QFontComboBox)
+ // QT_FORWARD_DECLARE_CLASS(QComboBox)
+ // QT_FORWARD_DECLARE_CLASS(QFontComboBox)
  QT_FORWARD_DECLARE_CLASS(QTextEdit)
  QT_FORWARD_DECLARE_CLASS(QTextCharFormat)
  QT_FORWARD_DECLARE_CLASS(QMenu)
@@ -66,7 +66,7 @@
  private:
      void setupFileActions();
      void setupEditActions();
-     void setupTextActions();
+     // void setupTextActions();
      bool load(const QString &f);
      bool askForSave();
      void setCurrentFileName(const QString &fileName);
@@ -80,14 +80,14 @@
      void filePrintPreview();
      void filePrintPdf();
 
-     void textBold();
-     void textUnderline();
-     void textItalic();
-     void textFamily(const QString &f);
-     void textSize(const QString &p);
-     void textStyle(int styleIndex);
-     void textColor();
-     void textAlign(QAction *a);
+     // void textBold();
+     // void textUnderline();
+     // void textItalic();
+     // void textFamily(const QString &f);
+     // void textSize(const QString &p);
+     // void textStyle(int styleIndex);
+     // void textColor();
+     // void textAlign(QAction *a);
 
      void currentCharFormatChanged(const QTextCharFormat &format);
      void cursorPositionChanged();
@@ -98,29 +98,21 @@
 
  private:
      void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
-     void fontChanged(const QFont &f);
+     // void fontChanged(const QFont &f);
      // void setTabWidth(); // Changed for setTabWidth function
      // void tabEvent(); // Changes tab into spaces
-     void alignmentChanged(Qt::Alignment a);
+     // void alignmentChanged(Qt::Alignment a);
 
      QAction *actionSave,
-         *actionTextBold,
-         *actionTextUnderline,
-         *actionTextItalic,
-         *actionTextColor,
-         *actionAlignLeft,
-         *actionAlignCenter,
-         *actionAlignRight,
-         *actionAlignJustify,
          *actionUndo,
          *actionRedo,
          *actionCut,
          *actionCopy,
          *actionPaste;
 
-     QComboBox *comboStyle;
-     QFontComboBox *comboFont;
-     QComboBox *comboSize;
+     // QComboBox *comboStyle;
+     // QFontComboBox *comboFont;
+     // QComboBox *comboSize;
 
      QToolBar *tb;
      QString fileName;
