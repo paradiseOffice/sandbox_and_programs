@@ -148,7 +148,7 @@
 
  void TextEdit::closeEvent(QCloseEvent *e)
  {
-     if (maybeSave())
+     if (askForSave())
          e->accept();
      else
          e->ignore();
@@ -182,7 +182,7 @@
 
      menu->addSeparator();
 
-     actionSave = a = new QAction(QIcon::fromTheme("document-save", QIcon(rsrcPath + "/filesave.png")),
+     actionSave = a = new QAction(QIcon(rsrcPath + "/filesave.png"),
                                   tr("&Save"), this);
      a->setShortcut(QKeySequence::Save);
      connect(a, SIGNAL(triggered()), this, SLOT(fileSave()));
@@ -197,21 +197,21 @@
      menu->addSeparator();
 
  #ifndef QT_NO_PRINTER
-     a = new QAction(QIcon::fromTheme("document-print", QIcon(rsrcPath + "/fileprint.png")),
-                     tr("&Print..."), this);
+     a = new QAction(QIcon(rsrcPath + "/fileprint.png"),
+                     tr("&Print"), this);
      a->setPriority(QAction::LowPriority);
      a->setShortcut(QKeySequence::Print);
      connect(a, SIGNAL(triggered()), this, SLOT(filePrint()));
      tb->addAction(a);
      menu->addAction(a);
 
-     a = new QAction(QIcon::fromTheme("fileprint", QIcon(rsrcPath + "/fileprint.png")),
-                     tr("Print Preview..."), this);
+     a = new QAction(QIcon(rsrcPath + "/fileprint.png"),
+                     tr("Print &View"), this);
      connect(a, SIGNAL(triggered()), this, SLOT(filePrintPreview()));
      menu->addAction(a);
 
-     a = new QAction(QIcon::fromTheme("exportpdf", QIcon(rsrcPath + "/exportpdf.png")),
-     tr("&Export PDF..."), this);
+     a = new QAction(QIcon(rsrcPath + "/exportpdf.png"),
+     tr("&Export PDF"), this);
      a->setPriority(QAction::LowPriority);
      a->setShortcut(Qt::CTRL + Qt::Key_D);
      connect(a, SIGNAL(triggered()), this, SLOT(filePrintPdf()));
@@ -236,31 +236,31 @@
      menuBar()->addMenu(menu);
 
      QAction *a;
-     a = actionUndo = new QAction(QIcon::fromTheme("edit-undo", QIcon(rsrcPath + "/editundo.png")),
+     a = actionUndo = new QAction(QIcon(rsrcPath + "/editundo.png"),
                                                tr("&Undo"), this);
      a->setShortcut(QKeySequence::Undo);
      tb->addAction(a);
      menu->addAction(a);
-     a = actionRedo = new QAction(QIcon::fromTheme("edit-redo", QIcon(rsrcPath + "/editredo.png")),
+     a = actionRedo = new QAction(QIcon(rsrcPath + "/editredo.png"),
                                                tr("&Redo"), this);
      a->setPriority(QAction::LowPriority);
      a->setShortcut(QKeySequence::Redo);
      tb->addAction(a);
      menu->addAction(a);
      menu->addSeparator();
-     a = actionCut = new QAction(QIcon::fromTheme("edit-cut", QIcon(rsrcPath + "/editcut.png")),
+     a = actionCut = new QAction(QIcon(rsrcPath + "/editcut.png"),
                                               tr("Cu&t"), this);
      a->setPriority(QAction::LowPriority);
      a->setShortcut(QKeySequence::Cut);
      tb->addAction(a);
      menu->addAction(a);
-     a = actionCopy = new QAction(QIcon::fromTheme("edit-copy", QIcon(rsrcPath + "/editcopy.png")),
+     a = actionCopy = new QAction(QIcon(rsrcPath + "/editcopy.png"),
                                   tr("&Copy"), this);
      a->setPriority(QAction::LowPriority);
      a->setShortcut(QKeySequence::Copy);
      tb->addAction(a);
      menu->addAction(a);
-     a = actionPaste = new QAction(QIcon::fromTheme("edit-paste", QIcon(rsrcPath + "/editpaste.png")),
+     a = actionPaste = new QAction(QIcon(rsrcPath + "/editpaste.png"),
                                    tr("&Paste"), this);
      a->setPriority(QAction::LowPriority);
      a->setShortcut(QKeySequence::Paste);
@@ -281,7 +281,7 @@
      QMenu *menu = new QMenu(tr("&View"), this);
      menuBar()->addMenu(menu);
 
-     actionTextBold = new QAction(QIcon::fromTheme("format-text-bold", QIcon(rsrcPath + "/textbold.png")),
+     actionTextBold = new QAction(QIcon(rsrcPath + "/textbold.png"),
                                   tr("&Bold"), this);
      actionTextBold->setShortcut(Qt::CTRL + Qt::Key_B);
      actionTextBold->setPriority(QAction::LowPriority);
@@ -293,7 +293,7 @@
      menu->addAction(actionTextBold);
      actionTextBold->setCheckable(true);
 
-     actionTextItalic = new QAction(QIcon::fromTheme("format-text-italic", QIcon(rsrcPath + "/textitalic.png")),
+     actionTextItalic = new QAction(QIcon(rsrcPath + "/textitalic.png"),
                                     tr("&Italic"), this);
      actionTextItalic->setPriority(QAction::LowPriority);
      actionTextItalic->setShortcut(Qt::CTRL + Qt::Key_I);
@@ -305,7 +305,7 @@
      menu->addAction(actionTextItalic);
      actionTextItalic->setCheckable(true);
 
-     actionTextUnderline = new QAction(QIcon::fromTheme("format-text-underline", QIcon(rsrcPath + "/textunder.png")),
+     actionTextUnderline = new QAction(QIcon(rsrcPath + "/textunder.png"),
                                        tr("&Underline"), this);
      actionTextUnderline->setShortcut(Qt::CTRL + Qt::Key_U);
      actionTextUnderline->setPriority(QAction::LowPriority);
@@ -324,16 +324,16 @@
 
      // Make sure the alignLeft  is always left of the alignRight
      if (QApplication::isLeftToRight()) {
-         actionAlignLeft = new QAction(QIcon::fromTheme("format-justify-left", QIcon(rsrcPath + "/textleft.png")),
+         actionAlignLeft = new QAction(QIcon(rsrcPath + "/textleft.png"),
                                        tr("&Left"), grp);
-         actionAlignCenter = new QAction(QIcon::fromTheme("format-justify-center", QIcon(rsrcPath + "/textcenter.png")), tr("C&enter"), grp);
-         actionAlignRight = new QAction(QIcon::fromTheme("format-justify-right", QIcon(rsrcPath + "/textright.png")), tr("&Right"), grp);
+         actionAlignCenter = new QAction(QIcon(rsrcPath + "/textcenter.png"), tr("C&enter"), grp);
+         actionAlignRight = new QAction(QIcon(rsrcPath + "/textright.png"), tr("&Right"), grp);
      } else {
-         actionAlignRight = new QAction(QIcon::fromTheme("format-justify-right", QIcon(rsrcPath + "/textright.png")), tr("&Right"), grp);
-         actionAlignCenter = new QAction(QIcon::fromTheme("format-justify-center", QIcon(rsrcPath + "/textcenter.png")), tr("C&enter"), grp);
-         actionAlignLeft = new QAction(QIcon::fromTheme("format-justify-left", QIcon(rsrcPath + "/textleft.png")), tr("&Left"), grp);
+         actionAlignRight = new QAction(QIcon(rsrcPath + "/textright.png"), tr("&Right"), grp);
+         actionAlignCenter = new QAction(QIcon(rsrcPath + "/textcenter.png"), tr("C&enter"), grp);
+         actionAlignLeft = new QAction(QIcon(rsrcPath + "/textleft.png"), tr("&Left"), grp);
      }
-     actionAlignJustify = new QAction(QIcon::fromTheme("format-justify-fill", QIcon(rsrcPath + "/textjustify.png")), tr("&Justify"), grp);
+     actionAlignJustify = new QAction(QIcon(rsrcPath + "/textjustify.png"), tr("&Justify"), grp);
 
      actionAlignLeft->setShortcut(Qt::CTRL + Qt::Key_L);
      actionAlignLeft->setCheckable(true);
@@ -422,14 +422,14 @@
      return true;
  }
 
- bool TextEdit::maybeSave()
+ bool TextEdit::askForSave()
  {
      if (!textEdit->document()->isModified())
          return true;
      if (fileName.startsWith(QLatin1String(":/")))
          return true;
      QMessageBox::StandardButton ret;
-     ret = QMessageBox::warning(this, tr("Application"),
+     ret = QMessageBox::warning(this, tr("Jotter"),
                                 tr("The document has been modified.\n"
                                    "Do you want to save your changes?"),
                                 QMessageBox::Save | QMessageBox::Discard
@@ -448,17 +448,17 @@
 
      QString shownName;
      if (fileName.isEmpty())
-         shownName = "untitled.txt";
+         shownName = "new.txt";
      else
          shownName = QFileInfo(fileName).fileName();
 
-     setWindowTitle(tr("%1[*] - %2").arg(shownName).arg(tr("Rich Text")));
+     setWindowTitle(tr("%1[*] - %2").arg(shownName).arg(tr("Jotter")));
      setWindowModified(false);
  }
 
  void TextEdit::fileNew()
  {
-     if (maybeSave()) {
+     if (askForSave()) {
          textEdit->clear();
          setCurrentFileName(QString());
      }
@@ -466,7 +466,7 @@
 
  void TextEdit::fileOpen()
  {
-     QString fn = QFileDialog::getOpenFileName(this, tr("Open File..."),
+     QString fn = QFileDialog::getOpenFileName(this, tr("Open File"),
                                                QString(), tr("C++ Files (*.cpp *.h *.hpp);;All Files (*)"));
      if (!fn.isEmpty())
          load(fn);
@@ -486,7 +486,7 @@
 
  bool TextEdit::fileSaveAs()
  {
-     QString fn = QFileDialog::getSaveFileName(this, tr("Save as..."),
+     QString fn = QFileDialog::getSaveFileName(this, tr("Save As"),
                                                QString(), tr("C++ Files (*.cpp *.h *.hpp);;All Files (*)"));
      if (fn.isEmpty())
          return false;
@@ -690,9 +690,8 @@
 
  void TextEdit::about()
  {
-     QMessageBox::about(this, tr("About"), tr("This example demonstrates Qt's "
-         "rich text editing facilities in action, providing an example "
-         "document for you to experiment with."));
+     QMessageBox::about(this, tr("About"), tr("Jotter is a lightweight text editor for programming"
+                                              "or other writing tasks. Based on an example from Digia."));
  }
 
  void TextEdit::mergeFormatOnWordOrSelection(const QTextCharFormat &format)

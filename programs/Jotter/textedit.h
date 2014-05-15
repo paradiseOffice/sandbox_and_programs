@@ -68,7 +68,7 @@
      void setupEditActions();
      void setupTextActions();
      bool load(const QString &f);
-     bool maybeSave();
+     bool askForSave();
      void setCurrentFileName(const QString &fileName);
 
  private slots:

@@ -1,5 +1,5 @@
  TEMPLATE        = app
- TARGET          = textedit
+ TARGET          = jotter
 
  CONFIG          += qt warn_on
 
