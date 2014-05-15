@@ -80,14 +80,6 @@
      void filePrintPreview();
      void filePrintPdf();
 
-     // void textBold();
-     // void textUnderline();
-     // void textItalic();
-     // void textFamily(const QString &f);
-     // void textSize(const QString &p);
-     // void textStyle(int styleIndex);
-     // void textColor();
-     // void textAlign(QAction *a);
 
      void currentCharFormatChanged(const QTextCharFormat &format);
      void cursorPositionChanged();
@@ -98,10 +90,8 @@
 
  private:
      void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
-     // void fontChanged(const QFont &f);
-     // void setTabWidth(); // Changed for setTabWidth function
-     // void tabEvent(); // Changes tab into spaces
-     // void alignmentChanged(Qt::Alignment a);
+     void setTabWidth(); // Changed for setTabWidth function
+     void tabEvent(); // Changes tab into spaces
 
      QAction *actionSave,
          *actionUndo,
@@ -109,10 +99,6 @@
          *actionCut,
          *actionCopy,
          *actionPaste;
-
-     // QComboBox *comboStyle;
-     // QFontComboBox *comboFont;
-     // QComboBox *comboSize;
 
      QToolBar *tb;
      QString fileName;

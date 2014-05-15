@@ -450,3 +450,12 @@
      textEdit->mergeCurrentCharFormat(format);
  }
 
+void TextEdit::setTabWidth()
+{
+
+}
+
+void TextEdit::tabEvent()
+{
+
+}
