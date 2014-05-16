@@ -452,21 +452,20 @@
  }
 
 
- QString TextEdit::setTabWidth(QKeyEvent *event)
- {
-     QString initTabWidth = " ";
-     return initTabWidth;
- }
+QString TextEdit::setTabWidth()
+{
+    QString initTabWidth = "     ";
+    return initTabWidth;
+}
 
- void TextEdit::tabEvent(QKeyEvent *event)
- {
-     // insertCursor = QTextCursor(QTextEdit->textCursor());
+void TextEdit::tabEvent(QKeyEvent *event)
+{
+    QString tabString = setTabWidth();
+    QTextCursor insertCursor = textEdit->textCursor();
 
-     if (((QKeyEvent*)event)->key() == Qt::Key_Tab) {
-         // append tabWidth at the cursor position
-         // Look up Qtextedit append after cursor...
-
-     }
-
-     // QTextEdit::keyPressEvent(event);
- }
+    if (((QKeyEvent*)event)->key() == Qt::Key_Tab) {
+        // append tabWidth at the cursor position
+        // Look up Qtextedit append after cursor...
+        insertCursor.insertText(tabString);
+    }
+}

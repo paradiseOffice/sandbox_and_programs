@@ -59,16 +59,16 @@
  public:
      TextEdit(QWidget *parent = 0);
 
- protected:
-     virtual void closeEvent(QCloseEvent *e);
+protected:
+    virtual void closeEvent(QCloseEvent *e);
+    void tabEvent(QKeyEvent *event); // Changes tab into spaces
 
-
- private:
-     void setupFileActions();
-     void setupEditActions();
-     bool load(const QString &f);
-     bool askForSave();
-     void setCurrentFileName(const QString &fileName);
+private:
+    void setupFileActions();
+    void setupEditActions();
+    bool load(const QString &f);
+    bool askForSave();
+    void setCurrentFileName(const QString &fileName);
 
  private slots:
      void fileNew();
@@ -90,9 +90,7 @@
  private:
      void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
 
-     QString setTabWidth(QKeyEvent *event);
-     void tabEvent(); // Changes tab into spaces
-
+     QString setTabWidth();
 
      QAction *actionSave,
          *actionUndo,
