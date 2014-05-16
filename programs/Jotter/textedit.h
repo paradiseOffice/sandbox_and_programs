@@ -48,12 +48,13 @@
 #include <QTextEdit>
 
  QT_FORWARD_DECLARE_CLASS(QAction)
- // QT_FORWARD_DECLARE_CLASS(QComboBox)
- // QT_FORWARD_DECLARE_CLASS(QFontComboBox)
  QT_FORWARD_DECLARE_CLASS(QTextEdit)
  QT_FORWARD_DECLARE_CLASS(QTextCharFormat)
  QT_FORWARD_DECLARE_CLASS(QMenu)
- // QT_FORWARD_DECLARE_CLASS(QTextCursor)
+
+
+
+// The public QObject is for the event filter tabEvent...
 
  class TextEdit : public QMainWindow
  {
@@ -65,10 +66,10 @@
  protected:
      virtual void closeEvent(QCloseEvent *e);
 
+
  private:
      void setupFileActions();
      void setupEditActions();
-     // void setupTextActions();
      bool load(const QString &f);
      bool askForSave();
      void setCurrentFileName(const QString &fileName);
@@ -93,7 +94,6 @@
  private:
      void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
      QString setTabWidth();
-     void tabEvent(QKeyEvent *event, QString &setTabWidth());
 
      QAction *actionSave,
          *actionUndo,
@@ -109,4 +109,15 @@
      QTextEdit *textEdit;
  };
 
- #endif
+class EventThingys :  public QObject
+{
+    Q_OBJECT
+
+
+protected:
+    bool tabEvent(QObject *obj, QKeyEvent *event);
+};
+
+
+#endif
+

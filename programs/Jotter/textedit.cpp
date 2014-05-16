@@ -83,6 +83,7 @@
      setToolButtonStyle(Qt::ToolButtonFollowStyle);
      setupFileActions();
      setupEditActions();
+
      setWindowIcon(QIcon(rsrcPath + "/logo32.png"));
 
      {
@@ -456,15 +457,19 @@ QString TextEdit::setTabWidth()
     return initTabWidth;
 }
 
-void TextEdit::tabEvent(QKeyEvent *event, QString &setTabWidth())
+bool EventThingys::tabEvent(QObject *obj, QKeyEvent *event)
 {
-    // insertCursor = QTextCursor(QTextEdit->textCursor());
+    const QString tabString = setTabWidth();
+    QTextCursor insertCursor = textEdit->textCursor();
 
     if (((QKeyEvent*)event)->key() == Qt::Key_Tab) {
         // append tabWidth at the cursor position 
         // Look up Qtextedit append after cursor...
-
+        insertCursor.insertText(tabString);
+        return true;
+    } else {
+        // it's another key...
+        return QObject::tabEvent(obj, event);
     }
 
-    // QTextEdit::keyPressEvent(event);
 }
