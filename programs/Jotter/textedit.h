@@ -39,22 +39,24 @@
  **
  ****************************************************************************/
 
-#ifndef TEXTEDIT_H
-#define TEXTEDIT_H
+ #ifndef TEXTEDIT_H
+ #define TEXTEDIT_H
 
-#include <QMainWindow>
-#include <QMap>
-#include <QPointer>
-#include <QTextEdit>
+ #include <QMainWindow>
+ #include <QMap>
+ #include <QPointer>
 
  QT_FORWARD_DECLARE_CLASS(QAction)
  QT_FORWARD_DECLARE_CLASS(QTextEdit)
  QT_FORWARD_DECLARE_CLASS(QTextCharFormat)
  QT_FORWARD_DECLARE_CLASS(QMenu)
+<<<<<<< HEAD
 
 
 
 // The public QObject is for the event filter tabEvent...
+=======
+>>>>>>> parent of 6999569... finished setTabWidth function
 
  class TextEdit : public QMainWindow
  {
@@ -93,7 +95,12 @@
 
  private:
      void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
+<<<<<<< HEAD
      QString setTabWidth();
+=======
+     void setTabWidth(); // Changed for setTabWidth function
+     void tabEvent(); // Changes tab into spaces
+>>>>>>> parent of 6999569... finished setTabWidth function
 
      QAction *actionSave,
          *actionUndo,
@@ -101,8 +108,6 @@
          *actionCut,
          *actionCopy,
          *actionPaste;
-
-     QTextCursor *insertCursor;
 
      QToolBar *tb;
      QString fileName;
