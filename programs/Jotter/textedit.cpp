@@ -451,34 +451,22 @@
      textEdit->mergeCurrentCharFormat(format);
  }
 
-void TextEdit::setTabWidth()
-{
 
-}
+ QString TextEdit::setTabWidth(QKeyEvent *event)
+ {
+     QString initTabWidth = " ";
+     return initTabWidth;
+ }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-bool EventThingys::tabEvent(QObject *obj, QKeyEvent *event)
-{
-    const QString tabString = setTabWidth();
-    QTextCursor insertCursor = textEdit->textCursor();
+ void TextEdit::tabEvent(QKeyEvent *event)
+ {
+     // insertCursor = QTextCursor(QTextEdit->textCursor());
 
-    if (((QKeyEvent*)event)->key() == Qt::Key_Tab) {
-        // append tabWidth at the cursor position 
-        // Look up Qtextedit append after cursor...
-        insertCursor.insertText(tabString);
-        return true;
-    } else {
-        // it's another key...
-        return QObject::tabEvent(obj, event);
-    }
-=======
-void TextEdit::tabEvent()
-{
->>>>>>> parent of 6999569... finished setTabWidth function
-=======
-void TextEdit::tabEvent()
-{
->>>>>>> parent of 6999569... finished setTabWidth function
+     if (((QKeyEvent*)event)->key() == Qt::Key_Tab) {
+         // append tabWidth at the cursor position
+         // Look up Qtextedit append after cursor...
 
-}
+     }
+
+     // QTextEdit::keyPressEvent(event);
+ }
