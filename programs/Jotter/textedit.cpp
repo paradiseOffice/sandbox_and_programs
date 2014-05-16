@@ -457,6 +457,7 @@ void TextEdit::setTabWidth()
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 bool EventThingys::tabEvent(QObject *obj, QKeyEvent *event)
 {
     const QString tabString = setTabWidth();
@@ -471,6 +472,10 @@ bool EventThingys::tabEvent(QObject *obj, QKeyEvent *event)
         // it's another key...
         return QObject::tabEvent(obj, event);
     }
+=======
+void TextEdit::tabEvent()
+{
+>>>>>>> parent of 6999569... finished setTabWidth function
 =======
 void TextEdit::tabEvent()
 {
