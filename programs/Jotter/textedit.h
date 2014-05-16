@@ -39,12 +39,13 @@
  **
  ****************************************************************************/
 
- #ifndef TEXTEDIT_H
- #define TEXTEDIT_H
+#ifndef TEXTEDIT_H
+#define TEXTEDIT_H
 
- #include <QMainWindow>
- #include <QMap>
- #include <QPointer>
+#include <QMainWindow>
+#include <QMap>
+#include <QPointer>
+#include <QTextEdit>
 
  QT_FORWARD_DECLARE_CLASS(QAction)
  // QT_FORWARD_DECLARE_CLASS(QComboBox)
@@ -52,6 +53,7 @@
  QT_FORWARD_DECLARE_CLASS(QTextEdit)
  QT_FORWARD_DECLARE_CLASS(QTextCharFormat)
  QT_FORWARD_DECLARE_CLASS(QMenu)
+ // QT_FORWARD_DECLARE_CLASS(QTextCursor)
 
  class TextEdit : public QMainWindow
  {
@@ -90,8 +92,8 @@
 
  private:
      void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
-     void setTabWidth(); // Changed for setTabWidth function
-     void tabEvent(); // Changes tab into spaces
+     QString setTabWidth();
+     void tabEvent(QKeyEvent *event, QString &setTabWidth());
 
      QAction *actionSave,
          *actionUndo,
@@ -99,6 +101,8 @@
          *actionCut,
          *actionCopy,
          *actionPaste;
+
+     QTextCursor *insertCursor;
 
      QToolBar *tb;
      QString fileName;

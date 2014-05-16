@@ -450,12 +450,21 @@
      textEdit->mergeCurrentCharFormat(format);
  }
 
-void TextEdit::setTabWidth()
+QString TextEdit::setTabWidth()
 {
-
+    QString initTabWidth = "    ";
+    return initTabWidth;
 }
 
-void TextEdit::tabEvent()
+void TextEdit::tabEvent(QKeyEvent *event, QString &setTabWidth())
 {
+    // insertCursor = QTextCursor(QTextEdit->textCursor());
 
+    if (((QKeyEvent*)event)->key() == Qt::Key_Tab) {
+        // append tabWidth at the cursor position 
+        // Look up Qtextedit append after cursor...
+
+    }
+
+    // QTextEdit::keyPressEvent(event);
 }
