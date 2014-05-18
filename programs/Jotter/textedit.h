@@ -50,6 +50,7 @@
  QT_FORWARD_DECLARE_CLASS(QTextEdit)
  QT_FORWARD_DECLARE_CLASS(QTextCharFormat)
  QT_FORWARD_DECLARE_CLASS(QMenu)
+ QT_FORWARD_DECLARE_CLASS(QFont)
 
 
  class TextEdit : public QMainWindow
@@ -61,7 +62,7 @@
 
 protected:
     virtual void closeEvent(QCloseEvent *e);
-    void tabEvent(QKeyEvent *event); // Changes tab into spaces
+
 
 private:
     void setupFileActions();
@@ -90,7 +91,8 @@ private:
  private:
      void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
 
-     QString setTabWidth();
+     void tabEvent(); // Changes tab into spaces
+     int setTabWidth();
 
      QAction *actionSave,
          *actionUndo,

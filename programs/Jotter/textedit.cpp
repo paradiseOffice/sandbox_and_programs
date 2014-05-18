@@ -1,4 +1,4 @@
- /****************************************************************************
+/****************************************************************************
  **
  ** Copyright (C) 2014 Digia Plc and/or its subsidiary(-ies).
  ** Contact: http://www.qt-project.org/legal
@@ -44,95 +44,104 @@
  **
  ****************************************************************************/
 
- #include "textedit.h"
+#include "textedit.h"
 
- #include <QAction>
- #include <QApplication>
- #include <QClipboard>
- #include <QColorDialog>
- // #include <QComboBox>
- #include <QFontComboBox>
- #include <QFile>
- #include <QFileDialog>
- #include <QFileInfo>
- #include <QFontDatabase>
- #include <QMenu>
- #include <QMenuBar>
- #include <QPrintDialog>
- #include <QPrinter>
- #include <QTextCodec>
- #include <QTextEdit>
- #include <QToolBar>
- #include <QTextCursor>
- #include <QTextDocumentWriter>
- #include <QTextList>
- #include <QtDebug>
- #include <QCloseEvent>
- #include <QMessageBox>
- #include <QPrintPreviewDialog>
+#include <QAction>
+#include <QApplication>
+#include <QClipboard>
+#include <QFont>
+#include <QFile>
+#include <QFileDialog>
+#include <QFileInfo>
+#include <QFontDatabase>
+#include <QMenu>
+#include <QMenuBar>
+#include <QPrintDialog>
+#include <QPrinter>
+#include <QTextCodec>
+#include <QTextEdit>
+#include <QToolBar>
+#include <QTextCursor>
+#include <QTextDocumentWriter>
+#include <QTextList>
+#include <QtDebug>
+#include <QCloseEvent>
+#include <QMessageBox>
+#include <QPrintPreviewDialog>
 
- #ifdef Q_WS_MAC // change these to the two separate theme dirs.
- const QString rsrcPath = ":/images/mac";
- #else
- const QString rsrcPath = ":/images/win";
- #endif
+#ifdef Q_WS_MAC // change these to the two separate theme dirs.
+const QString rsrcPath = ":/images/mac";
+#else
+const QString rsrcPath = ":/images/win";
+#endif
 
- TextEdit::TextEdit(QWidget *parent)
+TextEdit::TextEdit(QWidget *parent)
      : QMainWindow(parent)
- {
-     setToolButtonStyle(Qt::ToolButtonFollowStyle);
-     setupFileActions();
-     setupEditActions();
+{
+    QFont initialFont;
+    initialFont.setFamily("Courier");
+    initialFont.setStyleHint(QFont::Monospace);
+    initialFont.setFixedPitch(true);
+    initialFont.setPointSize(12);
 
-     setWindowIcon(QIcon(rsrcPath + "/logo32.png"));
+    setToolButtonStyle(Qt::ToolButtonFollowStyle);
+    setupFileActions();
+    setupEditActions();
 
-     {
-         QMenu *helpMenu = new QMenu(tr("Help"), this);
-         menuBar()->addMenu(helpMenu);
-         helpMenu->addAction(tr("About"), this, SLOT(about()));
-         helpMenu->addAction(tr("About &Qt"), qApp, SLOT(aboutQt()));
-     }
+    setWindowIcon(QIcon(rsrcPath + "/logo32.png"));
 
-     textEdit = new QTextEdit(this);
-     connect(textEdit, SIGNAL(currentCharFormatChanged(QTextCharFormat)),
+    {
+        QMenu *helpMenu = new QMenu(tr("Help"), this);
+        menuBar()->addMenu(helpMenu);
+        helpMenu->addAction(tr("About"), this, SLOT(about()));
+        helpMenu->addAction(tr("About &Qt"), qApp, SLOT(aboutQt()));
+    }
+
+    textEdit = new QTextEdit(this);
+    connect(textEdit, SIGNAL(currentCharFormatChanged(QTextCharFormat)),
              this, SLOT(currentCharFormatChanged(QTextCharFormat)));
-     connect(textEdit, SIGNAL(cursorPositionChanged()),
+    connect(textEdit, SIGNAL(cursorPositionChanged()),
              this, SLOT(cursorPositionChanged()));
 
-     setCentralWidget(textEdit);
-     textEdit->setFocus();
-     setCurrentFileName(QString());
+    setCentralWidget(textEdit);
+    textEdit->setFocus();
+    textEdit->setFont(initialFont);
+    // This piece sets the tabs up correctly to be a fixed no. of spaces
+    const int tabString = setTabWidth();
+    QFontMetrics metrics(initialFont);
+    textEdit->setTabStopWidth(tabString * metrics.width(' '));
 
+    setCurrentFileName(QString());
 
-
-     connect(textEdit->document(), SIGNAL(modificationChanged(bool)),
+    // The connect bits for document modification
+    connect(textEdit->document(), SIGNAL(modificationChanged(bool)),
              actionSave, SLOT(setEnabled(bool)));
-     connect(textEdit->document(), SIGNAL(modificationChanged(bool)),
+    connect(textEdit->document(), SIGNAL(modificationChanged(bool)),
              this, SLOT(setWindowModified(bool)));
-     connect(textEdit->document(), SIGNAL(undoAvailable(bool)),
+    connect(textEdit->document(), SIGNAL(undoAvailable(bool)),
              actionUndo, SLOT(setEnabled(bool)));
-     connect(textEdit->document(), SIGNAL(redoAvailable(bool)),
+    connect(textEdit->document(), SIGNAL(redoAvailable(bool)),
              actionRedo, SLOT(setEnabled(bool)));
 
-     setWindowModified(textEdit->document()->isModified());
-     actionSave->setEnabled(textEdit->document()->isModified());
-     actionUndo->setEnabled(textEdit->document()->isUndoAvailable());
-     actionRedo->setEnabled(textEdit->document()->isRedoAvailable());
+    setWindowModified(textEdit->document()->isModified());
+    actionSave->setEnabled(textEdit->document()->isModified());
+    actionUndo->setEnabled(textEdit->document()->isUndoAvailable());
+    actionRedo->setEnabled(textEdit->document()->isRedoAvailable());
 
-     connect(actionUndo, SIGNAL(triggered()), textEdit, SLOT(undo()));
-     connect(actionRedo, SIGNAL(triggered()), textEdit, SLOT(redo()));
+    connect(actionUndo, SIGNAL(triggered()), textEdit, SLOT(undo()));
+    connect(actionRedo, SIGNAL(triggered()), textEdit, SLOT(redo()));
 
-     actionCut->setEnabled(false);
-     actionCopy->setEnabled(false);
+    actionCut->setEnabled(false);
+    actionCopy->setEnabled(false);
 
-     connect(actionCut, SIGNAL(triggered()), textEdit, SLOT(cut()));
-     connect(actionCopy, SIGNAL(triggered()), textEdit, SLOT(copy()));
-     connect(actionPaste, SIGNAL(triggered()), textEdit, SLOT(paste()));
+    connect(actionCut, SIGNAL(triggered()), textEdit, SLOT(cut()));
+    connect(actionCopy, SIGNAL(triggered()), textEdit, SLOT(copy()));
+    connect(actionPaste, SIGNAL(triggered()), textEdit, SLOT(paste()));
 
-     connect(textEdit, SIGNAL(copyAvailable(bool)), actionCut, SLOT(setEnabled(bool)));
-     connect(textEdit, SIGNAL(copyAvailable(bool)), actionCopy, SLOT(setEnabled(bool)));
+    connect(textEdit, SIGNAL(copyAvailable(bool)), actionCut, SLOT(setEnabled(bool)));
+    connect(textEdit, SIGNAL(copyAvailable(bool)), actionCopy, SLOT(setEnabled(bool)));
 
- #ifndef QT_NO_CLIPBOARD
+#ifndef QT_NO_CLIPBOARD
      connect(QApplication::clipboard(), SIGNAL(dataChanged()), this, SLOT(clipboardDataChanged()));
  #endif
 
@@ -452,20 +461,13 @@
  }
 
 
-QString TextEdit::setTabWidth()
+int TextEdit::setTabWidth()
 {
-    QString initTabWidth = "     ";
+    int initTabWidth = 4;
     return initTabWidth;
 }
 
-void TextEdit::tabEvent(QKeyEvent *event)
+void TextEdit::tabEvent()
 {
-    QString tabString = setTabWidth();
-    QTextCursor insertCursor = textEdit->textCursor();
 
-    if (((QKeyEvent*)event)->key() == Qt::Key_Tab) {
-        // append tabWidth at the cursor position
-        // Look up Qtextedit append after cursor...
-        insertCursor.insertText(tabString);
-    }
 }
