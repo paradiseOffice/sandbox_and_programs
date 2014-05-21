@@ -34,12 +34,22 @@ body#landing {
 }
 @font-face {
   font-family: body;
-  src: url(fonts/EBGaramond.otf); 
+  src: url(fonts/OpenSans-Regular.ttf); 
+}
+@font-face {
+    font-family: body-italic;
+    src: url(fonts/OpenSans-Italic.ttf);
+}
+@font-face {
+    font-family: body-bold;
+    src: url(fonts/OpenSans-Bold.ttf);
 }
 @font-face {
   font-family: nav;
-  src: url(fonts/PT_Sans-Web-Bold.ttf);
+  src: url(fonts/OpenSans-Semibold.ttf);
 }
+
+
 header { 
   width: 900px; height: 200px;  
   padding: 0 20px;
@@ -54,9 +64,10 @@ header h1 {
   color: white;
 }
 header h2 { 
-  font-family: "Liberation sans", arial, "sans serif"; 
-  font-size: 34px; 
-  text-align: center; 
+  position: relative; 
+  left: 40%; top: 0;
+  font-family: nav, "Liberation sans", arial, "sans serif"; 
+  font-size: 34px;  
   color: #DE304B;
 }
 div#donate { 
@@ -79,7 +90,7 @@ div#donate {
   float: left;  
   padding: 5px;
   border: 2px solid #fff;
-  font-family: body, verdana, arial, "sans serif";
+  font-family: nav, verdana, arial, "sans serif";
   font-weight: normal; 
   /* background */
   border-radius: 20px;
@@ -233,7 +244,7 @@ nav#rainbow-menu #blog a:hover {
   padding: 0.4em;
   margin-left: 190px;  
   word-wrap: break-word;
-  font-family: nav, "times new roman", georgia, "serif";
+  font-family: body, "Liberation Sans", Arial, "sans serif";
  }
 div#demo_vid { 
   position: absolute; 
@@ -265,6 +276,7 @@ footer {
   padding: 5px 5px 5px 5px; 
   margin: 0 auto;
   color: #999999; background: #fff;
+  font-family: body-italic, "Liberation Sans", Arial, "sans serif";
   font-size: 16px;
   text-align: center;
 }
@@ -411,7 +423,6 @@ input:focus, textarea:focus {
 }
 label, input, textarea, select { 
   color: #1961FB; 
-  font-family: 'open sans', arial, 'sans serif';
   font-size: 100%;
   padding-left: 0.3em;
   text-align: left;
@@ -424,7 +435,6 @@ fieldset.captcha {
   margin: 0 auto;
   padding: 0.6em;
   font-size: 130%;
-  font-family: serif;
   color: #80003B;
 }
 textarea { background: white; color: black; }
