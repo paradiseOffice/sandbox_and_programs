@@ -67,9 +67,6 @@ header h1 {
   position: relative;
   left: 190px; top: 0;  
   color: white;
-  text-shadow: 0px 2px 1px rgba(255,255,255,1),
-  0px 2px 3px rgba(11,11,11,0.6),
-  0px 2px 7px rgba(0,0,0,1);
 }
 header h2 { 
   position: relative; 
@@ -77,13 +74,6 @@ header h2 {
   font-family: nav, "Liberation sans", arial, "sans serif"; 
   font-size: 34px;  
   color: #DE304B;
-  text-shadow: 0px 1px 0px #d02b46,
-  0px 2px 0px #bc233d,
-  0px 3px 0px #a0172e,
-  0px 4px 0px #7b0d1f,
-  0px 5px 0px #660817,
-  0px 6px 0px #550512,
-  0px 7px 3px #660000;
 }
 div#donate { 
   height: 200px; min-width: 200px; 
@@ -108,15 +98,16 @@ div#donate {
 }
 
 .content nav { 
-  width: auto; height: auto; 
+  width: 150px; height: auto; 
   float: left;  
-  margin: 5px;
-  border: 1px solid #999; border-radius: 15px;
+  padding: 5px;
+  border: 2px solid #fff;
   font-family: nav, verdana, arial, "sans serif";
   font-weight: normal; 
-  box-shadow: 0px 1px 2px #222,  -1px -3px 5px #333;
-  -moz-box-shadow: 0px 1px 2px #222, -3px -3px 5px #333;
-  -webkit-box-shadow: 0px 1px 2px #222, -3px -3px 5px #333;
+  /* background */
+  border-radius: 20px;
+  background-color: #Ddd; 
+
 }
 /* login / register buttons
 nav#rainbow-menu #login { 
@@ -185,88 +176,77 @@ nav#rainbow-menu #register:active {
 /*nav#rainbow-menu ul { list-style-type: none; }
 nav#rainbow-menu ul li { margin-left: 0px; } */
 nav#rainbow-menu a { 
-  font-size: 130%; 
+  font-size: 140%; 
   color: #fff;
-  text-shadow: 0px 1px 1px rgba(0,0,0,1), -1px -1px 2px rgba(0,0,0,1); 
+  text-shadow: 2px 2px 2px #000; 
   text-decoration: none; 
-  text-align: center; 
+  background-color: #aaa;
   display: block;
-  padding: 10px 0;
-  height: 40px; width: 170px; 
+  height: 40px; width: 150px; 
  
 }
-nav#rainbow-menu div a:hover {
-  outline: 3px solid #fff;
-  box-shadow: inset 0px 0px 43px #555;
-  -moz-box-shadow: inset 0 0 43px #555;
-  -webkit-box-shadow: inset 0 0 43px #555;
+nav#rainbow-menu #home_link a:hover  { 
+  background-color: #6A0023; 
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#6A0023) to(#E20800));
+  background-image: -webkit-linear-gradient(top, #6A0023, #E20800);
+  background-image: -moz-linear-gradient(top, #6A0023, #E20800);
+  background-image: -ms-linear-gradient(top, #6A0023, #E20800);
+  background-image: linear-gradient(top, #6A0023, #E20800);
+  background-image: -o-linear-gradient(top, #6A0023, #E20800);
 }
-nav#rainbow-menu #home_link a  { 
-  background: rgba(106,0,35,0.7); 
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(106,0,35, 0.7)) to(rgba(226,8,0, 0.7)));
-  background-image: -webkit-linear-gradient(top, rgba(106,0,35, 0.7), rgba(226,8,0, 0.7)));
-  background-image: -moz-linear-gradient(top, rgba(106,0,35, 0.7), rgba(226, 8, 0, 0.7));
-  background-image: -ms-linear-gradient(top, rgba(106,0,35, 0.7), rgba(226,8,0, 0.7));
-  background-image: linear-gradient(top, rgba(106,0,35, 0.7), rgba(226,8,0, 0.7));
-  background-image: -o-linear-gradient(top, rgba(106,0,35, 0.7), rgba(226,8,0, 0.7));
-
-  border-top: 1px solid #222; border-radius: 20px 20px 0 0;
+nav#rainbow-menu #dev_link a:hover {
+  background-color: #E20800; 
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E20800) to(#CF430C));
+  background-image: -webkit-linear-gradient(top, #E20800, #CF430C);
+  background-image: -moz-linear-gradient(top, #E20800, #CF430C);
+  background-image: -ms-linear-gradient(top, #E20800, #CF430C);
+  background-image: linear-gradient(top, #E20800, #CF430C);
+  background-image: -o-linear-gradient(top, #E20800, #CF430C);
 }
-nav#rainbow-menu #dev_link a {
-  background: rgba(226,8,0, 0.7); 
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(226,8,0, 0.7)) to(rgba(207,67,12, 0.7)));
-  background-image: -webkit-linear-gradient(top, rgba(226,8,0, 0.7), rgba(207,67,12, 0.7));
-  background-image: -moz-linear-gradient(top, rgba(226,8,0, 0.7), rgba(207,67,12, 0.7));
-  background-image: -ms-linear-gradient(top, rgba(226,8,0, 0.7), rgba(207,67,12, 0.7));
-  background-image: linear-gradient(top, rgba(226,8,0, 0.7), rgba(207,67,12, 0.7));
-  background-image: -o-linear-gradient(top, rgba(226,8,0, 0.7), rgba(207,67,12, 0.7));
+nav#rainbow-menu #doc_link a:hover {
+  background-color: #CF430C; 
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CF430C) to(#FFD500));
+  background-image: -webkit-linear-gradient(top, #CF430C, #FFD500);
+  background-image: -moz-linear-gradient(top, #CF430C, #FFD500);
+  background-image: -ms-linear-gradient(top, #CF430C, #FFD500);
+  background-image: linear-gradient(top, #CF430C, #FFD500);
+  background-image: -o-linear-gradient(top, #CF430C, #FFD500);
 }
-nav#rainbow-menu #doc_link a {
-  background: rgba(207,67,12, 0.7); 
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(207,67,12, 0.7)) to(rgba(255,213,0, 0.7)));
-  background-image: -webkit-linear-gradient(top, rgba(207,67,12, 0.7), rgba(255,213,0, 0.7));
-  background-image: -moz-linear-gradient(top, rgba(207,67,12, 0.7), rgba(255,213,0, 0.7));
-  background-image: -ms-linear-gradient(top, rgba(207,67,12, 0.7), rgba(255,213,0, 0.7));
-  background-image: linear-gradient(top, rgba(207,67,12, 0.7), rgba(255,213,0, 0.7));
-  background-image: -o-linear-gradient(top, rgba(207,67,12, 0.7), rgba(255,213,0, 0.7));
+nav#rainbow-menu #contact_link a:hover {
+  background-color: #FFD500; 
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFD500) to(#FFFF00));
+  background-image: -webkit-linear-gradient(top, #FFD500, #FFFF00);
+  background-image: -moz-linear-gradient(top, #FFD500, #FFFF00);
+  background-image: -ms-linear-gradient(top, #FFD500, #FFFF00);
+  background-image: linear-gradient(top, #FFD500, #FFFF00);
+  background-image: -o-linear-gradient(top, #FFD500, #FFFF00);
 }
-nav#rainbow-menu #contact_link a {
-  background: rgba(255,213,0, 0.7); 
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,213,0, 0.7)) to(rgba(255,255,0, 0.7)));
-  background-image: -webkit-linear-gradient(top, rgba(255,213,0, 0.7), rgba(255,255,0, 0.7));
-  background-image: -moz-linear-gradient(top, rgba(255,213,0, 0.7), rgba(255,255,0, 0.7));
-  background-image: -ms-linear-gradient(top, rgba(255,213,0, 0.7), rgba(255,255,0, 0.7));
-  background-image: linear-gradient(top, rgba(255,213,0, 0.7), rgba(255,255,0, 0.7));
-  background-image: -o-linear-gradient(top, rgba(255,213,0, 0.7), rgba(255,255,0, 0.7));
+nav#rainbow-menu #download a:hover {
+  background-color: #FFFF00; color: #000000;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFF00), color-stop(0.5, #00BF00), to(#0066FF));
+  background-image: -webkit-linear-gradient(top, #FFFF00, #00BF00 50%, #0066FF);
+  background-image: -moz-linear-gradient(top, #FFFF00, #00BF00 50%, #0066FF);
+  background-image: -ms-linear-gradient(top, #FFFF00, #00BF00 50%, #0066FF);
+  background-image: linear-gradient(top, #FFFF00, #00BF00 50%, #0066FF);
+  background-image: -o-linear-gradient(top, #FFFF00, #00BF00 50%, #0066FF);
 }
-nav#rainbow-menu #download a {
-  background: rgba(255,255,0, 0.7); /* 0, 191, 0 green */
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,0, 0.7)), color-stop(0.5, rgba(0,191,0, 0.7)), to(rgba(0,102,255, 0.7)));
-  background-image: -webkit-linear-gradient(top, rgba(255,255,0, 0.7), rgba(0,191,0, 0.7) 50%, rgba(0,102,255, 0.7));
-  background-image: -moz-linear-gradient(top, rgba(255,255,0, 0.7), rgba(0,191,0, 0.7) 50%, rgba(0,102,255, 0.7));
-  background-image: -ms-linear-gradient(top, rgba(255,255,0, 0.7), rgba(0,191,0, 0.7) 50%, rgba(0,102,255, 0.7));
-  background-image: linear-gradient(top, rgba(255,255,0, 0.7), rgba(0,191,0, 0.7) 50%, rgba(0,102,255, 0.7));
-  background-image: -o-linear-gradient(top, rgba(255,255,0, 0.7), rgba(0,191,0, 0.7) 50%, rgba(0,102,255, 0.7));
+nav#rainbow-menu  #forum a:hover {
+  background-color: #0066FF; 
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0066FF) to(#0000CC));
+  background-image: -webkit-linear-gradient(top, #0066FF, #0000CC);
+  background-image: -moz-linear-gradient(top, #0066FF, #0000CC);
+  background-image: -ms-linear-gradient(top, #0066FF, #0000CC);
+  background-image: linear-gradient(top, #0066FF, #0000CC);
+  background-image: -o-linear-gradient(top, #0066FF, #0000CC);
 }
-nav#rainbow-menu  #forum a {
-  background: rgba(0,102,255, 0.7); 
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,102,255, 0.7)) to(rgba(0,0,204, 0.7)));
-  background-image: -webkit-linear-gradient(top, rgba(0,102,255, 0.7), rgba(0,0,204, 0.7));
-  background-image: -moz-linear-gradient(top, rgba(0,102,255, 0.7), rgba(0,0,204, 0.7));
-  background-image: -ms-linear-gradient(top, rgba(0,102,255, 0.7), rgba(0,0,204, 0.7));
-  background-image: linear-gradient(top, rgba(0,102,255, 0.7), rgba(0,0,204, 0.7));
-  background-image: -o-linear-gradient(top, rgba(0,102,255, 0.7), rgba(0,0,204, 0.7));
-}
-nav#rainbow-menu #blog a {
-  background: rgba(0,0,204, 0.7); 
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(0,0,204, 0.7)) to(rgba(128,0,128, 0.7)));
-  background-image: -webkit-linear-gradient(top, rgba(0,0,204, 0.7), rgba(128,0,128, 0.7));
-  background-image: -moz-linear-gradient(top, rgba(0,0,204, 0.7), rgba(128,0,128, 0.7));
-  background-image: -ms-linear-gradient(top, rgba(0,0,204, 0.7), rgba(128,0,128, 0.7));
-  background-image: linear-gradient(top, rgba(0,0,204, 0.7), rgba(128,0,128, 0.7));
-  background-image: -o-linear-gradient(top, rgba(0,0,204, 0.7), rgba(128,0,128, 0.7));
-
-  border-bottom: 1px solid #222; border-radius: 0 0px 20px 20px;
+nav#rainbow-menu #blog a:hover {
+  background-color: #0000CC; 
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0000CC) to(#800080));
+  background-image: -webkit-linear-gradient(top, #0000CC, #800080);
+  background-image: -moz-linear-gradient(top, #0000CC, #800080);
+  background-image: -ms-linear-gradient(top, #0000CC, #800080);
+  background-image: linear-gradient(top, #0000CC, #800080);
+  background-image: -o-linear-gradient(top, #0000CC, #800080);
 }
 
 /* end of nav */
@@ -304,8 +284,9 @@ aside#switch {
 footer { 
   position: fixed; 
   bottom: 0px; 
-  width: 100%; height: 22px;
-  padding: 5px; 
+  width: 900px; height: 22px;
+  padding: 5px 5px 5px 5px; 
+  margin: 0 auto;
   color: #999999; background: #fff;
   font-family: body-italic, "Liberation Sans", Arial, "sans serif";
   font-size: 16px;
