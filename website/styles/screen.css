@@ -51,31 +51,36 @@ body#landing {
 
 
 header { 
-  width: 900px; height: 200px;  
+  width: 1000px; height: 200px;  
   padding: 0 20px;
-  background-image: url(../ui/banner_colour.png);
+  background-image: url(../ui/banner_colour_new.png);
   background-size: 100% 100%;
+  border: 6px solid #fff;
+  border-radius: 20px;
 }
 header h1 { 
   font-family: headings, "URW Chancery L", arial, "sans serif"; 
-  font-size: 52px; padding: 5px; 
+  font-size: 52px; 
+  font-style: italic;
+  padding: 5px; 
   padding-top: 30px;
-  text-align: center;  
+  position: relative;
+  left: 190px; top: 0;  
   color: white;
 }
 header h2 { 
   position: relative; 
-  left: 40%; top: 0;
+  left: 30%; top: 0;
   font-family: nav, "Liberation sans", arial, "sans serif"; 
   font-size: 34px;  
   color: #DE304B;
 }
 div#donate { 
-  height: 200px; min-width: 100px; 
+  height: 200px; min-width: 200px; 
   max-width: 400px; 
-  position: absolute;
-  z-index: -600;
-  top: 0px; right: 0px;
+  position: relative;
+  top: -45px; left: 800px;
+  /*
       background-color: #1961FB;
     background-image: -webkit-gradient(linear, 1000% 100%, 0% 0%, from(#043496) to(#1961FB));
     background-image: -webkit-linear-gradient(top, #043496, #1961FB);
@@ -83,6 +88,13 @@ div#donate {
     background-image: -ms-linear-gradient(top, #043496, #1961FB);
     background-image: linear-gradient(top, #043496, #1961FB);
     background-image: -o-linear-gradient(top, #043496, #1961FB);
+  */
+}
+#git #twit { 
+    display: block; 
+    position: relative; 
+    top: 120px; 
+    text-decoration: none; 
 }
 
 .content nav { 
