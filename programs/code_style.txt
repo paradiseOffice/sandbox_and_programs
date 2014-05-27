@@ -1,0 +1,36 @@
+Paradise Office Code Rules
+
+License at head of each .cpp file, my (c) and Digia rights, other rights from any copied code.
+
+	Curly Braces
+Except for 1 liners:
+
+if ( condition )
+{
+    // meh
+    // double meh
+}
+else
+{
+    // something else
+}
+
+	White Space
+4 spaces instead of tabs.
+
+	Dialogs
+In a 'dialog' folder per application, with sub dirs for each separate dialog.
+
+	Variables
+Camel case, if a Qt Object, do as thus: "fontComboBox".
+No longer than 30 but not less than 3 characters, unless it's the i,j,k loop iterators.
+
+	Class Names
+Capitalised 1st letter, camel case. Always MainWindow for the central UI.
+
+	Comments
+For particularly hard/clever parts and with a one/two sentence overview for:
+    - classes
+    - methods
+    - Methods or functions over 3 lines long.
+Possibly some comments (inline) for variables and data structures, where they need explaining.
